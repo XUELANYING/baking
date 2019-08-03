@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 class NavList extends React.Component {
     constructor() {
-        super()
+        super();
         this.state = {
             index: 0
         }
@@ -32,6 +32,9 @@ class NavList extends React.Component {
         this.setState({
             index: i
         })
+    }
+    componentDidMount(){
+        console.log(222,this.props.navList)
     }
 }
 

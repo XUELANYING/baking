@@ -4,6 +4,8 @@ import Nest from '../views/nest/nest'
 import QuestionAnswer from '../views/questionAnswer/questionAnswer'
 import Baike from "../views/learnBaking/baike";
 import University from "../views/learnBaking/university";
+import LessonSeries from "../views/learnBaking/lessonSeries";
+import Classify from "../views/learnBaking/classify";
 import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'
@@ -28,6 +30,50 @@ export default {
             children: [//子路由
 
             ]
+        },
+        {//百科
+            component:Baike,
+            name:"技巧百科",
+            to:"/baike",
+            display: true,//隐藏
+            meta:{
+                title:"烘焙百科",
+                unActive:"https://image.hongbeibang.com/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80",
+                isAppear:true,
+            }
+        },
+        {//学堂
+            component:University,
+            name:"视频学堂",
+            to:"/university",
+            display: true,//隐藏
+            meta:{
+                title:"烘焙帮学堂",
+                unActive:"https://image.hongbeibang.com/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80",
+                isAppear:true,
+            }
+        },
+        {//教程
+            component:LessonSeries,
+            name:"新手教程",
+            to:"/lessonSeries",
+            display: true,//隐藏
+            meta:{
+                title:"烘焙帮教程",
+                unActive:"https://image.hongbeibang.com/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80",
+                isAppear:true,
+            }
+        },
+        {//分类
+            component:Classify,
+            name:"食谱分类",
+            to:"/classify",
+            display: true,//隐藏
+            meta:{
+                title:"烘焙食谱_烘焙分类_食谱分类_全部分类_分类浏览_烘焙帮",
+                unActive:"https://image.hongbeibang.com/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80",
+                isAppear:true,
+            }
         },
         {
             component: BarkingRing,

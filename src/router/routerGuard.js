@@ -10,6 +10,7 @@ export default class RouterGuard extends React.Component {
                     {
                         //isShow的值为true，则显示
                           this.props.meta.isShow?<NavList navList={router.routers}></NavList>:null
+
                     }
                 </div>
                 <this.props.component  children={this.props.children}/>
@@ -17,6 +18,7 @@ export default class RouterGuard extends React.Component {
         )
     }
     componentDidMount(){
+        console.log(333,this.props)
         document.title= this.props.meta.title
     }
 }

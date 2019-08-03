@@ -7,8 +7,17 @@ import University from "../views/learnBaking/university";
 import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'
+// 烘焙圈
+import Attention from '../views/bakingRing/attention'
+import Latest from '../views/bakingRing/latest'
+import Expert from '../views/bakingRing/expert'
+
 import QuestionDetail from '../component/questionAnswer/questionDetail'
 import AnswerDetail from '../component/questionAnswer/answerDetail'
+
+import ActivityDetail from '../component/bakingRing/activityDetail'
+import BakingCircleDetail from '../component/bakingRing/bakingCircleDetail'
+
 
 
 export default {
@@ -38,7 +47,40 @@ export default {
                 unActive: 'https://image.hongbeibang.com/Fkpdn7F9EWxvNeSS8M7V4_xbRPlf?50X50&imageView2/1/w/50/h/50',
                 active: 'https://image.hongbeibang.com/Flc4c0tB_BGGFnA-ORFowqfNOpaD?50X50&imageView2/1/w/50/h/50',
                 isShow: true,
-            }
+            },
+            // 添加子路由
+            children:[
+                {
+                    component: Attention,
+                    name: "关注",
+                    path: '/show/attention',
+                    to: '/show/attention',
+                    meta: {
+                        title: "烘焙圈_烘焙秀秀_烘焙帮",
+                        isShow: true,
+                    },
+                },
+                {
+                    component: Latest,
+                    name: "最新",
+                    path: '/show/latest',
+                    to: '/show/latest',
+                    meta: {
+                        title: "烘焙圈_烘焙秀秀_烘焙帮",
+                        isShow: true,
+                    },
+                },
+                {
+                    component: Expert,
+                    name: "达人",
+                    path: '/show/expert',
+                    to: '/show/expert',
+                    meta: {
+                        title: "烘焙圈_烘焙秀秀_烘焙帮",
+                        isShow: true,
+                    },
+                },
+            ]
         },
         {
             component: QuestionAnswer,
@@ -88,6 +130,27 @@ export default {
                     isHide: true
                 }
             ]
+        },
+        {
+           component:ActivityDetail,
+           path:'/activity/',
+           to:'/activity/:id',
+            display:true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+
+        },
+        {
+            component:BakingCircleDetail,
+            path:'/bakingCircle/',
+            to:'/bakingCircle/:id',
+            display:true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
         },
         {
             component: Nest,

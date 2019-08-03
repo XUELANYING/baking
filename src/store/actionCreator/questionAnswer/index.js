@@ -51,7 +51,7 @@ export default {
     },
     getHotList(){
         return async (dispatch)=>{
-            let {data} =await axios.get('/api//question/getHot?_t=1564640806432&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc3NzIzMywiaWF0IjoxNTY0Mzg4NDMzfQ.N_xvMOAIQwmW-ff8By4ia2xN1DIhb9x98Kpkxz3bgQE&pageIndex=0&pageSize=10')
+            let {data} =await axios.get('/api/question/getHot?_t=1564640806432&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc3NzIzMywiaWF0IjoxNTY0Mzg4NDMzfQ.N_xvMOAIQwmW-ff8By4ia2xN1DIhb9x98Kpkxz3bgQE&pageIndex=0&pageSize=10')
             dispatch(hotList(data.data.content.data))
         }
     },
@@ -59,6 +59,7 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/question/getEssence?_t=1564641390856&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc3NzIzMywiaWF0IjoxNTY0Mzg4NDMzfQ.N_xvMOAIQwmW-ff8By4ia2xN1DIhb9x98Kpkxz3bgQE&pageIndex='+pageIndex+'&pageSize=10')
             dispatch(essenceList(data.data.content.data))
+            console.log('question',data.data.content)
         }
     },
     getQuestionDetail(id){

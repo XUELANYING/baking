@@ -1,3 +1,4 @@
 export default {
-
+    GET_ACTIVITY:'GET_ACTIVITY',
+    GET_COMMUNITY:'GET_COMMUNITY'
 }

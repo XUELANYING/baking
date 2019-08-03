@@ -1,0 +1,103 @@
+#bakingRing{
+    #baking_header{
+        width: 100%;
+        height: 44px;
+        position: fixed;
+        background: #ffffff;
+        top:0;
+        right:0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 0 18px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            i{
+              font-size: 27px;
+            }
+        }
+        .baking_header_main{
+          display: flex;
+            justify-content: space-between;
+          align-items: center;
+            flex: 1;
+            margin:0 61px;
+            height: 44px;
+            .baking_header_main_list{
+              //flex: 1;
+              color: #999;
+              font-size:16px;
+            }
+
+          .active{
+            color: #4A4945;
+            font-weight: bold;
+            border-bottom:2px solid #E98B71;
+          }
+        }
+    }
+    #baking_body{
+      padding-top:44px;
+      .baking_activity{
+        overflow: auto;
+        padding: 5px 0 10px 0 ;
+        margin:0 auto;
+        background: #fff;
+        border-bottom: 2px solid #E7E2E5;
+        div{
+          margin-left: 15px;
+          width: 150%;
+          .baking_activity_item{
+            width: 150px;
+            height: 85.5px;
+            margin-right: 6px;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            zoom: 1;
+            img{
+              width: 100%;
+              overflow: hidden;
+              display: inline-block;
+            }
+          }
+
+
+        }
+      }
+      .baking_type_wrap{
+        overflow: auto;
+        background: #fff;
+        margin-bottom:10px;
+        .baking_type{
+          overflow: auto;
+          margin-left: 15px;
+          width: 400%;
+          padding:10px 0;
+          div{
+            display: inline-block;
+            a{
+              font-size: 15px;
+              line-height: 21px;
+              text-align: center;
+              position: relative;
+              margin-right: 8px;
+              border-radius: 4px;
+              padding: 7px 10px;
+              display: inline-block;
+              vertical-align: middle;
+              overflow:hidden;
+              zoom: 1;
+              box-sizing: border-box;
+              color: #FFFFFF;
+              background: red;
+            }
+          }
+
+        }
+      }
+    }
+}

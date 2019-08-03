@@ -2,8 +2,7 @@
 import BarkingRing from '../views/bakingRing/bakingRing'
 import Nest from '../views/nest/nest'
 import QuestionAnswer from '../views/questionAnswer/questionAnswer'
-import Baike from "../views/learnBaking/baike";
-import University from "../views/learnBaking/university";
+
 import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'

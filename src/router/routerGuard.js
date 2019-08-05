@@ -6,17 +6,17 @@ export default class RouterGuard extends React.Component {
     render() {
         return (
             <Fragment>
-                <div className={"tab"}>
+
                     {
                         //isShow的值为true，则显示
-                          this.props.meta.isShow?<NavList navList={router.routers}></NavList>:null
+                          this.props.meta.isShow?<div className={"tab"}><NavList navList={router.routers}></NavList></div>:null
                     }
-                </div>
+
                 <this.props.component  children={this.props.children}/>
             </Fragment>
         )
     }
     componentDidMount(){
-        document.title= this.props.meta.title
+        document.title= this.props.meta.title || "烘焙帮"
     }
 }

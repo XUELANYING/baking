@@ -5,13 +5,14 @@ import {connect} from 'react-redux'
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
 } from 'react-router-dom';
 import router from './router';
 import actionCreator from './store/actionCreator'
 import RouterGuard from "./router/routerGuard";
 import Loading from './component/common/loading'
-import QuestionDetail from "./component/questionAnswer/questionDetail";
+import axios from 'axios'
+
 
 class App extends React.Component {
     constructor() {
@@ -32,7 +33,7 @@ class App extends React.Component {
                                            path={v.to}></Route>
                                 ))
                             }
-                            <Route path={'/question/:id'} component={QuestionDetail}></Route>
+
                         </Switch>
                     </Router>
                 }
@@ -40,6 +41,9 @@ class App extends React.Component {
         );
     }
     componentWillMount() {
+        if(! localStorage.csrfToken){
+            localStorage.csrfToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc3NzIzMywiaWF0IjoxNTY0Mzg4NDMzfQ.N_xvMOAIQwmW-ff8By4ia2xN1DIhb9x98Kpkxz3bgQE'
+        }
         // loading 动画 的结束 控制 模块
         if (this.state.isLoading) {
             setTimeout(() => {

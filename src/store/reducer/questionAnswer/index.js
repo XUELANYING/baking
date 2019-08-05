@@ -19,6 +19,17 @@ export default function(state=initState,{type,payload}){
         state.answerDetail = payload
     }else if(type===actionType.GET_ANSWERFLOOR){
         state.answerFloor = payload
+    }else if(type===actionType.GET_GETCLIENTINFO){
+        state.clientInfo = payload
+        state.dish = [...state.dish,...payload.dish.data]
+        console.log(1111,state.dish)
+    }else if(type===actionType.GET_GETCLIENTRECIOPE){
+        state.userRecipe = [...state.userRecipe,...payload]
+        console.log( payload)
+    }else if(type===actionType.GET_GETCLIENTANSWER){
+        state.userAnswer =  [...state.userAnswer,...payload]
+    }else if(type===actionType.GET_GETCLIENTACHIEVEMENTS){
+        state.achievements = payload
     }
     return state;
 }

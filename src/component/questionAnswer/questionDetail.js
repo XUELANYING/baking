@@ -75,6 +75,20 @@ class QuestionDetail extends React.Component {
                             ))
                     }
                 </div>
+                <div className={"tab-detail"}>
+
+                    <div className={"tab-item"}>
+                        <img src="https://image.hongbeibang.com/Fh_n2YndO4M5AlLq-k3uBHDG5PmP?48X48&imageView2/1/w/48/h/48" alt=""/>
+                        <span>邀请回答</span>
+                    </div>
+
+                    <div className={"tab-item"}>
+                        <img src="https://image.hongbeibang.com/Fnu20JVHiBh4OUcn7CDDPdCyJKC_?48X48&imageView2/1/w/48/h/48" alt=""/>
+                        <span>我来回答</span>
+                    </div>
+
+
+                </div>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
+import {withRouter} from 'react-router-dom'
 import more from '../../asset/img/more.gif'
 import actionCreator from "../../store/actionCreator";
 
@@ -13,7 +14,7 @@ class LoadingMore extends React.Component {
     }
     render() {
         return (
-            <div ref={"wrapper"}>
+            <div style={{width:"100%",margin:"0 auto",background:"#fff",display:"flex",justifyContent:"center"}} ref={"wrapper"}>
                 <img src={more} alt=""/>
             </div>
         )
@@ -41,10 +42,16 @@ class LoadingMore extends React.Component {
         },false)
     }
     handleClick(){
-        this.props[this.props.handleList](this.state.pageIndex+=10)
-        this.setState({
-            pageIndex:this.state.pageIndex+=10
-        })
+
+        if(this.props.handleList==="getClientRecipe" ||this.props.handleList==="getClientInfo" || this.props.handleList==="getClientAnswer"){
+            this.props[this.props.handleList]({pageIndex:0,clientId:this.props.match.params.clientId})
+        }else{
+            this.props[this.props.handleList](this.state.pageIndex+=10)
+            this.setState({
+                pageIndex:this.state.pageIndex+=10
+            })
+        }
+
     }
 }
-export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreator,dispatch)))(LoadingMore);
+export default withRouter(connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreator,dispatch)))(LoadingMore));

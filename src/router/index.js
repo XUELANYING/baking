@@ -2,14 +2,14 @@
 import BarkingRing from '../views/bakingRing/bakingRing'
 import Nest from '../views/nest/nest'
 import QuestionAnswer from '../views/questionAnswer/questionAnswer'
-import Baike from "../views/learnBaking/baike";
-import University from "../views/learnBaking/university";
 import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'
 import QuestionDetail from '../component/questionAnswer/questionDetail'
 import AnswerDetail from '../component/questionAnswer/answerDetail'
-
+import EditQuestion from '../component/questionAnswer/editQuestion'
+import ClientInfo from '../component/questionAnswer/clientInfo'
+import QuestionDescription from '../component/questionAnswer/questionDescription'
 
 export default {
     basename: "/m",
@@ -107,6 +107,7 @@ export default {
             component: QuestionDetail,
             path: '/question/',
             to: '/question/:id/',
+            exact:true,
             display: true,//隐藏
             meta: {
                 unActive: null,
@@ -122,6 +123,37 @@ export default {
                 unActive: null,
                 active: null
             }
-        }
+        },
+        {
+            component: EditQuestion,
+            path: '/edit/question',
+            to: '/edit/question',
+            display: true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+        },
+        {
+            component: QuestionDescription,
+            path: '/question/description',
+            to: '/question/description/:text',
+            exact:true,
+            display: true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+        },
+        {
+            component: ClientInfo,
+            path: '/clientInfo',
+            to: '/clientInfo/:clientId',
+            display: true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+        },
     ]
 }

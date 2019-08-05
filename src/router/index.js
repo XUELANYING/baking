@@ -13,7 +13,16 @@ import QuestionDescription from '../component/questionAnswer/questionDescription
 import Lesson from "@views/learnBaking/lesson"
 import Student from "@views/learnBaking/student"
 import University from "@views/learnBaking/university"
+
 import CourseList from "@views/learnBaking/courseList"
+
+/*郭郭的路由跳转*/
+import opusTaber from  "@component/Me/opusTaber"
+import addlistOne from "./Me/router/addlistORoute"
+import addlistTwo from "./Me/router/addlistTRouter"
+
+
+
 export default {
     basename: "/m",
     routers: [
@@ -94,10 +103,11 @@ export default {
         },
         {
             component: Nest,
-            to: '/client',
+            to: '/me',
             name: "小窝",
+            exact:true,
             meta: {
-                title: "的小窝_烘焙帮",
+                title: "郭郭的小窝_烘焙帮",
                 unActive: 'https://image.hongbeibang.com/FrYeKj0MohOJQuNzUgCugg90cHCS?50X50&imageView2/1/w/50/h/50',
                 active: 'https://image.hongbeibang.com/FpNSY800vY0I5ytvWaqDbdJqT0HR?50X50&imageView2/1/w/50/h/50',
                 isShow: true,
@@ -106,6 +116,27 @@ export default {
 
             ]
         },
+
+        {   //////////////郭郭的路由跳转////////////////
+            to:"/me/opustaber/:id",
+            path:'/me/opustaber/:id',
+            context:"切换",
+            component:opusTaber,
+            display:true,
+            exact:true,
+            meta:{
+                title:"作品和食品_烘焙帮",
+                keywored:"关键字",
+                descrieption:"描述",
+                isShow:false,
+            },
+        },
+
+        ...addlistOne,
+        ...addlistTwo,
+
+
+
         {
             component: QuestionDetail,
             path: '/question/',
@@ -202,5 +233,7 @@ export default {
                 active: null
             }
         },
+
+
     ]
 }

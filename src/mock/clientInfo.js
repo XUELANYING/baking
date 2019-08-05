@@ -17711,7 +17711,14 @@ let clientAchievements = [
     }
 ]
 
+let  Medal =[
+    {name:"我是郭郭"}
+]
+
 Mock.mock('/client/getDish', 'get', clientInfo)
 Mock.mock('/client/getRecipe','get',clientRecipe)
 Mock.mock('/client/getAnswer','get',clientAnswer)
 Mock.mock('/client/getAchievement','get',clientAchievements)
+/*郭郭的注释 */
+Mock.mock("/Medal/guoguo","get",Medal)
+/*////////////////////////////////////////////////////////////////////////////////////*/

@@ -3,8 +3,8 @@ import "@asset/css/learnBaking/student.scss"
 import actionCreator from "@store/actionCreator";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
-import Straight from "../../component/learnBaking/student/Straight"
-import Newest from "../../component/learnBaking/student/Newest"
+import Straight from "@component/learnBaking/student/Straight"
+import Newest from "@component/learnBaking/student/Newest"
 import {withRouter} from "react-router-dom"
 class Student extends Component {
     constructor(props) {
@@ -52,9 +52,9 @@ class Student extends Component {
         })
     }
 
-    componentDidMount() {
-        this.props.getStudent()
-    }
+    // componentDidMount() {
+    //     this.props.getStudent({pageIndex:0,contentId:this.props.match.params.contentId})
+    // }
 }
 
 export default withRouter(connect((state) => ({

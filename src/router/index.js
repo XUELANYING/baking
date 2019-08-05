@@ -1,4 +1,4 @@
-import LearnBaking from '../views/learnBaking/learnBaking'
+﻿import LearnBaking from '../views/learnBaking/learnBaking'
 import BarkingRing from '../views/bakingRing/bakingRing'
 import Nest from '../views/nest/nest'
 import QuestionAnswer from '../views/questionAnswer/questionAnswer'
@@ -13,7 +13,7 @@ import QuestionDescription from '../component/questionAnswer/questionDescription
 import Lesson from "@views/learnBaking/lesson"
 import Student from "@views/learnBaking/student"
 import University from "@views/learnBaking/university"
-
+import CourseList from "@views/learnBaking/courseList"
 export default {
     basename: "/m",
     routers: [
@@ -139,10 +139,21 @@ export default {
             }
         },
         {
-            to:"/student",
-            path:"/student",
+            to:"/student/:contentId",
+            path:"/student/:contentId",
             content:"学员作品",
             component:Student,
+            display: true,
+            meta:{
+                keywored:"关键字",
+                descrieption:"描述",
+            }
+        },
+        {
+            to:"/courseList",
+            path:"/courseList",
+            content:"课程列表",
+            component:CourseList,
             display: true,
             meta:{
                 keywored:"关键字",

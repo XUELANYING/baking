@@ -1,26 +1,23 @@
-import React, {Component,Fragment} from 'react';
+import React, {Component} from 'react';
 import "@asset/css/learnBaking/Newest.scss"
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux"
 import actionCreator from "@store/actionCreator";
 import LoadingMore from "@component/common/loadingMore";
 import BScroll from "better-scroll"
-import {withRouter} from "react-router-dom"
 
 class Straight extends Component {
     constructor(props) {
         super(props);
         this.state = {
             studentList: [],
-            pageIndex: 0,
-            contentId:0
+            pageIndex: 0
         };
     }
 
     render() {
-
         return (
-            <Fragment>
+            <div ref={"stright"} className={"strigth"}>
                 <div className="show_new">
                     {
                         this.props.studentList.map((item, index) => (
@@ -42,18 +39,18 @@ class Straight extends Component {
                     }
                     <LoadingMore handleList={"getStudent"}></LoadingMore>
                 </div>
-            </Fragment>
+            </div>
         )
     }
 
     componentDidMount() {
         if(this.props.studentList.length===0){
-            this.props.getStudent({pageIndex:0,contentId:this.props.match.params.contentId})
+            this.props.getStudent()
         }
     }
 }
 
-export default withRouter(connect((state) => ({
+export default connect((state) => ({
     studentList: state.learnBaking.studentList,
     introduces: state.learnBaking.introduces
-}), (dispatch) => bindActionCreators(actionCreator, dispatch))(Straight));
+}), (dispatch) => bindActionCreators(actionCreator, dispatch))(Straight);

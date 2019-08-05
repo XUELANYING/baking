@@ -7,7 +7,7 @@ import BScroll from "better-scroll"
 import {withRouter, Link} from "react-router-dom"
 import PlayUrl from "../../component/learnBaking/lesson/playUrl"
 import TrySeeUrl from "../../component/learnBaking/lesson/trySeeUrl";
-import LoadingMore from "@component/common/loadingMore";
+
 class Lesson extends Component {
     constructor(props) {
         super(props);
@@ -42,24 +42,13 @@ class Lesson extends Component {
                     </div>
                 </div>
                 <div className={"Study"}>
-                    <div className="study_con">
-                        <div className="study_top">
-                            <p>永久无限次回看</p>
-                            <p>购买后即看</p>
-                            <p>烘焙帮自营课程</p>
-                        </div>
-                        <div className="study_bot">
-                            <p>高效的学习体验</p>
-                            <p>分步骤学习</p>
-                            <p>专注打造唯一品类</p>
-                        </div>
-                    </div>
+
                 </div>
                 <div className={"show_lesson"}>
                     <div className={"homework"}>
                         <div className={"show-title"}>
                             <p>学员作业</p>
-                            <span onClick={()=>this.props.history.push("/student/"+this.props.lessonList.educationCourseId)}>查看更多</span>
+                            <span onClick={()=>this.props.history.push("/student")}>查看更多</span>
 
                         </div>
                         <div className="homework_con" ref={'hotList'}>
@@ -107,7 +96,7 @@ class Lesson extends Component {
                     <div className={"tutorCourse"}>
                         <div className={"show-title"}>
                             <p>导师的其他课程</p>
-                            <span onClick={()=>this.props.history.push("/courseList")}>查看全部</span>
+                            <span>查看全部</span>
                         </div>
                         <div className="curr_con" ref={'currList'}>
                             <ul className={"show_curr"}>
@@ -121,7 +110,6 @@ class Lesson extends Component {
                                         </li>
                                     ))
                                 }
-                                <LoadingMore handleList={"getCurr"}></LoadingMore>
                             </ul>
                         </div>
                     </div>

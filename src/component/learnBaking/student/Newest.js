@@ -1,10 +1,9 @@
-import React, {Component,Fragment} from 'react';
+import React, {Component} from 'react';
 import "@asset/css/learnBaking/Newest.scss"
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux"
 import actionCreator from "@store/actionCreator";
 import LoadingMore from "@component/common/loadingMore";
-import {withRouter} from "react-router-dom"
 class Newest extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +15,7 @@ class Newest extends Component {
 
     render() {
         return (
-            <Fragment>
+            <div>
                 <div className="show_new">
                     {
                         this.props.newestList.map((item,index)=>(
@@ -37,14 +36,13 @@ class Newest extends Component {
                     <LoadingMore handleList={"getNewest"}></LoadingMore>
 
                 </div>
-            </Fragment>
+            </div>
         )
     }
     componentDidMount(){
-        console.log(this.props.match.params.contentId)
         if(this.props.newestList.length===0){
-            this.props.getNewest({pageIndex:0,contentId:this.props.match.params.contentId})
+            this.props.getNewest()
         }
     }
 }
-export default withRouter(connect((state)=>({newestList: state.learnBaking.newestList,introduces:state.learnBaking.introduces}),(dispatch)=>bindActionCreators(actionCreator,dispatch))(Newest));
+export default connect((state)=>({newestList: state.learnBaking.newestList,introduces:state.learnBaking.introduces}),(dispatch)=>bindActionCreators(actionCreator,dispatch))(Newest);

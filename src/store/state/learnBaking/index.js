@@ -6,5 +6,5 @@ export default {
     dishList:{},
     floorList:[],
     homeworkList:[],
-    curriculumList:[],
+    curriculumList:[]
 }

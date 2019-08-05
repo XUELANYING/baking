@@ -1,5 +1,5 @@
-import  AddlistOSon from  "../../../components/Me/addlistOSon/acSon"
-import  AddSonson from  "../../../components/Me/addlistOSon/acSonSon"
+import  AddlistOSon from  "@component/Me/addlistOSon/acSon"
+import  AddSonson from  "@component/Me/addlistOSon/acSonSon"
 export default [
     {// 作品
         to:"/me/activity/addlistOSon/:id",

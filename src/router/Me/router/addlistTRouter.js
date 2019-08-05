@@ -1,6 +1,6 @@
-import Convert from "../../../components/Me/addlistTwo/convert"
-import Daren from "../../../components/Me/addlistTwo/daren"
-import Record from "../../../components/Me/addlistTwo/record"
+import Convert from "@component/Me/addlistTwo/convert"
+import Daren from "@component/Me/addlistTwo/daren"
+import Record from"@component/Me/addlistTwo/record"
 
 
 export default [

@@ -1,7 +1,7 @@
-import Activity from "../../../components/Me/addlistOne/activity"
-import Curriculum from "../../../components/Me/addlistOne/curriculum"
-import Medal from "../../../components/Me/addlistOne/medal"
-import Sign from "../../../components/Me/addlistOne/sign"
+import Activity from "@component/Me/addlistOne/activity"
+import Curriculum from "@component/Me/addlistOne/curriculum"
+import Medal from "@component/Me/addlistOne/medal"
+import Sign from "@component/Me/addlistOne/sign"
 import AddlistOSon  from  "./addlistOneSon"
 
 export default [

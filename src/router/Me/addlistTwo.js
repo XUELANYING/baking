@@ -1,5 +1,5 @@
 import React from "react"
-import "./../../assets/scss/Me/Top.scss"
+import "@asset/css/nest/Me/Top.scss"
 import {
     NavLink,
     Link,
@@ -7,7 +7,7 @@ import {
     Route
 } from "react-router-dom"
 import ouper from "./router/addlistTRouter"
-import "../../assets/scss/Me/addlistOne.scss"
+import "@asset/css/nest/Me/addlistOne.scss"
 class TpusTaber extends React.Component{
     constructor(){
         super()

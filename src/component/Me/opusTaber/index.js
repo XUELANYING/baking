@@ -8,7 +8,7 @@ import {
     BrowserRouter as Router,
     withRouter
 } from "react-router-dom"
-import "../../../assets/scss/Me/ceeTaber.scss"
+import "@/asset/css/nest/Me/ceeTaber.scss"
 class OpusTaber extends React.Component{
     constructor(){
         super()

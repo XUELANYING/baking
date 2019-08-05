@@ -46,9 +46,9 @@ export default {
     },
     acSonson(con){//  addlistOne ==精彩活动-3级页
         return async (dispatch)=>{
-                 const data = await axios.get("/api/dish/get?_t="+Date.now()+"&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1MzkzMjU5NiwiaWF0IjoxNTY0NTQzNzk2fQ.LX3DofGWSer3iUak_42AsPu61jebz3DQQOAGgFJPaLE&contentId="+con)
-                // console.log(data.data.dish)
-                 dispatch(acSonson(data.data.dish))
+                 const data = await axios.get("/api/dish/get?_t=1564987166103&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1MzkzMjU5NiwiaWF0IjoxNTY0NTQzNzk2fQ.LX3DofGWSer3iUak_42AsPu61jebz3DQQOAGgFJPaLE&contentId="+con)
+                //console.log(data.data.data)
+                 dispatch(acSonson(data.data.datadish))
            }
 
     },

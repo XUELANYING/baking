@@ -6,11 +6,10 @@ import {
     Link,
     Switch
 } from "react-router-dom"
-import "../../../assets/scss/Me/Top.scss"
-import OpusTaber from "../../../router/myNay";
+import "@asset/css/nest/Me/Top.scss"
 
-import AddListone  from "../../../router/Me/addlistOne";
-import AddListtwo  from "../../../router/Me/addlistTwo"
+import AddListone  from "@router/Me/addlistOne";
+import AddListtwo  from "@router/Me/addlistTwo"
 
 //import OpusTaber from "../../../router/Me/待优化"
 //创建人：郭郭

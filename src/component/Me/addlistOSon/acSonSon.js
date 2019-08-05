@@ -5,21 +5,22 @@ import {
 } from "react-router-dom"
 import {connect} from "react-redux";
 import  {bindActionCreators}from "redux";
-import test from "../../../store/actionCreator/Me";
+import test from "@store/actionCreator/Me";
 class AcSonson extends React.Component{
     render(){
+        console.log(this.props.sondoubleSon)
         return (
             <div>
                 我是儿子
-                {
-                    this.props.sondoubleSon.map((v,i)=>{
-                          return (
-                              <div key={i}>
-                                  <img src={v.coverImage} alt=""/>
-                              </div>
-                          )
-                    })
-            }
+                {/*{*/}
+                    {/*this.props.sondoubleSon.map((v,i)=>{*/}
+                          {/*return (*/}
+                              {/*<div key={i}>*/}
+                                  {/*<img src={v.clientImage} alt=""/>*/}
+                              {/*</div>*/}
+                          {/*)*/}
+                    {/*})*/}
+            {/*}*/}
             </div>
         )
 

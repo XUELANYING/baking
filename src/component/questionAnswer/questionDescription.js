@@ -1,39 +1,37 @@
 import React from 'react';
-import {withRouter,Link} from "react-router-dom"
+import {withRouter} from "react-router-dom"
 import "../../asset/css/questionAnswer/eidtQuestion.scss"
-import { Upload, Icon, Modal } from 'antd';
-
+import { ImagePicker, WingBlank, SegmentedControl } from 'antd-mobile';
+const data = [{
+    url: 'https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg',
+    id: '2121',
+}, {
+    url: 'https://zos.alipayobjects.com/rmsportal/hqQWgTXdrlmVVYi.jpeg',
+    id: '2122',
+}];
 class QuestionDescription extends React.Component {
     constructor() {
         super();
         this.state = {
-            previewVisible: false,
-            previewImage: '',
-            fileList: [],
+            files: data,
+            multiple: false,
         }
     }
-    handleCancel = () => this.setState({ previewVisible: false });
-
-    handlePreview = async file => {
-        if (!file.url && !file.preview) {
-            file.preview = await this.getBase64(file.originFileObj);
-        }
-
+    onChange = (files, type, index) => {
+        console.log(files, type, index);
         this.setState({
-            previewImage: file.url || file.preview,
-            previewVisible: true,
+            files,
         });
-    };
-
-    handleChange = ({ fileList }) => this.setState({ fileList });
+    }
+    onSegChange = (e) => {
+        const index = e.nativeEvent.selectedSegmentIndex;
+        this.setState({
+            multiple: index === 1,
+        });
+    }
     render() {
-        const { previewVisible, previewImage, fileList } = this.state;
-        const uploadButton = (
-            <div>
-                <Icon type="plus" />
-                <div className="ant-upload-text">Upload</div>
-            </div>
-        );
+        const { files } = this.state;
+
         return (
             <div className={"editQuestion"}>
                 <div className={"tab"}>
@@ -43,26 +41,20 @@ class QuestionDescription extends React.Component {
                         <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/></span>
                     <span onClick={this.handleOnClick.bind(this)}>完成</span>
                 </div>
-                <div className={"edit-wrap"}>
-                    <input className={"edit-box"} type="text" ref={"val"} placeholder={"填写问题相关描述信息（选填）"}/>
-
-                    <div>
-                        <Upload
-                            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-                            listType="picture"
-                            fileList={fileList}
-                            onPreview={this.handlePreview}
-                            onChange={this.handleChange}
-                        >
-                            {fileList.length >= 8 ? null : uploadButton}
-                        </Upload>
-                        <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
-                            <img alt="example" style={{ width: '100%' }} src={previewImage} />
-                        </Modal>
-                    </div>
-
-
-                </div>
+                <WingBlank>
+                    <SegmentedControl
+                        values={['切换到单选', '切换到多选']}
+                        selectedIndex={this.state.multiple ? 1 : 0}
+                        onChange={this.onSegChange}
+                    />
+                    <ImagePicker
+                        files={files}
+                        onChange={this.onChange}
+                        onImageClick={(index, fs) => console.log(index, fs)}
+                        selectable={files.length < 7}
+                        multiple={this.state.multiple}
+                    />
+                </WingBlank>
                 <div className={"footer-upload"}>
                     <div className={"upload-box"}>
                         <span>上传图片</span>
@@ -77,15 +69,7 @@ class QuestionDescription extends React.Component {
         )
     }
     handleOnClick(){
-
-    }
-    getBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = error => reject(error);
-        });
+        
     }
 }
 

@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import store from './store';
 import 'lib-flexible';
-import 'antd/dist/antd.css';
+import 'antd-mobile/dist/antd-mobile.css';
 import * as serviceWorker from './serviceWorker';
 import config from './common/config'
 

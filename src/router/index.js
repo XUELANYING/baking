@@ -13,15 +13,11 @@ import QuestionDescription from '../component/questionAnswer/questionDescription
 import Lesson from "@views/learnBaking/lesson"
 import Student from "@views/learnBaking/student"
 import University from "@views/learnBaking/university"
-
-import CourseList from "@views/learnBaking/courseList"
-
 /*郭郭的路由跳转*/
 import opusTaber from  "@component/Me/opusTaber"
 import addlistOne from "./Me/router/addlistORoute"
 import addlistTwo from "./Me/router/addlistTRouter"
-
-
+/////////////////////////////////////////////////////
 
 export default {
     basename: "/m",
@@ -170,21 +166,10 @@ export default {
             }
         },
         {
-            to:"/student/:contentId",
-            path:"/student/:contentId",
+            to:"/student",
+            path:"/student",
             content:"学员作品",
             component:Student,
-            display: true,
-            meta:{
-                keywored:"关键字",
-                descrieption:"描述",
-            }
-        },
-        {
-            to:"/courseList",
-            path:"/courseList",
-            content:"课程列表",
-            component:CourseList,
             display: true,
             meta:{
                 keywored:"关键字",

@@ -23,8 +23,7 @@ export default function(state=initState,{type,payload}){
             state.homeworkList = payload;
             break;
         case actionType.UP_CUURR:
-            state.curriculumList = [...state.curriculumList,...payload];
-            break;
+            state.curriculumList = [...state.curriculumList,...payload]
     }
     return state;
 }

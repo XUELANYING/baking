@@ -12,6 +12,7 @@ import actionCreator from './store/actionCreator'
 import RouterGuard from "./router/routerGuard";
 import Loading from './component/common/loading'
 import axios from 'axios'
+import Lrouters from "./router/Lrouters";
 
 
 class App extends React.Component {
@@ -33,7 +34,11 @@ class App extends React.Component {
                                            path={v.to}></Route>
                                 ))
                             }
-
+                            {
+                                Lrouters.map((v,i)=>(
+                                    <Route exact={v.exact} key={i} path={v.path} component={v.component}></Route>
+                                ))
+                            }
                         </Switch>
                     </Router>
                 }

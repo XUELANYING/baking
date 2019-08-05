@@ -18,7 +18,7 @@ class Lesson extends Component {
     }
 
     render() {
-        console.log(this.state.isVideo, 111)
+        console.log(this, 111)
         return (
             this.props.lessonList.shareTitle ? <div className={"lessonCom"}>
                 {

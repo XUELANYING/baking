@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e923009-3a61-43ac-bc12-f2a642fc202b" name="默认更改列表" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/baking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/baking.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/nest/Me/Top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/Top.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/nest/Me/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Me/addlistOSon/acSonSon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Me/addlistOSon/acSonSon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Me/opusTaber/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Me/opusTaber/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Me/top/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Me/top/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mock/clientInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/clientInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Me/addlistOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Me/addlistOne.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Me/addlistTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Me/addlistTwo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Me/router/addlistORoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Me/router/addlistORoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Me/router/addlistOneSon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Me/router/addlistOneSon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Me/router/addlistTRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Me/router/addlistTRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/Me/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreator/Me/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/nest/Me/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nest/nest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nest/nest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+>>>>>>> guoguo
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +47,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="js" value="40" />
+=======
+          <entry key="js" value="39" />
+>>>>>>> guoguo
           <entry key="json" value="1" />
           <entry key="scss" value="7" />
         </counts>
@@ -32,7 +59,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
+<<<<<<< HEAD
           <entry key="JavaScript" value="40" />
+=======
+          <entry key="JavaScript" value="39" />
+>>>>>>> guoguo
           <entry key="SCSS" value="7" />
         </counts>
       </usages-collector>
@@ -51,6 +82,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
@@ -64,6 +96,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf />
+>>>>>>> guoguo
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,7 +143,11 @@
     <option name="width" value="664" />
     <option name="height" value="380" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+=======
+  <component name="ProjectLevelVcsManager">
+>>>>>>> guoguo
     <ConfirmationsSetting value="2" id="添加" />
   </component>
   <component name="ProjectView">
@@ -129,12 +168,15 @@
               <item name="baking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="baking" type="b2602c69:ProjectViewProjectNode" />
               <item name="baking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> guoguo
           </expand>
           <select />
         </subPane>
@@ -183,16 +225,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564978523742</updated>
+<<<<<<< HEAD
       <workItem from="1564978525615" duration="5449000" />
+=======
+      <workItem from="1564978525615" duration="5196000" />
+>>>>>>> guoguo
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="5449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1477" height="888" extended-state="6" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="5196000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1477" height="888" extended-state="6" />
+>>>>>>> guoguo
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -226,7 +279,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/router/index.js</url>
+<<<<<<< HEAD
           <line>29</line>
+=======
+          <line>39</line>
+>>>>>>> guoguo
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -507,6 +564,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-360">
@@ -516,5 +574,7 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> guoguo
   </component>
 </project>

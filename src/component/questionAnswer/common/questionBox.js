@@ -1,9 +1,9 @@
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import actionCreator from "../../store/actionCreator";
-import LoadingMore from '../../component/common/loadingMore'
-import {withRouter} from 'react-router-dom'
+import actionCreator from "../../../store/actionCreator/index";
+import LoadingMore from '../../common/loadingMore'
+import {withRouter,Link} from 'react-router-dom'
 
 class Box extends React.Component {
     constructor() {
@@ -51,11 +51,9 @@ class Box extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.questionAnswer.hotList.length === 0) {
+        if (this.props.list.length === 0) {
             this.props[this.props.boxList]()
         }
-        console.log("接受的函数名", this.props.boxList)
-        console.log("接受的列表名", this.props.list)
     }
 }
 

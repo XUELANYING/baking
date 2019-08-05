@@ -1,6 +1,7 @@
 .questionDetail{
     width: 100%;
-
+    height: 100%;
+    background: #F5F7F9;
 }
 .detail-top{
     display: flex;
@@ -31,9 +32,11 @@
     line-height: 25px;
     font-weight: bold;
     padding: 10px 15px;
+    background: #fff;
 }
 .padding1015{
     padding: 10px 15px;
+    background: #fff;
 }
 .recipes{
     height: 70px;
@@ -141,7 +144,7 @@
     }
 }
 .margintop44{
-    margin-top: 44px;
+    padding-top: 44px;
 }
 .detail-wrap{
     width: 100%;
@@ -151,5 +154,26 @@
         padding: 10px 15px;
         background: #fff;
         margin-bottom: 10px;
+    }
+}
+.tab-detail{
+    height: 49px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    .tab-item{
+        display: flex;
+        align-items: center;
+        img{
+            height: 24px;
+            width:24px;
+            margin-right: 5px;
+        }
+        span{
+            color: #999;
+        }
     }
 }

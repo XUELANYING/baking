@@ -1,14 +1,15 @@
-﻿import LearnBaking from '@views/learnBaking/learnBaking'
-import BarkingRing from '@views/bakingRing/bakingRing'
-import Nest from '@views/nest/nest'
-import QuestionAnswer from '@views/questionAnswer/questionAnswer'
-
-import Essence from '@views/questionAnswer/essence';
-import New from '@views/questionAnswer/new';
-import Hot from '@views/questionAnswer/hot'
-import QuestionDetail from '@component/questionAnswer/questionDetail'
-import AnswerDetail from '@component/questionAnswer/answerDetail'
-
+import LearnBaking from '../views/learnBaking/learnBaking'
+import BarkingRing from '../views/bakingRing/bakingRing'
+import Nest from '../views/nest/nest'
+import QuestionAnswer from '../views/questionAnswer/questionAnswer'
+import Essence from '../views/questionAnswer/essence';
+import New from '../views/questionAnswer/new';
+import Hot from '../views/questionAnswer/hot'
+import QuestionDetail from '../component/questionAnswer/questionDetail'
+import AnswerDetail from '../component/questionAnswer/answerDetail'
+import EditQuestion from '../component/questionAnswer/editQuestion'
+import ClientInfo from '../component/questionAnswer/clientInfo'
+import QuestionDescription from '../component/questionAnswer/questionDescription'
 import Lesson from "@views/learnBaking/lesson"
 import Student from "@views/learnBaking/student"
 import University from "@views/learnBaking/university"
@@ -109,6 +110,7 @@ export default {
             component: QuestionDetail,
             path: '/question/',
             to: '/question/:id/',
+            exact:true,
             display: true,//隐藏
             meta: {
                 unActive: null,
@@ -147,15 +149,46 @@ export default {
                 descrieption:"描述",
             }
         },
+    {
+        to:"/university/:contentId",
+        path:"/university/:contentId",
+        content:"作品",
+        component:University,
+        display: true,
+        meta:{
+        keywored:"关键字",
+        descrieption:"描述",
+       }
+    },
+    {
+            component: EditQuestion,
+            path: '/edit/question',
+            to: '/edit/question',
+            display: true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+        },
         {
-            to:"/university/:contentId",
-            path:"/university/:contentId",
-            content:"作品",
-            component:University,
-            display: true,
-            meta:{
-                keywored:"关键字",
-                descrieption:"描述",
+            component: QuestionDescription,
+            path: '/question/description',
+            to: '/question/description/:text',
+            exact:true,
+            display: true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+        },
+        {
+            component: ClientInfo,
+            path: '/clientInfo',
+            to: '/clientInfo/:clientId',
+            display: true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
             }
         },
     ]

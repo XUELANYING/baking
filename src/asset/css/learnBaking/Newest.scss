@@ -1,0 +1,58 @@
+.strigth{
+  height: 100%;
+  overflow: hidden;
+}
+.show_new{
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #ffffff;
+  align-content: center;
+  flex-wrap: wrap;
+  .show-con{
+    margin: 5px;
+    width: 46%;
+    height: 278px;
+    border: 1px solid #fff;
+    .image{
+      width: 166px;
+      height: 166px;
+    }
+    .show-client{
+      margin: 8px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      img{
+        width: 20px;
+        height: 20px;
+        margin-right: 3px;
+        border-radius:30px;
+      }
+      i{
+        color: #B5B5B5;
+        font-size: 11px;
+      }
+    }
+    .introduce{
+      height: 36px;
+      padding: 0 4px 4px 4px;
+      color: #313131;
+      line-height: 18px;
+      font-size: 13px;
+    }
+    .likeNum{
+      display: flex;
+      justify-content: center;
+      height: 19px;
+      margin: 7px 0 15px;
+      font-size: 11px;
+      img{
+        width: 16px;
+        height: 16px;
+      }
+
+    }
+  }
+}

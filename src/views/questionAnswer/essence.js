@@ -2,8 +2,8 @@ import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
-import actionCreator from "../../store/actionCreator";
-import LoadingMore from "../../component/common/loadingMore";
+import actionCreator from "@store/actionCreator";
+import LoadingMore from "@component/common/loadingMore";
 
 class Essence extends React.Component {
     constructor() {

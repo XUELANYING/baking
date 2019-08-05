@@ -1,14 +1,17 @@
-﻿import LearnBaking from '../views/learnBaking/learnBaking'
-import BarkingRing from '../views/bakingRing/bakingRing'
-import Nest from '../views/nest/nest'
-import QuestionAnswer from '../views/questionAnswer/questionAnswer'
+﻿import LearnBaking from '@views/learnBaking/learnBaking'
+import BarkingRing from '@views/bakingRing/bakingRing'
+import Nest from '@views/nest/nest'
+import QuestionAnswer from '@views/questionAnswer/questionAnswer'
 
-import Essence from '../views/questionAnswer/essence';
-import New from '../views/questionAnswer/new';
-import Hot from '../views/questionAnswer/hot'
-import QuestionDetail from '../component/questionAnswer/questionDetail'
-import AnswerDetail from '../component/questionAnswer/answerDetail'
+import Essence from '@views/questionAnswer/essence';
+import New from '@views/questionAnswer/new';
+import Hot from '@views/questionAnswer/hot'
+import QuestionDetail from '@component/questionAnswer/questionDetail'
+import AnswerDetail from '@component/questionAnswer/answerDetail'
 
+import Lesson from "@views/learnBaking/lesson"
+import Student from "@views/learnBaking/student"
+import University from "@views/learnBaking/university"
 
 export default {
     basename: "/m",
@@ -121,6 +124,39 @@ export default {
                 unActive: null,
                 active: null
             }
-        }
+        },
+        {
+            to:"/lesson",
+            path:"/lesson",
+            content:"详情",
+            component:Lesson,
+            display: true,
+            meta:{
+                keywored:"关键字",
+                descrieption:"描述",
+            }
+        },
+        {
+            to:"/student",
+            path:"/student",
+            content:"学员作品",
+            component:Student,
+            display: true,
+            meta:{
+                keywored:"关键字",
+                descrieption:"描述",
+            }
+        },
+        {
+            to:"/university/:contentId",
+            path:"/university/:contentId",
+            content:"作品",
+            component:University,
+            display: true,
+            meta:{
+                keywored:"关键字",
+                descrieption:"描述",
+            }
+        },
     ]
 }

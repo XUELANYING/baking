@@ -42,11 +42,6 @@ class QuestionDescription extends React.Component {
                     <span onClick={this.handleOnClick.bind(this)}>完成</span>
                 </div>
                 <WingBlank>
-                    <SegmentedControl
-                        values={['切换到单选', '切换到多选']}
-                        selectedIndex={this.state.multiple ? 1 : 0}
-                        onChange={this.onSegChange}
-                    />
                     <ImagePicker
                         files={files}
                         onChange={this.onChange}
@@ -69,7 +64,7 @@ class QuestionDescription extends React.Component {
         )
     }
     handleOnClick(){
-        
+
     }
 }
 

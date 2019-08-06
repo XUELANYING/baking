@@ -6,6 +6,7 @@ import UserWork from './userWork'
 import UserRecipe from './userRecipe'
 import UserAnswer from '../../component/questionAnswer/userAnswer'
 import actionCreator from "../../store/actionCreator";
+import TopWrap from '../../component/common/topWrap'
 import "../../asset/css/questionAnswer/clientInfo.scss"
 
 class ClientInfo extends React.Component {
@@ -21,16 +22,7 @@ class ClientInfo extends React.Component {
         const achievements = this.props.achievements
         return (
             <div className={"clientInfo-wrap"}>
-                <div className={'clientInfo-top'}>
-                    <span onClick={() => {
-                        this.props.history.go(-1)
-                    }}>
-                        <img className={'icon'}
-                             src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"
-                             alt=""/>
-                    </span>
-                    <span className={"titleCon"}>举报</span>
-                </div>
+                <TopWrap styleType={"s1"}></TopWrap>
                 <div className={"client-box"}>
                     <div className={"client-avator"}>
                         <img src={info.image} alt=""/>

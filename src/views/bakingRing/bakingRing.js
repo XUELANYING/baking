@@ -1,7 +1,8 @@
 import React from 'react';
-import {Switch, Link, Route} from 'react-router-dom'
+import {Switch, Link, Route,withRouter} from 'react-router-dom'
 
-export default class BakingRing extends React.Component {
+
+class BakingRing extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -11,9 +12,10 @@ export default class BakingRing extends React.Component {
 
     render() {
         return (
-            <div>BakingRing
-
+            <div>
+                BakingRing
             </div>
         )
     }
 }
+export default withRouter(BakingRing)

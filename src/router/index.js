@@ -15,10 +15,11 @@ import Student from "@views/learnBaking/student"
 import University from "@views/learnBaking/university"
 import CourseList from "@views/learnBaking/courseList"
 /*郭郭的路由跳转*/
-import opusTaber from  "@component/Me/opusTaber"
+import opusTaber from "@component/Me/opusTaber"
 import addlistOne from "./Me/router/addlistORoute"
 import addlistTwo from "./Me/router/addlistTRouter"
 /////////////////////////////////////////////////////
+
 
 export default {
     basename: "/m",
@@ -34,6 +35,10 @@ export default {
                 active: "https://image.hongbeibang.com/FsxN7RUFRJ9Zdris5Z22haR2xIhj?50X50&imageView2/1/w/50/h/50",
                 isShow: true,
             },
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
+            },
             children: [//子路由
 
             ]
@@ -42,6 +47,10 @@ export default {
             component: BarkingRing,
             to: '/show',
             name: "烘焙圈",
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
+            },
             meta: {
                 title: "烘焙圈_烘焙秀秀_烘焙帮",
                 unActive: 'https://image.hongbeibang.com/Fkpdn7F9EWxvNeSS8M7V4_xbRPlf?50X50&imageView2/1/w/50/h/50',
@@ -58,6 +67,10 @@ export default {
                 unActive: 'https://image.hongbeibang.com/Flm_lYHJQA56h0VyhdRhQ1i5iO06?50X50&imageView2/1/w/50/h/50',
                 active: 'https://image.hongbeibang.com/Fj5pW1jZYwlS9rB3h_nsvXNptuPX?50X50&imageView2/1/w/50/h/50',
                 isShow: true,
+            },
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
             },
             children: [//子路由
                 {
@@ -102,43 +115,44 @@ export default {
             component: Nest,
             to: '/me',
             name: "小窝",
-            exact:true,
+            exact: true,
             meta: {
                 title: "郭郭的小窝_烘焙帮",
                 unActive: 'https://image.hongbeibang.com/FrYeKj0MohOJQuNzUgCugg90cHCS?50X50&imageView2/1/w/50/h/50',
                 active: 'https://image.hongbeibang.com/FpNSY800vY0I5ytvWaqDbdJqT0HR?50X50&imageView2/1/w/50/h/50',
                 isShow: true,
             },
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
+            },
             children: [//子路由
-
             ]
         },
 
         {   //////////////郭郭的路由跳转////////////////
-            to:"/me/opustaber/:id",
-            path:'/me/opustaber/:id',
-            context:"切换",
-            component:opusTaber,
-            display:true,
-            exact:true,
-            meta:{
-                title:"作品和食品_烘焙帮",
-                keywored:"关键字",
-                descrieption:"描述",
-                isShow:false,
+            to: "/me/opustaber/:id",
+            path: '/me/opustaber/:id',
+            context: "切换",
+            component: opusTaber,
+            display: true,
+            exact: true,
+            meta: {
+                title: "作品和食品_烘焙帮",
+                keywored: "关键字",
+                descrieption: "描述",
+                isShow: false,
             },
+            children:[]
         },
-
         ...addlistOne,
         ...addlistTwo,
-
-
 
         {
             component: QuestionDetail,
             path: '/question/',
             to: '/question/:id/',
-            exact:true,
+            exact: true,
             display: true,//隐藏
             meta: {
                 unActive: null,
@@ -156,50 +170,52 @@ export default {
             }
         },
         {
-            to:"/lesson/:contentId/:clientId",
-            path:"/lesson/:contentId/:clientId",
-            content:"详情",
-            component:Lesson,
+
+            to: "/lesson/:contentId/:clientId",
+            path: "/lesson/:contentId/:clientId",
+            content: "详情",
+            component: Lesson,
             display: true,
-            meta:{
-                keywored:"关键字",
-                descrieption:"描述",
+            meta: {
+                keywored: "关键字",
+                descrieption: "描述",
             }
         },
         {
-            to:"/student/:contentId",
-            path:"/student/:contentId",
-            content:"学员作品",
-            component:Student,
+
+            to: "/student/:contentId",
+            path: "/student/:contentId",
+            content: "学员作品",
+            component: Student,
             display: true,
-            meta:{
-                keywored:"关键字",
-                descrieption:"描述",
+            meta: {
+                keywored: "关键字",
+                descrieption: "描述",
             }
         },
         {
-            to:"/courseList/:contentId/:clientId",
-            path:"/courseList/:contentId/:clientId",
-            content:"课程列表",
-            component:CourseList,
+            to: "/courseList/:contentId/:clientId",
+            path: "/courseList/:contentId/:clientId",
+            content: "课程列表",
+            component: CourseList,
             display: true,
-            meta:{
-                keywored:"关键字",
-                descrieption:"描述",
+            meta: {
+                keywored: "关键字",
+                descrieption: "描述",
             }
         },
-    {
-        to:"/university/:contentId",
-        path:"/university/:contentId",
-        content:"作品",
-        component:University,
-        display: true,
-        meta:{
-        keywored:"关键字",
-        descrieption:"描述",
-       }
-    },
-    {
+        {
+            to: "/university/:contentId",
+            path: "/university/:contentId",
+            content: "作品",
+            component: University,
+            display: true,
+            meta: {
+                keywored: "关键字",
+                descrieption: "描述",
+            }
+        },
+        {
             component: EditQuestion,
             path: '/edit/question',
             to: '/edit/question',
@@ -213,7 +229,7 @@ export default {
             component: QuestionDescription,
             path: '/question/description',
             to: '/question/description/:text',
-            exact:true,
+            exact: true,
             display: true,//隐藏
             meta: {
                 unActive: null,
@@ -230,7 +246,5 @@ export default {
                 active: null
             }
         },
-
-
     ]
 }

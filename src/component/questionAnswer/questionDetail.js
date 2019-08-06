@@ -4,23 +4,13 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import '../../asset/css/questionAnswer/questionDetail.scss'
 import actionCreator from "../../store/actionCreator";
+import TopWrap from "../common/topWrap";
 
 class QuestionDetail extends React.Component {
     render() {
         return (
             <div className={"questionDetail"}>
-                <div className={'detail-top'}>
-                    <span onClick={() => {
-                        this.props.history.go(-1)
-                    }}>
-                        <img className={'icon'}
-                             src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"
-                             alt=""/>
-                    </span>
-                    <div>
-                        <span className={'collect'}>收藏</span>
-                    </div>
-                </div>
+                <TopWrap styleType={"s2"}></TopWrap>
                 <div className={"margintop44"}>
                     <div className={'detail-title'}>{this.props.questionDetail.coverTitle}</div>
                     <div className={"padding1015"}>

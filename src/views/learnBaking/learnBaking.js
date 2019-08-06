@@ -1,12 +1,11 @@
 import React from 'react';
-import {Link,Route,Switch,NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import router from "../../router";
 import '../../asset/css/learnBaking/index.scss'
-
-
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
+// import {bindActionCreators} from 'redux'
+// import {connect} from 'react-redux'
 import ShowList from "../../component/learnBaking/showList"
+import KindList from "../../component/learnBaking/kindList"
 export default class LearnBarking extends React.Component {
     constructor() {
         super();
@@ -18,19 +17,6 @@ export default class LearnBarking extends React.Component {
     render() {
         return (
             <div>
-              
-                <Switch>
-                    {
-                    //     this.props.children.map((v,i)=>(
-                    //         <Route key={i} path={v.to} {...v}/>
-                    //     ))
-                    }
-                </Switch>
-                {
-                    // this.props.children.map((v,i)=>(
-                    //     <Link key={i} to={v.to}>{v.name}</Link>
-                    // ))
-                }
                 <nav>
                     {
                         router.routers.map((v,i)=>(
@@ -43,10 +29,16 @@ export default class LearnBarking extends React.Component {
                     }
                 </nav>
                 <ShowList></ShowList>
+                <KindList ></KindList>
+
+
+                <br/>
+                <br/><br/>
+                <br/>
             </div>
         )
     }
     componentDidMount(){
-        console.log(777,router.routers)
+        // console.log(777,router.routers)
     }
 }

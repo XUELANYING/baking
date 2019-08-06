@@ -1,0 +1,60 @@
+.lesson{
+  background: #eee;
+}
+.lesson .lesson-wrap{
+  width:100% ;
+
+}
+.lesson-wrap img{
+  width: 375px;
+  height: 210px;
+}
+.lesson-wrap .biaoti{
+
+  background: #fff;
+}
+.lesson-wrap .biaoti p{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #313131;
+  margin-bottom: 15px;
+}
+.biaoti .study{
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  font-size: 13px;
+  line-height: 26.5px;
+  color: #313131;
+}
+.biaoti .study .icon{
+  vertical-align: top;
+  width: 27px !important;
+  height: 27px !important;
+  float: left;
+  margin-top: 0px;
+}
+.adv{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.adv li em {
+  display: inline-block;
+  //align-items: center;
+  //justify-content: center;
+  //display: inline-flex;
+  height: 3px;
+  width: 3px;
+  border-radius: 1.5px;
+  background-color: #E98B71;
+}
+.adv li span{
+  color: #676767;
+  font-weight: 200;
+  font-size: 13px;
+  margin-left: 5px;
+  margin-right: 10px;
+  line-height: 18.5px;
+}

@@ -1,4 +1,9 @@
 export default {
-    recommendList:[]
+    recommendList:[],   //推荐课程列表
+    kindList:[],        //首页不同种类列表
+    baikeList:[],       //技巧百科列表
+    swiperList:[],      //轮播图列表
+    lessonList:{},      //新手教程
+    variousList:[],      //视频学堂页分类列表
 }
 

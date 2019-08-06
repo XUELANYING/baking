@@ -7,11 +7,7 @@ import AnswerBox from '../../component/questionAnswer/common/answerBox'
 
 
 class Essence extends React.Component {
-    constructor() {
-        super();
-    }
-
-    render() {
+      render() {
         return (
             <Fragment>
                 <AnswerBox  boxList={"getEssenceList"} list={"essenceList"}></AnswerBox>

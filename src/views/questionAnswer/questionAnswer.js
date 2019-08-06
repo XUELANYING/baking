@@ -13,13 +13,13 @@ class QuestionAnswer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id={"wrap"}>
                 <div className={'positionFixed'}>
-                    <div className={'searchWrap'}>
+                    <div className={'x-searchWrap'}>
                         <span className={'getQus'} onClick={() => {
                             this.props.history.push('/edit/question')
                         }}>提问</span>
-                        <div className={'searchBox'}>
+                        <div className={'x-searchBox'}>
                             <span>搜索问题</span>
                         </div>
                         <span>
@@ -51,6 +51,7 @@ class QuestionAnswer extends React.Component {
         if(this.props.location.pathname==='/questionAndAnswer'){
             this.props.history.push('/questionAndAnswer/new')
         }
+
     }
 }
 

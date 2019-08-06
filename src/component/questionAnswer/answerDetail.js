@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import actionCreator from "../../store/actionCreator";
 import '../../asset/css/questionAnswer/answerDetail.scss'
+import TopWrap from "../common/topWrap";
 
 class AnswerDetail extends React.Component {
     constructor(props) {
@@ -23,23 +24,10 @@ class AnswerDetail extends React.Component {
         const floor = this.props.questionAnswer.answerFloor
         return (
             <div className={"answerDetail"}>
-                <div className={'detail-top'}>
-                    <span onClick={() => {
-                        this.props.history.go(-1)
-                    }}>
-                        <img className={'icon'}
-                             src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"
-                             alt=""/>
-                    </span>
-                    <div>
-                        <span className={"title"}>回答</span>
-                    </div>
-                </div>
-
+                <TopWrap styleType={"s3"}></TopWrap>
                 <div className={"answer-title"}>
                     {info.title}
                 </div>
-
                 <div className={"answer-main"}>
                     <div className={"answer-user"}>
                         <div className={"user"}>

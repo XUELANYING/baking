@@ -6,52 +6,58 @@ import more from '../../asset/img/more.gif'
 import actionCreator from "../../store/actionCreator";
 
 class LoadingMore extends React.Component {
-    constructor(){
+    constructor() {
         super()
-        this.state={
-            pageIndex:0
+        this.state = {
+            pageIndex: 0
         }
     }
+
     render() {
         return (
-            <div style={{width:"100%",margin:"0 auto",background:"#fff",display:"flex",justifyContent:"center"}} ref={"wrapper"}>
+            <div
+                style={{width: "100%", margin: "0 auto", background: "#fff", display: "flex", justifyContent: "center"}}
+                ref={"wrapper"}>
                 <img src={more} alt=""/>
             </div>
         )
     }
-    componentDidMount(){
+
+    componentDidMount() {
         const wrapper = this.refs.wrapper;
-        window.addEventListener('scroll', ()=>{
+        window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
             const windowHeight = window.screen.height;//窗口高度
             // clearTimeout(this.timer);
             // this.timer = setTimeout(()=>{    //检测到屏幕滚动后，延时30ms进行下一次检测。优化体验,保证性能。
-            if(scrollTop && scrollTop<windowHeight){
+            if (scrollTop && scrollTop < windowHeight) {
                 this.setState({
-                    flag:true
+                    flag: true
                 })
-            }else{
+            } else {
                 this.setState({
-                    flag:false
+                    flag: false
                 })
             }
             // },0)
-            if(this.state.flag){
+            if (this.state.flag) {
                 this.handleClick()
             }
-        },false)
+        }, false)
     }
-    handleClick(){
 
-        if(this.props.handleList==="getClientRecipe" ||this.props.handleList==="getClientInfo" || this.props.handleList==="getClientAnswer"){
-            this.props[this.props.handleList]({pageIndex:0,clientId:this.props.match.params.clientId})
-        }else{
-            this.props[this.props.handleList](this.state.pageIndex+=10)
+    handleClick() {
+
+        if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {
+            this.props[this.props.handleList]({pageIndex: 0, clientId: this.props.match.params.clientId})
+        } else {
+            this.props[this.props.handleList](this.state.pageIndex += 10)
             this.setState({
-                pageIndex:this.state.pageIndex+=10
+                pageIndex: this.state.pageIndex += 10
             })
         }
 
     }
 }
-export default withRouter(connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreator,dispatch)))(LoadingMore));
+
+export default withRouter(connect((state) => ({...state}), (dispatch) => (bindActionCreators(actionCreator, dispatch)))(LoadingMore));

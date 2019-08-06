@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link,Route,Switch} from 'react-router-dom'
 
 export default class LearnBarking extends React.Component {
     constructor() {
@@ -18,3 +17,4 @@ export default class LearnBarking extends React.Component {
     }
 
 }
+

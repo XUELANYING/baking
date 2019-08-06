@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../../store/actionCreator/index";
 import LoadingMore from '../../common/loadingMore'
-import {withRouter,Link} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 class Box extends React.Component {
     constructor() {
@@ -16,7 +16,7 @@ class Box extends React.Component {
 
     render() {
         return (
-            <div className={'questionWrap '}>
+            <div className={'questionWrap'}>
                 {
                     this.props.questionAnswer[this.props.list].map((v, i) => (
                         <div key={i} className={'questionBox'} onClick={() => {

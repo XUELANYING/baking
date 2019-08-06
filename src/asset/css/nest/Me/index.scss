@@ -4,12 +4,14 @@
   min-height: 100px;
   overflow: hidden;
   background: #f7fbff;
+  position: relative;
   .son {
     img {
       width: 100px;
       height: 100px;
     }
   }
+
   /********Me_SetUp* z-index: 5***********/
   .MeSetUp {
      width: 100%;
@@ -23,7 +25,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 5;
+      z-index: 1;
       img {
         width: 27px;
         height: 27px;
@@ -32,7 +34,6 @@
       }
       .my_Top {
         position: absolute;
-       // height: 800px;
 
       }
     }

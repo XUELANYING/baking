@@ -40,6 +40,7 @@ body{
     left: 0;
     z-index: 10;
     padding: 8px 0;
+    z-index: 11;
 }
 .tabbar-item{
     color: #999999;

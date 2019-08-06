@@ -1,16 +1,36 @@
 import React from "react";
 import {
-    Route
+    BrowserRouter as Router,
+    NavLink,
+    Route,
+    Link,
+    Switch,
+    withRouter
 } from "react-router-dom"
-import Top from "../top"
 import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 
-export default class MeSetUp extends React.Component {
+class MeSetUp extends React.Component {
     state = {
-        docked: false,
+        open: false,
     }
+
     onOpenChange = (...args) => {
-        this.setState({ docked: !this.state.docked });
+       // console.log(args);
+        this.setState({open: !this.state.open});
+        const con = document.getElementsByClassName("my_Top")[0]
+        const see = document.getElementsByClassName("Me_SetUp")[0]
+        const ree = document.getElementsByClassName("am-drawer-draghandle")[0]
+
+        con.style.zIndex = 11
+        //console.log(args[0])
+         if(args[0]===false){
+             see.style.zIndex = 6
+             con.style.zIndex = 5
+             ree.style.display="none"
+         }
+    }
+    componentWillMount(){
+
     }
 
     render() {
@@ -29,20 +49,25 @@ export default class MeSetUp extends React.Component {
             })}
         </List>);
 
-        return (<div>
-            <NavBar className={"Me_SetUp"} icon={<Icon type="ellipsis" />} onClick={this.onOpenChange}>
+        return (
+            <div>
+            <NavBar className={"Me_SetUp"}  icon={<Icon type="ellipsis" />} onClick={this.onOpenChange}>
                 <img src="https://image.hongbeibang.com/FthUBRvh6uWFq7omAeGtn8A-0E4s?48X48&imageView2/1/w/48/h/48" alt=""/>
             </NavBar>
             <Drawer
                     position={'right'}
-                    className=" my_Top my-drawer"
+                    className="my_Top"
+                    sidebar={sidebar}
+                    style={{ minHeight: document.documentElement.clientHeight }}
                     contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
                     sidebarStyle={{ border: '1px solid #ddd' }}
-                    sidebar={sidebar}
-                    docked={this.state.docked}
+                    enableDragHandle
+                    open={this.state.open}
+                    onOpenChange={this.onOpenChange}
             >
-               {/*<Top></Top>*/}
+
             </Drawer>
         </div>);
     }
 }
+export default  withRouter(MeSetUp)

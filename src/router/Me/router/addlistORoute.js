@@ -2,7 +2,7 @@ import Activity from "@component/Me/addlistOne/activity"
 import Curriculum from "@component/Me/addlistOne/curriculum"
 import Medal from "@component/Me/addlistOne/medal"
 import Sign from "@component/Me/addlistOne/sign"
-import AddlistOSon  from  "./addlistOneSon"
+import addlistOneSon from "./addlistOneSon"
 
 export default [
     {// 作品
@@ -11,6 +11,7 @@ export default [
         context:"精彩活动",
         display:true,
         exact:true,
+        displaySon:false,
         img:"https://image.hongbeibang.com/FjqJkpwIsLMWXY0LsNTSRG853oJR?48X48&imageView2/1/w/48/h/48",
         imgs:"https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46",
         component:Activity,
@@ -28,6 +29,7 @@ export default [
         component:Curriculum,
         exact:true,
         display:true,
+        displaySon:false,
         img:"https://image.hongbeibang.com/FnuWoFzlqjbUFcZHkVG64M-cKA_N?48X48&imageView2/1/w/48/h/48",
         imgs:"https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46",
         meta:{
@@ -44,6 +46,7 @@ export default [
         component:Medal,
         exact:true,
         display:true,
+        displaySon:false,
         img:"https://image.hongbeibang.com/FpFAELJdsHHxStgBnhPdgYgGmAYo?48X48&imageView2/1/w/48/h/48",
         imgs:"https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46",
         meta:{
@@ -60,6 +63,7 @@ export default [
         component:Sign,
         exact:true,
         display:true,
+        displaySon:false,
         img:'https://image.hongbeibang.com/Fu1OwEAsExJ20OHVI2ZqBEtLtubY?48X48&imageView2/1/w/48/h/48',
         imgs:"https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46",
         meta:{
@@ -69,6 +73,6 @@ export default [
             isFooter:false
         },
     },
-        ...AddlistOSon
+    ...addlistOneSon
  ]
 

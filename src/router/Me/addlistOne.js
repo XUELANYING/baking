@@ -25,7 +25,7 @@ class OpusTaber extends React.Component{
                 {/*<Router>*/}
                     {
                         ouper.map((v,i)=>(
-                            <div key={i} className={"addListRoute"}>
+                            v.displaySon? null: <div key={i} className={"addListRoute"}>
                                 <Link to={v.to}  key={i} className={"addListRoute_son"}>
                                     <img src={v.img} alt="" className={"img"}/>
                                     <p>{v.context}</p>

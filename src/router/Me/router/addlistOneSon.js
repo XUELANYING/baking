@@ -6,6 +6,7 @@ export default [
         path:'/me/activity/addlistOSon/:id',
         context:"",
         display:true,
+        displaySon:true,
         exact:true,
         component:AddlistOSon,
         meta:{
@@ -19,8 +20,9 @@ export default [
         to:"/me/activity/addSonson/:id",
         path:'/me/activity/addSonson/:id',
         context:"",
-        display:true,
         exact:true,
+        display:true,
+        displaySon:true,
         component:AddSonson,
         meta:{
             title:"标题",

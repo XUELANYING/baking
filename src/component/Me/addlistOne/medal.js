@@ -11,13 +11,12 @@ import test from "../../../store/actionCreator/Me";
     render(){
         return (
             <div>
-
+                勋章
             </div>
         )
 
     }
      componentDidMount(){
-         this.props.Medal()
      }
 }
 export default connect((state)=>({medal:state.Me.medal}),(dispatch)=>bindActionCreators(test,dispatch))(Medal)

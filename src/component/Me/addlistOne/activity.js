@@ -11,7 +11,7 @@ import {
     Link,
     Switch
 } from "react-router-dom"
-
+//
  class Activity extends React.Component{
     constructor(props){
         super(props)
@@ -28,7 +28,7 @@ import {
                 {
                     this.props.test.map((item,i) => {
                         return (
-                            <div className={"conSon-ADD"} key={item.activityDisplay / 1 - 1}>
+                            <div className={"conSon-ADD"} key={i}>
                                 <h3>{item.activityPrefixTitle}:{item.coverTitle}</h3>
                                 <Link to={"/me/activity/addlistOSon/"+item.contentId} exact={item.exact}  key={i} >
                                     <img width={"100px"} src={item.image} alt=""/>
@@ -47,7 +47,7 @@ import {
 
     }
      componentDidMount(){
-           console.log(this.props)
+          // console.log(this.props)
          this.props.goodsCon()
      }
 }

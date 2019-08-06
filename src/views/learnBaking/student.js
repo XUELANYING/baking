@@ -52,9 +52,9 @@ class Student extends Component {
         })
     }
 
-    componentDidMount() {
-        this.props.getStudent()
-    }
+    // componentDidMount() {
+    //     this.props.getStudent()
+    // }
 }
 
 export default withRouter(connect((state) => ({

@@ -38,7 +38,6 @@ class LoadingMore extends React.Component {
             // },0)
             if(this.state.flag){
                 this.handleClick()
-                
             }
         },false)
     }
@@ -46,7 +45,12 @@ class LoadingMore extends React.Component {
 
         if(this.props.handleList==="getClientRecipe" ||this.props.handleList==="getClientInfo" || this.props.handleList==="getClientAnswer"){
             this.props[this.props.handleList]({pageIndex:0,clientId:this.props.match.params.clientId})
-        }else{
+        }else if(this.props.handleList==="getStudent" ||this.props.handleList==="getNewest"){
+            this.props[this.props.handleList]({pageIndex:this.state.pageIndex+=10,contentId:this.props.match.params.contentId})
+        }else if(this.props.handleList==="getCurr"){
+            this.props[this.props.handleList]({pageIndex:this.state.pageIndex+=10,contentId:this.props.match.params.contentId,clientId:this.props.match.params.clientId})
+        }
+        else{
             this.props[this.props.handleList](this.state.pageIndex+=10)
             this.setState({
                 pageIndex:this.state.pageIndex+=10

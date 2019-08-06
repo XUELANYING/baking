@@ -7,25 +7,25 @@ import BScroll from "better-scroll"
 import {withRouter, Link} from "react-router-dom"
 import PlayUrl from "../../component/learnBaking/lesson/playUrl"
 import TrySeeUrl from "../../component/learnBaking/lesson/trySeeUrl";
-
+import LoadingMore from "@component/common/loadingMore";
 class Lesson extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            contentId: 10497,
+            contentId: 0,
+            clientId:0,
             isVideo: true
         };
     }
 
     render() {
-        console.log(this, 111)
         return (
             this.props.lessonList.shareTitle ? <div className={"lessonCom"}>
                 {
                     this.state.isVideo ? <PlayUrl/> : <TrySeeUrl/>
                 }
                 <div className={"titles"}>
-                    <p>{this.state.isVideo ? this.props.lessonList.shareTitle : this.props.lessonList.trySeeTitle}</p>
+                    <p>{this.state.isVideo ? this.props.lessonList.shareTitle : "试看步骤:"+this.props.lessonList.trySeeTitle}</p>
                     <div className={"On-line"}>
                         <div className={"On-line-l"}>
                             <img
@@ -42,13 +42,24 @@ class Lesson extends Component {
                     </div>
                 </div>
                 <div className={"Study"}>
-
+                    <div className="study_con">
+                        <div className="study_top">
+                            <p>永久无限次回看</p>
+                            <p>购买后即看</p>
+                            <p>烘焙帮自营课程</p>
+                        </div>
+                        <div className="study_bot">
+                            <p>高效的学习体验</p>
+                            <p>分步骤学习</p>
+                            <p>专注打造唯一品类</p>
+                        </div>
+                    </div>
                 </div>
                 <div className={"show_lesson"}>
                     <div className={"homework"}>
                         <div className={"show-title"}>
                             <p>学员作业</p>
-                            <span onClick={()=>this.props.history.push("/student")}>查看更多</span>
+                            <span onClick={()=>this.props.history.push("/student/"+this.props.lessonList.educationCourseId)}>查看更多</span>
 
                         </div>
                         <div className="homework_con" ref={'hotList'}>
@@ -89,20 +100,22 @@ class Lesson extends Component {
                         </div>
                         <div className="tutor_introduce">
                             <img src={this.props.lessonList.clientImage} alt=""/>
-                            <p>微光</p>
+                            <p>{this.props.lessonList.clientName}</p>
                         </div>
                         <div dangerouslySetInnerHTML={{__html: this.props.lessonList.teacherIntroduce}}></div>
                     </div>
                     <div className={"tutorCourse"}>
                         <div className={"show-title"}>
                             <p>导师的其他课程</p>
-                            <span>查看全部</span>
+                            <span onClick={()=>this.props.history.push("/courseList/"+this.props.lessonList.educationCourseId+"/"+this.props.lessonList.clientId)}>查看全部</span>
                         </div>
                         <div className="curr_con" ref={'currList'}>
                             <ul className={"show_curr"}>
                                 {
                                     this.props.curriculumList.map((item, index) => (
-                                        <li className={"curr_list"} key={index}>
+                                        <li className={"curr_list"} key={index} onClick={() => {
+                                            this.props.history.push("/lesson/"+item.educationCourseId+"/"+item.clientId)
+                                        }}>
                                             <img src={item.image} alt=""/>
                                             <div className="curr_less">
                                                 <p>{item.shareTitle}</p>
@@ -179,13 +192,12 @@ class Lesson extends Component {
         this.setState({
             isVideo: !this.state.isVideo
         })
-        console.log(this.state.isVideo)
     }
 
     componentDidMount() {
-        this.props.getLesson()
-        this.props.getHomeWork()
-        this.props.getCurr()
+        this.props.getLesson(this.props.match.params.contentId)
+        this.props.getHomeWork(this.props.match.params.contentId)
+        this.props.getCurr({pageIndex:0,contentId:this.props.match.params.contentId,clientId:this.props.match.params.clientId})
     }
 
     componentDidUpdate() {
@@ -195,12 +207,12 @@ class Lesson extends Component {
                 tap: true,
                 click: true,
             })
-            console.log(this.scroll)
         }
         if (this.refs.currList) {
             this.scroll = new BScroll(this.refs.currList, {
                 scrollX: true,
-                tap: true
+                tap: true,
+                click: true,
             })
         }
     }

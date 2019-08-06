@@ -83,7 +83,7 @@ class List extends Component{
                     {
                         videoList.map((v,i)=>(
                             <div className="cookList" key={i}>
-                                <Link className="listInfo" to={"/lesson/"+v.contentId}>
+                                <Link className="listInfo" to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                                     <div className="listImg">
                                         <img src={v.image} alt=""/>
                                         <div className={"videoLogo"}>视频</div>

@@ -1,3 +1,8 @@
+//$color: rgb(random(256),random(123),random(356));
+//@mixin randomColor {
+//    background: $color;
+//}
+
 #bakingRing{
     #baking_header{
         width: 100%;
@@ -75,7 +80,7 @@
         .baking_type{
           overflow: auto;
           margin-left: 15px;
-          width: 400%;
+          width: 300%;
           padding:10px 0;
           div{
             display: inline-block;
@@ -93,7 +98,7 @@
               zoom: 1;
               box-sizing: border-box;
               color: #FFFFFF;
-              background: red;
+              //background: $color;
             }
           }
 

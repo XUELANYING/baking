@@ -4,6 +4,7 @@ import { NavLink} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
+import ShowListCommon from '../../component/bakingRing/ShowListCommon'
 class Latest extends Component{
     render(){
         return (
@@ -28,15 +29,31 @@ class Latest extends Component{
                     <div className={'baking_type'}>
                         {
                             this.props.communityList.map((v,i)=>(
-                                <div key={i}>
-                                    <NavLink to={'/community/'+v.communityId}>{v.name}</NavLink>
+                                <div key={i} >
+                                    <NavLink to={'/bakingCircle/'+v.communityId} style={{background:this.randomColor(1)}}>{v.name}</NavLink>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
+                <ShowListCommon></ShowListCommon>
             </div>
         )
+    }
+    randomColor(alpha){
+
+            if(alpha>1 || isNaN(alpha) || alpha<0){
+                alpha=1;
+            }
+            let color="rgba(";
+            for(let
+                    i=0;i<3;i++){
+                color+=parseInt(Math.random()*230);
+                color+=",";
+            }
+            color+=alpha+")";
+            return color;
+
     }
     componentDidMount(){
         // console.log('jing--------------------',this.props.activityList);
@@ -51,5 +68,6 @@ class Latest extends Component{
 }
 export default connect((state)=>({
     activityList:state.bakingRing.activityList,
-    communityList:state.bakingRing.communityList
+    communityList:state.bakingRing.communityList,
+    showList:state.bakingRing.showList
 }),(dispatch)=>(bindActionCreators(actionCreator,dispatch)))(Latest)

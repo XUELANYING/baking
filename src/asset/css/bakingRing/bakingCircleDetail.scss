@@ -1,0 +1,28 @@
+.community_head_bar_wrap{
+  width:100%;
+  .community_head_bar{
+    width: 100%;
+    position:fixed;
+    background: #fff;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .community_type{
+      margin:8px 33px;
+      text-align:center;
+      color:#999;
+      height: 30px;
+      font-size:14px;
+      box-sizing: border-box;
+      //background: red;
+      display: flex;
+      align-items: center;
+
+    }
+  }
+
+
+}

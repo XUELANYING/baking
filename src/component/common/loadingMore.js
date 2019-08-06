@@ -41,7 +41,8 @@ class LoadingMore extends React.Component {
         },false)
     }
     handleClick(){
-        this.props[this.props.handleList](this.state.pageIndex+=10)
+        console.log('jing________loadingMore',this.props);
+        this.props[this.props.handleList](this.state.pageIndex+=10);
         this.setState({
             pageIndex:this.state.pageIndex+=10
         })

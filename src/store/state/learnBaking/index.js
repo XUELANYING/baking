@@ -5,5 +5,7 @@ export default {
     swiperList:[],      //轮播图列表
     lessonList:{},      //新手教程
     variousList:[],      //视频学堂页分类列表
+    catalogList:[],      //课程目录
+    taskLisk:[],         //学员作业
 }
 

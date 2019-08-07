@@ -34,7 +34,7 @@ export default class University extends React.Component{
                 title:"其他",
                 categoryId:10180
             },
-        ]
+        ];
         this.state = {
             index:0,
         }

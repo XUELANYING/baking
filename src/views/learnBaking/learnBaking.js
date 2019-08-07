@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom'
 import {NavLink} from 'react-router-dom';
 import router from "../../router";
 import '../../asset/css/learnBaking/index.scss'
@@ -6,7 +7,7 @@ import '../../asset/css/learnBaking/index.scss'
 // import {connect} from 'react-redux'
 import ShowList from "../../component/learnBaking/showList"
 import KindList from "../../component/learnBaking/kindList"
-export default class LearnBarking extends React.Component {
+class LearnBarking extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -15,6 +16,7 @@ export default class LearnBarking extends React.Component {
     }
 
     render() {
+// console.log(1111,this.props.location.query.contentId)
         return (
             <div>
                 <nav>
@@ -24,6 +26,7 @@ export default class LearnBarking extends React.Component {
                                 <img src={v.meta.unActive} alt=""/>
                                 <h3>{v.name}</h3>
                             </NavLink>:null
+
                         ))
 
                     }
@@ -42,3 +45,5 @@ export default class LearnBarking extends React.Component {
         // console.log(777,router.routers)
     }
 }
+
+export default withRouter(LearnBarking)

@@ -1,7 +1,7 @@
 import React from "react";
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-// import {Link}from "react-router-dom";
+import {Link}from "react-router-dom";
 import actionCreator from "../../../store/actionCreator";
 import "../../../asset/css/learnBaking/cake.scss"
 
@@ -15,13 +15,17 @@ class Cake extends React.Component {
             <div id="cake">
                 {
                     this.props.variousList.map((v,i)=>(
-                        <dl key={i}>
-                            <dt>
-                                <img src={v.verticalImages} alt=""/>
-                                <i>{v.buyNum>1000?"1000+人参加":v.buyNum+"人参加"}</i>
-                            </dt>
-                            <dd>{v.shareTitle}</dd>
-                        </dl>
+
+                            <dl key={i}>
+                                <Link to={v.link}>
+                                <dt>
+                                    <img src={v.verticalImages} alt=""/>
+                                    <i>{v.buyNum>1000?"1000+人参加":v.buyNum+"人参加"}</i>
+                                </dt>
+                                <dd>{v.shareTitle}</dd>
+                                </Link>
+                            </dl>
+
                     ))
                 }
             </div>

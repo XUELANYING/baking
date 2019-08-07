@@ -18,11 +18,11 @@ export default {
     routers: [
         {
             component: LearnBaking,
-            name: "烘焙帮",
+            name: "学烘焙",
             to: '/',
             exact: true,
             meta: {
-                title: "学烘焙",
+                title: "烘焙帮",
                 unActive: 'https://image.hongbeibang.com/FhngZoiK_s7Zw4K3DxLogRfqoO06?50X50&imageView2/1/w/50/h/50',
                 active: "https://image.hongbeibang.com/FsxN7RUFRJ9Zdris5Z22haR2xIhj?50X50&imageView2/1/w/50/h/50",
                 isShow: true,
@@ -45,7 +45,7 @@ export default {
         {//学堂
             component:University,
             name:"视频学堂",
-            to:"/university",
+            to:"/universitysss",
             display: true,//隐藏
             meta:{
                 title:"烘焙帮学堂",

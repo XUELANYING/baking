@@ -13,7 +13,7 @@ class BaikeList extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div className={"ba-wrap"}>
                 {
                     this.props.baikeList.map((v,i)=>(
                         <section key={i} id={"baike"}>

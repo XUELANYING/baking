@@ -20,8 +20,14 @@ export default function(state=initState,{type,payload}){
         state.lessonList = {...state.lessonList,...payload};         //新手教程
         // console.log("新手",state.lessonList)
     }else if(type===actionType.GET_VARIOUSLIST){
-        state.variousList = [...payload];        //视频分页列表
+        state.variousList = [...payload];                              //视频分页列表
         console.log("variousList",state.variousList)
+    }else if(type===actionType.GET_CATALOGLIST){
+        state.catalogList = [...state.catalogList,...payload];        //课程目录
+        console.log("catalogList",state.catalogList)
+    }else if(type===actionType.GET_TASKLIST){
+        state.taskLisk = [...state.taskLisk,...payload];             //学员作业
+        console.log("taskLisk",state.taskLisk)
     }
     return state;
 }

@@ -2,7 +2,7 @@
   overflow: hidden;
   padding-bottom:44px;
   width:100%;
-  background: #eee;
+  //background: #eee;
   .activityDetail_head{
     overflow: hidden;
 
@@ -32,10 +32,13 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 10px 15px;
-
+    border-bottom:10px solid #eeeeee;
+    padding-top:44px;
     .dishDetail_info {
       display: flex;
+      padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
   
       img {
         width: 40px;
@@ -60,12 +63,87 @@
           color: #999;
         }
       }
+      .follow {
+          width: 60px;
+        height: 30px;
+          background-color: #FFFFFF;
+          border:#E98B71 1px solid;
+          border-radius: 4px;
+        text-align: center;
+        line-height: 30px;
+          span{
+            color: #E98B71;
+            font-size:12px;
+          }
+      }
+    }
+    .dishDetail_instroduce{
+      margin: 10px 15px 11px 15px;
+      font-size: 14px;
+      color: #4A4945;
+      line-height: 20px;
+      max-height: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .dishDetail_image{
+        margin: 0 11px;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+        div{
+          padding:4px;
+          box-sizing: border-box;
+          width:66.6%;
 
+          img{
+            width:100%;
+          }
+        }
+    }
+    .dishDetail_title{
+      margin: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 22px;
+      color: #4A4945;
+      overflow: hidden;
+      display: flex;
+      padding-bottom: 10px;
+      justify-content: space-between;
+      >:last-child{
+        font-size: 14px;
+        line-height: 22px;
+        color: #999999;
+        font-weight: 400;
+      }
     }
 
   }
-
-
+  .dishDetail_bottom{
+    background-color: #FFFFFF;
+    height: 40px;
+    padding: 0 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    section{
+      display: flex;
+      div{
+        margin-right: 40px;
+      }
+    }
+    div{
+      span{
+        font-size: 14px;
+        color: #999999;
+      }
+    }
+  }
 }
 
 

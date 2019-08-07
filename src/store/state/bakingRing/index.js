@@ -21,7 +21,7 @@ export default {
     showList:[],
 
     // 关注
-    follow:[]
+    followList:[]
 
 
 

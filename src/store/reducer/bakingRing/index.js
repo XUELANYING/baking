@@ -30,7 +30,7 @@ export default function(state=initState,{type,payload}){
             state.showList = [...state.showList,...payload];
             break;
         case actionType.GET_FOLLOW:
-            state.follow = [...payload];
+            state.followList = [...payload];
             break;
         default:
             break;

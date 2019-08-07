@@ -70,8 +70,10 @@ class recipeDetail extends Component{
             <div className={"recipeDetail"}>
                 <div className="detailTop">
                     <div className="topWrap">
-                        <span><img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"/></span>
-                        <div className="collect">
+                        <span onClick={()=>this.props.history.go(-1)}>
+                            <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"/>
+                        </span>
+                        <div className="collectLBox">
                             <div>收藏</div>
                         </div>
                     </div>
@@ -187,26 +189,30 @@ class recipeDetail extends Component{
                                 </div>
                             </div>
                             {/*可优化为组件*/}
-                            <div className="title">
-                                <span>食谱推荐</span>
-                                <strong>查看更多</strong>
-                            </div>
-                            <div className="commendList">
-                                <div className="listBox">
-                                    {
-                                        recipe.map((v,i)=>(
-                                            <div className="listInfo" key={i}>
-                                                <Link to={"/recipe/"+v.clientId+"/"+v.contentId}>
-                                                    <div className="infoImg">
-                                                        <img src={v.image} alt=""/>
-                                                    </div>
-                                                    <div className="charactor">{v.title}</div>
-                                                </Link>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
+                            {
+                                recipe.length!==0?<div className="title">
+                                    <span>食谱推荐</span>
+                                    <strong>查看更多</strong>
+                                </div>:null
+                            }
+                            {
+                                recipe.length!==0?<div className="commendList">
+                                    <div className="listBox">
+                                        {
+                                            recipe.map((v,i)=>(
+                                                <div className="listInfo" key={i}>
+                                                    <Link to={"/recipe/"+v.clientId+"/"+v.contentId}>
+                                                        <div className="infoImg">
+                                                            <img src={v.image} alt=""/>
+                                                        </div>
+                                                        <div className="charactor">{v.title}</div>
+                                                    </Link>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>:null
+                            }
 
                             <div className="title">
                                 <span>作者食谱</span>
@@ -237,13 +243,13 @@ class recipeDetail extends Component{
                                 <div className="VideoBox">
                                     {
                                         videoList.map((v,i)=>(
-                                            <div className="VideoInfo" key={i}>
+                                            <Link className="VideoInfo" key={i} to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                                                 <div className="VideoImg">
                                                     <img src={v.coverImage} alt=""/>
                                                 </div>
                                                 <div className="learning">{v.buyNum>1000?<span>1000+</span>:<span>{v.buyNum}</span>}<span>在学</span></div>
                                                 <div className="charactor">{v.coverTitle}</div>
-                                            </div>
+                                            </Link>
                                         ))
                                     }
                                 </div>

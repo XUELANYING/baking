@@ -9,6 +9,7 @@ class RouterGuard extends React.Component {
     render() {
         return (
             <Fragment>
+
                 <this.props.component children={this.props.children}/>
                 {
                     //isShow的值为true，则显示tabbar

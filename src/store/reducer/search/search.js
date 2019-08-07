@@ -11,8 +11,16 @@ export default function(state=searchState,{type,payload}){
         state.searchRecipeResults = payload.data
     }
     if(type === searchType.VideoType){
-        payload.list.length = payload.showNum;
+        if(payload.list.length > payload.showNum){
+            payload.list.length = payload.showNum;
+        }
         state.searchVideoList = payload.list;
+    }
+    if(type === searchType.SearchAnswer){
+        state.searchAnswerList = payload
+    }
+    if(type === searchType.SearchHelpFriends){
+        state.searchHFList = payload
     }
     // console.log(state)
     return state;

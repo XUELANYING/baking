@@ -47,6 +47,7 @@ class LoadingMore extends React.Component {
     }
 
 
+
     handleClick() {
 
         if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {

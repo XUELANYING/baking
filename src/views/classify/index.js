@@ -4,6 +4,7 @@ import {Route,BrowserRouter as Router,Link} from "react-router-dom"
 import getClassifyInfo,{getCommendList,getClassifyList} from "../../store/actionCreator/search/classify";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
+import SearchBar from "../../component/search/searchBar"
 
 class Classify extends Component{
     constructor(){
@@ -32,15 +33,7 @@ class Classify extends Component{
         return(
             <div className={"classifyWrap"}>
                 {/*搜索组件*/}
-                <div className="searchBox">
-                    <p className={"backImg"}>
-                        <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
-                    </p>
-                    <div className={"searchText"}>
-                        <input type="text" placeholder={"搜索食谱/食材，烘焙/家常菜一应俱全"}/>
-                    </div>
-                    <span></span>
-                </div>
+                <SearchBar></SearchBar>
 
                 <div className="classifyList clear_fix">
                     <div className="classifyName">
@@ -60,13 +53,17 @@ class Classify extends Component{
                                         {
                                             v.classifys?v.classifys.map((item,i)=>(
                                                 <div className={"box"} key={item.classifyId}>
-                                                    <p><img src={item.image} alt={item.name}/></p>
-                                                    <span>{item.name}</span>
+                                                    <Link to={"/search/recipe/"+item.name}>
+                                                        <p><img src={item.image} alt={item.name}/></p>
+                                                        <span>{item.name}</span>
+                                                    </Link>
                                                 </div>
                                             )):v.list.map((item,i)=>(
                                                 <div className={"box"} key={item.classifyId}>
-                                                    <p><img src={item.image} alt={item.name}/></p>
-                                                    <span>{item.name}</span>
+                                                   <Link to={"/search/recipe/"+item.name}>
+                                                       <p><img src={item.image} alt={item.name}/></p>
+                                                       <span>{item.name}</span>
+                                                   </Link>
                                                 </div>
                                             ))
                                         }

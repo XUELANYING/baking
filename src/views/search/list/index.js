@@ -1,130 +1,82 @@
-import React,{Component} from "react";
+﻿import React,{Component} from "react";
 import "../../../asset/css/search/list.scss";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import getSearchInfo,{getDetailList,getVideoList} from "../../../store/actionCreator/search/search";
 import {Link} from "react-router-dom";
-import LoadingMore from "../../../component/common/loadingMore"
+import SearchRecipeList from "./searchRecipeList";
+import SearchAnswerList from "./searchAnswerList";
+import SearchHelpFriends from "./searchHelpFriends";
 
 class List extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
-            keyword:"",
-            tabBar:[
-                {
-                    name:"综合排序",
-                    sortType:""
-                },
-                {
-                    name:"做过最多",
-                    sortType:"dishNum"
-                },
-                {
-                    name:"达人食谱",
-                    sortType:"master"
-                }
-            ],
-            index:0
+            keyword:props.match.params.keyword,
+            isShowBar:false,
+            showIndex:0,
+            threeBarInfo:["食谱","问答","帮友"]
         }
     }
-    componentDidMount(){
-        //待优化
-        this.props.getDetailList(this.props.match.params.keyword,this.state.tabBar[0].sortType)
-        this.setState({
-            keyword:this.props.match.params.keyword
-        });
-        this.props.getVideoList(this.props.match.params.keyword)
-    }
-    changeKeyword(){
+    changeInputVal(){
         this.setState({
             keyword:this.refs.recipe.value
+        });
+    }
+    changeKeyword(e){
+        if(e.nativeEvent.keyCode === 13){
+            this.props.history.push("/search/recipe/"+this.state.keyword)
+        }
+    }
+    changeListContent(){
+        this.setState({
+            isShowBar:!this.state.isShowBar
         })
     }
-    changeTabBar(index,t,sortType){
+    getOtherSth(index){
         this.setState({
-            index
-        });
-        this.props.getDetailList(this.props.match.params.keyword,t,sortType)
+            showIndex:index,
+            isShowBar:false
+        })
     }
     render(){
-        let recipeList = this.props.search.searchRecipeResults;
-        // console.log(recipeList);
-        let videoList = this.props.search.searchVideoList;
-        let {keyword,tabBar} = this.state;
+        let {keyword,threeBarInfo} = this.state;
         return(
             <div className={'listWrap'}>
-                <div className="searchBox2">
-                    <p className={"backImg"}><img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/></p>
+                <div className="searchBoxC">
+                    <p className={"backImg"} onClick={()=>this.props.history.go(-1)}>
+                        <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
+                    </p>
                     <div className={"searchText"}>
-                        <span><img src="https://image.hongbeibang.com/Fi6tDLktzhDiUQoin--ZelAIFSsr?94X94&imageView2/1/w/80/h/80" alt=""/></span>
-                        <input type="text" placeholder={"搜索食谱"} ref={"recipe"} value={keyword} onChange={this.changeKeyword.bind(this)}/>
+                        <span onClick={()=>this.setState({keyword:""})}>
+                            <img src="https://image.hongbeibang.com/Fi6tDLktzhDiUQoin--ZelAIFSsr?94X94&imageView2/1/w/80/h/80" alt=""/>
+                        </span>
+                        <input type="text" ref={"recipe"} placeholder={"搜索食谱"} value={keyword} onChange={this.changeInputVal.bind(this)} onKeyPress={this.changeKeyword.bind(this)}/>
                     </div>
-                    <span>
-                        <strong>食谱</strong>
+                    <span className={"spans"} onClick={this.changeListContent.bind(this)}>
+                        <strong>{this.state.threeBarInfo[this.state.showIndex]}</strong>
                         <b>
                             <img src="https://image.hongbeibang.com/FnX5qtpWKlcHoDYC5KDFHulWfEZl?32X32&imageView2/1/w/32/h/32" alt=""/>
                         </b>
                     </span>
-                </div>
-                <div className="bar">
-                    <div className="tabbar">
-                        {
-                            tabBar.map((v,i)=>(
-                                <div key={i} className={i===this.state.index?"cookBook active":"cookBook"} onClick={this.changeTabBar.bind(this,i,v.t,v.sortType,this.state.keyword)}>
-                                    <span>{v.name}</span>
-                                    <div className={i===this.state.index?"activeBook":""}></div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-                <div className="lists clear_fix">
                     {
-                        videoList.map((v,i)=>(
-                            <div className="cookList" key={i}>
-                                <Link className="listInfo" to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
-                                    <div className="listImg">
-                                        <img src={v.image} alt=""/>
-                                        <div className={"videoLogo"}>视频</div>
-                                    </div>
-                                    <div className="ListDescript">
-                                        <div className="title1">{v.title}</div>
-                                        {v.buyNum>1000? <div className="title2">1000+人学过</div>: <div className="title2">{v.buyNum}人学过</div>}
-                                        <div className="title2">
-                                            <span>视频学习更简单</span>
+                        this.state.isShowBar?<div className="contentBar">
+                            <div className="threeBar">
+                                {
+                                    threeBarInfo.map((v,i)=>(
+                                        <div className="barFloor" key={i} onClick={this.getOtherSth.bind(this,i)}>
+                                            {this.state.showIndex===i?<img src="https://image.hongbeibang.com/FuWlyZPRZXaM47paYt6w8V4diI1_?28X28&imageView2/1/w/28/h/28" alt=""/>:null}
+                                            <span>{v}</span>
                                         </div>
-                                    </div>
-                                </Link>
-                                <div className="isShow"><span>不再显示</span></div>
+                                    ))
+                                }
                             </div>
-                        ))
-                    }
-                    {
-                        recipeList.map((v,i)=>(
-                            <Link className="cookList" key={i} to={"/recipe/"+v.clientId+"/"+v.contentId}>
-                                <div className="listInfo">
-                                    <div className="listImg">
-                                        <img src={v.coverImage} alt={v.coverTitle}/>
-                                    </div>
-                                    <div className="ListDescript">
-                                        <div className="title1 title3" ref={"title"}>{v.coverTitle}</div>
-                                        {
-                                            v.coverTitle.length<8?<div className="title2">{
-                                                v.material.map((item,index)=>(
-                                                    <span key={index}>{item.name} </span>
-                                                ))
-                                            }</div>:null
-                                        }
-                                        <div className="title2">{v.clientName}</div>
-                                        <div className="title2"><span>{v.collectNum}收藏 </span><span>{v.dishNum}人做过</span></div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))
+                        </div>:null
                     }
                 </div>
-                <LoadingMore getMoreRecipe={this.props.getDetailList}></LoadingMore>
+                {
+                    this.state.showIndex===0?<SearchRecipeList showIndex={this.state.showIndex} {...this.props}></SearchRecipeList>:this.state.showIndex===1?<SearchAnswerList {...this.props}></SearchAnswerList>:<SearchHelpFriends {...this.props}></SearchHelpFriends>
+                }
             </div>
         )
     }

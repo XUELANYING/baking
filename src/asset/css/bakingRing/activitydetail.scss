@@ -1,0 +1,126 @@
+#activityDetail{
+  overflow: hidden;
+  padding-bottom:44px;
+    width:100%;
+    background: #eee;
+    .activityDetail_head{
+      overflow: hidden;
+
+      height: 44px;
+      width: 100%;
+      padding:0 18px;
+      margin:0 auto;position: fixed;
+      box-sizing:border-box;
+      background: #fff;
+      display:flex;
+      align-items: center;
+      //justify-content: space-between;
+      i{
+        font-size: 27px;
+      }
+      span{
+        font-size:18px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+
+      }
+    }
+    .activityDetail_image{
+      overflow: hidden;
+
+      width: 100%;
+      padding-top: 44px;
+      img {
+        width: 360px;
+        height: 192px;
+      }
+    }
+    .activityDetail_image_two{
+      overflow: hidden;
+      width: 100%;
+      //margin: 12px 10px 0 10px;
+      box-sizing: border-box;
+      padding-bottom: 12px;
+      margin-top: 12px ;
+      background: #fff;
+      p{
+        font-size:16px;
+        line-height: 22px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .activity_join{
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      text-align: center;
+      background: #fff;
+      margin-bottom:10px;
+      //border-bottom:2px solid #EEEEEE;
+      color:#F95050;
+    }
+    .activity_join_two{
+      margin-bottom: 0;
+    }
+}
+#activity_common_wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  .aaa {
+    width: 50%;
+    background:#eee;
+    .activity_common{
+      box-sizing: border-box;
+      margin:10px 9px 0 9px;
+      border-radius: 4px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      img{
+        height: 162px;
+        border-radius: 4px;
+      }
+      .activity_userInfo{
+        display: flex;
+        font-size: 11px;
+        padding:0 5px;
+        padding-top:10px;
+        padding-bottom: 50px;
+        align-items: center;
+
+
+        img {
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        div{
+            width: 100%;
+            text-align: left;
+            //background: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          span,p{
+              margin-bottom:10px;
+            width: 100px;
+            text-overflow:ellipsis ;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+
+      }
+    }
+  }
+
+
+
+}

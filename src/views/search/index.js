@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import getSearchInfo,{getSearchList} from "../../store/actionCreator/search/search";
 import {Link} from "react-router-dom";
+import SearchBar from "../../component/search/searchBar"
 
 class Search extends Component{
     constructor(){
@@ -16,13 +17,9 @@ class Search extends Component{
         const {lastestSearch,popularSearch} = this.props.search
         return(
             <div className={'searchsWrap'}>
-                <div className="searchBoxs">
-                    <p className={"backImg"}><img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/></p>
-                    <div className={"searchText"}>
-                        <input type="text" placeholder={"搜索食谱/食材，烘焙/家常菜一应俱全"}/>
-                    </div>
+                <SearchBar {...this.props}>
                     <span>搜索</span>
-                </div>
+                </SearchBar>
                 <div className="searchTitle">
                     <div>热门搜索</div>
                 </div>

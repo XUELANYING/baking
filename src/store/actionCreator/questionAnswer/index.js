@@ -77,6 +77,7 @@ export default {
     },
     getHotList(){
         return async (dispatch)=>{
+
             let {data} =await axios.get('/api/question/getHot?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex=0&pageSize=10')
             dispatch(hotList(data.data.content.data))
             console.log(data.data.content.data)
@@ -86,6 +87,7 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/question/getEssence?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex='+pageIndex+'&pageSize=10')
             dispatch(essenceList(data.data.content.data))
+            console.log('question',data.data.content)
         }
     },
     getQuestionDetail(id){

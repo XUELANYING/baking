@@ -23,6 +23,20 @@ export const getVideoInfo = (payload)=>{
     }
 };
 
+export const getSearchAnswerInfo = (payload)=>{
+    return {
+        type:searchType.SearchAnswer,
+        payload
+    }
+};
+
+export const getSearchHelpFriendInfo = (payload)=>{
+    return {
+        type:searchType.SearchHelpFriends,
+        payload
+    }
+};
+
 export default{
     getSearchList(){
         return async(dispatch)=>{
@@ -34,13 +48,32 @@ export default{
             })
         }
     },
-    getDetailList(keyword,sortType){
+    getDetailList(type,keyword,pageIndex,sortType){
         return async(dispatch)=>{
-            let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex=0&pageSize=10&keyword="+keyword+"&sort="+sortType);
-            let res = result.json();
-            res.then((data)=>{
-                dispatch(getDetailInfo(data.data.search.list.recipe))
-            })
+            if(type === 0){//食谱
+                let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort="+sortType);
+                let res = result.json();
+                res.then((data)=>{
+                    dispatch(getDetailInfo(data.data.search.list.recipe))
+                })
+            }
+            if(type === 1){//问答
+                let result = await fetch("/api/search/getMoreQuestion?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort="+sortType);
+                let res = result.json();
+                res.then((data)=>{
+                    dispatch(getSearchAnswerInfo(data.data.search.list.question))
+                })
+            }
+
+            if(type === 2){//帮友
+                let result = await fetch("/api/search/getMoreClient?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort="+sortType);
+                let res = result.json();
+                res.then((data)=>{
+                    // console.log(data)
+                    dispatch(getSearchHelpFriendInfo(data.data.search.list.client))
+                })
+            }
+
         }
     },
     getVideoList(keyword){

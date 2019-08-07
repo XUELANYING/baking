@@ -10,7 +10,6 @@ export default class Baike extends React.Component {
             msg: ""
         }
     }
-
     render() {
         return (
             <div>

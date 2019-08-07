@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
-import QuestionBox from "../../component/questionAnswer/questionBox";
+import QuestionBox from "../../component/questionAnswer/common/questionBox";
 
 class New extends React.Component {
     constructor() {
@@ -20,7 +20,6 @@ class New extends React.Component {
             </Fragment>
         )
     }
-
     componentDidMount() {
         if (this.props.newsList.length === 0) {
             this.props.getNewsList()

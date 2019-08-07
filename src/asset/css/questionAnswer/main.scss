@@ -1,191 +1,200 @@
-.qusTab{
-    height: 30px;
-    margin: 8px 0;
-    width: 100%;
-    display: flex;
-    font-size: 14px;
-    justify-content: space-around;
-    align-items: center;
-    a{
-        color: #999;
-        line-height: 30px;
-    }
-    .active{
-        color: #4A4945;
-        font-weight: bold;
-        border-bottom:2px solid #E98B71;
-    }
+.qusTab {
+  height: 30px;
+  margin: 8px 0;
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    color: #999;
+    line-height: 30px;
+  }
+  .active {
+    color: #4A4945;
+    font-weight: bold;
+    border-bottom: 2px solid #E98B71;
+  }
 }
+
 /*顶部搜索框*/
-.searchWrap{
+.x-searchWrap {
+  height: 44px;
+  padding: 0 18px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 5px 0;
+  background: #fff;
+  span {
+    display: block;
     height: 44px;
-    padding: 0 18px;
-    width: 100%;
+    line-height: 35px;
+  }
+  .getQus {
+    color: #E98B71;
+  }
+  .x-searchBox {
+    width: 239px;
+    height: 35px;
+    padding: 0 10px;
+    background: #F5F7F9;
+    border-radius: 4px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
-    margin:5px 0;
-    background: #fff;
-    span{
-        display: block;
-        height: 44px;
-        line-height: 35px;
+    line-height: 35px;
+    color: #4A4945;
+    font-size: 14px;
+
+  }
+}
+
+.positionFixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: #fff;
+}
+.animated-page-wrapper{
+  opacity: 1!important;
+}
+.questionWrap {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0 120px 0;
+  .questionBox {
+    padding: 15px 0 10px;
+    width: 345px;
+    border-bottom: 1px solid #E7E2E5;
+    .question-title {
+      font-size: 18px;
+      color: #4A4945;
+      font-weight: bold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
-    .getQus{
-        color: #E98B71;
-    }
-    .searchBox{
-        width: 239px;
-        height: 35px;
-        padding: 0 10px;
-        background: #F5F7F9;
+    .recipes {
+      height: 70px;
+      width: 345px;
+      border-radius: 4px;
+      margin: 10px 0;
+      display: flex;
+      background: #F5F7F9;
+      .recipes-img {
+        height: 70px;
+        width: 70px;
         border-radius: 4px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .recipes-detail {
+        margin-left: 15px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-content: center;
-        line-height: 35px;
-        color: #4A4945;
-        font-size: 14px;
-
+        .recipes-title {
+          color: #313131;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .recipes-author {
+          font-size: 13px;
+          color: #999;
+          margin-top: 5px;
+        }
+      }
     }
-}
-.positionFixed{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #fff;
-}
-.questionWrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 90px 0 120px 0;
-    .questionBox{
-        padding: 15px 0 10px;
-        width: 345px;
-        border-bottom: 1px solid #E7E2E5;
-        .question-title{
-            font-size: 18px;
-            color: #4A4945;
-            font-weight: bold;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-        }
-        .recipes{
-            height: 70px;
-            width: 345px;
-            border-radius: 4px;
-            margin: 10px 0;
-            display: flex;
-            background: #F5F7F9;
-            .recipes-img{
-                height: 70px;
-                width: 70px;
-                border-radius: 4px;
-                overflow: hidden;
-                img{
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-            .recipes-detail{
-                margin-left: 15px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                .recipes-title{
-                    color: #313131;
-                    font-size: 14px;
-                    font-weight: bold;
-                }
-                .recipes-author{
-                    font-size: 13px;
-                    color: #999;
-                    margin-top: 5px;
-                }
-            }
-        }
-        .question-bottom{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            line-height: 20px;
-            color: #999;
-            .icon{
-                height: 19px;
-                width: 19px;
-                margin-right: 5px;
-            }
-            .icon-color{
-                color: #E98B71;
-                line-height: 20px;
-            }
-            .answerNone{
-                color: #498DD0;
-            }
-        }
-    }
-}
-
-.essenceWrap{
-    padding: 0 15px;
-    .userInfo{
-        display: flex;
-        .user-logo{
-            height: 38px;
-            width: 38px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 10px;
-            img{
-                height: 100%;
-                width: 100%;
-            }
-        }
-        .user-vip{
-            height: 40px;
-            width: 40px;
-            margin-right: 10px;
-            img{
-                height: 100%;
-                width: 100%;
-            }
-        }
-        .user-name{
-            font-size: 13px;
-            color: #4A4945;
-            height: 40px;
-            line-height: 40px;
-        }
-    }
-    .essence-box{
-        color: #4A4945;
-        margin: 10px 0;
-        .essence-title{
-            font-size: 18px;
-            font-weight: bold;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-        }
-        .essence-detail{
-            font-size: 14px;
-            margin-top: 5px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
-    }
-    .topNum{
-        font-size: 14px;
-        color: #999;
+    .question-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      line-height: 20px;
+      color: #999;
+      .icon {
+        height: 19px;
+        width: 19px;
+        margin-right: 5px;
+      }
+      .icon-color {
+        color: #E98B71;
         line-height: 20px;
+      }
+      .answerNone {
+        color: #498DD0;
+      }
     }
+  }
+}
+
+.essenceWrap {
+  background: #fff;
+  padding: 90px 15px 0;
+  opacity: 1!important;
+  .userInfo {
+    display: flex;
+    .user-logo {
+      height: 38px;
+      width: 38px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .user-vip {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .user-name {
+      font-size: 13px;
+      color: #4A4945;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  .essence-box {
+    color: #4A4945;
+    margin: 10px 0;
+    .essence-title {
+      font-size: 18px;
+      font-weight: bold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .essence-detail {
+      font-size: 14px;
+      margin-top: 5px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  }
+  .topNum {
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+  }
 }
 

@@ -19,7 +19,7 @@ class KindList extends React.Component {
             <div>
                 {
                     this.props.kindList.splice(1,this.props.kindList.length).map((v,i)=>(
-                        <div id="list" key={i}>
+                        <div id="l-list" key={i}>
                            <p>
                                <span>{v.title}</span>
                         <em>查看全部</em>

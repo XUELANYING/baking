@@ -40,12 +40,12 @@ class LessonSeries extends React.Component {
             <div className={"lesson"}>
                 {
                     <div className={"lesson-wrap"}>
-                        <img src={this.props.lessonList.image} alt=""/>
+                        <img src={this.props.lessonLists.image} alt=""/>
                         <div className={"biaoti"}>
-                            <p >{this.props.lessonList.title}</p>
+                            <p >{this.props.lessonLists.title}</p>
                             <div className={"study"}>
                                 <img className={"icon"} src="https://image.hongbeibang.com/FgRQxfAWq4kOdLc5xd_GxWm03Vs_?54X54&imageView2/1/w/54/h/54" alt=""/>
-                                {this.props.lessonList.buyNum>1000?"1000+人在学":this.props.lessonList.buyNum+"人在学"}
+                                {this.props.lessonLists.buyNum>1000?"1000+人在学":this.props.lessonLists.buyNum+"人在学"}
                             </div>
                         </div>
                         <div className="adv">
@@ -89,5 +89,5 @@ class LessonSeries extends React.Component {
 
     }
 }
-export default connect((state) => ({lessonList: state.learnBaking.lessonList}),
+export default connect((state) => ({lessonLists: state.learnBaking.lessonLists}),
     (dispatch) => (bindActionCreators(actionCreator, dispatch)))(LessonSeries)

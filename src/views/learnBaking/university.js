@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import Cake from "../../component/learnBaking/school/cake.js";
 import Recomme from "../../component/learnBaking/school/recomme.js";
 import "../../asset/css/learnBaking/university.scss"
@@ -61,19 +61,18 @@ export default class University extends React.Component{
                     </div>
 
                 </div>
-                <div className="wrap">
+                <div className="l-wrap">
                     {
-                        this.state.index===0?<Recomme></Recomme>:<div></div>
-                    }
-                    {
+                        this.state.index===0?
+                            <Recomme></Recomme>:
                         this.data.map((v,i)=>{
                             return(
-                                <div key={i}>
+                                <Fragment key={i}>
                                     {
                                         this.state.index===i?<Cake categoryId={this.data[i].categoryId}></Cake>:null
                                     }
 
-                                </div>
+                                </Fragment>
                             )
                         })
 

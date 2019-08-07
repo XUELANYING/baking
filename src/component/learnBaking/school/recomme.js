@@ -16,7 +16,7 @@ import "../../../asset/css/learnBaking/swiperstyle.scss"
     render(){
         return(
             <div>
-                <div  className="swiper-container">
+                <div className="swiper-height swiper-container">
                     <div className="swiper-wrapper" >
                         {
                             this.props.swiperList.slice(0,5).map((v,i)=>(

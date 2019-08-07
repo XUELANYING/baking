@@ -1,0 +1,37 @@
+.cee_top{
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content:space-around ;
+  align-items: center;
+  padding-left: 10px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: white;
+  img{
+    width: 27px;
+    height: 27px;
+    margin-left: 12px;
+  }
+  div{
+    width: 80%;
+    p{
+      float: right;
+      background-color: #FFFFFF;
+      color: #E98B71;
+      border: 1px solid;
+      border-color: #E98B71;
+      border-radius: 4px;
+      width:50px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+
+}
+.cee_taber{
+  margin-top: 44px;
+}

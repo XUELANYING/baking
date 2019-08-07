@@ -131,6 +131,7 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/client/getAnswer')
             let info = data.find(v=>v.clientId === clientId/1)
+              console.log(info)
             dispatch(ClientAnswer(info.questionAndAnswer.data))
         }
     },

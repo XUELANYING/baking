@@ -10,8 +10,9 @@ import {
     withRouter
 } from "react-router-dom"
 import test from "../../../store/actionCreator/Me";
+import "@asset/css/nest/Me/acson.scss"
 import AddSonson from "./acSonSon";
- class Convert extends React.Component{
+ class AcSon extends React.Component{
      constructor(){
          super()
      }
@@ -43,32 +44,65 @@ import AddSonson from "./acSonSon";
 
     render(){
         return (
-            <div>
-                {
-                      this.props.sondouble.map((v,i)=>{
+            <div className={"acSon"}>
+                <div className={"acson_top"}>
+                    <img
+                        src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""
+                        onClick={()=>{
+                            this.props.history.go(-1)
+                        }}
+                    />
+                    <p>精彩活动</p>
+                </div>
+                  <div className={"acson_center"}>
+                      {
+                          this.props.sondouble.map((v,i)=>{
                               return  (
-                                     <div key={i}>
-                                          <h2>{v.activityPrefixTitle}</h2>
-                                          <div dangerouslySetInnerHTML={{__html:v.activityIntroduce}}></div>
-                                         {
-                                             v.component.data.map((info,c)=>{
-                                                   return (
-                                                       <div key={c}>
-                                                           <Link to={"/me/activity/addSonson/"+info.contentId}  key={i} onClick={this.handleClick.bind(this)} >
-                                                               <h2>{info.coverSummary}</h2>
-                                                           </Link>
-                                                           <Route exact={true}  path={"/me/activity/addSonson/"+info.contentId} component={AddSonson}></Route>
+                                  <div key={i}>
+                                      <div className={'activityDetail_image'}>
+                                          <img src={v.image} alt=""/>
+                                      </div>
+                                      <div className={"activityDetail_image_two"} dangerouslySetInnerHTML={{__html:v.activityIntroduce}}></div>
 
-                                                       </div>
-                                                   )
-                                             })
-                                         }
-                                     </div>
+                                      <div className={'activity_join'}>
+                                          <span>参与活动即可获得幸运数字</span>
+                                      </div>
+                                      <div className={'activity_join activity_join_two'}>
+                                          {v.component?<span>参与人数 {v.component.count}</span>:<span></span>}
+                                      </div>
+
+                                        <div className={'activity_common_wrap'}>
+                                            {
+                                                v.component.data.map((info,c)=>{
+                                                    return (
+                                                        <div key={c} className={"aaa"}>
+                                                            <div className={'activity_common'}>
+                                                                <Link to={"/me/activity/addSonson/"+info.contentId}  key={i} onClick={this.handleClick.bind(this)} >
+                                                                    <img src={info.coverImage} alt="动态图片"/>
+                                                                    <div className={'activity_userInfo'}>
+                                                                        <img src={info.clientImage} alt="头像"/>
+                                                                        <div>
+                                                                            <span>{info.clientName}</span>
+                                                                            <p>{info.clientSign}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </Link>
+                                                                <Route exact={true}  path={"/me/activity/addSonson/"+info.contentId} component={AddSonson}></Route>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+
+                                  </div>
                               )
-                      })
-                }
+                          })
+                      }
+                  </div>
+
             </div>
         )
     }
 }
-export default  connect((state)=>{ return{sondouble:state.Me.sondouble}},(dispatch)=>bindActionCreators(test,dispatch))(withRouter(Convert))
+export default  connect((state)=>{ return{sondouble:state.Me.sondouble}},(dispatch)=>bindActionCreators(test,dispatch))(withRouter(AcSon))

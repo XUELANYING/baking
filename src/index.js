@@ -5,9 +5,16 @@ import './index.css';
 import App from './App';
 import store from './store';
 import 'lib-flexible';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import 'antd-mobile/dist/antd-mobile.css';
 import * as serviceWorker from './serviceWorker';
+import imgLoading from './asset/img/imgLoding.gif'//图片未加载完成时显示
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+// 引入mockjs
+import './mock/clientInfo.js'
+
+React.Component.prototype.imgLoading = imgLoading;
+ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

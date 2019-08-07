@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure{margin:0;padding:0;}
 *{box-sizing:border-box;}
@@ -20,8 +21,6 @@ body{
 }
 
 
-
-
 .App{
     height: 100%;
     width: 100%;
@@ -39,7 +38,9 @@ body{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 10;
     padding: 8px 0;
+    z-index: 11;
 }
 .tabbar-item{
     color: #999999;

@@ -1,0 +1,119 @@
+$size:14px;
+$color:#4A4945;
+
+.listWrap{
+  width:100%;
+  height:100%;
+  background:#fff;
+  overflow: auto;
+  text-align: left;
+}
+
+.searchBoxC{
+  background:#fff;
+  width:100%;
+  height:44px;
+  padding:0 18px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color;
+  font-size: 16px;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:5;
+  .backImg{
+    width:27px;
+    height:27px;
+    img{
+      width:100%;
+    }
+  }
+  .searchText{
+    width:239px;
+    height:35px;
+    padding:0 10px;
+    background:#F5F7F9;
+    display:flex;
+    span{
+      width:33px;
+      height:33px;
+      img{
+        width:100%;
+      }
+    }
+    input{
+      border:0;
+      width:170px;
+      height:100%;
+      background:#F5F7F9;
+      font-size: $size;
+    }
+  }
+  .spans{
+    width:52px;
+    height:30px;
+    line-height:30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    b{
+      width:19px;
+      height:19px;
+      img{
+        width:100%;
+      }
+    }
+    strong{
+      font-size: $size;
+      color: #E98B71;
+    }
+  }
+}
+
+.contentBar{
+  position:fixed;
+  top:54px;
+  right:0;
+  left:0;
+  height:156px;
+  width:100%;
+  z-index:5;
+  .threeBar{
+    width:110px;
+    height:100%;
+    border-radius: 2px;
+    position:absolute;
+    right:15px;
+    top:0;
+    z-index:7;
+    background:#fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    -o-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    padding:0 15px;
+    box-sizing: border-box;
+    .barFloor{
+      width:100%;
+      height:52px;
+      line-height:51px;
+      font-size:16px;
+      color:$color;
+      box-sizing: border-box;
+      border-bottom:1px solid #f1f1f1;
+      text-align:center;
+      position:relative;
+      img{
+        width:14px;
+        height:14px;
+        overflow: hidden;
+        margin-right:10px;
+        position:absolute;
+        top: 19px;
+        left: 0;
+      }
+    }
+  }
+}

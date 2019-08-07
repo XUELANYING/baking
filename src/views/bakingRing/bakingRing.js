@@ -1,10 +1,9 @@
 import React from 'react';
-import {Switch, NavLink, Route} from 'react-router-dom'
 import router from '../../router'
 import '../../asset/font/iconfont.css'
 import '../../asset/css/bakingRing/main.scss'
-
-export default class BakingRing extends React.Component {
+import {Switch, NavLink, Route,withRouter} from 'react-router-dom'
+class BakingRing extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -30,8 +29,6 @@ export default class BakingRing extends React.Component {
                     <span className={"baking_header_icon baking_header_icon_right"}>
                         <i className={"iconfont icon-lingdang"}></i>
                     </span>
-
-
                 </div>
 
                     {
@@ -40,9 +37,8 @@ export default class BakingRing extends React.Component {
 
                         ))
                     }
-
-
             </div>
         )
     }
 }
+export default withRouter(BakingRing)

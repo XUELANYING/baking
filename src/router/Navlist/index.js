@@ -8,7 +8,6 @@ class NavList extends React.Component {
             index: 0
         }
     }
-
     render() {
         return (
             <Fragment>

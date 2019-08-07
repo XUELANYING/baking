@@ -1,8 +1,10 @@
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {Link}from "react-router-dom";
+import {NavLink,Link,Route}from "react-router-dom";
 import actionCreator from "../../store/actionCreator";
+import More from "./more";
+import router from "../../router"
 import "../../asset/css/learnBaking/showList.scss"
 
 class KindList extends React.Component {
@@ -18,7 +20,10 @@ class KindList extends React.Component {
                 {
                     this.props.kindList.splice(1,this.props.kindList.length).map((v,i)=>(
                         <div id="list" key={i}>
-                           <p><span>{v.title}</span><em>查看全部</em></p>
+                           <p>
+                               <span>{v.title}</span>
+                        <em>查看全部</em>
+                           </p>
                             <div className={"sect"}>
                             {v.item.map((v1, i) => (
                                 <Link  key={i} to={"/lesson?contentId="+v1.educationCourseId}>

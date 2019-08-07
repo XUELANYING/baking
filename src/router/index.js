@@ -10,7 +10,8 @@ import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'
 import QuestionDetail from '../component/questionAnswer/questionDetail'
-import AnswerDetail from '../component/questionAnswer/answerDetail'
+import AnswerDetail from '../component/questionAnswer/answerDetail';
+import More from "../component/learnBaking/more"
 
 
 export default {
@@ -51,7 +52,14 @@ export default {
                 title:"烘焙帮学堂",
                 unActive:"https://image.hongbeibang.com/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80",
                 isAppear:true,
-            }
+            },
+            children:[
+                {
+                    component:More,
+                    name:"查看更多",
+                    to:"/university/allLessons"
+                }
+            ]
         },
         {//教程
             component:LessonSeries,

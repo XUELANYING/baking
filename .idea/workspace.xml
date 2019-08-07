@@ -1,18 +1,1018 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/component/bakingRing/activityDetail.js" line="61" mnemonic="9" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0cd1eba-190a-4ea7-9057-f75fc4d562af" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/baking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/antd/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/Newest.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/courseList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/lesson.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/student.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/university.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/App.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/SignSon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/Top.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/addlistOne.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/ceeTaber.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/convert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/daren.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/record.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/Me/sign.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/nest/test.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/clientInfo.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/eidtQuestion.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/classify.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/list.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/noSearchRes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/reachRecipes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/recipeDetail.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/search.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/searchAnswer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/searchBar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/search/searchHelpFriends.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/topWrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/css/transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/img/guoSon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/img/imgLoding.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/high-order/Image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/high-order/animated_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/high-order/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/Me_SetUP/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOSon/acSon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOSon/acSonSon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOSon/signAddlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOSon/signSon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOSon/signTime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOne/activity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOne/curriculum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOne/medal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistOne/sign.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistTwo/convert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistTwo/daren.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/addlistTwo/record.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/opusTaber/cookbook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/opusTaber/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/opusTaber/opus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/opusTaber/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/opusTaber/troble.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Me/top/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/common/topWrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/learnBaking/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/learnBaking/lesson/eject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/learnBaking/lesson/playUrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/learnBaking/lesson/trySeeUrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/learnBaking/student/Newest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/learnBaking/student/Straight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/clientInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/common/answerBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/editQuestion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/questionDescription.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/userAnswer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/userRecipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/questionAnswer/userWork.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/search/searchBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mock/clientInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Lrouters/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Me/MeTaber.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Me/addlistOne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Me/addlistTwo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Me/router/addlistORoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Me/router/addlistOneSon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/Me/router/addlistTRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/QuestionAndAnswer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionCreator/Me/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionCreator/search/classify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionCreator/search/recipeDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionCreator/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionType/Me/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionType/search/classify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionType/search/recipeDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actionType/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer/Me/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer/search/classify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/state/Me/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/state/search/classify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/state/search/recipeDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/state/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/classify/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/learnBaking/courseList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/learnBaking/lesson.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/learnBaking/student.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/list/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/list/nothing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/list/searchAnswerList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/list/searchHelpFriends.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/list/searchRecipeList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/search/recipeDetail/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/loading.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/loading.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/questionAnswer/answerDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/answerDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/questionAnswer/questionDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/questionDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/loadingMore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/loadingMore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/tabbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/tabbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/answerDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/answerDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/questionBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/questionDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/questionDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/Navlist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Navlist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/routerGuard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routerGuard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/learnBaking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreator/learnBaking/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/nest/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionType/learnBaking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionType/learnBaking/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionType/nest/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionType/questionAnswer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionType/questionAnswer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/learnBaking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/learnBaking/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/nest/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/questionAnswer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/questionAnswer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state/learnBaking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state/learnBaking/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state/nest/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state/questionAnswer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state/questionAnswer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/bakingRing/bakingRing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/bakingRing/bakingRing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/learnBaking/baike.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/learnBaking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/learnBaking/learnBaking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/learnBaking/university.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/learnBaking/university.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nest/nest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nest/nest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/questionAnswer/essence.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/questionAnswer/essence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/questionAnswer/hot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/questionAnswer/hot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/questionAnswer/new.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/questionAnswer/new.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="attention.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/bakingRing/attention.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="891">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadingMore.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/component/common/loadingMore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bakingRing.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/bakingRing/bakingRing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asset/css/loading.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2403">
+              <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.txt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/1908/webpack.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2484">
+              <caret line="92" column="40" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1971">
+              <caret line="127" column="17" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#1189#1604#0" />
+                <element signature="e#1641#2132#0" />
+                <element signature="e#2159#2787#0" />
+                <element signature="e#2832#3228#0" />
+                <element signature="e#3266#3712#0" />
+                <element signature="e#3761#4682#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducer/bakingRing/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/state/bakingRing/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actionType/bakingRing/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>acti</find>
+      <find>questionDetail</find>
+      <find>bakingRing</find>
+      <find>load</find>
+      <find>bo</find>
+      <find>box</find>
+      <find>boxList</find>
+      <find>handleList</find>
+      <find>link</find>
+      <find>nav</find>
+      <find>showlist_center</find>
+      <find>filter</find>
+      <find>dishDetail_image</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/views/bakingRing/expert.js" />
+        <option value="$PROJECT_DIR$/src/router/routerGuard.js" />
+        <option value="$USER_HOME$/Desktop/baking/baking/baking.html" />
+        <option value="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/bakingCircle.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/main.scss" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/activityDetail.scss" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/activityDetail.scss.css" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/activitydetail.scss" />
+        <option value="F:/1908/面试.txt" />
+        <option value="$PROJECT_DIR$/study" />
+        <option value="$PROJECT_DIR$/src/views/bakingRing/latest.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js" />
+        <option value="$PROJECT_DIR$/src/asset/filter/index.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/Newest.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/bakingCircleDetail.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/bakingCircleDetail.scss" />
+        <option value="$PROJECT_DIR$/src/store/actionType/bakingRing/index.js" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/activityDetail.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/Activitycommon.js" />
+        <option value="F:/1908/vue知识汇总.txt" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/dishDetail.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/showlistcommon.scss" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/dishDetail.scss" />
+        <option value="$PROJECT_DIR$/src/store/state/bakingRing/index.js" />
+        <option value="$PROJECT_DIR$/src/store/reducer/bakingRing/index.js" />
+        <option value="$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js" />
+        <option value="F:/1908/webpack.txt" />
+        <option value="$PROJECT_DIR$/src/views/bakingRing/attention.js" />
+        <option value="$PROJECT_DIR$/src/component/common/loadingMore.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/loading.scss" />
+        <option value="$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js" />
+        <option value="$PROJECT_DIR$/src/views/bakingRing/bakingRing.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="147" />
-    <option name="y" value="25" />
-    <option name="width" value="987" />
-    <option name="height" value="728" />
+    <option name="width" value="160" />
+    <option name="height" value="36" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="font" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="actionCreator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="actionCreator" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="actionCreator" type="462c0819:PsiDirectoryNode" />
+              <item name="questionAnswer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="actionType" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="actionType" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="reducer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="reducer" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="state" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="state" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="questionAnswer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="F:\hongbeib\baking\node_modules\eslint" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\reactpro\baking\src\asset\css\bakingRing" />
+      <recent name="G:\reactpro\baking\src\component\bakingRing" />
+      <recent name="G:\reactpro\baking\src\asset" />
+      <recent name="G:\reactpro\baking\src\views\bakingRing" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0cd1eba-190a-4ea7-9057-f75fc4d562af" name="Default" comment="" />
+      <created>1564739830434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564739830434</updated>
+      <workItem from="1564739832117" duration="81101000" />
+      <workItem from="1564985214782" duration="33335000" />
+      <workItem from="1565028978176" duration="72867000" />
+      <workItem from="1565169171378" duration="386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="187689000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7687296" visible="true" weight="0.3013393" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Structure" order="1" sideWeight="0.23127036" side_tool="true" visible="true" weight="0.3013393" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.22801302" side_tool="true" weight="0.038690478" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.77198696" visible="true" weight="0.16815476" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Desktop/baking/baking/baking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/activitydetail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/a.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/answerDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/new.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/hot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/essence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionCreator/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study" />
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1613">
+          <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/questionDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/questionBox.js" />
+    <entry file="file://$PROJECT_DIR$/src/store/actionType/questionAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/state/questionAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/questionAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setupProxy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/expert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/latest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/routerGuard.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-790">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/1908/面试.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="219" column="11" lean-forward="true" selection-start-line="219" selection-start-column="11" selection-end-line="219" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/1908/vue知识汇总.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="733" column="25" lean-forward="true" selection-start-line="733" selection-start-column="25" selection-end-line="733" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/bakingCircleDetail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/filter/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="9" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/Newest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/bakingCircleDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/font/demo_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="66" column="54" lean-forward="true" selection-start-line="64" selection-start-column="47" selection-end-line="66" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/showlistcommon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="66" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/dishDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="71" column="57" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/dishDetail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/activitydetail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/activityDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/Activitycommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionType/bakingRing/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/bakingRing/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/state/bakingRing/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1971">
+          <caret line="127" column="17" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#1189#1604#0" />
+            <element signature="e#1641#2132#0" />
+            <element signature="e#2159#2787#0" />
+            <element signature="e#2832#3228#0" />
+            <element signature="e#3266#3712#0" />
+            <element signature="e#3761#4682#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/1908/webpack.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2484">
+          <caret line="92" column="40" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/attention.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/loading.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2403">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/loadingMore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/bakingRing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

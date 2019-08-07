@@ -32,7 +32,7 @@ class Attention extends Component{
         )
     }
     componentDidMount(){
-        console.log('attention关注',this.props.followList);
+        console.log('attention关注1',this.props.followList);
         this.props.getFollowList();
         console.log('attention关注222',this.props.followList);
         console.log(this.props)

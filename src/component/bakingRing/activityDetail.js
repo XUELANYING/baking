@@ -35,25 +35,28 @@ import '../../asset/css/bakingRing/activitydetail.scss'
                     <div className={'activity_join activity_join_two'}>
                         {this.props.activityDetail.component?<span>参与人数 {this.props.activityDetail.component.count}</span>:<span></span>}
                     </div>
-                    <Activitycommon></Activitycommon>
+                    <Activitycommon ></Activitycommon>
                     {/*<LoadingMore handleList={this.props.boxList}></LoadingMore>*/}
                 </div>
 
             </div>
         )
     }
+    componentWillMount(){
+        // console.log('&&&&&&&&&&&&111111111',this.props.dishDetail.contentId)
+    }
     componentDidMount(){
         this.props.getActivityList();
-        console.log("activityDetail------------------jing",this.props.activityDetail);
-
         this.props.getActivityDetail(this.props.match.params.id);
-        console.log("activityDetail------------------jing",typeof this.props.activityDetail.component);
-        console.log("activityDetail------------------jing",this.props.match.params.id);
-        console.log("activityDetail222222------------------jing",this.props.activityDetail);
+        // console.log('&&&&&&&&&&&&',this.props.dishDetail.contentId);
+        // this.props.getDishDetail(this.props.dishDetail.contentId);
+
+
     }
 }
 // export default withRouter(ActivityDetail)
-export default withRouter( connect((state)=>({
+export default  connect((state)=>({
         activityList:state.bakingRing.activityList,
-        activityDetail:state.bakingRing.activityDetail
-}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(ActivityDetail))
+        activityDetail:state.bakingRing.activityDetail,
+        // dishDetail:state.bakingRing.dishDetail
+}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(ActivityDetail))

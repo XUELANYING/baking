@@ -36,7 +36,7 @@ class Latest extends Component{
                         }
                     </div>
                 </div>
-                <ShowListCommon></ShowListCommon>
+                <ShowListCommon ></ShowListCommon>
             </div>
         )
     }

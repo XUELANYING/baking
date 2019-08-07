@@ -6,7 +6,7 @@ import actionCreators from '../../store/actionCreator'
 import '../../asset/css/bakingRing/showlistcommon.scss'
 import filter from '../../asset/filter'
 
-class ShowListCommon extends Component{
+ class ShowListCommon extends Component{
     constructor(){
         super();
         this.state={
@@ -123,7 +123,8 @@ class ShowListCommon extends Component{
     componentDidMount(){
 
         this.props.getShowList();
-        console.log("showListComon",this.props.bakingRing.showList);
+        this.props.getCommunityDetail()
+
     }
 }
 export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(ShowListCommon)

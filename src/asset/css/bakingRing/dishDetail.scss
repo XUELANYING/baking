@@ -1,0 +1,71 @@
+#dishDetail_wrap_outside{
+  overflow: hidden;
+  padding-bottom:44px;
+  width:100%;
+  background: #eee;
+  .activityDetail_head{
+    overflow: hidden;
+
+    height: 44px;
+    width: 100%;
+    padding:0 18px;
+    margin:0 auto;position: fixed;
+    box-sizing:border-box;
+    background: #fff;
+    display:flex;
+    align-items: center;
+    //justify-content: space-between;
+    i{
+      font-size: 27px;
+    }
+    span{
+      font-size:18px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+
+    }
+  }
+  #dishDetail_wrap {
+    width: 100%;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 15px;
+
+    .dishDetail_info {
+      display: flex;
+  
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border-color: #E7E2E5;
+        margin-right: 10px;
+      }
+      .userinfo {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-around;
+        p {
+          font-size: 13px;
+          color: #4A4945;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        div {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+

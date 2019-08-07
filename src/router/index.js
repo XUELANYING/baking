@@ -15,8 +15,10 @@ import Expert from '../views/bakingRing/expert'
 import QuestionDetail from '../component/questionAnswer/questionDetail'
 import AnswerDetail from '../component/questionAnswer/answerDetail'
 
+
 import ActivityDetail from '../component/bakingRing/activityDetail'
 import BakingCircleDetail from '../component/bakingRing/bakingCircleDetail'
+import DishDetail from '../component/bakingRing/dishDetail'
 
 
 
@@ -135,6 +137,17 @@ export default {
            component:ActivityDetail,
            path:'/activity/',
            to:'/activity/:id',
+            display:true,//隐藏
+            meta: {
+                unActive: null,
+                active: null
+            }
+
+        },
+        {
+            component:DishDetail,
+            path:'/dish/',
+            to:'/dish/:id',
             display:true,//隐藏
             meta: {
                 unActive: null,

@@ -21,8 +21,24 @@ export default {
         // 计算分钟数后剩余的毫秒数
         let leave3 = leave2%(60*1000);
         let seconds = Math.round(leave3/1000)
-        return minutes+" 分钟"+seconds+" 秒"
+        return hours+'小时'+minutes+" 分钟"+seconds+" 秒"
 
+    },
+    compareAsc:function(key){
+        return function(value1,value2){
+            let val1=value1[key];
+            let val2=value2[key];
+            return val1-val2;
+
+        }
+    },
+    compareDesc:function(key){
+        return function(value1,value2){
+            let val1=value1[key];
+            let val2=value2[key];
+            return val2-val1;
+
+        }
     }
 
 }

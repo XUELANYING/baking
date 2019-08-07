@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import actionCreators from '../../store/actionCreator'
+import {NavLink} from 'react-router-dom'
+
 
 class Activitycommon extends Component{
 
@@ -9,10 +11,10 @@ class Activitycommon extends Component{
         const activity = this.props.bakingRing.activityDetail.component;
         console.log(88888888888888888888888888,activity)
         return (
-            <div id={'activity_common_wrap'}>
+            <div  id={'activity_common_wrap' } >
                 {
                     activity?activity.data.map((v,i)=>(
-                        <div key={i} className={"aaa"}>
+                        <NavLink key={i} className={"aaa"} to={'/dish/'+v.contentId}>
                             <div className={'activity_common'}>
                                 <img src={v.coverImage} alt="动态图片"/>
                                 <div className={'activity_userInfo'}>
@@ -23,7 +25,7 @@ class Activitycommon extends Component{
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </NavLink>
 
 
                     )):<div></div>
@@ -33,6 +35,7 @@ class Activitycommon extends Component{
     }
     componentDidMount(){
         console.log("日常活动的组件",this.props.bakingRing.activityDetail)
+        console.log('dishDetailId',this.props.bakingRing.dishDetail)
     }
 }
 export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(Activitycommon)

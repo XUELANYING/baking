@@ -14,7 +14,7 @@ class Cart extends Component {
         console.log(111)
         // console.log(args);
         this.setState({open: !this.state.open});
-        const con = document.getElementsByClassName("my_Top")[0]
+        const con = document.getElementsByClassName("Top")[0]
         const see = document.getElementsByClassName("Me_SetUp")[0]
         const ree = document.getElementsByClassName("am-drawer-draghandle")[0]
         const iTem= document.getElementsByClassName("Item")
@@ -122,7 +122,7 @@ class Cart extends Component {
                             </div>
                             <Drawer
                             position={'bottom'}
-                            className="my_Top"
+                            className="Top"
                             sidebar={sidebar}
                             style={{ minHeight: document.documentElement.clientHeight }}
                             contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}

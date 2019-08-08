@@ -1,65 +1,84 @@
-import React, {Component} from 'react';
-import "@asset/css/learnBaking/university.scss"
-import actionCreator from "@store/actionCreator";
-import {bindActionCreators} from "redux";
-import {connect} from "react-redux"
-import {withRouter} from "react-router-dom"
-class University extends Component {
-    constructor(props) {
+import React,{Fragment} from 'react';
+import Cake from "../../component/learnBaking/school/cake.js";
+import Recomme from "../../component/learnBaking/school/recomme.js";
+import "../../asset/css/learnBaking/university.scss"
+
+export default class University extends React.Component{
+    constructor(props){
         super(props);
-        this.state = {};
+        this.data=[
+            {
+                title:"推荐",
+            },
+            {
+                title:"蛋糕",
+                categoryId:10163
+            },
+            {
+                title:"甜品点心",
+                categoryId:10162
+            },
+            {
+                title:"面包",
+                categoryId:10164
+            },
+            {
+                title:"中式点心",
+                categoryId:10166
+            },
+            {
+                title:"面食",
+                categoryId:10173
+            },
+            {
+                title:"其他",
+                categoryId:10180
+            },
+        ];
+        this.state = {
+            index:0,
+        }
     }
-
-    render() {
-        console.log(this.props.floorList.data)
+    handlerChange(index){
+        this.setState({
+            index
+        })
+    }
+    render(){
         return (
-            <div className={"university"}>
-                <div className="image-header">
-                    <img src={this.props.dishList.coverImage} alt=""/>
-                </div>
-                <div className="user">
-                    <img src={this.props.dishList.clientImage} alt=""/>
-                    <div className={"title"}>{this.props.dishList.clientName}</div>
-                    <div style={{width: "150px", height: "1px", background: "#F1F1F1", margin: "10px 0"}}></div>
-                    <div className={"describe"}>{this.props.dishList.coverSummary}</div>
-                    <div className={"blank"}></div>
-                </div>
-                <div className={"number"}>
-                    <div className="liu">
-                        <span>留言</span>
-                        <span>{this.props.floorList.count}</span>
-                    </div>
-                    <div className="blank"></div>
-                </div>
-                {this.props.floorList.count?<ul className={"list"}>
-                    {
-                        this.props.floorList.data.map((item,index)=>(
-                            <li className={"list-li"} key={index}>
-                                <div className="list-user">
-                                    <img src={item.clientImage} alt=""/>
-                                    <div className={"list-name"}>
-                                        <p>{item.clientName}</p>
-                                        <span>{item.createTime}</span>
+            <div className="sec">
+                <div id="nav">
+                    <div className="nav-child">
+                        {
+                            this.data.map((v,i)=>{
+                                return (
+                                    <div key={i}>
+                                    <div id="nav-list" onClick={this.handlerChange.bind(this,i)} style={{color:i===this.state.index?"black":"gray",borderBottom:i===this.state.index?"2px solid red":""}} key={i}>{v.title}</div>
                                     </div>
-                                </div>
-                                <div className={"content"}>
-                                    <p>{item.coverSummary}</p>
-                                </div>
+                                )
+                            })
+                        }
+                    </div>
 
-                            </li>
-                        ))
+                </div>
+                <div className="l-wrap">
+                    {
+                        this.state.index===0?
+                            <Recomme></Recomme>:
+                        this.data.map((v,i)=>{
+                            return(
+                                <Fragment key={i}>
+                                    {
+                                        this.state.index===i?<Cake categoryId={this.data[i].categoryId}></Cake>:null
+                                    }
+
+                                </Fragment>
+                            )
+                        })
+
                     }
-                </ul>:null}
-                <footer className={"fot"}>
-                    <input type="text" className={"inp"}/>
-                    <button>发送</button>
-                </footer>
-            </div>
-        )
-    }
-    componentDidMount(){
-        this.props.getDish(this.props.match.params.contentId)
-        this.props.getFloorList(this.props.match.params.contentId)
+
+                </div>
+        </div>)
     }
 }
-export default withRouter(connect((state)=>({dishList: state.learnBaking.dishList,floorList:state.learnBaking.floorList}),(dispatch)=>bindActionCreators(actionCreator,dispatch))(University));

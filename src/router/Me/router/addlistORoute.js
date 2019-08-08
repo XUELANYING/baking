@@ -3,6 +3,7 @@ import Curriculum from "@component/Me/addlistOne/curriculum"
 import Medal from "@component/Me/addlistOne/medal"
 import Sign from "@component/Me/addlistOne/sign"
 import addlistOneSon from "./addlistOneSon"
+import Tailoring from "../../../component/Me/Me_SetUP/Tailoring";
 
 export default [
     {// 作品
@@ -72,6 +73,21 @@ export default [
             descrieption:"描述",
             isFooter:false
         },
+    },
+    {// 作品
+        to:"/me/setUP/tail",
+        path:'/me/setUP/tail',
+        context:"",
+        exact:true,
+        display:true,
+        displaySon:true,
+        component:Tailoring,
+        meta:{
+            title:"标题",
+            keywored:"关键字",
+            descrieption:"描述",
+            isShow:false
+        }
     },
     ...addlistOneSon
  ]

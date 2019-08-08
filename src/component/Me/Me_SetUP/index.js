@@ -8,7 +8,10 @@ import {
     withRouter
 } from "react-router-dom"
 import { Drawer, List, NavBar, Icon } from 'antd-mobile';
-
+import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import "@asset/css/nest/Me/meSetup.scss"
+import Tailoring from "./Tailoring"
+import AddSonson from "../addlistOSon/acSonSon";
 class MeSetUp extends React.Component {
     state = {
         open: false,
@@ -20,34 +23,60 @@ class MeSetUp extends React.Component {
         const con = document.getElementsByClassName("my_Top")[0]
         const see = document.getElementsByClassName("Me_SetUp")[0]
         const ree = document.getElementsByClassName("am-drawer-draghandle")[0]
-
+        const iTem= document.getElementsByClassName("Item")
         con.style.zIndex = 11
         //console.log(args[0])
          if(args[0]===false){
-             see.style.zIndex = 6
+             see.style.zIndex = 11
              con.style.zIndex = 5
              ree.style.display="none"
          }
     }
-    componentWillMount(){
-
+    componentDidMount(){
     }
 
+//<li>    <List className="Item"><h3>个人设置</h3></List></li>
     render() {
         // fix in codepen
-        const sidebar = (<List>
-            {[1,2].map((i, index) => {
-                if (index === 0) {
-                    return (<List.Item key={index}
-                                       thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-                                       multipleLine
-                    >Category</List.Item>);
-                }
-                return (<List.Item key={index}
-                                   thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-                >Category{index}</List.Item>);
-            })}
-        </List>);
+        const sidebar = (
+              <div className={"codeList"}>
+                  <List>
+                      <List className="Item">
+                           <h3>设置</h3>
+                      </List>
+                          <div className={"coo"}>
+                              <List className="Item coSon">
+                                  <h3 className={"coSon_h3"}>
+                                      个人设置
+                                          <i onClick={()=>{
+                                              this.props.history.push("/me/setUP/tail")
+                                          }}>
+                                              >
+                                          </i>
+
+                                  </h3>
+
+                                  <Route exact={true}  path={"/me/setUP/tail"} component={Tailoring}></Route>
+
+                              </List>
+                              <List className="Item"><h3  className={"coSon_h3"}>账号设置  <i> > </i></h3></List>
+                          </div>
+                           <div className={"donDon"}>
+                               <List className="Item"><h3  className={"coSon_h3"}>意见反馈  <i> > </i></h3></List>
+                               <List className="Item"><h3  className={"coSon_h3"}>用户守则  <i> > </i></h3></List>
+                               <List className="Item"><h3  className={"coSon_h3"}>关于我们  <i> > </i></h3></List>
+                           </div>
+                      <div className={"donwon"}>
+                          <List className="Item">
+                              <h3  className={"coSon_h4"}>
+                                  <Button type="warning">退出</Button>
+                              </h3>
+                          </List>
+                      </div>
+
+
+                  </List>
+              </div>);
 
         return (
             <div>

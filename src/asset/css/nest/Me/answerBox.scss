@@ -1,0 +1,75 @@
+.answerWrap {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 120px 0;
+  .questionBox {
+    padding: 15px 0 10px;
+    width: 345px;
+    border-bottom: 1px solid #E7E2E5;
+    .question-title {
+      font-size: 18px;
+      color: #4A4945;
+      font-weight: bold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .recipes {
+      height: 70px;
+      width: 345px;
+      border-radius: 4px;
+      margin: 10px 0;
+      display: flex;
+      background: #F5F7F9;
+      .recipes-img {
+        height: 70px;
+        width: 70px;
+        border-radius: 4px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .recipes-detail {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .recipes-title {
+          color: #313131;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .recipes-author {
+          font-size: 13px;
+          color: #999;
+          margin-top: 5px;
+        }
+      }
+    }
+    .question-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      line-height: 20px;
+      color: #999;
+      .icon {
+        height: 19px;
+        width: 19px;
+        margin-right: 5px;
+      }
+      .icon-color {
+        color: #E98B71;
+        line-height: 20px;
+      }
+      .answerNone {
+        color: #498DD0;
+      }
+    }
+  }
+}

@@ -6,4 +6,5 @@ export  default {
     signAddlist:[],//addlistOne ==签到=排行榜
     record:[],//addlistTwo == 浏览记录
     convert:[],//addlistTwo ===兑换帮币
+    Answerbox:[],//opusTaber === troble 问题
 }

@@ -3,6 +3,7 @@ import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
 import  Troble from  "./troble"
 import  Cookbook from "./cookbook"
 import  Opus  from "./opus"
+import  "@/asset/css/nest/Me/opusTaber.scss"
 import {
     Route,
     BrowserRouter as Router,
@@ -37,6 +38,18 @@ class OpusTaber extends React.Component{
 
         return (
             <div className={"cee"}>
+                <div className={"cee_top"}>
+                    <img
+                        src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""
+                        onClick={()=>{
+                            this.props.history.go(-1)
+                        }}
+                    />
+                    <div>
+                        <p>发布</p>
+                    </div>
+
+                </div>
                 <div className={"cee_taber"}>
                     <Tabs tabs={tabs}
                           initialPage={index}

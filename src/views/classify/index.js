@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import getClassifyInfo, { getCommendList, getClassifyList } from "../../store/actionCreator/search/classify";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import SearchBar from "../../component/search/searchBar";
 
 class Classify extends Component {
     constructor() {
@@ -16,6 +15,7 @@ class Classify extends Component {
         }
     }
     componentDidMount() {
+        console.log(this.props);
         this.props.getCommendList();
         this.props.getClassifyList()
     }

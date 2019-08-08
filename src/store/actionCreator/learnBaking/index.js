@@ -152,7 +152,7 @@ export default {
     //新手教程
     getLessonList(){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/education/getCourse?_t=1564977164258&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&educationCourseId=10377");
+            let {data} = await axios.get("/api/education/getCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&educationCourseId=10377");
             dispatch(lessonLists(data.data));
             // console.log("新手教程",data.data)
         }
@@ -160,7 +160,7 @@ export default {
     //视频学堂页分类列表
     getVariousList(categoryId){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/index/getIndexItem?_t=1564975332469&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&categoryId="+categoryId);
+            let {data} = await axios.get("/api/index/getIndexItem?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&categoryId="+categoryId);
             dispatch(variousList(data.data));
             // console.log("分类列表",data.data.length)
         }
@@ -168,7 +168,7 @@ export default {
     // 课程目录
     getCatalogList(){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/education/getSeriesCourse?_t=1565101116751&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&pageIndex=0&pageSize=10&educationCourseId=10377");
+            let {data} = await axios.get("/api/education/getSeriesCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&educationCourseId=10377");
             dispatch(catalogList(data.data.data));
             // console.log("课程目录",data.data.data)
         }
@@ -176,7 +176,7 @@ export default {
     //学员作业
     getTaskList(){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/dish/getOutstandingCourseContent?_t=1565140148485&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&pageIndex=0&pageSize=10&educationCourseId=10377")
+            let {data} = await axios.get("/api/dish/getOutstandingCourseContent?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&educationCourseId=10377")
             dispatch(taskLisk(data.data.content.data));
             // console.log("作业",data.data.content.data)
         }

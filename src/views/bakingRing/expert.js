@@ -38,11 +38,12 @@ class Expert extends Component{
         }
     }
     render(){
+        const show = this.props.expertList
         return (
             <div className={'showlistcommon_wrap'}>
                 <div className={'showlist_head'}>
                     {
-                        this.props.expertList.map((v, i) => (
+                        show.map((v, i) => (
                             <section key={i}>
                                 <div className={'showlist_head_title'}>
                                     <img src={v.clientImage} alt=""/>

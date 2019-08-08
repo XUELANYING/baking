@@ -37,19 +37,18 @@ class Attention extends Component{
                 "7":"105px",
                 '8':'105px',
                 "9":"105px",
-
             }
         }
     }
     render(){
         console.log(this.props.followList);
+        const show  = this.props.followList;
         return (
             <div>
                 <div className={'showlistcommon_wrap'}>
-
                     <div className={'showlist_head'}>
                         {
-                            this.props.followList.map((v, i) => (
+                            show.map((v, i) => (
                                 <section key={i}>
                                     <div className={'showlist_head_title'}>
                                         <img src={v.clientImage} alt=""/>
@@ -72,7 +71,6 @@ class Attention extends Component{
                                                 </div>
                                             ))
                                         }
-
                                     </div>
                                     <div className={'showlist_foot'}>
                                         <div className={'showlist_foot_one'}>
@@ -82,7 +80,6 @@ class Attention extends Component{
                                                         <div>
                                                             <span className={"span_one"}>{v.communityName}</span>
                                                             <span >{v.introduce}</span>
-
                                                         </div>
                                                     </div>
                                                     :v.recipe.image?
@@ -95,7 +92,6 @@ class Attention extends Component{
                                                     </div>:null
                                             }
                                         </div>
-
                                     </div>
                                     <div className={'showlist_comments_wrap'}>
                                         <div>
@@ -125,16 +121,10 @@ class Attention extends Component{
                                         </span>
                                         </div>
                                     </div>
-
-
-
                                 </section>
                             ))
                         }
                     </div>
-
-
-
                 </div>
             </div>
         )

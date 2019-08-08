@@ -67,9 +67,6 @@ class BakingCircleDetail extends Component {
             </div>
         )
     }
-    // componentDidUpdate(){
-    //     this.props.getCommunityDetail(this.props.match.params.id);
-    // }
     componentDidMount(){
         console.log(this.props.match.params.id)
         this.props.getCommunityDetail(this.props.match.params.id);

@@ -37,12 +37,13 @@ import filter from '../../asset/filter'
     }
 
     render(){
+        const show = this.props.mostMessage;
         return (
             <div className={'showlistcommon_wrap'}>
 
                 <div className={'showlist_head'}>
                 {
-                   this.props.mostMessage.map((v,i)=>(
+                   show.map((v,i)=>(
                         <section key={i}>
                             <div className={'showlist_head_title'}>
                                 <img src={v.clientImage} alt=""/>

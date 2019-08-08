@@ -36,27 +36,20 @@ import '../../asset/css/bakingRing/activitydetail.scss'
                         {this.props.activityDetail.component?<span>参与人数 {this.props.activityDetail.component.count}</span>:<span></span>}
                     </div>
                     <Activitycommon ></Activitycommon>
-                    {/*<LoadingMore handleList={this.props.boxList}></LoadingMore>*/}
                 </div>
 
             </div>
         )
     }
-    componentWillMount(){
-        // console.log('&&&&&&&&&&&&111111111',this.props.dishDetail.contentId)
-    }
+
     componentDidMount(){
         this.props.getActivityList();
         this.props.getActivityDetail(this.props.match.params.id);
-        // console.log('&&&&&&&&&&&&',this.props.dishDetail.contentId);
-        // this.props.getDishDetail(this.props.dishDetail.contentId);
-
 
     }
 }
-// export default withRouter(ActivityDetail)
+
 export default  connect((state)=>({
         activityList:state.bakingRing.activityList,
         activityDetail:state.bakingRing.activityDetail,
-        // dishDetail:state.bakingRing.dishDetail
 }),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(ActivityDetail))

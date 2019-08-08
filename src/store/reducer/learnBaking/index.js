@@ -3,6 +3,8 @@ import actionType from '../../actionType/learnBaking'
 
 export default function(state=initState,{type,payload}) {
     state = JSON.parse(JSON.stringify(state))
+
+
     // console.log("jing111111",payload);
     if (type === actionType.GET_RECOMMENDLIST) {                          //推荐列表
         state.recommendList = [...state.recommendList, ...payload];
@@ -29,7 +31,11 @@ export default function(state=initState,{type,payload}) {
         state.taskLisk = [ ...payload];                                           //学员作业
 
     }else if (type === actionType.UP_LESSON) {
+<<<<<<< HEAD
         state.lessonList = { ...payload};
+=======
+        state.lessonList =  payload;
+>>>>>>> 68de9c4d852e751879ac676f2dba57e820ffeb9e
 
     }else if (type === actionType.UP_STUDENT) {
         state.studentList = [...state.studentList, ...payload];
@@ -38,17 +44,24 @@ export default function(state=initState,{type,payload}) {
         state.newestList = [...state.newestList, ...payload];
 
     }else if (type === actionType.UP_DISH) {
+<<<<<<< HEAD
         state.dishList = {...state.dishList, ...payload};
+=======
+        state.dishList = payload;
+>>>>>>> 68de9c4d852e751879ac676f2dba57e820ffeb9e
 
     }else if (type === actionType.UP_FLOOR) {
-        state.floorList = [...state.floorList, ...payload];
+        state.floorList = payload;
 
     }else if (type === actionType.UP_HOMEWORK) {
-        state.homeworkList = [ ...payload];
+        state.homeworkList = payload;
 
     }else if (type === actionType.UP_CUURR) {
         state.curriculumList = [...state.curriculumList, ...payload];
 
+
+    }else if(type ===  actionType.UP_CART){
+        state.carList=payload;
     }
     return state;
 }

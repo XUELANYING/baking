@@ -3,14 +3,10 @@
   display: flex;
   overflow: hidden;
   background: #F5F7F9;
-  padding-bottom:44px;
-
   .showlist_head{
       width: 100%;
       overflow: hidden;
-      //background: #fff;
       margin-top:10px;
-
       section{
         background: #fff;
         width: 100%;
@@ -18,24 +14,32 @@
         padding-top:5px;
         margin-bottom: 10px;
         .showlist_head_title{
-          margin:10px 15px;
+          margin:15px 15px;
           display:flex;
+          align-items: center;
           img{
             width: 38px;
             height: 38px;
             border-radius: 50%;
             margin-right: 10px;
           }
-          div{
+          .showList_info{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items:space-between;
             width: 66%;
-            height: 20px;
-            p{
-              font-size: 13px;
-              text-align: left;
-              color:#4A4945;
+            //height: 20px;
+            div{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              p{
+                font-size: 13px;
+                text-align: left;
+                color:#4A4945;
 
+              }
             }
             span{
               font-size: 12px;

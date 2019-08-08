@@ -4,12 +4,9 @@ import {bindActionCreators} from 'redux'
 import actionCreators from '../../store/actionCreator'
 import {NavLink} from 'react-router-dom'
 
-
 class Activitycommon extends Component{
-
     render(){
         const activity = this.props.bakingRing.activityDetail.component;
-        console.log(88888888888888888888888888,activity)
         return (
             <div  id={'activity_common_wrap' } >
                 {
@@ -19,15 +16,13 @@ class Activitycommon extends Component{
                                 <img src={v.coverImage} alt="动态图片"/>
                                 <div className={'activity_userInfo'}>
                                     <img src={v.clientImage} alt="头像"/>
-                                    <div>
+                                    <div className={'userInfo'}>
                                         <span>{v.clientName}</span>
                                         <p>{v.clientSign}</p>
                                     </div>
                                 </div>
                             </div>
                         </NavLink>
-
-
                     )):<div></div>
                 }
             </div>

@@ -9,14 +9,15 @@
     "better-scroll": "^1.15.2",
     "http-proxy-middleware": "^0.19.1",
     "lib-flexible": "^0.3.2",
-    "mock": "^0.1.1",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.12.0",
     "postcss-px2rem": "^0.3.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-animated-router": "^0.1.12",
+    "react-cropper": "^1.2.0",
     "react-dom": "^16.8.6",
+    "react-lazyload": "^2.6.2",
     "react-loadable": "^5.5.0",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
@@ -26,8 +27,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
-    "swiper": "^4.5.0",
-    "whatwg-fetch": "^3.0.0"
+    "swiper": "^4.5.0"
   },
   "scripts": {
     "start": "react-app-rewired start",

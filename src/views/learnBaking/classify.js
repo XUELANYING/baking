@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class Classify extends React.Component {
     constructor() {
         super();
@@ -7,6 +8,7 @@ export default class Classify extends React.Component {
             msg: ""
         }
     }
+
 
     render() {
         return (

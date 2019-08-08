@@ -5,7 +5,7 @@ import QuestionAnswer from '../views/questionAnswer/questionAnswer'
 import Baike from "../views/learnBaking/baike";
 import University from "../views/learnBaking/university";
 import LessonSeries from "../views/learnBaking/lessonSeries";
-import Classify from "../views/learnBaking/classify";
+import Classify from "../views/classify";
 import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'
@@ -23,6 +23,7 @@ import Lesson from "@views/learnBaking/lesson"
 import Student from "@views/learnBaking/student"
 import School from "@views/learnBaking/school"
 import CourseList from "@views/learnBaking/courseList"
+import Cart from "@views/learnBaking/cart"
 /*郭郭的路由跳转*/
 import opusTaber from "@component/Me/opusTaber"
 import addlistOne from "./Me/router/addlistORoute"
@@ -123,39 +124,7 @@ export default {
                 active: 'https://image.hongbeibang.com/Flc4c0tB_BGGFnA-ORFowqfNOpaD?50X50&imageView2/1/w/50/h/50',
                 isShow: true,
             },
-            // 添加子路由
-            children:[
-                {
-                    component: Attention,
-                    name: "关注",
-                    path: '/show/attention',
-                    to: '/show/attention',
-                    meta: {
-                        title: "烘焙圈_烘焙秀秀_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: Latest,
-                    name: "最新",
-                    path: '/show/latest',
-                    to: '/show/latest',
-                    meta: {
-                        title: "烘焙圈_烘焙秀秀_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: Expert,
-                    name: "达人",
-                    path: '/show/expert',
-                    to: '/show/expert',
-                    meta: {
-                        title: "烘焙圈_烘焙秀秀_烘焙帮",
-                        isShow: true,
-                    },
-                },
-            ]
+            
         },
         {
             component: QuestionAnswer,
@@ -336,10 +305,21 @@ export default {
             }
         },
         {
-            to: "/university/:contentId",
-            path: "/university/:contentId",
+            to: "/school/:contentId",
+            path: "/school/:contentId",
             content: "作品",
             component: School,
+            display: true,
+            meta: {
+                keywored: "关键字",
+                descrieption: "描述",
+            }
+        },
+        {
+            to: "/cart/:contentId",
+            path: "/cart/:contentId",
+            content: "购买",
+            component: Cart,
             display: true,
             meta: {
                 keywored: "关键字",

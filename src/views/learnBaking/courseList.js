@@ -1,5 +1,5 @@
 import React, {Component,Fragment} from 'react';
-import "../../asset/css/learnBaking/courseList.scss"
+import "@asset/css/learnBaking/courseList.scss"
 import actionCreator from "@store/actionCreator";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";

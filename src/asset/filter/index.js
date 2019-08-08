@@ -39,6 +39,21 @@ export default {
             return val2-val1;
 
         }
+    },
+    randomColor:function(alpha){
+         if(alpha>1 || isNaN(alpha) || alpha<0){
+                        alpha=1;
+                    }
+                    let color="rgba(";
+                    for(let
+                            i=0;i<3;i++){
+                        color+=parseInt(Math.random()*230);
+                        color+=",";
+                    }
+                    color+=alpha+")";
+                    return color;
+
     }
+    
 
 }

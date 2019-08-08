@@ -1,14 +1,15 @@
 import React,{Fragment,Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Link,withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import actionCreators from '../../store/actionCreator'
 import '../../asset/css/bakingRing/showlistcommon.scss'
 import filter from '../../asset/filter'
 
+
  class ShowListCommon extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             imgW:{
                 "1":"219px",
@@ -38,7 +39,7 @@ import filter from '../../asset/filter'
     }
 
     render() {
-        const show = this.props.bakingRing.showList;
+        const show = this.props.showProps;
         return (
             <div className={'showlistcommon_wrap'}>
 
@@ -47,9 +48,12 @@ import filter from '../../asset/filter'
                             show.map((v, i) => (
                                 <section key={i}>
                                     <div className={'showlist_head_title'}>
-                                        <img src={v.clientImage} alt=""/>
-                                        <div>
-                                            <p>{v.clientName}</p>
+                                        <img src={v.clientImage} alt="" />
+                                        <div className={'showList_info'} >
+                                            <div>
+                                                {v.isMaster===1?<img src='https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80' alt=""/>:null}
+                                                <p>{v.clientName}</p>
+                                            </div>
                                             <span>{filter.date(v.createTime)} {v.coverTitle}</span>
                                         </div>
                                     </div>
@@ -95,36 +99,43 @@ import filter from '../../asset/filter'
                                     <div className={'showlist_comments_wrap'}>
                                         <div>
                                             <i className={'iconfont icon-zan'}></i>
-                                            <span>3</span>
+                                            <span>
+                                        {
+                                            v.likeNum?v.likeNum:'点赞'
+                                        }
+                                        </span>
                                         </div>
                                         <div>
                                             <i className={'iconfont icon-dashang'}></i>
-                                            <span>打赏</span>
+                                            <span>
+
+                                        {
+                                            v.rewardNum?v.rewardNum:'打赏'
+                                        }
+
+                                        </span>
                                         </div>
                                         <div>
                                             <i className={'iconfont icon-pinglun1'}></i>
-                                            <span>评论</span>
+                                            <span>
+                                        {
+                                            v.commentNum?v.commentNum:'评论'
+                                        }
+                                        </span>
                                         </div>
-
                                     </div>
-
-
-
                                 </section>
                             ))
                         }
                     </div>
-
-
-
             </div>
         )
     }
     componentDidMount(){
-
         this.props.getShowList();
-        this.props.getCommunityDetail()
+        this.props.getCommunityDetail();
+        this.props.getExpertList()
 
     }
 }
-export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(ShowListCommon)
+export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(ShowListCommon))

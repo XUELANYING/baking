@@ -2,57 +2,45 @@ import React from "react";
 import LoadingMore from "../../../component/common/loadingMore";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import getSearchInfo,{getDetailList,getVideoList} from "../../../store/actionCreator/search/search";
+import getSearchInfo,{getDetailList,getVideoList,getDidMoreList,getPopularList} from "../../../store/actionCreator/search/search";
 import {Link} from "react-router-dom";
 import "../../../asset/css/search/reachRecipes.scss";
+import MultiRecipe from "./multiRecipe";
+import DidMoreRecipe from "./didMoreRecipe";
+import PopularRecipe from "./popularRecipe";
 
 
 class SearchRecipeList extends React.Component{
     constructor(){
         super();
         this.state={
-            tabBar:[
-                {
-                    name:"综合排序",
-                    sortType:""
-                },
-                {
-                    name:"做过最多",
-                    sortType:"dishNum"
-                },
-                {
-                    name:"达人食谱",
-                    sortType:"master"
-                }
-            ],
+            tabBar:["综合排序","做过最多","达人食谱"],
             index:0
         }
     }
     componentDidMount(){
-        //待优化
+        this.props.getVideoList(this.props.match.params.keyword)
         this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,0,"");
         this.setState({
             keyword:this.props.match.params.keyword
         });
-        this.props.getVideoList(this.props.match.params.keyword)
     }
     componentDidUpdate(nextProps,oldState){
         if(nextProps.match.params.keyword !== oldState.keyword){
-            this.props.getDetailList(nextProps.showIndex,nextProps.match.params.keyword,0,this.state.tabBar[0].sortType);
+            this.props.getDetailList(nextProps.showIndex,nextProps.match.params.keyword,0);
         }
     }
     render(){
-        let recipeList = this.props.search.searchRecipeResults || [];
         let videoList = this.props.search.searchVideoList || [];
-        let {tabBar} = this.state;
+        let {tabBar,index} = this.state;
         return(
             <div className={"recipeL"}>
                 <div className="bar">
                     <div className="tabbar">
                         {
                             tabBar.map((v,i)=>(
-                                <div key={i} className={i===this.state.index?"cookBook active":"cookBook"} onClick={this.changeTabBar.bind(this,i,v.sortType)}>
-                                    <span>{v.name}</span>
+                                <div key={i} className={i===this.state.index?"cookBook active":"cookBook"} onClick={()=>this.setState({index:i})}>
+                                    <span>{v}</span>
                                     <div className={i===this.state.index?"activeBook":""}></div>
                                 </div>
                             ))
@@ -80,39 +68,11 @@ class SearchRecipeList extends React.Component{
                             </div>
                         )):null
                     }
-                    {
-                        recipeList.map((v,i)=>(
-                            <Link className="cookList" key={i} to={"/recipe/"+v.clientId+"/"+v.contentId}>
-                                <div className="listInfo">
-                                    <div className="listImg">
-                                        <img src={v.coverImage} alt={v.coverTitle}/>
-                                    </div>
-                                    <div className="ListDescript">
-                                        <div className="title1 title3" ref={"title"}>{v.coverTitle}</div>
-                                        {
-                                            v.coverTitle.length<8?<div className="title2">{
-                                                v.material.map((item,index)=>(
-                                                    <span key={index}>{item.name} </span>
-                                                ))
-                                            }</div>:null
-                                        }
-                                        <div className="title2">{v.clientName}</div>
-                                        <div className="title2"><span>{v.collectNum}收藏 </span><span>{v.dishNum}人做过</span></div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))
-                    }
+                    {/*列表组件 */} 
+                    {index===0?<MultiRecipe {...this.props}></MultiRecipe>:index===1?<DidMoreRecipe {...this.props}></DidMoreRecipe>:<PopularRecipe {...this.props}></PopularRecipe>}
                 </div>
-                <LoadingMore getMoreRecipe={this.props.getDetailList}></LoadingMore>
             </div>
         )
-    }
-    changeTabBar(index,sortType){
-        this.setState({
-            index
-        });
-        this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,0,sortType)
     }
 }
 

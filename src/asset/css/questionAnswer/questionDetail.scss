@@ -49,15 +49,18 @@
     display: flex;
     background: #F5F7F9;
     .recipes-img{
+        position: relative;
         height: 70px;
         width: 70px;
         border-radius: 4px;
         overflow: hidden;
-        img{
+        .thisImg{
             height: 100%;
             width: 100%;
         }
+
     }
+
     .recipes-detail{
         margin-left: 15px;
         display: flex;

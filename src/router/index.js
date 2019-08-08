@@ -5,7 +5,7 @@ import QuestionAnswer from '../views/questionAnswer/questionAnswer'
 import Baike from "../views/learnBaking/baike";
 import University from "../views/learnBaking/university";
 import LessonSeries from "../views/learnBaking/lessonSeries";
-import Classify from "../views/learnBaking/classify";
+import Classify from "../views/classify";
 import Essence from '../views/questionAnswer/essence';
 import New from '../views/questionAnswer/new';
 import Hot from '../views/questionAnswer/hot'
@@ -301,8 +301,8 @@ export default {
             }
         },
         {
-            to: "/university/:contentId",
-            path: "/university/:contentId",
+            to: "/school/:contentId",
+            path: "/school/:contentId",
             content: "作品",
             component: School,
             display: true,

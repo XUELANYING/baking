@@ -9,12 +9,44 @@ import SearchBar from "../../component/search/searchBar"
 class Search extends Component{
     constructor(){
         super();
+        this.state={
+            lastestSearch:[]
+        }
     }
     componentDidMount(){
         this.props.getSearchList();
+        if(localStorage.keyword){
+            this.setState({
+                lastestSearch:JSON.parse(localStorage.keyword)
+            })
+        }
+    }
+    setHistoryList(item){
+        if(localStorage.keyword){
+            let kw = JSON.parse(localStorage.keyword);
+            kw.unshift(item);
+            if(kw.length>5){
+                kw.length = 5
+            }
+            localStorage.setItem("keyword",JSON.stringify(kw))
+        }else{
+            let arr = [];
+            arr.push(item);
+            localStorage.setItem("keyword",JSON.stringify(arr))
+        }
+        this.setState({
+            lastestSearch:JSON.parse(localStorage.keyword)
+        })
+    }
+    clearHistory(){
+        localStorage.keyword = "";
+        this.setState({
+            lastestSearch:[]
+        })
     }
     render(){
-        const {lastestSearch,popularSearch} = this.props.search
+        const {popularSearch} = this.props.search;
+        let {lastestSearch} = this.state;
         return(
             <div className={'searchsWrap'}>
                 <SearchBar {...this.props}>
@@ -23,10 +55,10 @@ class Search extends Component{
                 <div className="searchTitle">
                     <div>热门搜索</div>
                 </div>
-                <div className="popularSearchBox">
+                <div className="popularSearchBox clear_fix">
                     {
                         popularSearch.map((v,i)=>(
-                            <Link to={"/search/recipe/"+v.keyword} key={v.popularSearchId} className={"SearchResult"}>{v.keyword}</Link>
+                            <Link to={"/search/recipe/"+v.keyword} key={v.popularSearchId} className={"SearchResult"} onClick={this.setHistoryList.bind(this,v.keyword)}>{v.keyword}</Link>
                         ))
                     }
                 </div>
@@ -35,13 +67,15 @@ class Search extends Component{
                         <div className="currentSearch">
                             <div className="searchText">
                                 最近搜索
-                                <p><img src="https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38" alt=""/></p>
+                                <p onClick={this.clearHistory.bind(this)}>
+                                    <img src="https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38" alt=""/>
+                                </p>
                             </div>
                         </div>
-                        <div className="popularSearch">
+                        <div className="popularSearchBox clear_fix">
                             {
                                 lastestSearch.map((v,i)=>(
-                                    <div key={v.lastestSearchId} className="SearchResult">{v.keyword}</div>
+                                    <Link to={"/search/recipe/"+v} key={i} className="SearchResult">{v}</Link>
                                 ))
                             }
                         </div>

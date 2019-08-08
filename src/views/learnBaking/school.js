@@ -11,7 +11,6 @@ class School extends Component {
     }
 
     render() {
-        console.log(this.props.floorList.data)
         return (
             <div className={"university"}>
                 <div className="image-header">

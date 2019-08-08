@@ -69,7 +69,9 @@ class MeSetUp extends React.Component {
                       <div className={"donwon"}>
                           <List className="Item">
                               <h3  className={"coSon_h4"}>
-                                  <Button type="warning">退出</Button>
+                                  <Button type="warning" className={"ddde"} onClick={()=>{
+                                        this.props.history.push("/")
+                                  }}>退出</Button>
                               </h3>
                           </List>
                       </div>

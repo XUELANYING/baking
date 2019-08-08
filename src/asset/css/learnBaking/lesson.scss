@@ -2,7 +2,7 @@
   background: #f3f8fd;
   margin-bottom: 43px;
   overflow-x: hidden;
-  footer{
+  .fotq{
     height: 43px;
     position: fixed;
     bottom: 0;
@@ -15,8 +15,9 @@
     img{
       width: 17px;
       height: 17px;
+      position: static;
     }
-    .foot-l{
+    .foot-lq{
       width: 59px;
       height: 100%;
       background: #FFFFFF;
@@ -25,7 +26,7 @@
       align-items: center;
       flex-direction: column;
     }
-    .foot-c{
+    .foot-cq{
       width: 59px;
       height: 100%;
       background: #FFFFFF;

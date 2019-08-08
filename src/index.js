@@ -5,7 +5,6 @@ import './index.css';
 import App from './App';
 import store from './store';
 import 'lib-flexible';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import 'antd-mobile/dist/antd-mobile.css';
 import * as serviceWorker from './serviceWorker';
 import imgLoading from './asset/img/imgLoding.gif'//图片未加载完成时显示

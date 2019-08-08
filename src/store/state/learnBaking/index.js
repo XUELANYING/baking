@@ -8,6 +8,7 @@ export default {
     variousList:[],      //视频学堂页分类列表
     catalogList:[],      //课程目录
     taskLisk:[],         //学员作业
+    userInfo:{},         //登录
     lessonList:{},
     introduces:[],
     studentList:[],

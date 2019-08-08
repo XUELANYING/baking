@@ -1,7 +1,8 @@
 ﻿import LearnBaking from '../views/learnBaking/learnBaking'
 import BarkingRing from '../views/bakingRing/bakingRing'
 import Nest from '../views/nest/nest'
-import QuestionAnswer from '../views/questionAnswer/questionAnswer'
+import QuestionAnswer from '../views/questionAnswer/questionAnswer';
+import Login from  "../views/login";
 import Baike from "../views/learnBaking/baike";
 import University from "../views/learnBaking/university";
 import LessonSeries from "../views/learnBaking/lessonSeries";
@@ -55,6 +56,18 @@ export default {
             children: [//子路由
 
             ]
+        },
+        //登录
+        {
+            component:Login,
+            name:"登录",
+            to:"/login",
+            display: true,//隐藏
+            exact: true,
+            meta:{
+                title:"烘焙百科",
+                isAppear:false,
+            }
         },
         {//百科
             component:Baike,

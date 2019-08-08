@@ -35,9 +35,13 @@
         margin-right: 50px;
         flex: 1;
         .upload-input-label {
-          border: 1px solid #eaeaea;
-          border-radius: 4px;
+          //border: 1px solid #eaeaea;
+          //border-radius: 4px;
           padding: 8px;
+          img{
+            width: 200px;
+            height: 200px;
+          }
           .base-upload-input {
             display: none;
           }

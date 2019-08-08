@@ -131,7 +131,7 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/education/getIndex?_t=1564833387381&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs')
             dispatch(swiperList(data.data.category));
-            console.log('轮播图',data.data.category)
+            // console.log('轮播图',data.data.category)
         }
     },
     //新手教程
@@ -163,7 +163,7 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/api/dish/getOutstandingCourseContent?_t=1565140148485&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&pageIndex=0&pageSize=10&educationCourseId=10377")
             dispatch(taskLisk(data.data.content.data));
-            console.log("作业",data.data.content.data)
+            // console.log("作业",data.data.content.data)
         }
     },
 

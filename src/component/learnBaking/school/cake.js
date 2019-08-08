@@ -36,7 +36,7 @@ class Cake extends React.Component {
     componentDidMount(){
         console.log(this.props.categoryId);
         this.props.getVariousList(this.props.categoryId);
-console.log('ahah',this.props.categoryId)
+// console.log('ahah',this.props.categoryId)
     }
 }
 export default connect((state) => ({variousList: state.learnBaking.variousList}),

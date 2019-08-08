@@ -1,3 +1,5 @@
+
+
 .lesson{
   background: #eee;
 }
@@ -78,23 +80,23 @@ padding-left: 15px;
   line-height: 20px;
 }
 //课程介绍
-.course {
+.l-course {
   width: 100%;
   padding: 0 15px;
   background: #fff;
 }
-.course .words{
+.l-course .words{
   margin-bottom: 10px;
   background: #fff;
 }
-.course .words h2{
+.l-course .words h2{
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: #313131;
   margin:10px 0;
 }
-.course .words p{
+.l-course .words p{
   max-width: 100%;
   box-sizing: border-box !important;
   overflow-wrap: break-word !important;
@@ -103,6 +105,7 @@ padding-left: 15px;
   letter-spacing: 0.2px;
   color: #313131;
 }
+//课程目录
 .ca-com{
   width: 100%;
   background: #fff;
@@ -126,10 +129,17 @@ padding-left: 15px;
   flex: 1;
   flex-direction: column;
 }
+.ca-tit .ca-tt{
+  color: #313131;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 400;
+}
 .ca-see{
   color: #E98B71;
   font-size: 13px;
   line-height: 18.5px;
+  font-weight: 400;
 }
 .ta-wrap{
   width: 100%;

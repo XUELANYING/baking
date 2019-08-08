@@ -60,6 +60,7 @@ export default {
             name:"技巧百科",
             to:"/baike",
             display: true,//隐藏
+            exact: true,
             meta:{
                 title:"烘焙百科",
                 unActive:"https://image.hongbeibang.com/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80",
@@ -71,6 +72,7 @@ export default {
             name:"视频学堂",
             to:"/university",
             display: true,//隐藏
+            exact: true,
             meta:{
                 title:"烘焙帮学堂",
                 unActive:"https://image.hongbeibang.com/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80",
@@ -80,7 +82,8 @@ export default {
                 {
                     component:More,
                     name:"查看更多",
-                    to:"/university/allLessons"
+                    to:"/university/allLessons",
+                    exact: true,
                 }
             ]
         },

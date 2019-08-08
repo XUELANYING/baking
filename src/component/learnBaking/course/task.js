@@ -2,16 +2,16 @@ import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../../store/actionCreator";
-
+import {Link}from "react-router-dom";
  class Task extends React.Component {
     render() {
         return (
-
             <div className={"ta-wrap"}>
-
                     {
                         this.props.taskLisk.map((v,i)=>(
-                            <div className="ta-com">
+                            <div key={i} className="ta-com">
+                                {/*<Link className={"ca-l"} to={"/lesson?contentId="+v.educationCourseId+"&isHideBottom=1&playTryVideo="+v.hasTrySeeVideo}>*/}
+                                <Link exact={0} className={"ca-l"} to={"/university/dish?contentId="+v.contentId}>
                                 <dl className={"ta-out"}>
                                     <dt><img src={v.image} alt=""/></dt>
                                     <dd className={"ta-tit"}>
@@ -20,6 +20,7 @@ import actionCreator from "../../../store/actionCreator";
                                         <h5><img src="https://image.hongbeibang.com/Fj4ZDoVywR5b3huYgsOzfnPalXRt?76X76&imageView2/1/w/76/h/76|imageView2/1/w/76/h/76"  alt=""/><span>{v.likeNum}</span></h5>
                                     </dd>
                                 </dl>
+                                </Link>
                             </div>
                         ))
                     }

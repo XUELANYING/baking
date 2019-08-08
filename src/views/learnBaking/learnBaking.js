@@ -21,7 +21,7 @@ class LearnBarking extends React.Component {
                     <div className={"l-w"}>
                         {
                             router.routers.map((v,i)=>(
-                                v.meta.isAppear?<NavLink  className={"l-bar"} key={i} to={v.to}>
+                                v.meta.isAppear?<NavLink exact  className={"l-bar"} key={i} to={v.to}>
                                     <img src={v.meta.unActive} alt=""/>
                                     <h3>{v.name}</h3>
                                 </NavLink>:null

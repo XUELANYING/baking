@@ -21,15 +21,15 @@ export default function(state=initState,{type,payload}) {
         // console.log("新手",state.lessonLists)
     } else if (type === actionType.GET_VARIOUSLIST) {
         state.variousList = [...payload];                              //视频分页列表
-        console.log("variousList", state.variousList)
+        // console.log("variousList", state.variousList)
     } else if (type === actionType.GET_CATALOGLIST) {
-        state.catalogList = [...state.catalogList, ...payload];        //课程目录
-        console.log("catalogList", state.catalogList)
+        state.catalogList = [ ...payload];                                       //课程目录
+        // console.log("catalogList", state.catalogList)
     } else if (type === actionType.GET_TASKLIST) {
-        state.taskLisk = [...state.taskLisk, ...payload];             //学员作业
+        state.taskLisk = [ ...payload];                                           //学员作业
 
     }else if (type === actionType.UP_LESSON) {
-        state.lessonList = [ ...payload];
+        state.lessonList = { ...payload};
 
     }else if (type === actionType.UP_STUDENT) {
         state.studentList = [...state.studentList, ...payload];
@@ -38,7 +38,7 @@ export default function(state=initState,{type,payload}) {
         state.newestList = [...state.newestList, ...payload];
 
     }else if (type === actionType.UP_DISH) {
-        state.dishList = [...state.dishList, ...payload];
+        state.dishList = {...state.dishList, ...payload};
 
     }else if (type === actionType.UP_FLOOR) {
         state.floorList = [...state.floorList, ...payload];

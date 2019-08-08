@@ -1,0 +1,29 @@
+.NothingWrap{
+  width:100%;
+  height:100%;
+}
+
+.nothingInfo{
+  margin: 70px auto;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .nothingImg{
+    width: 175px;
+    height: 175px;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+  p{
+    font-size: 14px;
+    text-align: center;
+    color: #999999;
+    margin-top: 10px;
+    line-height: 16px;
+  }
+}

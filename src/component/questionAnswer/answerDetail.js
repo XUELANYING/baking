@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import actionCreator from "../../store/actionCreator";
 import '../../asset/css/questionAnswer/answerDetail.scss'
+import TopWrap from "../common/topWrap";
 
 class AnswerDetail extends React.Component {
     constructor(props) {
@@ -23,23 +24,10 @@ class AnswerDetail extends React.Component {
         const floor = this.props.questionAnswer.answerFloor
         return (
             <div className={"answerDetail"}>
-                <div className={'detail-top'}>
-                    <span onClick={() => {
-                        this.props.history.go(-1)
-                    }}>
-                        <img className={'icon'}
-                             src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"
-                             alt=""/>
-                    </span>
-                    <div>
-                        <span className={"title"}>回答</span>
-                    </div>
-                </div>
-
+                <TopWrap styleType={"s3"}></TopWrap>
                 <div className={"answer-title"}>
                     {info.title}
                 </div>
-
                 <div className={"answer-main"}>
                     <div className={"answer-user"}>
                         <div className={"user"}>
@@ -61,15 +49,18 @@ class AnswerDetail extends React.Component {
                         </div>
                     </div>
                     <div className={"answer-content"}>
-                        <p>{info.coverSummary}</p></div>
+                        <div dangerouslySetInnerHTML={{__html: info.description}}></div>
+                    </div>
                 </div>
 
                 <div className={"comment"}>
-                    <div className={"comment-num"}><p>评论 {floor.length}</p></div>
-                    <div className={"detail-wrap"}>
-                        {
+                    <div className={"comment-num"}><p>评论 {
+                        floor.length === 0 ? null : floor.length
+                    }</p></div>
+                    <div className={"details-wrap"}>
+                        {floor.length === 0 ? <div className={"nuAnswer"}><p>快去发表你的评论吧</p></div> :
                             floor.map((v, i) => (
-                                <div className={"detail-box"} key={i}>
+                                <div className={"details-box"} key={i}>
                                     <div className={'detail-user'}>
                                         <div className={"detailUser-logo"}>
                                             <img src={v.clientImage} alt=""/>
@@ -97,7 +88,7 @@ class AnswerDetail extends React.Component {
                                                     {
                                                         v.comments.data.map((item, index) => (
                                                             <li key={index}>
-                                                                <span>{item.clientName} </span>{item.coverSummary}</li>
+                                                                <span>{item.clientName}: </span>{item.coverSummary}</li>
                                                         ))
                                                     }
                                                 </ul>
@@ -111,6 +102,24 @@ class AnswerDetail extends React.Component {
                         }
 
                     </div>
+                </div>
+                <div className={"tab-detail"}>
+
+                    <div className={"tab-item"}>
+                        <img
+                            src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/50/h/50"
+                            alt=""/>
+                        <span>{info.hotNum}</span>
+                    </div>
+
+                    <div className={"tab-item"}>
+                        <img
+                            src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/50/h/50"
+                            alt=""/>
+                        <span>评论</span>
+                    </div>
+
+
                 </div>
             </div>
         )

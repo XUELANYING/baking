@@ -1,0 +1,41 @@
+/*我是ME的总的css 我可以做下拉刷新 也可以搞swiper*/
+.Me {
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  background: #f7fbff;
+  position: relative;
+  .son {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  /********Me_SetUp* z-index: 5***********/
+  .MeSetUp {
+     width: 100%;
+     min-height:44px;
+     position: relative;
+    .Me_SetUp {
+      width: 100%;
+      height: 44px;
+      background: white;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index:11;
+      img {
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        right: 20px;
+      }
+      .my_Top {
+        position: absolute;
+        height: 1000px;
+      }
+    }
+  }
+}

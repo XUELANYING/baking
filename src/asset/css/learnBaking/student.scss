@@ -1,0 +1,60 @@
+.studentCon{
+  margin-top: 44px;
+    header{
+      height: 44px;
+      position: fixed;
+      background: #FFF;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0 18px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      span{
+        width: 27px;
+        height: 44px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        img{
+            width: 27px;
+            height: 27px;
+        }
+      }
+      .Straight_action{
+        color: #E98B71;
+      }
+      .Straight{
+        width: 287px;
+        height: 44px;
+        padding: 0;
+       justify-content: center;
+        overflow: hidden;
+        display: flex;
+        margin: 0 auto;
+        .Straight-l{
+          text-align: center;
+          cursor: pointer;
+          width: 65px;
+          line-height: 44px;
+          height: 44px;
+          font-size: 16px;
+          color: #999999;
+        }
+        .Straight-r{
+          text-align: center;
+          cursor: pointer;
+          width: 65px;
+          line-height: 44px;
+          height: 44px;
+          font-size: 16px;
+          color: #999999;
+        }
+      }
+    }
+  .show{
+    min-height: 100px;
+  }
+}

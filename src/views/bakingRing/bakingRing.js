@@ -1,10 +1,9 @@
 import React from 'react';
-import {Switch, NavLink, Route} from 'react-router-dom'
 import router from '../../router'
 import '../../asset/font/iconfont.css'
 import '../../asset/css/bakingRing/main.scss'
-
-export default class BakingRing extends React.Component {
+import {Switch, NavLink, Route,withRouter} from 'react-router-dom'
+class BakingRing extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -23,26 +22,23 @@ export default class BakingRing extends React.Component {
                         {
                             this.props.children.map((v,i)=>(
 
-                                v.isHide? null:<NavLink className={'baking_header_main_list'} activeClassName={'active'} key={i} to={v.to}>{v.name}</NavLink>
+                                v.isHide? null:<NavLink className={'baking_header_main_list'} activeClassName={'active'} exact={true} key={i} to={v.to}>{v.name}</NavLink>
                             ))
                         }
                     </nav>
                     <span className={"baking_header_icon baking_header_icon_right"}>
                         <i className={"iconfont icon-lingdang"}></i>
                     </span>
-
-
                 </div>
 
                     {
                         this.props.children.map((v,i)=>(
-                            v.isHide? null:<Route key={i} path={v.path} {...v}/>
+                            v.isHide? null:<Route key={i} exact={v.exact} path={v.path} {...v}/>
 
                         ))
                     }
-
-
             </div>
         )
     }
 }
+export default withRouter(BakingRing)

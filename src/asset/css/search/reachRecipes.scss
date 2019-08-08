@@ -1,0 +1,145 @@
+$size:14px;
+$color:#4A4945;
+
+.recipeL{
+  width:100%;
+  height:100%;
+}
+
+.bar{
+  width:100%;
+  height:46px;
+  position:fixed;
+  top:44px;
+  left:0;
+  z-index:2;
+  background:#fff;
+  .tabbar{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .cookBook{
+      width:33%;
+      height:30px;
+      text-align: center;
+      line-height: 28px;
+      font-size:$size;
+      color:#999;
+      cursor:pointer;
+    }
+    .active{
+      color:#4A4945;
+      font-weight:900;
+    }
+    .activeBook{
+      width:50px;
+      height:2px;
+      margin:0 auto;
+      border-radius:20px;
+      background:#E98B71;
+    }
+  }
+}
+
+
+.lists{
+  width:100%;
+  padding-bottom:20px;
+  padding-top:90px;
+}
+.cookList{
+  width:100%;
+  height:98.5px;
+  padding:3px 0;
+  overflow: hidden;
+  zoom:1;
+  position:relative;
+  .listInfo{
+    width:375px;
+    height:92.5px;
+    padding:0 15px 2.5px 15px;
+    overflow: hidden;
+    zoom:1;
+    background:#fff;
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+    .listImg{
+      width:125px;
+      height:90px;
+      margin-right:15px;
+      overflow: hidden;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        height:100%;
+        width:100%;
+      }
+      .videoLogo{
+        position: absolute;
+        top: 0;
+        left: 18.75px;
+        width: 52px;
+        height: 15px;
+        font-size: 11px;
+        background-color: #E98B71;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 15px;
+      }
+    }
+    .ListDescript{
+      width:205px;
+      height:100%;
+      .title1{
+        width:100%;
+        font-size:18px;
+        color: $color;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-weight:900;
+      }
+      .title3{
+        letter-spacing: 0.5px;
+      }
+      .title2{
+        width:100%;
+        height:16px;
+        font-size:12px;
+        line-height:16px;
+        color:#999;
+        margin:3px 0 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        -webkit-text-overflow: ellipsis;
+        -moz-text-overflow: ellipsis;
+        white-space: nowrap;
+        span{
+          color:$color;
+        }
+      }
+    }
+  }
+  .isShow{
+    width:55px;
+    height:19px;
+    position: absolute;
+    bottom: 7.5px;
+    right: 12.5px;
+    background-color: #FAFBFC;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    z-index: 1;
+    display: flex;
+    font-size: 11px;
+    color: #999;
+  }
+}

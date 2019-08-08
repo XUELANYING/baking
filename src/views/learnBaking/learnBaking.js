@@ -1,35 +1,45 @@
-import React from 'react';
-import {Link,Route,Switch} from 'react-router-dom'
-
-export default class LearnBarking extends React.Component {
+import React,{Fragment} from 'react';
+import {NavLink,withRouter} from 'react-router-dom';
+import router from "../../router";
+import '../../asset/css/learnBaking/index.scss'
+// import {bindActionCreators} from 'redux'
+// import {connect} from 'react-redux'
+import ShowList from "../../component/learnBaking/showList"
+import KindList from "../../component/learnBaking/kindList"
+class LearnBarking extends React.Component {
     constructor() {
         super();
         this.state = {
             msg: ""
         }
     }
-
     render() {
         return (
-            <div>
-                <h1>LearnBarking</h1>
-                <Switch>
-                    {
-                        this.props.children.map((v,i)=>(
-                            <Route key={i} path={v.to} {...v}/>
-                        ))
-                    }
-                </Switch>
-                {
-                    this.props.children.map((v,i)=>(
-                        <Link key={i} to={v.to}>{v.name}</Link>
-                    ))
-                }
+            <Fragment>
+                <nav>
+                    <div className="search"></div>
+                    <div className={"l-w"}>
+                        {
+                            router.routers.map((v,i)=>(
+                                v.meta.isAppear?<NavLink  className={"l-bar"} key={i} to={v.to}>
+                                    <img src={v.meta.unActive} alt=""/>
+                                    <h3>{v.name}</h3>
+                                </NavLink>:null
 
-            </div>
+                            ))
+                        }
+                    </div>
+
+                </nav>
+                <ShowList></ShowList>
+                <KindList ></KindList>
+            </Fragment>
         )
     }
-    componentDidMount(){
-        console.log(this.props)
-    }
 }
+
+export default withRouter(LearnBarking)
+
+
+
+

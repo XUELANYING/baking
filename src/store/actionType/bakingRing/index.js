@@ -8,6 +8,6 @@ export default {
 
     GET_NEWEST:'GET_NEWEST',
     GET_HOT_MOST:'GET_HOT_MOST',
-    GET_FOLLOW:'GET_FOLLOW'
-
+    GET_FOLLOW:'GET_FOLLOW',
+    GET_EXPERT:'GET_EXPERT'
 }

@@ -2,8 +2,16 @@ import React, { useState, useEffect, useCallback, useRef } from 'react'
 import PropTypes from 'prop-types'
 import Cropper from 'react-cropper' // 引入Cropper
 import 'cropperjs/dist/cropper.css' // 引入Cropper对应的css
-
-import '@asset/css/nest/Me/HooksCropperModal.scss'
+import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import '@asset/css/nest/Me/HooksCropperModal.scss';
+import {
+    BrowserRouter as Router,
+    NavLink,
+    Route,
+    Link,
+    Switch,
+    withRouter
+} from "react-router-dom"
 
 function HooksCropperModal({ uploadedImageFile, onClose, onSubmit }) {
   const [src, setSrc] = useState(null)
@@ -22,7 +30,7 @@ function HooksCropperModal({ uploadedImageFile, onClose, onSubmit }) {
   const handleSubmit = useCallback(() => {
     // let filename = uploadedImageFile.name
 
-    console.log('正在上传图片')
+    //console.log('正在上传图片')
     // TODO: 这里可以尝试修改上传图片的尺寸
     cropperRef.current.getCroppedCanvas().toBlob(async blob => {
       // // 创造提交表单数据对象
@@ -69,7 +77,7 @@ function HooksCropperModal({ uploadedImageFile, onClose, onSubmit }) {
         </div>
         <div className="button-row">
           <div className="submit-button" onClick={handleSubmit}>
-            点击提交
+              <Button type="warning" className={"button"}>确定</Button>
           </div>
         </div>
       </div>
@@ -83,4 +91,4 @@ HooksCropperModal.propTypes = {
   onSubmit: PropTypes.func.isRequired
 }
 
-export default HooksCropperModal
+export default withRouter (HooksCropperModal)

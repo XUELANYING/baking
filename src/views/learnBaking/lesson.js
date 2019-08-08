@@ -5,6 +5,7 @@ import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import BScroll from "better-scroll"
 import {withRouter, Link} from "react-router-dom"
+import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 import PlayUrl from "../../component/learnBaking/lesson/playUrl"
 import TrySeeUrl from "../../component/learnBaking/lesson/trySeeUrl";
 import LoadingMore from "@component/common/loadingMore";
@@ -14,11 +15,35 @@ class Lesson extends Component {
         this.state = {
             contentId: 0,
             clientId:0,
-            isVideo: true
+            isVideo: true,
+            open: false,
         };
     }
 
+    // onOpenChange = (...args) => {
+    //     console.log(111)
+    //     // console.log(args);
+    //     this.setState({open: !this.state.open});
+    //     const con = document.getElementsByClassName("my_Top")[0]
+    //     const see = document.getElementsByClassName("Me_SetUp")[0]
+    //     const ree = document.getElementsByClassName("am-drawer-draghandle")[0]
+    //     const iTem= document.getElementsByClassName("Item")
+    //     con.style.zIndex = 11
+    //     //console.log(args[0])
+    //     if(args[0]===false){
+    //         con.style.zIndex = 5
+    //         ree.style.display = "none"
+    //     }
+    // }
     render() {
+        const sidebar = (
+            <div className={"codeList"}>
+                <List>
+                    <List className="Item">
+                        <h3>设置</h3>
+                    </List>
+                </List>
+            </div>);
         return (
             this.props.lessonList.shareTitle ? <div className={"lessonCom"}>
                 {
@@ -31,29 +56,55 @@ class Lesson extends Component {
                             <img
                                 src="https://image.hongbeibang.com/FgRQxfAWq4kOdLc5xd_GxWm03Vs_?54X54&imageView2/1/w/54/h/54"
                                 alt=""/>
-                            <span>1000+人在学</span>
+                            <span><i>{this.props.lessonList.buyNum>1000?"1000+":this.props.lessonList.buyNum}</i>人在学</span>
                         </div>
                         <div className={"On-line-r"}>
                             <img
                                 src="https://image.hongbeibang.com/FvlaRxbO9YVI0n8uMoFepUzffkWK?imageView2/1/w/640/h/640"
                                 alt=""/>
-                            <span onTouchEnd={this.handOnTouch.bind(this)}>试看课程</span>
+                            <span onTouchEnd={this.handOnTouch.bind(this)}>{this.state.isVideo ?"试看课程":"课程介绍"}</span>
                         </div>
                     </div>
                 </div>
-                <div className={"Study"}>
-                    <div className="study_con">
-                        <div className="study_top">
-                            <p>永久无限次回看</p>
-                            <p>购买后即看</p>
-                            <p>烘焙帮自营课程</p>
+
+                    {/*1111*/}
+                {/*</Button>*/}
+                <div className={"Study"}  onClick={this.onOpenChange}>
+                        <div className="study_work">
+                            <div className="study_top">
+                                <div className="study_dian"></div>
+                                <p>永久无限次回看</p>
+                                <div className="study_dian"></div>
+                                <p>购买后即看</p>
+                                <div className="study_dian"></div>
+                                <p>烘焙帮自营课程</p>
+                            </div>
+                            <div className="study_bot">
+                                <div className="study_dian"></div>
+                                <p>高效的学习体验</p>
+                                <div className="study_dian"></div>
+                                <p>分步骤学习</p>
+                                <div className="cart_dian"></div>
+                                <p>专注打造唯一品类</p>
+                            </div>
                         </div>
-                        <div className="study_bot">
-                            <p>高效的学习体验</p>
-                            <p>分步骤学习</p>
-                            <p>专注打造唯一品类</p>
+                        <div className="study_san">
+                            <img src="https://image.hongbeibang.com/Fqee_DzmTrYWinRY2tMPfDtu1ym8" alt=""/>
                         </div>
-                    </div>
+
+                    {/*<Drawer*/}
+                        {/*position={'bottom'}*/}
+                        {/*className="my_Top"*/}
+                        {/*sidebar={sidebar}*/}
+                        {/*style={{ minHeight: document.documentElement.clientHeight }}*/}
+                        {/*contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}*/}
+                        {/*sidebarStyle={{ border: '1px solid #ddd' }}*/}
+                        {/*enableDragHandle*/}
+                        {/*open={this.state.open}*/}
+                        {/*onOpenChange={this.onOpenChange}*/}
+                    {/*>*/}
+
+                    {/*</Drawer>*/}
                 </div>
                 <div className={"show_lesson"}>
                     <div className={"homework"}>
@@ -114,9 +165,14 @@ class Lesson extends Component {
                                 {
                                     this.props.curriculumList.map((item, index) => (
                                         <li className={"curr_list"} key={index} onClick={() => {
-                                            this.props.history.push("/lesson/"+item.educationCourseId+"/"+item.clientId)
+
+                                            this.props.history.replace("/lesson/"+item.educationCourseId+"/"+item.clientId)
+
                                         }}>
-                                            <img src={item.image} alt=""/>
+                                            <div className="curr_img">
+                                                <img src={item.image} alt=""/>
+                                                <div className="buynum"><span>{item.buyNum>1000?"1000+":item.buyNum}</span>人在学</div>
+                                            </div>
                                             <div className="curr_less">
                                                 <p>{item.shareTitle}</p>
                                             </div>
@@ -139,7 +195,7 @@ class Lesson extends Component {
                                     <img
                                         src="https://image.hongbeibang.com/FvihrbO1twdtKSkz2WqB9KxUjjeg?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p>蛋糕</p>
+                                    <p onClick={()=>this.props.history.push("/university")}>蛋糕</p>
                                 </div>
                             </div>
                             <div className="cake">
@@ -147,7 +203,7 @@ class Lesson extends Component {
                                     <img
                                         src="https://image.hongbeibang.com/Frs8TmZhk4PrxBY2cvA9e3jbbdrB?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p>甜点</p>
+                                    <p onClick={()=>this.props.history.push("/university")}>甜点</p>
                                 </div>
                             </div>
                             <div className="cake">
@@ -155,7 +211,7 @@ class Lesson extends Component {
                                     <img
                                         src="https://image.hongbeibang.com/ForyDTluoYKimnQmobG6agmowKzy?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p>面包</p>
+                                    <p onClick={()=>this.props.history.push("/university")}>面包</p>
                                 </div>
                             </div>
                             <div className="cake">
@@ -163,7 +219,7 @@ class Lesson extends Component {
                                     <img
                                         src="https://image.hongbeibang.com/FuCKHBljrYAFuTjTs0B1fkNcUhWw?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p>中式点心</p>
+                                    <p onClick={()=>this.props.history.push("/university")}>中式点心</p>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +237,7 @@ class Lesson extends Component {
                              alt=""/>
                         <span>咨询</span>
                     </div>
-                    <div className={"foot-r"}>￥9.9购买本课程</div>
+                    <div className={"foot-r"} onClick={()=>this.props.history.push("/cart/"+this.props.lessonList.educationCourseId)}>￥9.9购买本课程</div>
                 </footer>
             </div> : null
 
@@ -198,6 +254,7 @@ class Lesson extends Component {
         this.props.getLesson(this.props.match.params.contentId)
         this.props.getHomeWork(this.props.match.params.contentId)
         this.props.getCurr({pageIndex:0,contentId:this.props.match.params.contentId,clientId:this.props.match.params.clientId})
+        this.forceUpdate();
     }
 
     componentDidUpdate() {
@@ -208,6 +265,9 @@ class Lesson extends Component {
                 click: true,
             })
         }
+
+
+
         if (this.refs.currList) {
             this.scroll = new BScroll(this.refs.currList, {
                 scrollX: true,
@@ -215,6 +275,12 @@ class Lesson extends Component {
                 click: true,
             })
         }
+    }
+
+    componentWillReceiveProps(nextProps){
+        let contentId = this.props.match.params.contentId
+
+        // console.log(234,this.props.match.params.contentId,nextProps.match.params.contentId)
     }
 }
 

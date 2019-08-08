@@ -14,6 +14,7 @@ import Lesson from "@views/learnBaking/lesson"
 import Student from "@views/learnBaking/student"
 import University from "@views/learnBaking/university"
 import CourseList from "@views/learnBaking/courseList"
+import Cart from "@views/learnBaking/cart"
 /*郭郭的路由跳转*/
 import opusTaber from "@component/Me/opusTaber"
 import addlistOne from "./Me/router/addlistORoute"
@@ -209,6 +210,17 @@ export default {
             path: "/university/:contentId",
             content: "作品",
             component: University,
+            display: true,
+            meta: {
+                keywored: "关键字",
+                descrieption: "描述",
+            }
+        },
+        {
+            to: "/cart/:contentId",
+            path: "/cart/:contentId",
+            content: "购买",
+            component: Cart,
             display: true,
             meta: {
                 keywored: "关键字",

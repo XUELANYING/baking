@@ -24,6 +24,9 @@ export default function(state=initState,{type,payload}){
             break;
         case actionType.UP_CUURR:
             state.curriculumList = [...state.curriculumList,...payload]
+            break;
+        case actionType.UP_CART:
+            state.carList=payload;
     }
     return state;
 }

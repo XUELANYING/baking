@@ -35,7 +35,11 @@ class Sign extends React.Component{
                 alertInstance.close();
             }, 500000);
         };
-        const con =JSON.parse(localStorage.getItem("doList"))
+
+            // const con =JSON.parse(localStorage.getItem("userInfo")
+               const  ass = JSON.parse(localStorage.userInfo)
+
+            //console.log(JSON.parse(localStorage.getItem(userInfo))
 
         return (
             <div className={"Sign"}>
@@ -61,9 +65,11 @@ class Sign extends React.Component{
                         <h3>
                             {/*日历==签到*/}
                             {/*等登陆跳转加上*/}
-                            {
-                                con.uesecon?<SignTime></SignTime>:<div><p>请登录</p></div>
-                            }
+                           {
+                               ass.userName?<SignTime></SignTime>:<div>
+                                   <p>去登陆</p>
+                               </div>
+                           }
 
                         </h3>
                     </div>

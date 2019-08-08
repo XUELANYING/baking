@@ -43,6 +43,12 @@ const upCurr = function (payload) {
         payload
     }
 }
+const upCart = function (payload) {
+    return{
+        type:actionType.UP_CART,
+        payload
+    }
+}
 export default {
     getLesson(contentId){
         return(dispatch)=>{
@@ -119,6 +125,17 @@ export default {
                 .then(data => {
                     console.log(666,data)
                     dispatch(upCurr(data.data.data))
+                })
+        }
+    },
+    getCart(contentId){
+        return (dispatch)=>{
+            let url = "/api/education/getCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&educationCourseId="+contentId+"";
+            fetchfill(url)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(777,data.data)
+                    dispatch(upCart(data.data))
                 })
         }
     },

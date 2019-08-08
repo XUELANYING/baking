@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import NavList from './Navlist/index'
 import router from './index'
+import {TransitionGroup, CSSTransition} from "react-transition-group";
 import {withRouter} from 'react-router-dom'
 import 'react-animated-router/animate.css'; //导入默认的切换动画样式，如果需要其它切换样式，可以导入自己的动画样式定义文件
 

@@ -195,12 +195,20 @@ class Lesson extends Component {
     }
 
     componentDidMount() {
+
         this.props.getLesson(this.props.match.params.contentId)
         this.props.getHomeWork(this.props.match.params.contentId)
         this.props.getCurr({pageIndex:0,contentId:this.props.match.params.contentId,clientId:this.props.match.params.clientId})
     }
+    getSnapshotBeforeUpdate() {
+        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
+    }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState, scroll) {
+        // 窗口发生滚动，滚动最顶端
+        if (scroll === true) {
+            window.scrollTo(0, 0);
+        }
         if (this.refs.hotList) {
             this.scroll = new BScroll(this.refs.hotList, {
                 scrollX: true,

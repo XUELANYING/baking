@@ -62,3 +62,19 @@ body{
     width: 27px;
     margin-top: 6px;
 }
+
+
+/*图片loading*/
+.loadingBox{
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -14px;
+    margin-left: -14px;
+}
+.loadingBox img{
+    height: 100%;
+    width: 100%;
+}

@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import actionCreator from "../../store/actionCreator";
 import QuestionBox from '../../component/questionAnswer/common/questionBox'
-import animatedWrapper from '../../common/high-order/animated_wrapper'
 
 class Hot extends React.Component {
     render() {
@@ -20,5 +19,5 @@ class Hot extends React.Component {
         }
     }
 }
-export default animatedWrapper(withRouter(connect((state)=>({hotList:state.questionAnswer.hotList}),
-    (dispatch)=>(bindActionCreators(actionCreator,dispatch)))(Hot)))
+export default withRouter(connect((state)=>({hotList:state.questionAnswer.hotList}),
+    (dispatch)=>(bindActionCreators(actionCreator,dispatch)))(Hot))

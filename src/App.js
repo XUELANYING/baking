@@ -84,6 +84,7 @@ class App extends React.Component {
             }, 2500)
         }
     }
+
 }
 
 export default App;

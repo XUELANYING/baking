@@ -29,9 +29,7 @@ class EditQuestion extends React.Component {
     }
     handleOnClick(){
         if(!this.refs.val.value){
-            Toast.info('请输入你的问题',6);
-            document.getElementsByClassName("am-toast-text")[0].style.background="rgb(249, 103, 80)"
-
+            Toast.info('请输入你的问题',2);
         }else{
             this.props.history.push('/question/description/'+this.refs.val.value)
         }

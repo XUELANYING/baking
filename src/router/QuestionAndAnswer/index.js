@@ -24,7 +24,7 @@ export default [
             exit: 'to-right'
         },
         children: [//子路由
-            {
+            /*{
                 component: Essence,
                 name: "精华问答",
                 path: '/questionAndAnswer/essence',
@@ -53,7 +53,7 @@ export default [
                     title: "烘焙问答_烘焙社区_烘焙交流_烘焙帮问答_烘焙帮社区_社区_烘焙帮",
                     isShow: true,
                 },
-            },
+            },*/
             {
                 component: QuestionDetail,
                 path: '/question',

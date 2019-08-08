@@ -88,20 +88,6 @@ class DishDetail extends Component {
                             </div>
                         </div>
 
-
-
-                    {/*</div>*/}
-                    {/*{*/}
-                        {/*<div className={'activityDetail_image_two'} dangerouslySetInnerHTML={{__html:this.props.activityDetail.activityIntroduce}}></div>*/}
-                    {/*}*/}
-                    {/*<div className={'activity_join'}>*/}
-                        {/*<span>参与活动即可获得幸运数字</span>*/}
-                    {/*</div>*/}
-                    {/*<div className={'activity_join activity_join_two'}>*/}
-                        {/*{this.props.activityDetail.component?<span>参与人数 {this.props.activityDetail.component.count}</span>:<span></span>}*/}
-                    {/*</div>*/}
-
-
                 </div>
                     <div className={'dishDetail_bottom'}>
                         <section>

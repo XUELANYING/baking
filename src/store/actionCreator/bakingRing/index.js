@@ -1,5 +1,6 @@
 import axios from 'axios'
 import actionType from '../../actionType/bakingRing'
+
 import filter from '../../../asset/filter'
 const activityList=(payload)=>{
     return {
@@ -54,6 +55,13 @@ const followList = (payload) =>{
 const dishDetail = (payload) =>{
     return {
         type:actionType.GET_DISH_DETAIL,
+        payload
+    }
+}
+
+const expertList = (payload) =>{
+    return {
+        type:actionType.GET_EXPERT,
         payload
     }
 }
@@ -127,9 +135,18 @@ export default {
     //获得关注列表
     getFollowList(){
         return async (dispatch)=> {
-            let {data} = await axios.get('/api/v2/feed/getFollow?_t=1565100848958&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzk0ODE1OCwiaWF0IjoxNTY0NTU5MzU4fQ.rJn3G0BD0fF1tke6OLAO0ys3luCuQ8jw2ZxvK_k9NLw&pageIndex=0&pageSize=10')
-            console.log('关注列表,这是最最想要的',data.data);
-            dispatch(followList(data.data));
+            let {data} = await axios.get('/show/getFollow');
+            console.log('关注列表',data);
+            dispatch(followList(data));
+        }
+    },
+    // 获得达人列表
+    getExpertList(){
+        return async (dispatch)=>{
+            let {data} = await axios.get('/api/v2/feed/getMasterNew?_t=1565178188023&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzk0ODE1OCwiaWF0IjoxNTY0NTU5MzU4fQ.rJn3G0BD0fF1tke6OLAO0ys3luCuQ8jw2ZxvK_k9NLw&pageIndex=0&pageSize=10')
+            console.log('达人列表',data.data.content)
+            dispatch(expertList(data.data.content))
+
         }
     }
 }

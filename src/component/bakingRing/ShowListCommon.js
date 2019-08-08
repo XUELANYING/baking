@@ -95,17 +95,30 @@ import filter from '../../asset/filter'
                                     <div className={'showlist_comments_wrap'}>
                                         <div>
                                             <i className={'iconfont icon-zan'}></i>
-                                            <span>3</span>
+                                            <span>
+                                        {
+                                            v.likeNum?v.likeNum:'点赞'
+                                        }
+                                        </span>
                                         </div>
                                         <div>
                                             <i className={'iconfont icon-dashang'}></i>
-                                            <span>打赏</span>
+                                            <span>
+
+                                        {
+                                            v.rewardNum?v.rewardNum:'打赏'
+                                        }
+
+                                        </span>
                                         </div>
                                         <div>
                                             <i className={'iconfont icon-pinglun1'}></i>
-                                            <span>评论</span>
+                                            <span>
+                                        {
+                                            v.commentNum?v.commentNum:'评论'
+                                        }
+                                        </span>
                                         </div>
-
                                     </div>
 
 
@@ -123,7 +136,8 @@ import filter from '../../asset/filter'
     componentDidMount(){
 
         this.props.getShowList();
-        this.props.getCommunityDetail()
+        this.props.getCommunityDetail();
+        this.props.getExpertList()
 
     }
 }

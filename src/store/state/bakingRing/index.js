@@ -21,8 +21,10 @@ export default {
     showList:[],
 
     // 关注
-    followList:[]
+    followList:[],
 
+    // 达人
+    expertList:[]
 
 
 

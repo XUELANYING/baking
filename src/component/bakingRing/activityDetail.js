@@ -42,15 +42,10 @@ import '../../asset/css/bakingRing/activitydetail.scss'
             </div>
         )
     }
-    componentWillMount(){
-        // console.log('&&&&&&&&&&&&111111111',this.props.dishDetail.contentId)
-    }
+
     componentDidMount(){
         this.props.getActivityList();
         this.props.getActivityDetail(this.props.match.params.id);
-        // console.log('&&&&&&&&&&&&',this.props.dishDetail.contentId);
-        // this.props.getDishDetail(this.props.dishDetail.contentId);
-
 
     }
 }
@@ -58,5 +53,4 @@ import '../../asset/css/bakingRing/activitydetail.scss'
 export default  connect((state)=>({
         activityList:state.bakingRing.activityList,
         activityDetail:state.bakingRing.activityDetail,
-        // dishDetail:state.bakingRing.dishDetail
 }),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(ActivityDetail))

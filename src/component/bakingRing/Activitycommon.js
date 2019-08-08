@@ -9,7 +9,6 @@ class Activitycommon extends Component{
 
     render(){
         const activity = this.props.bakingRing.activityDetail.component;
-        console.log(88888888888888888888888888,activity)
         return (
             <div  id={'activity_common_wrap' } >
                 {

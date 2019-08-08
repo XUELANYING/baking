@@ -18,16 +18,22 @@ export const getClassifyInfo = (payload)=>{
 export default{
     getCommendList(dispatch){
         return async(dispatch)=>{
-            let {data} = await axios.get("/api/classify/getRecommend?_t="+Date.now()+"&csrfToken="+token)
-            // console.log(data.data)
-            dispatch(getCommendInfo(data.data))
+            let result = await fetch("/api/classify/getRecommend?_t="+Date.now()+"&csrfToken="+token)
+            let res = result.json();
+            res.then(({data})=>{
+                // console.log(data)
+                dispatch(getCommendInfo(data))
+            })
         }
     },
     getClassifyList(dispatch){
         return async(dispatch)=>{
-            let {data} = await axios.get("/api/classify/get?_t="+Date.now()+"&csrfToken="+token)
-            // console.log(data.data)
-            dispatch(getClassifyInfo(data.data))
+            let result = await fetch("/api/classify/get?_t="+Date.now()+"&csrfToken="+token)
+            let res = result.json();
+            res.then(({data})=>{
+                // console.log(data)
+                dispatch(getClassifyInfo(data))
+            })
         }
     }
 }

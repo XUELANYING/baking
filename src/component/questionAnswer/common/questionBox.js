@@ -1,9 +1,11 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 import actionCreator from "../../../store/actionCreator/index";
 import LoadingMore from '../../common/loadingMore'
-import {withRouter, Link} from 'react-router-dom'
+
 
 class Box extends React.Component {
     constructor() {
@@ -23,9 +25,14 @@ class Box extends React.Component {
                             this.props.history.push('/question/' + v.contentId)
                         }}>
                             <p className={'question-title'}>{v.coverTitle}</p>
-                            <div className={'recipes'}>
+                            <div className={'recipes'} onClick={(e)=>{
+                                e.stopPropagation(true)
+                                this.props.history.push('/recipe/'+v.contentId+'/'+v.clientId)
+                            }}>
                                 <div className={'recipes-img'}>
-                                    <img src={v.recipe.image} alt=""/>
+                                    <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img className={"thisImg"} src={v.recipe.image} />
+                                    </LazyLoad>
                                 </div>
                                 <div className={'recipes-detail'}>
                                     <p className={'recipes-title'}>{v.recipe.title}</p>
@@ -55,6 +62,16 @@ class Box extends React.Component {
             this.props[this.props.boxList]()
         }
     }
+
+   /* getSnapshotBeforeUpdate() {
+        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
+    }
+    componentDidUpdate(prevProps, prevState, scroll) {
+        // 窗口发生滚动，滚动最顶端
+        if (scroll === true) {
+            window.scrollTo(0, 0);
+        }
+    }*/
 }
 
 export default withRouter(connect((state) => ({questionAnswer: state.questionAnswer}),

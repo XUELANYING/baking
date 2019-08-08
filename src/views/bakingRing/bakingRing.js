@@ -22,7 +22,7 @@ class BakingRing extends React.Component {
                         {
                             this.props.children.map((v,i)=>(
 
-                                v.isHide? null:<NavLink className={'baking_header_main_list'} activeClassName={'active'} key={i} to={v.to}>{v.name}</NavLink>
+                                v.isHide? null:<NavLink className={'baking_header_main_list'} activeClassName={'active'} exact={true} key={i} to={v.to}>{v.name}</NavLink>
                             ))
                         }
                     </nav>
@@ -33,7 +33,7 @@ class BakingRing extends React.Component {
 
                     {
                         this.props.children.map((v,i)=>(
-                            v.isHide? null:<Route key={i} path={v.path} {...v}/>
+                            v.isHide? null:<Route key={i} exact={v.exact} path={v.path} {...v}/>
 
                         ))
                     }

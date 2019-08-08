@@ -135,8 +135,9 @@ export default {
                 {
                     component: Latest,
                     name: "最新",
-                    path: '/show/latest',
-                    to: '/show/latest',
+                    path: '/show/',
+                    to: '/show/',
+                    exact: true,
                     meta: {
                         title: "烘焙圈_烘焙秀秀_烘焙帮",
                         isShow: true,

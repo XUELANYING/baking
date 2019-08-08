@@ -30,7 +30,12 @@ export default function(state=initState,{type,payload}){
             state.showList = [...state.showList,...payload];
             break;
         case actionType.GET_FOLLOW:
+            // console.log(payload);
             state.followList = [...payload];
+            console.log(state.followList);
+            break;
+        case actionType.GET_EXPERT:
+            state.expertList = [...payload];
             break;
         default:
             break;

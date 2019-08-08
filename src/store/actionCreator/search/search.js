@@ -43,7 +43,6 @@ export default{
             let result = await fetch("/api/keyword/detail?_t="+Date.now()+"&csrfToken="+token);
             let res = result.json();
             res.then((data)=>{
-                // console.log(data)
                 dispatch(getSearchInfo(data.data))
             })
         }
@@ -51,14 +50,19 @@ export default{
     getDetailList(type,keyword,pageIndex,sortType){
         return async(dispatch)=>{
             if(type === 0){//食谱
-                let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort="+sortType);
+                let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort=");
                 let res = result.json();
                 res.then((data)=>{
-                    dispatch(getDetailInfo(data.data.search.list.recipe))
+                    let obj={};
+                    obj={
+                        infoType:1,
+                        data:data.data.search.list.recipe
+                    }
+                    dispatch(getDetailInfo(obj))
                 })
             }
             if(type === 1){//问答
-                let result = await fetch("/api/search/getMoreQuestion?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort="+sortType);
+                let result = await fetch("/api/search/getMoreQuestion?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort=");
                 let res = result.json();
                 res.then((data)=>{
                     dispatch(getSearchAnswerInfo(data.data.search.list.question))
@@ -66,14 +70,42 @@ export default{
             }
 
             if(type === 2){//帮友
-                let result = await fetch("/api/search/getMoreClient?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort="+sortType);
+                let result = await fetch("/api/search/getMoreClient?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort=");
                 let res = result.json();
                 res.then((data)=>{
-                    // console.log(data)
                     dispatch(getSearchHelpFriendInfo(data.data.search.list.client))
                 })
             }
 
+        }
+    },
+    getDidMoreList(keyword,pageIndex){
+        return async(dispatch)=>{
+             let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort=dishNum");
+             let res = result.json();
+             res.then((data)=>{
+                // console.log(data)
+                let obj={};
+                    obj={
+                        infoType:2,
+                        data:data.data.search.list.recipe
+                    }
+                    dispatch(getDetailInfo(obj))
+             })
+        }
+    },
+    getPopularList(keyword,pageIndex){
+        return async(dispatch)=>{
+             let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort=master");
+             let res = result.json();
+             res.then((data)=>{
+                let obj={};
+                obj={
+                    infoType:3,
+                    data:data.data.search.list.recipe
+                }
+                dispatch(getDetailInfo(obj))
+             })
         }
     },
     getVideoList(keyword){

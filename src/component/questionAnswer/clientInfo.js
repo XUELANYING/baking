@@ -71,24 +71,25 @@ class ClientInfo extends React.Component {
 
                 </div>
                 {
-                    info.sign?<div className={"client-sign"}>
+                    info.sign ? <div className={"client-sign"}>
                         {info.sign}
-                    </div>:null
+                    </div> : null
                 }
 
                 <div className={"clientInfo-tab"}>
                     <div className={"clientbox"}>
-                        <div onClick={this.handleClick.bind(this, 0)} className={this.state.index === 0 ?'now':''}>
+                        <div onClick={this.handleClick.bind(this, 0)} className={this.state.index === 0 ? 'now' : ''}>
                             作品
                             {
                                 this.state.index === 0 ? <span></span> : null
                             }
                         </div>
-                        <div onClick={this.handleClick.bind(this, 1)} className={this.state.index === 1 ?'now':''}>
+                        <div onClick={this.handleClick.bind(this, 1)} className={this.state.index === 1 ? 'now' : ''}>
                             食谱 {
                             this.state.index === 1 ? <span></span> : null
                         }</div>
-                        <div onClick={this.handleClick.bind(this, 2)} className={this.state.index === 2 ?'now':''}>问答 {
+                        <div onClick={this.handleClick.bind(this, 2)}
+                             className={this.state.index === 2 ? 'now' : ''}>问答 {
                             this.state.index === 2 ? <span></span> : null
                         }</div>
                     </div>
@@ -116,10 +117,21 @@ class ClientInfo extends React.Component {
             index: i
         })
     }
+
+  /*  getSnapshotBeforeUpdate() {
+        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
+    }
+
+    componentDidUpdate(prevProps, prevState, scroll) {
+        // 窗口发生滚动，滚动最顶端
+        if (scroll === true) {
+            window.scrollTo(0, 0);
+        }
+    }*/
 }
 
 export default withRouter(connect((state) => ({
     clientInfo: state.questionAnswer.clientInfo,
     dish: state.questionAnswer.dish,
-    achievements:state.questionAnswer.achievements
+    achievements: state.questionAnswer.achievements
 }), (dispatch) => (bindActionCreators(actionCreator, dispatch)))(ClientInfo))

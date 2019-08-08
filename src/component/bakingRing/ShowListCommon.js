@@ -48,7 +48,7 @@ import filter from '../../asset/filter'
                             show.map((v, i) => (
                                 <section key={i}>
                                     <div className={'showlist_head_title'}>
-                                        <img src={v.clientImage} alt="" >
+                                        <img src={v.clientImage} alt="" />
                                         <div className={'showList_info'} >
                                             <div>
                                                 {v.isMaster===1?<img src='https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80' alt=""/>:null}

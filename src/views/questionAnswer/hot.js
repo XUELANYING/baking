@@ -5,7 +5,6 @@ import {withRouter} from 'react-router-dom'
 import actionCreator from "../../store/actionCreator";
 import QuestionBox from '../../component/questionAnswer/common/questionBox'
 
-
 class Hot extends React.Component {
     render() {
         return (

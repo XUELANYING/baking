@@ -6,7 +6,7 @@
   font-size: 14px;
   justify-content: space-around;
   align-items: center;
-  a {
+  div{
     color: #999;
     line-height: 30px;
   }
@@ -130,8 +130,7 @@
       .icon-color {
         color: #E98B71;
         line-height: 20px;
-      }
-      .answerNone {
+      }.answerNone {
         color: #498DD0;
       }
     }
@@ -140,7 +139,7 @@
 
 .essenceWrap {
   background: #fff;
-  padding: 90px 15px 0;
+  padding: 90px 15px 120px;
   opacity: 1!important;
   .userInfo {
     display: flex;
@@ -198,3 +197,10 @@
   }
 }
 
+.lazyload-placeholder{
+  height: 70px;
+  width: 70px;
+  recipes-img{
+
+  }
+}

@@ -5,6 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/component/bakingRing/activityDetail.js" line="55" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e0cd1eba-190a-4ea7-9057-f75fc4d562af" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/baking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/baking.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -22,6 +23,34 @@
       <change beforePath="$PROJECT_DIR$/src/views/bakingRing/attention.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/bakingRing/attention.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/bakingRing/bakingRing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/bakingRing/bakingRing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/bakingRing/expert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/bakingRing/expert.js" afterDir="false" />
+=======
+    <list default="true" id="59b59c51-2f25-4896-a315-d72bdb4ffb95" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/src/component/common/utils/ImgView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/questionAnswer/clientInfo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/clientInfo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/questionAnswer/questionDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/questionAnswer/questionDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/transition.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/high-order/Image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/high-order/animated_wrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/high-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/animated/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/topWrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/topWrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/clientInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/clientInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/common/answerBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/common/answerBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/editQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/editQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/userRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/userRecipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/questionAnswer/userWork.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/questionAnswer/userWork.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/QuestionAndAnswer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/QuestionAndAnswer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/routerGuard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routerGuard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/learnBaking/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/learnBaking/lesson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/questionAnswer/hot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/questionAnswer/hot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" afterDir="false" />
+>>>>>>> xxx
     </list>
 =======
   <component name="ChangeListManager">
@@ -40,39 +69,49 @@
     <session id="597856718">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.77" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="7" />
-          <entry key="js" value="47" />
-          <entry key="json" value="1" />
-          <entry key="scss" value="17" />
+          <entry key="css" value="12" />
+          <entry key="js" value="98" />
+          <entry key="json" value="4" />
+          <entry key="rnc" value="1" />
+          <entry key="scss" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="7" />
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="47" />
-          <entry key="SCSS" value="17" />
+          <entry key="CSS" value="12" />
+          <entry key="JSON" value="4" />
+          <entry key="JavaScript" value="98" />
+          <entry key="RNG Compact" value="1" />
+          <entry key="SCSS" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="24" />
-          <entry key="js" value="2205" />
-          <entry key="scss" value="141" />
+          <entry key="css" value="68" />
+          <entry key="js" value="4561" />
+          <entry key="scss" value="514" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="24" />
-          <entry key="JavaScript" value="2205" />
-          <entry key="SCSS" value="141" />
+          <entry key="CSS" value="68" />
+          <entry key="JavaScript" value="4561" />
+          <entry key="SCSS" value="514" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="ESLintLanguageService" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -132,6 +171,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/Me/Me_SetUP/Tailoring.js">
@@ -143,6 +183,16 @@
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#378#432#0" expanded="true" />
                 <element signature="e#3975#5316#0" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="61" column="44" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+>>>>>>> xxx
               </folding>
 =======
             <state relative-caret-position="150">
@@ -162,6 +212,7 @@
                 <element signature="e#4368#5761#0" />
 =======
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/component/Me/addlistOSon/ClassCropperModal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
@@ -170,16 +221,30 @@
                 <element signature="e#0#40#0" expanded="true" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/questionDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-825">
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
+>>>>>>> xxx
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="bakingRing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/bakingRing/bakingRing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
               <caret line="24" column="150" selection-start-line="24" selection-start-column="150" selection-end-line="24" selection-end-column="150" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/clientInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="133" column="48" lean-forward="true" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
+>>>>>>> xxx
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -205,6 +270,7 @@
                 <element signature="e#377#430#0" expanded="true" />
 =======
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/component/Me/addlistOSon/HooksCropperModal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-155">
@@ -231,11 +297,20 @@
               <folding>
                 <element signature="e#21#340#0" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+        <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/userWork.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2500">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+>>>>>>> xxx
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="expert.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/bakingRing/expert.js">
@@ -255,6 +330,15 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/component/common/utils/ImgView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+>>>>>>> xxx
               </folding>
             </state>
           </provider>
@@ -274,6 +358,7 @@
                 <element signature="e#845964#845985#0" />
 =======
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/store/actionCreator/Me/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1122">
@@ -282,6 +367,14 @@
                 <element signature="e#0#27#0" expanded="true" />
                 <element signature="e#114#207#0" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+        <entry file="file://$PROJECT_DIR$/src/router/routerGuard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+>>>>>>> xxx
               </folding>
             </state>
           </provider>
@@ -297,6 +390,7 @@
                 <element signature="e#0#25#0" expanded="true" />
 =======
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/mock/clientInfo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
@@ -308,7 +402,24 @@
                 <element signature="e#844125#845950#0" />
                 <element signature="e#846089#931633#0" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+        <entry file="file://$PROJECT_DIR$/src/asset/css/questionAnswer/clientInfo.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="316" column="17" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="17" />
+              <folding>
+                <element signature="e#2362#3020#0" />
+>>>>>>> xxx
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asset/css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -344,7 +455,14 @@
       <find>Sh</find>
 =======
       <find>positionFixed</find>
+<<<<<<< HEAD
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+      <find>recipes-img</find>
+      <find>qusTab</find>
+      <find>loadingBox</find>
+      <find>img-box</find>
+>>>>>>> xxx
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -353,6 +471,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/router/routerGuard.js" />
         <option value="$USER_HOME$/Desktop/baking/baking/baking.html" />
@@ -376,15 +495,26 @@
         <option value="$PROJECT_DIR$/src/asset/css/transition.scss" />
         <option value="$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss" />
         <option value="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" />
+=======
+        <option value="$PROJECT_DIR$/src/asset/transition.scss" />
+        <option value="$PROJECT_DIR$/src/router/move/AnimateaRouter.js" />
+        <option value="$PROJECT_DIR$/src/router/move/AnimatedRouter.js" />
+        <option value="$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/react-animated-router/animate.css" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/views/questionAnswer/essence.js" />
+>>>>>>> xxx
         <option value="$PROJECT_DIR$/src/views/bakingRing/bakingRing.js" />
         <option value="$PROJECT_DIR$/src/views/learnBaking/learnBaking.js" />
-        <option value="$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js" />
         <option value="$PROJECT_DIR$/src/component/common/tabbar.js" />
         <option value="$PROJECT_DIR$/src/router/Navlist/index.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/router/routerGuard.js" />
         <option value="$PROJECT_DIR$/src/router/QuestionAndAnswer/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+>>>>>>> xxx
         <option value="$PROJECT_DIR$/src/component/common/loadingMore.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/router/Me/router/addlistTRouter.js" />
@@ -430,6 +560,7 @@
         <option value="$PROJECT_DIR$/src/component/Me/opusTaber/cookbook.js" />
         <option value="$PROJECT_DIR$/src/router/Me/router/addlistOneSon.js" />
         <option value="$PROJECT_DIR$/src/router/Me/router/addlistORoute.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/asset/css/nest/Me/index.scss" />
         <option value="$PROJECT_DIR$/src/component/Me/Me_SetUP/index.js" />
         <option value="$PROJECT_DIR$/src/asset/css/nest/Me/meSetup.scss" />
@@ -442,6 +573,34 @@
         <option value="$PROJECT_DIR$/src/asset/css/nest/Me/Ticeimg.scss" />
         <option value="$PROJECT_DIR$/test.js" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+        <option value="$PROJECT_DIR$/src/common/high-order/ReactLazyLoad.js" />
+        <option value="$PROJECT_DIR$/src/views/questionAnswer/hot.js" />
+        <option value="$PROJECT_DIR$/src/views/learnBaking/lesson.js" />
+        <option value="$PROJECT_DIR$/src/common/high-order/imgView.js" />
+        <option value="$PROJECT_DIR$/src/common/viewImg/style.scss" />
+        <option value="$PROJECT_DIR$/src/common/viewImg/imgView.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/questionAnswer/questionDetail.scss" />
+        <option value="$PROJECT_DIR$/src/asset/css/common.css" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/userRecipe.js" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/common/answerBox.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/router/routerGuard.js" />
+        <option value="$PROJECT_DIR$/src/router/QuestionAndAnswer/index.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/transition.scss" />
+        <option value="$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/questionDetail.js" />
+        <option value="$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/editQuestion.js" />
+        <option value="$PROJECT_DIR$/src/component/common/utils/compatible.js" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/userWork.js" />
+        <option value="$PROJECT_DIR$/src/component/questionAnswer/clientInfo.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/questionAnswer/clientInfo.scss" />
+        <option value="$PROJECT_DIR$/src/component/common/utils/ImgView.js" />
+>>>>>>> xxx
       </list>
     </option>
   </component>
@@ -452,6 +611,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -464,10 +626,15 @@
     <option name="height" value="36" />
 =======
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="y" value="14" />
     <option name="width" value="665" />
     <option name="height" value="382" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <option name="width" value="585" />
+    <option name="height" value="728" />
+>>>>>>> xxx
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -475,6 +642,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <pane id="Scope" />
 =======
@@ -536,6 +704,8 @@
         </subPane>
       </pane>
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+>>>>>>> xxx
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -758,11 +928,114 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope '项目文件'; set:项目文件; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="asset" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="asset" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="component" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="component" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="component" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="questionAnswer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="component" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="questionAnswer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="router" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="router" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="QuestionAndAnswer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bakingRing" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="learnBaking" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="questionAnswer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -773,6 +1046,11 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="D:\千峰\react--张培月\Me\baking\node_modules\eslint" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="E:\work\react1908\hongbei\baking\node_modules\eslint" />
+>>>>>>> xxx
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -780,12 +1058,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="D:\千峰\react--张培月\Me\baking\src\asset\css\nest\Me" />
       <recent name="D:\千峰\react--张培月\Me\baking\src\component\Me\addlistOSon" />
       <recent name="D:\千峰\react--张培月\Me\baking\src\asset\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\千峰\react--张培月\Me\baking\src\component\Me\addlistOSon" />
+=======
+      <recent name="E:\work\react1908\hongbei\baking\src\asset\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\work\react1908\hongbei\baking\src\common\viewImg" />
+>>>>>>> xxx
       <recent name="E:\work\react1908\hongbei\baking\src\asset\css" />
     </key>
   </component>
@@ -837,24 +1122,35 @@
 =======
       <updated>1565051403847</updated>
       <workItem from="1565051406856" duration="24355000" />
+<<<<<<< HEAD
       <workItem from="1565087797849" duration="9060000" />
       <workItem from="1565136560411" duration="7385000" />
       <workItem from="1565157869459" duration="24882000" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+      <workItem from="1565087797849" duration="10525000" />
+      <workItem from="1565137564119" duration="30933000" />
+      <workItem from="1565224843556" duration="9213000" />
+>>>>>>> xxx
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="203647000" />
 =======
     <option name="totallyTimeSpent" value="71690000" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <option name="totallyTimeSpent" value="75026000" />
+>>>>>>> xxx
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1477" height="888" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.767101" visible="true" weight="0.24107143" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -898,15 +1194,25 @@
       <window_info id="npm" order="0" sideWeight="0.13461539" side_tool="true" weight="0.1688988" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.86538464" visible="true" weight="0.23855756" />
+=======
+      <window_info id="npm" order="0" sideWeight="0.34469697" side_tool="true" weight="0.14434524" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.655303" visible="true" weight="0.14434524" />
+>>>>>>> xxx
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32967034" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.34379905" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="调试" order="4" />
       <window_info anchor="bottom" id="Message" order="5" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.26455027" />
+=======
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.1711146" />
+>>>>>>> xxx
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -916,18 +1222,29 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
+<<<<<<< HEAD
       <window_info id="npm" order="0" sideWeight="0.13461539" side_tool="true" weight="0.1688988" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.86538464" visible="true" weight="0.15603329" />
+=======
+      <window_info id="npm" order="0" sideWeight="0.34469697" side_tool="true" visible="true" weight="0.14434524" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.655303" visible="true" weight="0.14434524" />
+>>>>>>> xxx
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32967034" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.34379905" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="调试" order="4" />
       <window_info anchor="bottom" id="Message" order="5" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.26455027" />
+=======
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.1711146" />
+>>>>>>> xxx
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -968,6 +1285,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/a.scss">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1189,12 +1507,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/_react-router-dom@5.0.1@react-router-dom/esm/react-router-dom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="197" column="9" selection-start-line="197" selection-start-column="9" selection-end-line="197" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/tabbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/Navlist/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/loading.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/learnBaking/learnBaking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/Me/router/addlistTRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/Lrouters/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/learnBaking/student.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="60" column="47" lean-forward="true" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/Me/router/addlistORoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/bakingRing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/learnBaking/courseList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+>>>>>>> xxx
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/component/bakingRing/bakingCircleDetail.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1268,10 +1668,57 @@
           <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/common/high-order/ReactLazyLoad.js" />
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/userAnswer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/learnBaking/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/media.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/learnBaking/lesson/trySeeUrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-179" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/learnBaking/student/Newest.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/learnBaking/lesson/eject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/learnBaking/lesson/playUrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/learnBaking/lesson.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/component/Me/opusTaber/troble.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1296,11 +1743,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/answerDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3099" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/_react-lazy-load@3.0.13@react-lazy-load/lib/LazyLoad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5063" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/viewImg/style.scss" />
+    <entry file="file://$PROJECT_DIR$/src/asset/css/loading.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/viewImg/imgView.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+>>>>>>> xxx
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/asset/css/nest/Me/index.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="497">
           <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
@@ -1310,12 +1786,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
+=======
+        <state relative-caret-position="175">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/animated/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/loadingMore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="76" column="134" selection-start-line="76" selection-start-column="134" selection-end-line="76" selection-end-column="134" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/userRecipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="50" column="68" lean-forward="true" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
+>>>>>>> xxx
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/router/Me/router/addlistOneSon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1342,10 +1843,40 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <entry file="file://$PROJECT_DIR$/node_modules/_react-router@5.0.1@react-router/esm/react-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="400" column="4" selection-start-line="400" selection-start-column="4" selection-end-line="400" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/transition.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/hot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/store/actionType/bakingRing/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1430,10 +1961,40 @@
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#114#207#0" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <entry file="file://$PROJECT_DIR$/src/router/QuestionAndAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/questionAnswer/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="149" column="23" lean-forward="true" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/editQuestion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/component/bakingRing/activityDetail.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1471,12 +2032,26 @@
         <state relative-caret-position="171">
           <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/common/answerBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="20" column="73" lean-forward="true" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+>>>>>>> xxx
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/store/actionCreator/Me/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1498,10 +2073,26 @@
             <element signature="e#761502#844098#0" />
             <element signature="e#844125#845950#0" />
             <element signature="e#845964#845985#0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/asset/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/questionAnswer/clientInfo.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="316" column="17" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="17" />
+          <folding>
+            <element signature="e#2362#3020#0" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1536,15 +2127,30 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
+=======
+    <entry file="file://$PROJECT_DIR$/src/router/routerGuard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/views/bakingRing/expert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="122" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/userWork.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2500">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+>>>>>>> xxx
           <folding>
             <element signature="e#116#162#0" expanded="true" />
             <element signature="e#2318#3661#0" />
@@ -1562,6 +2168,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/views/bakingRing/bakingRing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1574,10 +2181,19 @@
 >>>>>>> d44dd9803682dc3556a27a5b08cfb4806901a03f
           <folding>
             <element signature="n#!!doc" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/clientInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="133" column="48" lean-forward="true" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1585,10 +2201,19 @@
           <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
           <folding>
             <element signature="e#4368#5761#0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="61" column="44" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> xxx
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/views/bakingRing/attention.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1614,6 +2239,21 @@
           <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
           <folding>
             <element signature="e#377#430#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/questionDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/utils/ImgView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+>>>>>>> xxx
           </folding>
 =======
     <entry file="file://$PROJECT_DIR$/src/component/Me/Me_SetUP/Tailoring.js">

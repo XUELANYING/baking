@@ -4,7 +4,7 @@ import {
 } from "react-router-dom"
 import "@asset/css/nest/Me/index.scss"
  import Top from "@component/Me/top/index";
-import MeSetUp from "@component/Me/Me_SetUP"
+import MeSetUp from "../../component/Me/Me_SetUP/index"
 export default class Me extends React.Component{
     constructor(props){
         super(props)

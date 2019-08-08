@@ -2,6 +2,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import LazyLoad from 'react-lazyload';
 import '../../asset/css/questionAnswer/clientInfo.scss'
 import actionCreator from "../../store/actionCreator";
 import LoadingMore from "../common/loadingMore";
@@ -19,7 +20,9 @@ class UserRecipe extends React.Component {
             <div className={"userWork"}>
                 {
                     this.props.recipe.map((v,i)=>(
-                        <div key={i} className={"box-wrap"}>
+                        <div key={i} className={"box-wrap"} onClick={()=>{
+                            this.props.history.push('/recipe/'+v.clientId+'/'+v.contentId)
+                        }}>
                             <div className={"box-top"}>
                                 <div className={"box-top-img"}>
                                     <img src={v.clientImage} alt=""/>
@@ -44,7 +47,9 @@ class UserRecipe extends React.Component {
                                 </div>
                             </div>
                             <div className={"main-img"}>
-                                <img src={v.coverImage} alt=""/>
+                                <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                    <img src={v.coverImage} alt=""/>
+                                </LazyLoad>
                             </div>
                             <div className={"main-title"}>
                                 {v.coverTitle}

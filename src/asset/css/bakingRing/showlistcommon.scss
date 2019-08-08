@@ -1,0 +1,182 @@
+.showlistcommon_wrap{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background: #F5F7F9;
+  padding-bottom:44px;
+  //padding-top:44px;
+  margin-top: 44px;
+
+  .showlist_head{
+      width: 100%;
+      overflow: hidden;
+      //background: #fff;
+      margin-top:10px;
+
+      section{
+        background: #fff;
+        width: 100%;
+        padding:0 15px;
+        padding-top:5px;
+        margin-bottom: 10px;
+        .showlist_head_title{
+          margin:15px 15px;
+          display:flex;
+          align-items: center;
+
+          img{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          .showList_info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 66%;
+            height: 20px;
+            div{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              p{
+                font-size: 13px;
+                text-align: left;
+                color:#4A4945;
+
+              }
+            }
+            span{
+              font-size: 12px;
+              text-align:left;
+              color: #999999;
+            }
+
+          }
+
+        }
+        .showlist_message{
+          margin: 10px 15px 11px 15px;
+          font-size:14px;
+          color:#4A4945;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 20px;
+          .communityName{
+            font-size:14px;
+            color:#498DD0;
+          }
+        }
+        .showlist_center_wrap{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          //width: 219px;
+          box-sizing: border-box;
+          margin-bottom: 15px;
+
+          .showlist_center{
+            padding-right: 5px;
+            padding-bottom: 5px;
+
+          }
+
+        }
+        .showlist_foot{
+          margin-bottom:10px;
+
+          .showlist_foot_one{
+            background: #F5F7F9;
+            box-sizing: border-box;
+            border-radius: 4px;
+            display: flex;
+            .one{
+              a{
+                font-size:18px;
+                font-weight: bold;
+                margin:10px 15px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                line-height: 25px;
+              }
+              div{
+                span{
+                  font-size: 14px;
+                  color: #999999;
+                  line-height: 20px;
+                  display: inline-block;
+                }
+                .span_one{
+                  color: #498DD0;
+                }
+              }
+
+            }
+            .two{
+              background: #F5F7F9;
+              box-sizing: border-box;
+              border-radius: 4px;
+              display: flex;
+              img{
+                width: 70px;
+                height: 70px;
+                border-radius: 4px;
+              }
+              div{
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 15px;
+                p{
+                  font-size: 14px;
+                  color: #313131;
+                  font-weight: bold;
+                  text-align: justify;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+                span{
+                  margin-top: 5px;
+                  font-size: 13px;
+                  color: #999;
+                  text-align: justify;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+        .showlist_comments_wrap{
+          display: flex;
+          height: 30px;
+          //padding:0 15px;
+          //padding-bottom:10px;
+          border-top:1px solid #eeeeee;
+          div{
+            flex:1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+              font-size: 19px;
+              color: #999999;
+            }
+            span{
+              font-size: 12px;
+              color: #999999;
+              margin-left: 5px;
+            }
+          }
+        }
+
+      }
+
+    }
+
+
+
+}

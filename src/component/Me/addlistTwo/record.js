@@ -1,7 +1,8 @@
 import React,{Fragment} from "react";
 import {
     Route,
-    withRouter
+    withRouter,
+    Link
 } from "react-router-dom"
 import {connect} from "react-redux";
 import  {bindActionCreators}from "redux";
@@ -50,9 +51,11 @@ class Record extends React.Component{
                                                        {
                                                            v.newList.map((v,i)=>{
                                                                return (
-                                                                   <div key={i} className={"nnkd"}>
+                                                                   <div key={i} className={"nnkd"} >
                                                                        <div className={"nnkd_img"}>
+                                                                           <Link to={"/recipe/"+v.clientId+"/"+v.contentId}  key={i}>
                                                                            <img src={v.recipe.image} alt=""/>
+                                                                           </Link>
                                                                        </div>
 
                                                                        <div className={"recipeMasge"}>
@@ -90,7 +93,9 @@ class Record extends React.Component{
                                                       return (
                                                               <div key={i} className={"nnkd"}>
                                                                   <div className={"nnkd_img"}>
+                                                                      <Link to={"/recipe/"+v.clientId+"/"+v.contentId}  key={i}>
                                                                       <img src={v.recipe.image} alt=""/>
+                                                                      </Link>
                                                                   </div>
 
                                                                   <div className={"recipeMasge"}>

@@ -6,13 +6,13 @@ const  upPosition = (payload)=> { //   addlistOne ==精彩活动
         payload
     }
 }
-const  addSonList  =  (payload)=>{//  addlistOne ==精彩活动-2级页
+const  addSonList = (payload)=>{//  addlistOne ==精彩活动-2级页
        return {
             type:actionTypeMe.ADD_LIST_SON,
             payload
        }
 }
-const  acSonson =    (payload)=> {//  addlistOne ==精彩活动-3级页
+const  acSonson   = (payload)=> {//  addlistOne ==精彩活动-3级页
        return {
            type:actionTypeMe.ADD_LIST_SON_SON,
            payload
@@ -35,6 +35,13 @@ const  Convert=(payload)=>{//addlistTwo===兑换帮币
             type :actionTypeMe.CONVERT,
             payload
         }
+}
+const  AnswerBox=(payload)=>{//opusTaber === troble 问题
+       console.log(payload)
+      return {
+            type:actionTypeMe.ANSWERBOX,
+            payload
+      }
 }
 
 export default {
@@ -139,8 +146,18 @@ export default {
     //     }  没有借口了 不想写 了
     // },
 
+    //////////////////////////////opusTaber === troble 问题 /////////////////////////////////
 
+    AnswerBox(clientId){// opusTaber === troble 问题
+        return async (dispatch)=>{
+            const  data =await axios.get("/api/question/getNew?_t=1565166887124&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10")
+            const info =data.data.data.content.data
+            dispatch(AnswerBox(info))
+            console.log(info)
 
+        }
+
+    },
 
 
 

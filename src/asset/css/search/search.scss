@@ -59,7 +59,6 @@ $color:#4A4945;
 
 .popularSearchBox{
   width:345px;
-  height:210px;
   margin:0 15px;
   overflow: hidden;
   display:flex;
@@ -83,11 +82,11 @@ $color:#4A4945;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight:normal;
 }
 
 .current{
   width:100%;
-  height:100%;
 }
 .currentSearch{
   width:100%;

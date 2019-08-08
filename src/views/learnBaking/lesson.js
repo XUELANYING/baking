@@ -118,7 +118,7 @@ class Lesson extends Component {
                                 {
                                     this.props.homeworkList.map((item, index) => (
                                         <li className={"show_list"} key={index} onClick={() => {
-                                            this.props.history.push("/university/"+item.contentId)
+                                            this.props.history.push("/school/"+item.contentId)
                                         }}>
                                             <img src={item.image[0]} alt=""/>
                                             <div className="user_less">
@@ -226,15 +226,15 @@ class Lesson extends Component {
                     </div>
                 </div>
                 <div style={{background: "#fff", height: "21px"}}></div>
-                <footer>
-                    <div className={"foot-l"}>
+                <footer className="fotq">
+                    <div className={"foot-lq"}>
                         <img src="https://image.hongbeibang.com/FjlY1hEsTozcG0oGvSXzNqRIc8gb?imageView2/1/w/640/h/640"
                              alt=""/>
                         <span>更多课程</span>
                     </div>
-                    <div className={"foot-c"}>
-                        <img src="https://image.hongbeibang.com/FoOJzEIUP4G3Ub0wp_XeNNYIHH0s?imageView2/1/w/640/h/640"
-                             alt=""/>
+                    <div className={"foot-cq"}>
+                        <div className="img"><img src="https://image.hongbeibang.com/FoOJzEIUP4G3Ub0wp_XeNNYIHH0s?imageView2/1/w/640/h/640"
+                                                  alt=""/></div>
                         <span>咨询</span>
                     </div>
                     <div className={"foot-r"} onClick={()=>this.props.history.push("/cart/"+this.props.lessonList.educationCourseId)}>￥9.9购买本课程</div>
@@ -251,13 +251,21 @@ class Lesson extends Component {
     }
 
     componentDidMount() {
+
         this.props.getLesson(this.props.match.params.contentId)
         this.props.getHomeWork(this.props.match.params.contentId)
         this.props.getCurr({pageIndex:0,contentId:this.props.match.params.contentId,clientId:this.props.match.params.clientId})
         this.forceUpdate();
     }
+    getSnapshotBeforeUpdate() {
+        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
+    }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState, scroll) {
+        // 窗口发生滚动，滚动最顶端
+        if (scroll === true) {
+            window.scrollTo(0, 0);
+        }
         if (this.refs.hotList) {
             this.scroll = new BScroll(this.refs.hotList, {
                 scrollX: true,

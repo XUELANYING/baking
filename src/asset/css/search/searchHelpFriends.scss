@@ -1,0 +1,85 @@
+.searchHelpFriends{
+  width:100%;
+  height:100%;
+}
+.sHelpFList{
+  margin: 0;
+  padding: 0 15px;
+  overflow: hidden;
+  zoom: 1;
+  padding-top:44px;
+  .HFBox{
+    padding: 15px 0;
+    position: relative;
+    border-bottom: 1px solid #E7E2E5;
+    overflow: hidden;
+    zoom: 1;
+    .HFInfo{
+      width:100%;
+      height:100%;
+      .HFAvator{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        float: left;
+        font-size: 0;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img{
+          border-radius: 50%;
+          overflow: hidden;
+          box-sizing: border-box;
+          border: 1px solid #E7E2E5;
+          width:100%;
+          height:100%;
+        }
+      }
+      .infos{
+        float:left;
+        .HFName{
+          width:245px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #4A4945;
+          line-height: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+          -webkit-text-overflow: ellipsis;
+          -moz-text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .aboutHF{
+          width:100%;
+          span{
+            line-height: 20px;
+            color: #999999;
+            font-size: 13px;
+            overflow: hidden;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .followHF{
+      background-color: #FFFFFF;
+      color: #E98B71;
+      border: 1px solid #E98B71;
+      float: right;
+      margin: 5px 0;
+      border-radius: 4px;
+      font-size: 12px;
+      position: relative;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 28px;
+      width: 50px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+}

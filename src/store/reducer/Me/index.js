@@ -17,6 +17,9 @@ export  default  function (state=Me,{type,payload}){
            // console.log(state.record)
     }else  if(type == actionTypeMe.CONVERT){//addlistTwo  ==== 兑换帮币
              state.convert =[payload]
+    }else  if(type == actionTypeMe.ANSWERBOX){//opusTaber === troble 问题
+            state.Answerbox=payload
+            console.log(111,state.Answerbox)
     }
      return   state
 }

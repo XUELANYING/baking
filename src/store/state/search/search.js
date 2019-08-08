@@ -2,6 +2,10 @@ const searchState = {
         popularSearch:[],
         lastestSearch:[],
         searchRecipeResults:[],
-        searchVideoList:[]
+        searchDidMore:[],
+        searchPopular:[],
+        searchVideoList:[],
+        searchAnswerList:{},
+        searchHFList:{}
 }
 export default searchState;

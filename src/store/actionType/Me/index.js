@@ -6,4 +6,5 @@ export default{
      SIGN_ADD_LIST:"SIGN_ADD_LIST",//addlistOne ==签到 排行榜
      RECORD:"RECORD",//addlistTwo==浏览记录
      CONVERT:"CONVERT",//
+    ANSWERBOX:"ANSWERBOX",//opusTaber === troble 问题
 }

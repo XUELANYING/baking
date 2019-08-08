@@ -56,7 +56,14 @@ const taskLisk = (payload) =>{
         type:actionType.GET_TASKLIST,
         payload
     }
-}
+};
+//登录
+const userInfo = (payload) =>{
+    return{
+        type:actionType.GET_USERINFO,
+        payload
+    }
+};
 const upLesson = function (payload) {
     return{
         type:actionType.UP_LESSON,
@@ -166,6 +173,14 @@ export default {
             // console.log("作业",data.data.content.data)
         }
     },
+    //登录
+    getUserInfo(){
+        return async (dispatch)=>{
+            let {data} = await axios.get("/login")
+            dispatch(userInfo(data));
+            console.log("登录",data)
+        }
+    },
 
 
     getLesson(contentId){
@@ -174,7 +189,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data=>{
-                    console.log(data.data)
+                    // console.log(data.data)
                     dispatch(upLesson(data.data))
                 })
         }
@@ -186,7 +201,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(1234,data.data.content.data)
+                    // console.log(1234,data.data.content.data)
                     dispatch(upStudent(data.data.content.data))
                 })
         }
@@ -197,7 +212,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(222,data.data.content.data)
+                    // console.log(222,data.data.content.data)
                     dispatch(upNewest(data.data.content.data))
                 })
         }
@@ -208,7 +223,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(333,data.data.dish)
+                    // console.log(333,data.data.dish)
                     dispatch(upDish(data.data.dish))
                 })
         }
@@ -219,7 +234,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(444,data.data)
+                    // console.log(444,data.data)
                     dispatch(upFloor(data.data))
                 })
         }
@@ -230,7 +245,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(555,data.data.content.data)
+                    // console.log(555,data.data.content.data)
                     dispatch(upHomeWork(data.data.content.data))
                 })
         }
@@ -241,7 +256,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(666,data)
+                    // console.log(666,data)
                     dispatch(upCurr(data.data.data))
                 })
         }

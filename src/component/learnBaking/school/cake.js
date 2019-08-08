@@ -17,7 +17,7 @@ class Cake extends React.Component {
                     this.props.variousList.map((v,i)=>(
 
                             <dl key={i}>
-                                <Link to={v.link}>
+                                <Link to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                                 <dt>
                                     <img src={v.verticalImages} alt=""/>
                                     <i>{v.buyNum>1000?"1000+人参加":v.buyNum+"人参加"}</i>

@@ -49,6 +49,9 @@ export default function(state=initState,{type,payload}) {
     }else if (type === actionType.UP_CUURR) {
         state.curriculumList = [...state.curriculumList, ...payload];
 
+    }else if (type === actionType.GET_USERINFO) {            //登录
+        state.userInfo = { ...payload};
+       console.log("user",state.userInfo)
     }
     return state;
 }

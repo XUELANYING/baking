@@ -13,7 +13,7 @@ class Catalog extends React.Component {
                 {
                     this.props.catalogList.map((v,i)=>(
                         <div className={"ca-com"} key={i}>
-                            <Link className={"ca-l"} to={"/lesson?contentId="+v.educationCourseId+"&isHideBottom=1&playTryVideo="+v.hasTrySeeVideo}>
+                            <Link className={"ca-l"} to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                             <dl>
                                 <dt className={"ca-pic"}><img src={v.image} alt=""/></dt>
                                 <dd className={"ca-tit"}>

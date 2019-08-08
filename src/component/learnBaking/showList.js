@@ -19,7 +19,7 @@ class ShowList extends React.Component {
                 <div className={"sect"}>
                     {
                         this.props.recommendList.map((v,i)=>(
-                            <Link  key={i} to={"/lesson?contentId="+v.courseId}>
+                            <Link  key={i} to={"/lesson/"+v.courseId+"/"+v.clientId}>
                                 <dl>
                                     <dt>
                                         <img src={v.coverImage} alt="" />

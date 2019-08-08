@@ -26,7 +26,7 @@ class KindList extends React.Component {
                            </p>
                             <div className={"sect"}>
                             {v.item.map((v1, i) => (
-                                <Link  key={i} to={"/lesson?contentId="+v1.educationCourseId}>
+                                <Link  key={i} to={"/lesson/"+v1.educationCourseId+"/"+v1.clientId}>
                                     <dl>
                                         <dt>
                                             <img src={v1.image} alt=""/>

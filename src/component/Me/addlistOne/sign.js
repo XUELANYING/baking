@@ -37,8 +37,9 @@ class Sign extends React.Component{
         };
 
             // const con =JSON.parse(localStorage.getItem("userInfo")
-               const  ass = JSON.parse(localStorage.userInfo)
-
+                //const  ass = JSON.parse(localStorage.userName)
+               localStorage.userName = "admin"
+               console.log(localStorage.userName)
             //console.log(JSON.parse(localStorage.getItem(userInfo))
 
         return (
@@ -65,9 +66,13 @@ class Sign extends React.Component{
                         <h3>
                             {/*日历==签到*/}
                             {/*等登陆跳转加上*/}
+                            {/*<p>去登陆</p>*/}
                            {
-                               ass.userName?<SignTime></SignTime>:<div>
-                                   <p>去登陆</p>
+                               localStorage.userName?<SignTime></SignTime>:<div>
+                                   <p onClick={()=>{
+                                        this.props.history.push("/login")
+                                   }
+                                   }>去登陆</p>
                                </div>
                            }
 
@@ -84,7 +89,7 @@ class Sign extends React.Component{
                     </div>
                     {/*幸运任务*/}
                     <div className={"signLink"}>
-                        
+
                         <div className={"signLinkO"}>
                             <img src="https://image.hongbeibang.com/Ftfu-2lUpdTjYCWBv6uhq3_k0ZOd?108X103" alt=""/>
                             <div>
@@ -100,7 +105,7 @@ class Sign extends React.Component{
                                 <span>帮贡兑换</span>
                             </div>
                         </div>
-                        
+
                     </div>
                     {/*signType*/}
                     <div className={"signType"}>

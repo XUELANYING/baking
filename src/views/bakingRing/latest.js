@@ -37,12 +37,13 @@ class Latest extends Component{
                         }
                     </div>
                 </div>
-                <ShowListCommon ></ShowListCommon>
+                <ShowListCommon showProps={this.props.showList}></ShowListCommon>
             </div>
         )
     }
  
     componentDidMount(){
+        this.props.getShowList();
         this.props.getActivityList();
         this.props.getCommunityList();
     }

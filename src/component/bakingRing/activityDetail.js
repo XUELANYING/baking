@@ -48,7 +48,7 @@ import '../../asset/css/bakingRing/activitydetail.scss'
 
     }
 }
-// export default withRouter(ActivityDetail)
+
 export default  connect((state)=>({
         activityList:state.bakingRing.activityList,
         activityDetail:state.bakingRing.activityDetail,

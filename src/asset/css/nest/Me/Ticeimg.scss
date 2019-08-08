@@ -1,7 +1,7 @@
 .Ticeimg{
   width: 100%;
   height:800px;
-  background: #f7fbff;
+  background:white;
   .ticeimg_top{
     width: 100%;
     height: 44px;
@@ -12,7 +12,7 @@
     z-index: 10;
     top: 0;
     left: 0;
-    background: white;
+   // background: white;
     img{
       width: 27px;
       height: 27px;
@@ -25,11 +25,18 @@
     }
   }
   .ticeimg_cneter{
-      position: absolute;
-    top: 44px;
+     position: fixed;
+      left: 70px;
+      top: 44px;
       display: flex;
       height: 200px;
       align-items: stretch;
+    .hooksP{
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
       .half-area {
         margin-top: 50px;
         margin-right: 50px;
@@ -48,27 +55,30 @@
         }
 
         .img-container {
-          height: 300px;
-          margin-top: 24px;
-          padding: 20px;
+          width: 200px;
+          height: 200px;
           display: flex;
           justify-content: center;
           align-items: center;
+          border-radius:50%;
+          overflow: hidden;
+          box-shadow: darkgrey 10px 10px 30px 5px;
+
           .img {
             height: 100%;
+            border: 1px solid;
+
           }
 
       }
     }
   }
   .ticeimg_bottom{
-    display: none;
     position: fixed;
-    bottom:-10px;
     left: 0;
     width: 100%;
-    min-height:100px;
-
+    height:150px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +86,16 @@
     width: 120px;
     height: 120px;
    }
+    p{
+      margin-bottom: 20px;
+    }
+    .base-upload-input{
+      margin-top: 30px;
+      display: none;
+    }
+
   }
+
 }
 
 

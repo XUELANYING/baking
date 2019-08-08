@@ -101,31 +101,25 @@ import HooksCropperModal from '../addlistOSon/HooksCropperModal'
 
                   <div className={"ticeimg_cneter"}>
 
-                          {/*<label className="upload-input-label">*/}
-                              {/*<span>(class形式的component)添加图片</span>*/}
-                              {/*<input*/}
-                                  {/*type="file"*/}
-                                  {/*accept="image/jpeg,image/jpg,image/png"*/}
-                                  {/*className="base-upload-input"*/}
-                                  {/*onChange={this.handleClassFileChange}*/}
-                              {/*/>*/}
-                          {/*</label>*/}
-                          {/*<div className="img-container">*/}
-                              {/*{classResultImgUrl && (*/}
-                                  {/*<img*/}
-                                      {/*className="img"*/}
-                                      {/*src={classResultImgUrl}*/}
-                                      {/*alt="classResultImgUrl"*/}
-                                  {/*/>*/}
-                              {/*)}*/}
-                          {/*</div>*/}
-
                       <div className="half-area">
-                          <label className="upload-input-label">
+
+                              <div className={hooksResultImgUrl?"img-container":null}>
+                                  {hooksResultImgUrl && (
+                                      <img
+                                          className="img"
+                                          src={hooksResultImgUrl}
+                                          alt="classResultImgUrl"
+                                      />
+                                  )}
+                              </div>
+                          {
+                              hooksResultImgUrl?<p className={"hooksP"}>新的头像</p>:null
+                          }
+                          <label className="ticeimg_bottom">
                               <span>
-                                  <img src="https://image.hongbeibang.com/FtUJvHaECXwl58x67bktx4KSjnym?imageMogr2/strip/thumbnail/640x640"  className={"sns"} alt=""/>
+                                  <img src="https://image.hongbeibang.com/FtUJvHaECXwl58x67bktx4KSjnym?imageMogr2/strip/thumbnail/640x640"  className={"sns"} alt=""  onChange={this.handleHooksFileChange}/>
                               </span>
-                              <p>上传头像</p>
+                               <p>点击上传头像</p>
                               <input
                                   type="file"
                                   accept="image/jpeg,image/jpg,image/png"
@@ -133,26 +127,9 @@ import HooksCropperModal from '../addlistOSon/HooksCropperModal'
                                   onChange={this.handleHooksFileChange}
                               />
                           </label>
-                          <div className="img-container">
-                              {hooksResultImgUrl && (
-                                  <img
-                                      className="img"
-                                      src={hooksResultImgUrl}
-                                      alt="classResultImgUrl"
-                                  />
-                              )}
-                          </div>
+
                       </div>
 
-                      {classModalVisible && (
-                          <ClassCropperModal
-                              uploadedImageFile={classModalFile}
-                              onClose={() => {
-                                  this.setState({ classModalVisible: false })
-                              }}
-                              onSubmit={this.handleGetResultImgUrl('classResultImgUrl')}
-                          />
-                      )}
                       {hooksModalVisible && (
                           <HooksCropperModal
                               uploadedImageFile={hooksModalFile}

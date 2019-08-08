@@ -12,7 +12,7 @@
   .modal-panel {
     width: 880px;
     height: 500px;
-    background: white;
+    //background: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -32,13 +32,9 @@
     }
 
     .cropper-container-container {
-      flex: 1;
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
       width: 100%;
       height: 100%;
-
+      margin-left: 35px;
       .cropper-container {
         flex: 0 0 600px;
         margin-right: 20px;
@@ -52,12 +48,29 @@
         display: flex;
         align-items: flex-end;
         .cropper-preview {
-          width: 180px;
-          height: 180px;
+          margin-top: 10px;
+          width: 60px;
+          height: 60px;
           overflow: hidden;
-          border: 1px solid #383838;
         }
       }
     }
+  }
+  .button-row{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 50px;
+    left: 100px;
+      .button{
+        width: 100px;
+        height: 50px;
+        background-color: #E98B71;
+        color: #FFFFFF;
+        border: 1px solid;
+        border-color: #E98B71;
+        border-radius: 4px;
+
+      }
   }
 }

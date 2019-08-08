@@ -24,7 +24,7 @@ class recipeDetail extends Component{
     }
     componentDidMount(){
         let {clientId,contentId} = this.props.match.params;
-        this.props.getUserList(contentId).then(()=>{
+        this.props.getUserList(contentId,"").then(()=>{
             let recipeDetail = this.props.recipeDetail;
             // console.log(this.props)
             this.setState({
@@ -57,15 +57,30 @@ class recipeDetail extends Component{
             })
         });
     }
+    changeQuantity(type){
+        let num = this.state.quantity;
+        if(type === 1 && num!==1){
+            --num
+        }else if(type === 2 && num<10){
+            ++num;
+        }
+        let {contentId} = this.props.match.params;
+        this.props.getUserList(contentId,num).then(()=>{
+            let recipeDetail = this.props.recipeDetail;
+            // console.log(this.props)
+            this.setState({
+                quantity:recipeDetail.quantity,
+                material:recipeDetail.material
+            });
+        });
+    }
     changeNum(){
 
     }
     render(){
-        // console.log(this.props.match.params)
         let {recipeDetail} = this.props;
         let commentList = this.state.comment.data || [];
         let {quantity,material,step,dish,recipe,ownRecipe,videoList,comment,rewardNum,likeNum} = this.state;
-        // console.log(recipe)
         return(
             <div className={"recipeDetail"}>
                 <div className="detailTop">
@@ -91,7 +106,7 @@ class recipeDetail extends Component{
                                 </div>
                                 <div className="detail clear_fix">
                                     <div className="follow">关注</div>
-                                    <div className="avator">
+                                    <div className="avator" onClick={()=>this.props.history.push("/clientInfo/" + recipeDetail.clientId)}>
                                         <img src={recipeDetail.clientImage} alt=""/>
                                     </div>
                                     <h3>{recipeDetail.clientName}</h3>
@@ -103,11 +118,13 @@ class recipeDetail extends Component{
                                     <h4>食用材料</h4>
                                     <div className="quantity">
                                         <div className="quantityDetail">
-                                            <div className="doChange"><div className={"reduce"}></div></div>
+                                            <div className="doChange" onClick={this.changeQuantity.bind(this,1)}>
+                                            <div className={"reduce"}></div></div>
                                             <div className="num">
                                                 <input type="text" value={quantity} onChange={this.changeNum.bind(this)}/>
                                             </div>
-                                            <div className="doChange"><div className={"reduce"}></div><div className={"add"}></div></div>
+                                            <div className="doChange" onClick={this.changeQuantity.bind(this,2)}><div className={"reduce"}></div>
+                                            <div className={"add"}></div></div>
                                             <span>（份量/份）</span>
                                         </div>
                                     </div>
@@ -148,46 +165,52 @@ class recipeDetail extends Component{
                                     <p>{recipeDetail.tip}</p>
                                 </div>
                             </div>
-                            <div className="title">
-                                <span>作业</span>
-                                <strong>查看更多</strong>
-                            </div>
-                            <div className="homeworkList">
-                                <div className="showList">
-                                    <div className="listInfo">
-                                        {
-                                            dish.map((v,i)=>(
-                                                <div className="list" key={i}>
-                                                    <div className="imgs">
-                                                        <img src={v.coverImage} alt=""/>
-                                                    </div>
-                                                    <div className="cilent">
-                                                        <div className="avator">
-                                                            <img src={v.clientImage} alt=""/>
+                            {
+                                dish.length!==0?<div className="title">
+                                    <span>作业</span>
+                                    <strong>查看更多</strong>
+                                </div>:null
+                            }
+                            {
+                                dish.length!==0?<div className="homeworkList">
+                                    <div className="showList">
+                                        <div className="listInfo">
+                                            {
+                                                dish.map((v,i)=>(
+                                                    <div className="list" key={i}>
+                                                        <div className="imgs">
+                                                            <img src={v.coverImage} alt=""/>
                                                         </div>
-                                                        <div className="sign">{v.clientName}</div>
-                                                    </div>
-                                                    <div className="info">{v.coverSummary}</div>
-                                                    <div className="thumbUp">
-                                                        <div className="thumbs">
-                                                            <img src="https://image.hongbeibang.com/FmwV3erfnWllNy3UkmPLji-iWRn8?imageMogr2/strip/thumbnail/640x640" alt=""/>
+                                                        <div className="cilent">
+                                                            <div className="avator">
+                                                                <img src={v.clientImage} alt=""/>
+                                                            </div>
+                                                            <div className="sign">{v.clientName}</div>
                                                         </div>
-                                                        <div className="upNum">{v.likeNum}</div>
+                                                        <div className="info">{v.coverSummary}</div>
+                                                        <div className="thumbUp">
+                                                            <div className="thumbs">
+                                                                <img src="https://image.hongbeibang.com/FmwV3erfnWllNy3UkmPLji-iWRn8?imageMogr2/strip/thumbnail/640x640" alt=""/>
+                                                            </div>
+                                                            <div className="upNum">{v.likeNum}</div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                                <div className="uploadDone">
-                                    <div className="btn">
-                                        <div className="cinema">
-                                            <img src="https://image.hongbeibang.com/FstDrTWNqnY76dJTq964YhL5zr2A?200X200&imageView2/1/w/48/h/48" alt=""/>
+                                                ))
+                                            }
                                         </div>
-                                        <div className={"myWork"}>上传我的作品</div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div className="uploadDone">
+                                        <div className="btn">
+                                            <div className="cinema">
+                                                <img src="https://image.hongbeibang.com/FstDrTWNqnY76dJTq964YhL5zr2A?200X200&imageView2/1/w/48/h/48" alt=""/>
+                                            </div>
+                                            <div className={"myWork"}>上传我的作品</div>
+                                        </div>
+                                    </div>
+                                </div>:null
+                            }
+                            
+                            
                             {/*可优化为组件*/}
                             {
                                 recipe.length!==0?<div className="title">
@@ -237,13 +260,13 @@ class recipeDetail extends Component{
                             {/*推荐课程*/}
                             <div className="title">
                                 <span>课程推荐</span>
-                                <strong>查看更多</strong>
+                                <strong onClick={()=>this.props.history.push("/university")}>查看更多</strong>
                             </div>
                             <div className="commendVideoList">
                                 <div className="VideoBox">
                                     {
                                         videoList.map((v,i)=>(
-                                            <Link className="VideoInfo" key={i} to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
+                                            <Link className="VideoInfo" key={i} to={"/lesson/"+v.courseId+"/"+v.clientId}>
                                                 <div className="VideoImg">
                                                     <img src={v.coverImage} alt=""/>
                                                 </div>

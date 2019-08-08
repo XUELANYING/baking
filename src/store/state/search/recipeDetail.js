@@ -4,6 +4,7 @@ const recipeDetailState={
     step:[],
     dish:[],
     recipe:[],
+    clientId:"",
     coverImage:"",
     coverTitle:"",
     coverSummary:"",

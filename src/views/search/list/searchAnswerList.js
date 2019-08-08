@@ -4,12 +4,10 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import getSearchInfo,{getDetailList} from "../../../store/actionCreator/search/search";
 import "../../../asset/css/search/searchAnswer.scss";
-import NothingRes from "./nothing"
+import NothingRes from "./nothing";
+
 
 class SearchAnswerList extends React.Component{
-    constructor(){
-        super();
-    }
     componentDidMount(){
         this.props.getDetailList(1,this.props.match.params.keyword,0,"")
     }
@@ -18,9 +16,9 @@ class SearchAnswerList extends React.Component{
         return(
             <div className={"searchAnswerWrap clear_fix"}>
                 {
-                    answersList.length!==0?<div className="sAnswerList clear_fix">
+                    answersList.length !== 0 ? <div className="sAnswerList clear_fix">
                         {
-                            answersList.map((v,i)=>(
+                            answersList.map((v, i) => (
                                 <div className="sBox" key={i}>
                                     <p dangerouslySetInnerHTML={{__html: v.description}}></p>
                                     <span>{v.answerNum}个回答</span>
@@ -28,7 +26,7 @@ class SearchAnswerList extends React.Component{
                             ))
                         }
                         <LoadingMore></LoadingMore>
-                    </div>:<NothingRes></NothingRes>
+                    </div> : <NothingRes></NothingRes>
                 }
             </div>
         )

@@ -14,7 +14,6 @@
       background: #fff;
       display:flex;
       align-items: center;
-      //justify-content: space-between;
       i{
         font-size: 27px;
       }
@@ -101,20 +100,23 @@
           border-radius: 50%;
           margin-right: 10px;
         }
-        div{
+        .userInfo{
             width: 100%;
             text-align: left;
-            //background: red;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-          span,p{
+            span,p{
               margin-bottom:10px;
-            width: 100px;
-            text-overflow:ellipsis ;
-            overflow: hidden;
-            white-space: nowrap;
-          }
+              width: 100px;
+              text-overflow:ellipsis ;
+              overflow: hidden;
+              white-space: nowrap;
+              color:#4A4945;
+              font-size:11px;
+
+
+            }
         }
 
       }

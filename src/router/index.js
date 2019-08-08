@@ -121,40 +121,7 @@ export default {
                 active: 'https://image.hongbeibang.com/Flc4c0tB_BGGFnA-ORFowqfNOpaD?50X50&imageView2/1/w/50/h/50',
                 isShow: true,
             },
-            // 添加子路由
-            children:[
-                {
-                    component: Attention,
-                    name: "关注",
-                    path: '/show/attention',
-                    to: '/show/attention',
-                    meta: {
-                        title: "烘焙圈_烘焙秀秀_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: Latest,
-                    name: "最新",
-                    path: '/show/',
-                    to: '/show/',
-                    exact: true,
-                    meta: {
-                        title: "烘焙圈_烘焙秀秀_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: Expert,
-                    name: "达人",
-                    path: '/show/expert',
-                    to: '/show/expert',
-                    meta: {
-                        title: "烘焙圈_烘焙秀秀_烘焙帮",
-                        isShow: true,
-                    },
-                },
-            ]
+            
         },
         {
             component: QuestionAnswer,

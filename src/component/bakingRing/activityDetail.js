@@ -36,7 +36,6 @@ import '../../asset/css/bakingRing/activitydetail.scss'
                         {this.props.activityDetail.component?<span>参与人数 {this.props.activityDetail.component.count}</span>:<span></span>}
                     </div>
                     <Activitycommon ></Activitycommon>
-                    {/*<LoadingMore handleList={this.props.boxList}></LoadingMore>*/}
                 </div>
 
             </div>
@@ -49,7 +48,7 @@ import '../../asset/css/bakingRing/activitydetail.scss'
 
     }
 }
-// export default withRouter(ActivityDetail)
+
 export default  connect((state)=>({
         activityList:state.bakingRing.activityList,
         activityDetail:state.bakingRing.activityDetail,

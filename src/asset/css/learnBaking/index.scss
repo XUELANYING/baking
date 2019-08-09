@@ -1,3 +1,44 @@
+.getQus{
+  margin-left: -12px;
+  img{
+    margin:5px;
+    height: 27px;
+    width: 27px;
+  }
+
+}
+.x-searchBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .l-ser{
+    height: 18px;
+    width: 18px;
+    margin-right:10px;
+  }
+  .search-key{
+    color: #999999;
+    font-size: 12px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    height: 35px!important;
+  }
+}
+.search-key{
+  color: #999999;
+  font-size: 12px;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+
 //头部路由
 .search{
   width: 100%;

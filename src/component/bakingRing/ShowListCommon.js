@@ -46,7 +46,10 @@ import filter from '../../asset/filter'
                     <div className={'showlist_head'}>
                         {
                             show.map((v, i) => (
-                                <section key={i}>
+                                <section key={i} onClick={(e)=>{
+                                    this.props.history.push("/dish/"+v.contentId);
+                                    e.stopPropagation();
+                                }}>
                                     <div className={'showlist_head_title'}>
                                         <img src={v.clientImage} alt="" />
                                         <div className={'showList_info'} >
@@ -73,10 +76,13 @@ import filter from '../../asset/filter'
                                         }
 
                                     </div>
-                                    <div className={'showlist_foot'}>
+                                    <div className={'showlist_foot'} >
                                         <div className={'showlist_foot_one'}>
                                             {
-                                                v.type===2?<div className={'one'}>
+                                                v.type===2?<div className={'one'} onClick={(e)=>{
+                                        this.props.history.push('/recipe/'+v.clientId+"/"+v.contentId);
+                                        e.stopPropagation();
+                                    }}>
                                                         <Link to={'/'}>{v.coverTitle}</Link>
                                                         <div>
                                                             <span className={"span_one"}>{v.communityName}</span>
@@ -85,7 +91,10 @@ import filter from '../../asset/filter'
                                                         </div>
                                                     </div>
                                                     :v.recipe.image?
-                                                    <div className={'two'}>
+                                                    <div className={'two'} onClick={(e)=>{
+                                        this.props.history.push('/recipe/'+v.recipe.clientId+"/"+v.recipe.contentId);
+                                        e.stopPropagation();
+                                    }}>
                                                         <img src={v.recipe.image} alt=""/>
                                                         <div>
                                                             <p>{v.recipe.title}</p>

@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca61c42f-a2e8-4a49-975d-55dfca132c7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/baking.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/baking.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/asset/css/learnBaking/showList.scss" afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/showList.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/asset/css/learnBaking/university.scss" afterPath="$PROJECT_DIR$/src/asset/css/learnBaking/university.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/asset/css/transition.scss" afterPath="$PROJECT_DIR$/src/asset/css/transition.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/learnBaking/course/task.js" afterPath="$PROJECT_DIR$/src/component/learnBaking/course/task.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/learnBaking/kindList.js" afterPath="$PROJECT_DIR$/src/component/learnBaking/kindList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/learnBaking/more.js" afterPath="$PROJECT_DIR$/src/component/learnBaking/more.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/actionCreator/learnBaking/index.js" afterPath="$PROJECT_DIR$/src/store/actionCreator/learnBaking/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/actionType/learnBaking/index.js" afterPath="$PROJECT_DIR$/src/store/actionType/learnBaking/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/reducer/learnBaking/index.js" afterPath="$PROJECT_DIR$/src/store/reducer/learnBaking/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/state/learnBaking/index.js" afterPath="$PROJECT_DIR$/src/store/state/learnBaking/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/learnBaking/classify.js" afterPath="$PROJECT_DIR$/src/views/learnBaking/classify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/learnBaking/learnBaking.js" afterPath="$PROJECT_DIR$/src/views/learnBaking/learnBaking.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/learnBaking/lesson.js" afterPath="$PROJECT_DIR$/src/views/learnBaking/lesson.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -121,7 +107,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="160" />
     <option name="height" value="39" />
   </component>
@@ -238,15 +224,15 @@
       <option name="presentableId" value="Default" />
       <updated>1565268921463</updated>
       <workItem from="1565268942157" duration="4611000" />
-      <workItem from="1565310324392" duration="17979000" />
+      <workItem from="1565310324392" duration="18324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22590000" />
+    <option name="totallyTimeSpent" value="22935000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22916667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

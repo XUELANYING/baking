@@ -43,6 +43,13 @@ const variousList = (payload) =>{
         payload
     }
 };
+//查看更多
+const moreList = (payload) =>{
+    return {
+        type:actionType.GET_MORE_LIST,
+        payload
+    }
+};
 // 课程目录
 const catalogList = (payload) =>{
     return {
@@ -163,6 +170,14 @@ export default {
             let {data} = await axios.get("/api/index/getIndexItem?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&categoryId="+categoryId);
             dispatch(variousList(data.data));
             // console.log("分类列表",data.data.length)
+        }
+    },
+    // 查看更多
+    getMoreList(categoryId){
+        return async (dispatch)=>{
+            let {data} = await axios.get("/api/index/getIndexItem?_t=1565341527450&csrfToken=&pageIndex=0&pageSize=10&categoryId="+categoryId);
+            dispatch(moreList(data.data));
+            console.log("查看更多----",data.data)
         }
     },
     // 课程目录

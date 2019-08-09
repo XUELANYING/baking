@@ -81,6 +81,16 @@ export default {
                 isAppear:true,
             }
         },
+        {//查看更多
+            component:More,
+            name:"查看更多",
+            to:"/university/allLessons/:id",
+            display: true,//隐藏
+            exact: true,
+            meta:{
+                isAppear:false,
+            },
+        },
         {//学堂
             component:University,
             name:"视频学堂",
@@ -93,12 +103,7 @@ export default {
                 isAppear:true,
             },
             children:[
-                {
-                    component:More,
-                    name:"查看更多",
-                    to:"/university/allLessons",
-                    exact: true,
-                }
+
             ]
         },
         {//教程

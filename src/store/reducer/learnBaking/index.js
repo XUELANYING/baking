@@ -24,7 +24,10 @@ export default function(state=initState,{type,payload}) {
     } else if (type === actionType.GET_VARIOUSLIST) {
         state.variousList = [...payload];                              //视频分页列表
         // console.log("variousList", state.variousList)
-    } else if (type === actionType.GET_CATALOGLIST) {
+    }else if(type === actionType.GET_MORE_LIST){                      //查看更多
+        state.moreList = [ ...payload]
+        console.log("more///", state.moreList)
+    }else if (type === actionType.GET_CATALOGLIST) {
         state.catalogList = [ ...payload];                                       //课程目录
         // console.log("catalogList", state.catalogList)
     } else if (type === actionType.GET_TASKLIST) {

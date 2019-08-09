@@ -10,8 +10,7 @@ import {Link}from "react-router-dom";
                     {
                         this.props.taskLisk.map((v,i)=>(
                             <div key={i} className="ta-com">
-                                {/*<Link className={"ca-l"} to={"/lesson?contentId="+v.educationCourseId+"&isHideBottom=1&playTryVideo="+v.hasTrySeeVideo}>*/}
-                                <Link exact={0} className={"ca-l"} to={"/university/dish?contentId="+v.contentId}>
+                                <Link exact={0} className={"ca-l"} to={"/school/"+v.contentId}>
                                 <dl className={"ta-out"}>
                                     <dt><img src={v.image} alt=""/></dt>
                                     <dd className={"ta-tit"}>

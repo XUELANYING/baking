@@ -1,9 +1,7 @@
 import React,{Fragment} from 'react';
 import {NavLink,withRouter} from 'react-router-dom';
 import router from "../../router";
-import '../../asset/css/learnBaking/index.scss'
-// import {bindActionCreators} from 'redux'
-// import {connect} from 'react-redux'
+import '../../asset/css/learnBaking/index.scss';
 import ShowList from "../../component/learnBaking/showList"
 import KindList from "../../component/learnBaking/kindList"
 class LearnBarking extends React.Component {

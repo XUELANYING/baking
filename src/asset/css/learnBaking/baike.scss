@@ -29,10 +29,15 @@ section dl{
   border-bottom: 1px solid #F5F7F9;
 }
 
-section dl dt img{
+section dl dt{
+  position: relative;
   display: block;
   width: 130px;
   height: 80px;
+  img{
+    height:100%;
+    width: 100%;
+  }
 }
 .ba-wrap{
   background: #fff;

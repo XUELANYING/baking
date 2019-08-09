@@ -31,6 +31,7 @@ const Routes = withRouter(({location, history}) => {
             <CSSTransition
                 key={location.pathname}
                 timeout={500} // 动画时间设置为500ms，和css中的需要一致。
+                unmountOnExit
             >
                 <Switch>
                     {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
@@ -68,7 +68,7 @@ class LessonSeries extends React.Component {
                                 })
                             }
                     </ul>
-                        <div >
+                        <Fragment >
                             {
                                 this.data.map((v,i)=>{
                                     return(
@@ -78,7 +78,7 @@ class LessonSeries extends React.Component {
                                     )
                                 })
                             }
-                        </div>
+                        </Fragment>
                 </div>
             </div>
         )

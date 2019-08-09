@@ -14,7 +14,7 @@ class ShowList extends React.Component {
     }
     render(){
         return(
-            <div id="l-list">
+            <div className="l-list">
                 <p><span>推荐课程</span></p>
                 <div className={"sect"}>
                     {

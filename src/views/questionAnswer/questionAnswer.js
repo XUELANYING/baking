@@ -57,24 +57,10 @@ class QuestionAnswer extends React.Component {
                             ))
                         }
                     </nav>
-
-                    {/*<nav className={'qusTab'}>
-                        {
-                            this.props.children.map((v, i) => (
-                                v.isHide ? null :
-                                    <NavLink activeClassName={'active'} key={i} to={v.to}>{v.name}</NavLink>
-                            ))
-                        }
-                    </nav>*/}
                 </div>
                 {
                     index===0? <Essence></Essence>:index===1? <New></New>:index===2?<Hot></Hot>:null
                 }
-                {/*{
-                    this.props.children.map((v, i) => (
-                        v.isHide ? null : <Route key={i} path={v.path} {...v}/>
-                    ))
-                }*/}
             </div>
         )
     }

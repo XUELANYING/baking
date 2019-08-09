@@ -21,7 +21,7 @@ export function topTab(MyCom) {
                         this.props.history.push('/questionAndAnswer')
                     }}>取消</span>,
                     right:"下一步"
-                }
+                },
             }
         }
         render(){

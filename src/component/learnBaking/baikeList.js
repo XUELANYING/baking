@@ -1,6 +1,7 @@
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import Lazyload from 'react-lazyload'
 import actionCreator from "../../store/actionCreator";
 import {Link}from "react-router-dom";
 
@@ -19,7 +20,11 @@ class BaikeList extends React.Component {
                         <section key={i} id={"baike"}>
                             <Link to={"/newbie/video?contentId="+v.courseId}>
                                 <dl>
-                                    <dt><img src={v.image} alt="" /></dt>
+                                    <dt>
+                                        <Lazyload placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                            <img src={v.image} alt="" />
+                                        </Lazyload>
+                                    </dt>
                                     <dd className={"tit"}>{v.title}</dd>
                                 </dl>
                             </Link>

@@ -4,15 +4,27 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import actionCreator from "../../../store/actionCreator/index";
 import LoadingMore from "../../common/loadingMore";
+import Scroll from '../../../component/common/utils/Bscroll'
+import '../../../asset/css/list.scss'
+import Loading from "../../../component/common/loading"
 
 class AnswerBox extends React.Component {
     constructor() {
         super();
+        this.state = {
+            loading: true,
+            sliderList: [],
+            newAlbums: [],
+            refreshScroll: false,
+            page:0,
+        };
     }
 
     render() {
         return (
+            <Scroll refresh={this.state.refreshScroll} className="list" handleList={this.props.boxList} list={this.props.list}>
             <div className={'questionWrap essenceWrap'}>
+
                 {
                     this.props.questionAnswer[this.props.list].map((v, i) => (
                         <div key={i} className={'questionBox'} onClick={() => {
@@ -46,16 +58,38 @@ class AnswerBox extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={this.props.boxList}></LoadingMore>
+                <Loading show={true}></Loading>
+            {/*    <LoadingMore handleList={this.props.boxList} show={true}></LoadingMore>*/}
             </div>
+            </Scroll>
         )
     }
 
     componentDidMount() {
         if (this.props.list.length === 0) {
             this.props[this.props.boxList]()
+            this.setState({
+                loading: false,
+            },() => {
+                //刷新scroll
+                this.setState({refreshScroll:true});
+            })
         }
     }
+
+    componentWillReceiveProps(nextProps){
+       // console.log(nextProps.questionAnswer[this.props.list])
+            console.log("接收到了值")
+        console.log(this.props.list)
+        this.setState({refreshScroll:true});
+            this.setState({
+                newAlbums: this.props.list
+            }, () => {
+                //刷新scroll
+
+            });
+        }
+
 }
 
 export default withRouter(connect((state) => ({questionAnswer: state.questionAnswer}),

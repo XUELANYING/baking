@@ -1,8 +1,10 @@
 import React, {Fragment} from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import LazyLoad,{forceCheck} from 'react-lazyload';
 import actionCreator from "../../store/actionCreator";
 import QuestionBox from "../../component/questionAnswer/common/questionBox";
+import BScroll from '../../component/common/utils/Bscroll'
 
 class New extends React.Component {
     constructor() {
@@ -16,7 +18,9 @@ class New extends React.Component {
     render() {
         return (
             <Fragment>
-                <QuestionBox boxList={"getNewsList"} list={"newsList"}></QuestionBox>
+                /*检查懒加载组件是否出现在视图中，如果出现就加载组件*/
+                <BScroll refresh={this.state.refreshScroll} boxList={"getNewsList"} list={"newsList"} onScroll={()=>{forceCheck()}}></BScroll>
+{/* <QuestionBox count={{nowCount:this.props.newsList.length,sumCount:this.props.newsCount}} boxList={"getNewsList"} list={"newsList"}></QuestionBox>*/}
             </Fragment>
         )
     }
@@ -27,4 +31,5 @@ class New extends React.Component {
     }
 }
 
-export default connect((state) => ({newsList: state.questionAnswer.newsList}), (dispatch) => (bindActionCreators(actionCreator, dispatch)))(New)
+export default connect((state) => ({newsList: state.questionAnswer.newsList,
+    newsCount:state.questionAnswer.newsCount}), (dispatch) => (bindActionCreators(actionCreator, dispatch)))(New)

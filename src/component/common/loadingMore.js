@@ -2,28 +2,33 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {withRouter} from 'react-router-dom'
-import more from '../../asset/img/more.gif'
+import loadingImg from '../../asset/img/more.gif'
 import actionCreator from "../../store/actionCreator";
 
 class LoadingMore extends React.Component {
     constructor() {
         super()
         this.state = {
-            pageIndex: 0
+            pageIndex: 0,
+            nowIndex:1
         }
     }
 
     render() {
+        let displayStyle = this.props.show === true ?
+            {display:""} : {display:"none"};
         return (
-            <div
-                style={{width: "100%", margin: "0 auto", background: "#fff", display: "flex", justifyContent: "center"}}
-                ref={"wrapper"}>
-                <img src={more} alt=""/>
+            <div className="loading-container" style={displayStyle}>
+                <div className="loading-wrapper">
+                    <img src={loadingImg} style={{width: "100%", margin: "0 auto", background: "#fff", display: "flex", justifyContent: "center"}}/>
+                    <div className="loading-title">{this.props.title}</div>
+                </div>
             </div>
-        )
+        );
     }
 
     componentDidMount() {
+        console.log(this.props)
         const wrapper = this.refs.wrapper;
         window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
@@ -40,13 +45,39 @@ class LoadingMore extends React.Component {
                 })
             }
             // },0)
-            if (this.state.flag) {
+            if(this.state.flag){
                 this.handleClick()
             }
         }, false)
     }
-
-
+   /* getSnapshotBeforeUpdate(nextProps) {
+        return nextProps.count/10>this.state.nowIndex && this.state.flag===true? true: false;
+    }
+    componentDidUpdate(prevProps, prevState, isLoading) {
+        if (isLoading === true) {
+            ++this.state.nowIndex
+        }
+    }*/
+ /*  componentWillReceiveProps(nextProps){
+       if(nextProps.count.nowCount/1<30){
+           this.state.flag=false
+       }
+       console.log()
+   }*/
+  /*  shouldComponentUpdate(nextProps){
+        if (nextProps.count.nowCount!==this.props.count.nowCount){
+            console.log(nextProps.count.nowCount)
+            if(nextProps.count.nowCount/1<30){
+                return true
+            }
+        }
+        return false
+    }*/
+   /* componentWillUpdate(){
+        if (this.state.flag) {
+            this.handleClick()
+        }
+    }*/
 
     handleClick() {
         if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {

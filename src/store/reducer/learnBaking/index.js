@@ -29,7 +29,7 @@ export default function(state=initState,{type,payload}) {
         state.taskLisk = [...state.taskLisk, ...payload];             //学员作业
 
     }else if (type === actionType.UP_LESSON) {
-        state.lessonList = [ ...payload];
+        state.lessonList = payload;
 
     }else if (type === actionType.UP_STUDENT) {
         state.studentList = [...state.studentList, ...payload];
@@ -44,7 +44,7 @@ export default function(state=initState,{type,payload}) {
         state.floorList = [...state.floorList, ...payload];
 
     }else if (type === actionType.UP_HOMEWORK) {
-        state.homeworkList = [ ...payload];
+        state.homeworkList = payload;
 
     }else if (type === actionType.UP_CUURR) {
         state.curriculumList = [...state.curriculumList, ...payload];

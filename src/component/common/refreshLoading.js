@@ -14,7 +14,7 @@ export default class Loading extends React.Component {
 }
 */
 import React from "react"
-import loadingImg from '../../asset/img/more.gif'
+import loadingImg from '../../asset/img/imgLoding.gif'
 
 class Loading extends React.Component {
     render() {

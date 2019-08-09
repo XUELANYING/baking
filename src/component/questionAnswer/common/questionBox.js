@@ -1,26 +1,36 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+import LazyLoad,{forceCheck} from 'react-lazyload';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
+import Bscroll from "better-scroll";
 import actionCreator from "../../../store/actionCreator/index";
-import LoadingMore from '../../common/loadingMore'
+import Loading from '../../common/loading'
+import RefreshLoading from '../../../component/common/refreshLoading'
 
 
 class Box extends React.Component {
+
     constructor() {
         super();
+
         this.state = {
             flag: false,
-            pageIndex: 0
+            pageIndex: 0,
+            count:1,
+            isLoading:true,
+            refreshScroll: false,
+            isRefresh:false,
         }
+
     }
 
     render() {
         return (
             <div className={'questionWrap'}>
+                <RefreshLoading title={"正在刷新"} show={this.state.isRefresh}></RefreshLoading>
                 {
-                    this.props.questionAnswer[this.props.list].map((v, i) => (
+                    this.state.list?this.state.list.map((v, i) => (
                         <div key={i} className={'questionBox'} onClick={() => {
                             this.props.history.push('/question/' + v.contentId)
                         }}>
@@ -50,19 +60,32 @@ class Box extends React.Component {
                                 </p>
                             </div>
                         </div>
-                    ))
+                    )):null
                 }
-                <LoadingMore handleList={this.props.boxList}></LoadingMore>
+                <Loading show={true}></Loading>
+               {/* {
+                    this.state.isLoading?<LoadingMore count={this.props.count} handleList={this.props.boxList}></LoadingMore>:<div>"没啦没啦"</div>
+                }*/}
             </div>
         )
     }
 
     componentDidMount() {
+        console.log(this.props.list)
         if (this.props.list.length === 0) {
             this.props[this.props.boxList]()
         }
+        console.log("取到了",this.props.list)
     }
-
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps.list)
+        if(nextProps.list!== this.props.list){
+            this.setState({
+                list:nextProps.list,
+                refreshScroll:true
+            });
+        }
+    }
    /* getSnapshotBeforeUpdate() {
         return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
     }

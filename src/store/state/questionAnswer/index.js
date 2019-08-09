@@ -1,5 +1,6 @@
 export default {
     newsList:[],
+    newsCount:1,
     hotList:[],
     essenceList:[],
     questionDetail:{},

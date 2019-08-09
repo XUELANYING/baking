@@ -5,10 +5,13 @@ export default function(state=initState,{type,payload}){
     state = JSON.parse(JSON.stringify(state))
     if(type===actionType.GET_NEWSLIST){
         state.newsList = [...state.newsList,...payload]
+       // state.newsCount = payload.count
     }else if(type===actionType.GET_HOTLIST){
         state.hotList = [...state.hotList,...payload]
+        state.count = payload.count
     }else if (type===actionType.GET_ESSENCELIST){
         state.essenceList = [...state.essenceList,...payload]
+        console.log( state.essenceList )
     }else if(type === actionType.GET_QUESTIONDETAIL){
         state.questionDetail = payload
         state.recipe = payload.recipe

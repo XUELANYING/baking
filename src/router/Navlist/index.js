@@ -46,7 +46,7 @@ class NavList extends React.Component {
         })
     }
     componentDidMount(){
-        console.log(222,this.props.navList)
+        //console.log(222,this.props.navList)
     }
 }
 

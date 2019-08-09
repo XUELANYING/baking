@@ -557,8 +557,9 @@
 
 .commendVideoList{
   width:100%;
-  height:270px;
+  height:275px;
   overflow: hidden;
+  padding-top:10px;
   .VideoBox{
     height:100%;
     overflow-x: auto;
@@ -736,6 +737,49 @@
         margin-left: 40.875px;
         font-size: 15px;
         line-height: 21px;
+      }
+    }
+  }
+}
+
+.clientComment{
+  text-align: justify;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  color: #4A4945;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-left: 40.875px;
+  font-size: 15px;
+  line-height: 21px;
+  .commentsL{
+    box-sizing: border-box;
+    background-color: #F5F7F9;
+    letter-spacing: 0.5px;
+    list-style-type: none;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    li{
+      position: relative;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      cursor: pointer;
+      font-size:13px;
+      p{
+        display:inline;
+      }
+      span{
+        color: #313131;
+      }
+      b{
+        color:#999;
       }
     }
   }

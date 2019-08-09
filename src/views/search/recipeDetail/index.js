@@ -1,10 +1,10 @@
 import React,{Component} from "react";
 import "../../../asset/css/search/recipeDetail.scss";
 import {connect} from "react-redux";
-// import getClassifyInfo from "../../../store/actionCreator/search/classify";
 import {bindActionCreators} from "redux";
 import {Link} from "react-router-dom";
 import recipeDetailInfo,{getUserList,getMoreCommendInfo,getMoreVideoInfo,getCommendList} from "../../../store/actionCreator/search/recipeDetail"
+import NoComments from "./noComment"
 
 class recipeDetail extends Component{
     constructor(){
@@ -26,7 +26,6 @@ class recipeDetail extends Component{
         let {clientId,contentId} = this.props.match.params;
         this.props.getUserList(contentId,"").then(()=>{
             let recipeDetail = this.props.recipeDetail;
-            // console.log(this.props)
             this.setState({
                 quantity:recipeDetail.quantity,
                 material:recipeDetail.material,
@@ -209,8 +208,6 @@ class recipeDetail extends Component{
                                     </div>
                                 </div>:null
                             }
-                            
-                            
                             {/*可优化为组件*/}
                             {
                                 recipe.length!==0?<div className="title">
@@ -308,27 +305,51 @@ class recipeDetail extends Component{
                                 </div>
                             </div>
 
-                            <div className="commentInfoList clear_fix">
-                                <div className="borders"></div>
-                                <ul className={"clear_fix"}>
-                                    {
-                                        commentList.map((v,i)=>(
-                                            <li className={"clear_fix"} key={i}>
-                                                <div className="top">
-                                                    <div className="avator">
-                                                        <img src={v.clientImage} alt=""/>
+                            {
+                                commentList.length!==0?<div className="commentInfoList clear_fix">
+                                    <div className="borders"></div>
+                                    <ul className={"clear_fix"}>
+                                        {
+                                            commentList.map((v,i)=>(
+                                                <li className={"clear_fix"} key={i}>
+                                                    <div className="top">
+                                                        <div className="avator">
+                                                            <img src={v.clientImage} alt=""/>
+                                                        </div>
+                                                        <div className="nickName">
+                                                            <div className={"name"}>{v.clientName}</div>
+                                                            <div className={"createTime"}>{v.modifyTime}</div>
+                                                        </div>
                                                     </div>
-                                                    <div className="nickName">
-                                                        <div className={"name"}>{v.clientName}</div>
-                                                        <div className={"createTime"}>{v.modifyTime}</div>
-                                                    </div>
-                                                </div>
-                                                <div className="content">{v.coverSummary}</div>
-                                            </li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
+                                                    <div className="content">{v.coverSummary}</div>
+                                                    {/*回复*/}
+                                                    {
+                                                        v.comments.count!==0?<div className="clientComment clear_fix">
+                                                            <ul className="commentsL clear_fix">
+                                                                {
+                                                                    v.comments.data.map((item,index)=>(
+                                                                        <li className={"clear_fix"} key={index}>
+                                                                            <span>{item.clientName}</span>
+                                                                            {
+                                                                                v.clientName!==item.commentClientName?<p>
+                                                                                    <b> 回复 </b>
+                                                                                    <span>{item.commentClientName}</span>
+                                                                                </p>:null
+                                                                            }
+
+                                                                            <b>: {item.coverSummary}</b>
+                                                                        </li>
+                                                                    ))
+                                                                }
+                                                            </ul>
+                                                        </div>:null
+                                                    }
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>:<NoComments></NoComments>
+                            }
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,6 @@ export default {
     getUserList(contentId,quantity){
         return async(dispatch)=>{
             let {data} = await axios.get("/api/recipe/get?_t="+Date.now()+"&csrfToken="+token+"&contentId="+contentId+"&quantity="+quantity);
-            // console.log(data)
             dispatch(recipeDetailInfo(data.data.recipe))
         }
     },

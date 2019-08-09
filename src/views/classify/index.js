@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import getClassifyInfo, { getCommendList, getClassifyList } from "../../store/actionCreator/search/classify";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import {withRouter} from "react-router-dom";
 
 class Classify extends Component {
     constructor() {
@@ -15,7 +16,6 @@ class Classify extends Component {
         }
     }
     componentDidMount() {
-        console.log(this.props);
         this.props.getCommendList();
         this.props.getClassifyList()
     }
@@ -31,7 +31,7 @@ class Classify extends Component {
     }
     render() {
         let { classify } = this.props.classify;
-        let { commendList } = this.state;
+        let commendList = this.state.commendList;
         return (
             <div className={"classifyWrap"}>
                 {/*搜索组件*/}
@@ -86,7 +86,7 @@ class Classify extends Component {
     }
     changeList(index) {
         this.index = index;
-        let arr = [];
+        var arr = [];
         if (index === 0) {
             arr.push(this.state.allInfo[index])
         } else {
@@ -108,4 +108,4 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators(getClassifyInfo, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Classify)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Classify))

@@ -37,14 +37,10 @@ class DishDetail extends Component {
         }
 
     }
-
-
     render(){
-        console.log('最想看到的',this.props.dishDetail);
         const show = this.props.dishDetail;
         return (
             <div id={'dishDetail_wrap_outside'}>
-
                 <div >
                     <div className={'activityDetail_head'}>
                         <i className={'iconfont icon-arrow-left'} onClick={()=>{
@@ -54,54 +50,57 @@ class DishDetail extends Component {
                     </div>
                     <div id={'dishDetail_wrap'}>
                         <div className={'dishDetail_info'}>
-                            <img src={show.clientImage} alt=""/>
-                            <div className={'userinfo'}>
-                                <p>{show.clientName}</p>
-                                <div>
-                                    <span>{show.createTime}</span>
-                                    {/*{filter.date(show.createTime)}*/}
-                                    <span>{show.coverTitle}</span>
+                            <div className={'houhou'}>
+                                <img className={'dishDetail_clientImage'} src={show.clientImage} alt=""/>
+                                <div className={'dishDetail_userInfo'}>
+                                    <p>{show.clientName}</p>
+                                    <div>
+                                        <span>{show.createTime}</span>
+                                        <span>{show.coverTitle}</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div className={'follow'}>
+
+                            <div className={'dishDetail_follow'}>
                                 <span>+  关注</span>
                             </div>
                         </div>
                         <div className={'dishDetail_instroduce'}>{show.introduce}</div>
 
                         <div className={'dishDetail_image'}>
-
                                 {
                                     show.image?show.image.map((v,i)=>(
                                         <div className={'showlist_center'} key={i} style={{width:this.state.imgW[show.image.length]}} >
-                                            <img src={v} alt=""  style={{width:"100%",height:this.state.imgH[show.image.length]}}/>
+                                            <img ref={'dishImg'} src={v} alt=""  style={{width:"100%",height:this.state.imgH[show.image.length]}} />
                                         </div>
                                     )):null
                                 }
-
                         </div>
                         <div className={'dishDetail_title'}>
                             <div>{show.coverTitle}</div>
                             <div>
-                                <span>找食谱</span>
+                                <span onClick={(e)=>{
+                                    this.props.history.push('/classify');
+                                    e.stopPropagation();
+                                }}>找食谱</span>
                                 <i className={'iconfont icon-iconfontyoujiantou-copy'}></i>
                             </div>
                         </div>
 
                 </div>
                     <div className={'dishDetail_bottom'}>
-                        <section>
-                            <div >
+                        <div className={'haha'}>
+                            <div className={'content'}>
                                 <span>点赞{show.likeNum}</span>
                                 <div></div>
                             </div>
-                            <div>
+                            <div className={'content'}>
                                 <span>打赏{show.rewardNum}</span>
                                 <div></div>
                             </div>
-                        </section>
+                        </div>
 
-                        <div>
+                        <div className={'content'}>
                             <span>评论</span>
                             <div></div>
                         </div>

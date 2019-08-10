@@ -3,6 +3,7 @@ import {Link,withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import actionCreators from '../../store/actionCreator'
+import LazyLoad from 'react-lazyload'
 import '../../asset/css/bakingRing/showlistcommon.scss'
 import filter from '../../asset/filter'
 
@@ -34,8 +35,33 @@ import filter from '../../asset/filter'
                 '8':'105px',
                 "9":"105px",
 
-            }
+            },
+            look:false,
+            index:-1,
+            change:false
+
         }
+        this.handleScroll=this.handleScroll.bind(this);
+    }
+    //回到顶部
+     handleScroll(){
+        let scrollTop = document.documentElement.scrollTop;
+        if(scrollTop > 220){
+            this.setState({
+                look:true
+            })
+        }else{
+            this.setState({
+                look:false
+            })
+        }
+     }
+     backTop(){
+        document.documentElement.scrollTop = 0;
+     }
+
+    componentWillMount(){
+        window.addEventListener('scroll',this.handleScroll,true);
     }
 
     render() {
@@ -51,10 +77,14 @@ import filter from '../../asset/filter'
                                     e.stopPropagation();
                                 }}>
                                     <div className={'showlist_head_title'}>
+                                        <LazyLoad height={200}>
                                         <img src={v.clientImage} alt="" />
+                                        </LazyLoad>
                                         <div className={'showList_info'} >
                                             <div>
+
                                                 {v.isMaster===1?<img src='https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80' alt=""/>:null}
+
                                                 <p>{v.clientName}</p>
                                             </div>
                                             <span>{filter.date(v.createTime)} {v.coverTitle}</span>
@@ -66,7 +96,9 @@ import filter from '../../asset/filter'
                                             v.type===4?<span>{v.introduce}</span>:null
                                         }
                                     </div>
+
                                     <div className={'showlist_center_wrap'}>
+
                                         {
                                             v.image.map((v1,i)=>(
                                                 <div className={'showlist_center'} key={i} style={{width:this.state.imgW[v.image.length]}} >
@@ -76,6 +108,7 @@ import filter from '../../asset/filter'
                                         }
 
                                     </div>
+
                                     <div className={'showlist_foot'} >
                                         <div className={'showlist_foot_one'}>
                                             {
@@ -96,6 +129,7 @@ import filter from '../../asset/filter'
                                         e.stopPropagation();
                                     }}>
                                                         <img src={v.recipe.image} alt=""/>
+
                                                         <div>
                                                             <p>{v.recipe.title}</p>
                                                             <span>{v.recipe.clientName}</span>
@@ -105,14 +139,14 @@ import filter from '../../asset/filter'
                                         </div>
 
                                     </div>
-                                    <div className={'showlist_comments_wrap'}>
+                                    <div className={'showlist_comments_wrap'} >
                                         <div>
                                             <i className={'iconfont icon-zan'}></i>
-                                            <span>
-                                        {
-                                            v.likeNum?v.likeNum:'点赞'
-                                        }
-                                        </span>
+                                            <span  >
+                                                {
+                                                    v.likeNum?v.likeNum:'点赞'
+                                                }
+                                            </span>
                                         </div>
                                         <div>
                                             <i className={'iconfont icon-dashang'}></i>
@@ -136,6 +170,10 @@ import filter from '../../asset/filter'
                                 </section>
                             ))
                         }
+                    </div>
+
+                    <div className={'backTop'} style={{display:this.state.look?'block':'none'}} onClick={this.backTop.bind(this)}>
+                        <i className={'iconfont icon-huidaodingbu-copy-copy'} onClick={this.backTop.bind(this)}></i>
                     </div>
             </div>
         )

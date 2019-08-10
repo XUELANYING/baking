@@ -3,6 +3,7 @@ import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
 import  Troble from  "./troble"
 import  Cookbook from "./cookbook"
 import  Opus  from "./opus"
+import Store from "./store"
 import  "@/asset/css/nest/Me/opusTaber.scss"
 import {
     Route,
@@ -28,13 +29,12 @@ class OpusTaber extends React.Component{
 // 创建名字：className={"taber"}
     render(){
         const tabs = [
-
             { title: <Badge >作品</Badge> },
             { title: <Badge >食谱</Badge> },
             { title: <Badge >问答</Badge> },
+            { title: <Badge >收藏</Badge> },
         ];
         const  {index} = this.state
-
 
         return (
             <div className={"cee"}>
@@ -63,6 +63,7 @@ class OpusTaber extends React.Component{
                         <Opus></Opus>
                         <Cookbook></Cookbook>
                         <Troble></Troble>
+                        <Store></Store>
                     </Tabs>
 
                 </div>

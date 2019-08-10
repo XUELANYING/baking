@@ -110,7 +110,7 @@ export default {
             var time = years + "-0" + month + "-0" + days +' '+hours + ":" + minutes + ":" + seconds;
 
             data.data.data.forEach(v=>{
-               console.log(v.Time)
+              // console.log(v.Time)
                 if( time < v.createTime){
                     newList.push(v);
                 }else{

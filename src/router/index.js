@@ -33,11 +33,21 @@ import ActivityDetail from '../component/bakingRing/activityDetail'
 import BakingCircleDetail from '../component/bakingRing/bakingCircleDetail'
 import DishDetail from '../component/bakingRing/dishDetail'
 
-
-
 export default {
     basename: "/m",
     routers: [
+        //登录
+        {
+            component:Login,
+            name:"登录",
+            to:"/login",
+            display: true,//隐藏
+            exact: true,
+            meta:{
+                title:"烘焙百科",
+                isAppear:false,
+            }
+        },
         {
             component: LearnBaking,
             name: "学烘焙",
@@ -53,21 +63,59 @@ export default {
                 enter: 'from-right',
                 exit: 'to-right'
             },
+            children: []
+        },
+        {
+            component: BarkingRing,
+            to: '/show',
+            name: "烘焙圈",
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
+            },
+            meta: {
+                title: "烘焙圈_烘焙秀秀_烘焙帮",
+                unActive: 'https://image.hongbeibang.com/Fkpdn7F9EWxvNeSS8M7V4_xbRPlf?50X50&imageView2/1/w/50/h/50',
+                active: 'https://image.hongbeibang.com/Flc4c0tB_BGGFnA-ORFowqfNOpaD?50X50&imageView2/1/w/50/h/50',
+                isShow: true,
+            },
+
+        },
+        {
+            component: QuestionAnswer,
+            to: '/questionAndAnswer',
+            name: "问答",
+            meta: {
+                title: "烘焙问答_烘焙社区_烘焙交流_烘焙帮问答_烘焙帮社区_社区_烘焙帮",
+                unActive: 'https://image.hongbeibang.com/Flm_lYHJQA56h0VyhdRhQ1i5iO06?50X50&imageView2/1/w/50/h/50',
+                active: 'https://image.hongbeibang.com/Fj5pW1jZYwlS9rB3h_nsvXNptuPX?50X50&imageView2/1/w/50/h/50',
+                isShow: true,
+            },
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
+            },
             children: [//子路由
 
             ]
         },
-        //登录
         {
-            component:Login,
-            name:"登录",
-            to:"/login",
-            display: true,//隐藏
+            component: Nest,
+            to: '/me',
+            name: "小窝",
             exact: true,
-            meta:{
-                title:"烘焙百科",
-                isAppear:false,
-            }
+            meta: {
+                title: "郭郭的小窝_烘焙帮",
+                unActive: 'https://image.hongbeibang.com/FrYeKj0MohOJQuNzUgCugg90cHCS?50X50&imageView2/1/w/50/h/50',
+                active: 'https://image.hongbeibang.com/FpNSY800vY0I5ytvWaqDbdJqT0HR?50X50&imageView2/1/w/50/h/50',
+                isShow: true,
+            },
+            sceneConfig: {
+                enter: 'from-right',
+                exit: 'to-right'
+            },
+            children: [//子路由
+            ]
         },
         {//百科
             component:Baike,
@@ -128,75 +176,7 @@ export default {
                 isAppear:true,
             }
         },
-        {
-            component: BarkingRing,
-            to: '/show',
-            name: "烘焙圈",
-            sceneConfig: {
-                enter: 'from-right',
-                exit: 'to-right'
-            },
-            meta: {
-                title: "烘焙圈_烘焙秀秀_烘焙帮",
-                unActive: 'https://image.hongbeibang.com/Fkpdn7F9EWxvNeSS8M7V4_xbRPlf?50X50&imageView2/1/w/50/h/50',
-                active: 'https://image.hongbeibang.com/Flc4c0tB_BGGFnA-ORFowqfNOpaD?50X50&imageView2/1/w/50/h/50',
-                isShow: true,
-            },
-            
-        },
-        {
-            component: QuestionAnswer,
-            to: '/questionAndAnswer',
-            name: "问答",
-            meta: {
-                title: "烘焙问答_烘焙社区_烘焙交流_烘焙帮问答_烘焙帮社区_社区_烘焙帮",
-                unActive: 'https://image.hongbeibang.com/Flm_lYHJQA56h0VyhdRhQ1i5iO06?50X50&imageView2/1/w/50/h/50',
-                active: 'https://image.hongbeibang.com/Fj5pW1jZYwlS9rB3h_nsvXNptuPX?50X50&imageView2/1/w/50/h/50',
-                isShow: true,
-            },
-            sceneConfig: {
-                enter: 'from-right',
-                exit: 'to-right'
-            },
-            children: [//子路由
-                {
-                    component: Essence,
-                    name: "精华问答",
-                    path: '/questionAndAnswer/essence',
-                    to: '/questionAndAnswer/essence',
-                    meta: {
-                        title: "烘焙问答_烘焙社区_烘焙交流_烘焙帮问答_烘焙帮社区_社区_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: New,
-                    name: "最新问题",
-                    path: '/questionAndAnswer/new',
-                    to: '/questionAndAnswer/new',
-                    meta: {
-                        title: "烘焙问答_烘焙社区_烘焙交流_烘焙帮问答_烘焙帮社区_社区_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: Hot,
-                    name: "最热问题",
-                    path: '/questionAndAnswer/hot',
-                    to: '/questionAndAnswer/hot',
-                    meta: {
-                        title: "烘焙问答_烘焙社区_烘焙交流_烘焙帮问答_烘焙帮社区_社区_烘焙帮",
-                        isShow: true,
-                    },
-                },
-                {
-                    component: QuestionDetail,
-                    path: '/question',
-                    to: '/question/:contentId',
-                    isHide: true
-                }
-            ]
-        },
+
         {
            component:ActivityDetail,
            path:'/activity/',
@@ -229,24 +209,7 @@ export default {
                 active: null
             }
         },
-        {
-            component: Nest,
-            to: '/me',
-            name: "小窝",
-            exact: true,
-            meta: {
-                title: "郭郭的小窝_烘焙帮",
-                unActive: 'https://image.hongbeibang.com/FrYeKj0MohOJQuNzUgCugg90cHCS?50X50&imageView2/1/w/50/h/50',
-                active: 'https://image.hongbeibang.com/FpNSY800vY0I5ytvWaqDbdJqT0HR?50X50&imageView2/1/w/50/h/50',
-                isShow: true,
-            },
-            sceneConfig: {
-                enter: 'from-right',
-                exit: 'to-right'
-            },
-            children: [//子路由
-            ]
-        },
+
 
         {   //////////////郭郭的路由跳转////////////////
             to: "/me/opustaber/:id",

@@ -169,9 +169,8 @@ export default {
     // 查看更多
     getMoreList(categoryId){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/index/getIndexItem?_t=1565341527450&csrfToken=&pageIndex=0&pageSize=10&categoryId="+categoryId);
+            let {data} = await axios.get("/api/index/getIndexItem?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&categoryId="+categoryId);
             dispatch(moreList(data.data));
-            // console.log("查看更多----",data.data)
         }
     },
     // 课程目录

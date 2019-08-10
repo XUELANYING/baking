@@ -7,9 +7,6 @@ import Baike from "../views/learnBaking/baike";
 import University from "../views/learnBaking/university";
 import LessonSeries from "../views/learnBaking/lessonSeries";
 import Classify from "../views/classify";
-import Essence from '../views/questionAnswer/essence';
-import New from '../views/questionAnswer/new';
-import Hot from '../views/questionAnswer/hot'
 // 烘焙圈
 import Attention from '../views/bakingRing/attention'
 import Latest from '../views/bakingRing/latest'

@@ -1,7 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom'
 import '../../asset/css/topWrap.scss'
-import {topTab} from '../../common/animated/index'
+import {topTab} from '../../common/height/index'
 
 class TopWrap extends React.Component {
     constructor() {

@@ -7,13 +7,10 @@ import KindList from "../../component/learnBaking/kindList"
 class LearnBarking extends React.Component {
     constructor() {
         super();
-        this.state = {
-            msg: ""
-        }
     }
     render() {
         return (
-            <div>
+            <div style={{paddingBottom:"76px",height:"100%"}}>
                 <div className={'positionFixed'}>
                     <div className={'x-searchWrap'}>
                         <span className={'getQus'}>
@@ -43,14 +40,12 @@ class LearnBarking extends React.Component {
                                     <img src={v.meta.unActive} alt=""/>
                                     <h3>{v.name}</h3>
                                 </NavLink>:null
-
                             ))
                         }
                     </div>
-
                 </nav>
-                <ShowList></ShowList>
-                <KindList ></KindList>
+                    <ShowList></ShowList>
+                    <KindList ></KindList>
             </div>
         )
     }

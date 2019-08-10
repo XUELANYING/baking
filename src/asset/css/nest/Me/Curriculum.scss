@@ -1,0 +1,46 @@
+.Curriculum{
+  width: 100%;
+  min-height: 100%;
+  background: white;
+  .Curriculum_son{
+    width: 100%;
+    height: 100%;
+    //margin-bottom: 100px;
+    background: white;
+    .Curriculum_top{
+      width: 100%;
+      height: 500x;
+       img{
+         width: 100%;
+         height: 500px;
+       }
+    }
+    .Curriculum_center{
+      width: 100%;
+      height: 270px;
+      margin-bottom: 100px;
+       img{
+         width: 100%;
+         height: 270px;
+       }
+    }
+  }
+  .Curriculum_bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -4px 8px rgba(0,0,0,0.1);
+    img{
+      width: 100%;
+      height: 80px;
+  }
+}
+}

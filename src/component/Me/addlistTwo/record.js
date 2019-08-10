@@ -8,6 +8,7 @@ import {connect} from "react-redux";
 import  {bindActionCreators}from "redux";
 import  "@/asset/css/nest/Me/record.scss"
 import test from "../../../store/actionCreator/Me";
+import more from '@asset/img/more.gif'
 //亮点 数据分割化根据时间分割   分为昨天 和 更早
 //创建人：郭郭
 //时间：8月5日
@@ -16,6 +17,12 @@ import test from "../../../store/actionCreator/Me";
 //浏览记录
 
 class Record extends React.Component{
+      constructor(){
+          super()
+            this.state={
+                isLoading:true
+            }
+      }
     render(){
 
         return (
@@ -32,57 +39,63 @@ class Record extends React.Component{
                 </div>
 
                 {/*record_center*/}
-                <Fragment>
+                {
+                      this.state.isLoading?<div  className={"snjs"}
+                    style={{width: "100%", margin: "0 auto", background: "#fff", display: "flex", justifyContent: "center"}}
+                    ref={"wrapper"}>
+                    <img src={more} alt=""/>
+                    </div>:<Fragment>
+
                           {
                               this.props.record.map((v,i)=>{
                                   return (
                                       <div className={"record_center"} key={i}>
                                           {/*最新的数据*/}
 
-                                           <div className={"record_new"}>
+                                          <div className={"record_new"}>
 
-                                               <h2>昨天</h2>
-                                               {
-                                                   v.newList==[]?
-                                                       <div className={"record_show"}>
+                                              <h2>昨天</h2>
+                                              {
+                                                  v.newList==[]?
+                                                      <div className={"record_show"}>
                                                           <p>客官看来昨天您没有来呀！！！</p>
-                                                       </div>
-                                                       : <div className={"record_block"}>
-                                                       {
-                                                           v.newList.map((v,i)=>{
-                                                               return (
-                                                                   <div key={i} className={"nnkd"} >
-                                                                       <div className={"nnkd_img"}>
-                                                                           <Link to={"/recipe/"+v.clientId+"/"+v.contentId}  key={i}>
-                                                                           <img src={v.recipe.image} alt=""/>
-                                                                           </Link>
-                                                                       </div>
+                                                      </div>
+                                                      : <div className={"record_block"}>
+                                                          {
+                                                              v.newList.map((v,i)=>{
+                                                                  return (
+                                                                      <div key={i} className={"nnkd"} >
+                                                                          <div className={"nnkd_img"}>
+                                                                              <Link to={"/recipe/"+v.clientId+"/"+v.contentId}  key={i}>
+                                                                                  <img src={v.recipe.image} alt=""/>
+                                                                              </Link>
+                                                                          </div>
 
-                                                                       <div className={"recipeMasge"}>
-                                                                           <h3>{v.recipe.coverTitle}</h3>
-                                                                           <i>{v.recipe.tip}</i>
-                                                                           <p>{v.recipe.clientName}</p>
+                                                                          <div className={"recipeMasge"}>
+                                                                              <h3>{v.recipe.coverTitle}</h3>
+                                                                              <i>{v.recipe.tip}</i>
+                                                                              <p>{v.recipe.clientName}</p>
 
-                                                                           <div>
-                                                                               <img src={"https://image.hongbeibang.com/FkYy0i06K2Xbnp7UkhGssEFgzULR?200X200&imageView2/1/w/32/h/32"} alt=""/>
-                                                                               <span>{v.recipe.visitNum}</span>
+                                                                              <div>
+                                                                                  <img src={"https://image.hongbeibang.com/FkYy0i06K2Xbnp7UkhGssEFgzULR?200X200&imageView2/1/w/32/h/32"} alt=""/>
+                                                                                  <span>{v.recipe.visitNum}</span>
 
-                                                                               <img src={"https://image.hongbeibang.com/FgCTJvM3b9Q3sT5V5YI8ReK4h3dv?200X200&imageView2/1/w/32/h/32"}alt=""/>
+                                                                                  <img src={"https://image.hongbeibang.com/FgCTJvM3b9Q3sT5V5YI8ReK4h3dv?200X200&imageView2/1/w/32/h/32"}alt=""/>
 
-                                                                               <span>{v.recipe.collectNum}</span>
-                                                                           </div>
-                                                                       </div>
+                                                                                  <span>{v.recipe.collectNum}</span>
+                                                                              </div>
+                                                                          </div>
 
-                                                                   </div>
-                                                               )
-                                                           })
-                                                       }
-                                                   </div>
-                                               }
+                                                                      </div>
+                                                                  )
+                                                              })
+                                                          }
+                                                      </div>
+                                              }
 
 
 
-                                         </div>
+                                          </div>
 
                                           {/*之前的数据的一批数据*/}
                                           <div  className={"record_old"}>
@@ -91,29 +104,29 @@ class Record extends React.Component{
 
                                                   v.oldList.map((v,i)=>{
                                                       return (
-                                                              <div key={i} className={"nnkd"}>
-                                                                  <div className={"nnkd_img"}>
-                                                                      <Link to={"/recipe/"+v.clientId+"/"+v.contentId}  key={i}>
+                                                          <div key={i} className={"nnkd"}>
+                                                              <div className={"nnkd_img"}>
+                                                                  <Link to={"/recipe/"+v.clientId+"/"+v.contentId}  key={i}>
                                                                       <img src={v.recipe.image} alt=""/>
-                                                                      </Link>
-                                                                  </div>
-
-                                                                  <div className={"recipeMasge"}>
-                                                                      <h3>{v.recipe.coverTitle}</h3>
-                                                                      <i>{v.recipe.tip}</i>
-                                                                      <p>{v.recipe.clientName}</p>
-
-                                                                      <div>
-                                                                          <img src={"https://image.hongbeibang.com/FkYy0i06K2Xbnp7UkhGssEFgzULR?200X200&imageView2/1/w/32/h/32"} alt=""/>
-                                                                          <span>{v.recipe.visitNum}</span>
-
-                                                                          <img src={"https://image.hongbeibang.com/FgCTJvM3b9Q3sT5V5YI8ReK4h3dv?200X200&imageView2/1/w/32/h/32"}alt=""/>
-
-                                                                          <span>{v.recipe.collectNum}</span>
-                                                                      </div>
-                                                                  </div>
-
+                                                                  </Link>
                                                               </div>
+
+                                                              <div className={"recipeMasge"}>
+                                                                  <h3>{v.recipe.coverTitle}</h3>
+                                                                  <i>{v.recipe.tip}</i>
+                                                                  <p>{v.recipe.clientName}</p>
+
+                                                                  <div>
+                                                                      <img src={"https://image.hongbeibang.com/FkYy0i06K2Xbnp7UkhGssEFgzULR?200X200&imageView2/1/w/32/h/32"} alt=""/>
+                                                                      <span>{v.recipe.visitNum}</span>
+
+                                                                      <img src={"https://image.hongbeibang.com/FgCTJvM3b9Q3sT5V5YI8ReK4h3dv?200X200&imageView2/1/w/32/h/32"}alt=""/>
+
+                                                                      <span>{v.recipe.collectNum}</span>
+                                                                  </div>
+                                                              </div>
+
+                                                          </div>
                                                       )
                                                   })
                                               }
@@ -126,9 +139,23 @@ class Record extends React.Component{
 
 
 
-                </Fragment>
+                      </Fragment>
+                }
+
+
             </div>
         )
+    }
+
+    componentWillMount() {
+
+        if (this.state.isLoading) {
+            setTimeout(() => {
+                this.setState({
+                    isLoading: false
+                })
+            }, 2500)
+        }
     }
     componentDidMount(){
         // console.log(this.props)

@@ -198,9 +198,14 @@
         height: 208px;
         margin: 5px;
         border: 1px solid #f3f8fd;
-        img{
+        .show_img{
           width: 136px;
           height: 136px;
+          position: relative;
+          img{
+            width: 100%;
+            height: 100%;
+          }
         }
         .user_less{
           width: 118px;

@@ -106,9 +106,12 @@ class Lesson extends Component {
                                         <li className={"show_list"} key={index} onClick={() => {
                                             this.props.history.push("/school/"+item.contentId)
                                         }}>
-                                            <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
-                                                <img alt="" src={item.image[0]}/>
-                                            </LazyLoad>
+                                            <div className="show_img">
+                                                <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                    <img alt="" src={item.image[0]}/>
+                                                </LazyLoad>
+                                            </div>
+
                                             <div className="user_less">
                                                 <div className="user_img">
                                                     <img src={item.clientImage} alt=""/>

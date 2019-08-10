@@ -15,10 +15,16 @@
     width: 46%;
     height: 278px;
     border: 1px solid #fff;
-    .image{
+    .introfuce_img{
       width: 166px;
       height: 166px;
+      position: relative;
+      .image{
+        width: 100%;
+        height: 100%;
+      }
     }
+
     .show-client{
       margin: 8px;
       height: 20px;

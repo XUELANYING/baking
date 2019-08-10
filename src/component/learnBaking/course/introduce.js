@@ -6,12 +6,11 @@ import "../../../asset/css/learnBaking/lessonSeries.scss"
 
 class Introduce extends React.Component {
     render() {
-        console.log(111,this.props.lessonList.introduces)
+        // console.log(111,this.props.lessonLists.introduces)
         return (
-            <div className={"course"}>
-
+            <div className={"l-course"}>
                 {
-                    this.props.lessonList.introduces?this.props.lessonList.introduces.map((v,i)=>(
+                    this.props.lessonLists.introduces?this.props.lessonLists.introduces.map((v,i)=>(
                         <div key={i} className={"words"}>
                             <h2>{v.title}</h2>
                             <p dangerouslySetInnerHTML = {{ __html:v.introduce }}></p>
@@ -25,5 +24,5 @@ class Introduce extends React.Component {
         this.props.getLessonList();
     }
 }
-export default connect((state) => ({lessonList: state.learnBaking.lessonList}),
+export default connect((state) => ({lessonLists: state.learnBaking.lessonLists}),
     (dispatch) => (bindActionCreators(actionCreator, dispatch)))(Introduce)

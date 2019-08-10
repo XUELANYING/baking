@@ -20,21 +20,6 @@ class Lesson extends Component {
         };
     }
 
-    // onOpenChange = (...args) => {
-    //     console.log(111)
-    //     // console.log(args);
-    //     this.setState({open: !this.state.open});
-    //     const con = document.getElementsByClassName("my_Top")[0]
-    //     const see = document.getElementsByClassName("Me_SetUp")[0]
-    //     const ree = document.getElementsByClassName("am-drawer-draghandle")[0]
-    //     const iTem= document.getElementsByClassName("Item")
-    //     con.style.zIndex = 11
-    //     //console.log(args[0])
-    //     if(args[0]===false){
-    //         con.style.zIndex = 5
-    //         ree.style.display = "none"
-    //     }
-    // }
     render() {
         const sidebar = (
             <div className={"codeList"}>

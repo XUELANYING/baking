@@ -23,15 +23,22 @@ export default function(state=initState,{type,payload}) {
         // console.log("新手",state.lessonLists)
     } else if (type === actionType.GET_VARIOUSLIST) {
         state.variousList = [...payload];                              //视频分页列表
-        console.log("variousList", state.variousList)
-    } else if (type === actionType.GET_CATALOGLIST) {
-        state.catalogList = [...state.catalogList, ...payload];        //课程目录
-        console.log("catalogList", state.catalogList)
+        // console.log("variousList", state.variousList)
+    }else if(type === actionType.GET_MORE_LIST){                      //查看更多
+        state.moreList = [ ...payload]
+        console.log("more///", state.moreList)
+    }else if (type === actionType.GET_CATALOGLIST) {
+        state.catalogList = [ ...payload];                                       //课程目录
+        // console.log("catalogList", state.catalogList)
     } else if (type === actionType.GET_TASKLIST) {
-        state.taskLisk = [...state.taskLisk, ...payload];             //学员作业
+        state.taskLisk = [ ...payload];                                           //学员作业
 
     }else if (type === actionType.UP_LESSON) {
+
+        state.lessonList = { ...payload};
+
         state.lessonList =  payload;
+
 
     }else if (type === actionType.UP_STUDENT) {
         state.studentList = [...state.studentList, ...payload];
@@ -40,6 +47,9 @@ export default function(state=initState,{type,payload}) {
         state.newestList = [...state.newestList, ...payload];
 
     }else if (type === actionType.UP_DISH) {
+
+        state.dishList = {...state.dishList, ...payload};
+
         state.dishList = payload;
 
     }else if (type === actionType.UP_FLOOR) {
@@ -51,9 +61,13 @@ export default function(state=initState,{type,payload}) {
     }else if (type === actionType.UP_CUURR) {
         state.curriculumList = [...state.curriculumList, ...payload];
 
-
     }else if(type ===  actionType.UP_CART){
         state.carList=payload;
+
+    }else if (type === actionType.GET_USERINFO) {            //登录
+        state.userInfo = { ...payload};
+       console.log("user",state.userInfo)
+
     }
     return state;
 }

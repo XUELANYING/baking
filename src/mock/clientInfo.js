@@ -17714,6 +17714,7 @@ let clientAchievements = [
 let  Medal =[
     {name:"我是郭郭"}
 ]
+
 let guoguoAnswer =  [
     {
         "address": "",
@@ -20497,6 +20498,16 @@ let clientFollow =  [
     }]
 Mock.mock('/show/getFollow','get',clientFollow)
 
+//登录
+let userInfo =
+    {
+        userName:"admin",
+        passWord:"admin"
+    }
+
+
+//登录
+Mock.mock("/login",'get',userInfo)
 Mock.mock('/client/getDish', 'get', clientInfo)
 Mock.mock('/client/getRecipe','get',clientRecipe)
 Mock.mock('/client/getAnswer','get',clientAnswer)

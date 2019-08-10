@@ -1,7 +1,7 @@
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {NavLink,Link,Route}from "react-router-dom";
+import {NavLink,Link,Route,withRouter}from "react-router-dom";
 import actionCreator from "../../store/actionCreator";
 import More from "./more";
 import router from "../../router"
@@ -16,17 +16,19 @@ class KindList extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div className={"ka-b"}>
                 {
                     this.props.kindList.splice(1,this.props.kindList.length).map((v,i)=>(
                         <div id="l-list" key={i}>
                            <p>
                                <span>{v.title}</span>
-                        <em>查看全部</em>
+                                <em onClick={()=>{
+                                    this.props.history.push("/university/allLessons/"+v.categoryId)
+                                }}>查看全部</em>
                            </p>
                             <div className={"sect"}>
                             {v.item.map((v1, i) => (
-                                <Link  key={i} to={"/lesson?contentId="+v1.educationCourseId}>
+                                <Link  key={i} to={"/lesson/"+v1.educationCourseId+"/"+v1.clientId}>
                                     <dl>
                                         <dt>
                                             <img src={v1.image} alt=""/>
@@ -47,15 +49,7 @@ class KindList extends React.Component {
     componentWillMount(){
         this.props.getKindList();
     }
-    componentDidMount(){
-        // this.props.getKindList();
-        // console.log(this.props.id)
-    }
-    componentDidUpdate(){
-        // this.props.getKindList();
-      // console.log(this.props.kindList)
-        }
 }
 
 export default connect((state) => ({kindList: state.learnBaking.kindList}),
-    (dispatch) => (bindActionCreators(actionCreator,dispatch)))(KindList)
+    (dispatch) => (bindActionCreators(actionCreator,dispatch)))(withRouter(KindList))

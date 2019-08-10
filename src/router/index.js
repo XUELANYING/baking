@@ -1,7 +1,8 @@
 ﻿import LearnBaking from '../views/learnBaking/learnBaking'
 import BarkingRing from '../views/bakingRing/bakingRing'
 import Nest from '../views/nest/nest'
-import QuestionAnswer from '../views/questionAnswer/questionAnswer'
+import QuestionAnswer from '../views/questionAnswer/questionAnswer';
+import Login from  "../views/login";
 import Baike from "../views/learnBaking/baike";
 import University from "../views/learnBaking/university";
 import LessonSeries from "../views/learnBaking/lessonSeries";
@@ -56,33 +57,53 @@ export default {
 
             ]
         },
+        //登录
+        {
+            component:Login,
+            name:"登录",
+            to:"/login",
+            display: true,//隐藏
+            exact: true,
+            meta:{
+                title:"烘焙百科",
+                isAppear:false,
+            }
+        },
         {//百科
             component:Baike,
             name:"技巧百科",
             to:"/baike",
             display: true,//隐藏
+            exact: true,
             meta:{
                 title:"烘焙百科",
                 unActive:"https://image.hongbeibang.com/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80",
                 isAppear:true,
             }
         },
+        {//查看更多
+            component:More,
+            name:"查看更多",
+            to:"/university/allLessons/:id",
+            display: true,//隐藏
+            exact: true,
+            meta:{
+                isAppear:false,
+            },
+        },
         {//学堂
             component:University,
             name:"视频学堂",
             to:"/university",
             display: true,//隐藏
+            exact: true,
             meta:{
                 title:"烘焙帮学堂",
                 unActive:"https://image.hongbeibang.com/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80",
                 isAppear:true,
             },
             children:[
-                {
-                    component:More,
-                    name:"查看更多",
-                    to:"/university/allLessons"
-                }
+
             ]
         },
         {//教程

@@ -1,11 +1,44 @@
 import React from 'react';
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
+import {Link,withRouter}from "react-router-dom";
+import actionCreator from "../../store/actionCreator";
+import "../../asset/css/learnBaking/cake.scss";
 
-export default class More extends React.Component{
+class More extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            moreList:[]
+        }
+    }
     render(){
+        // console.log("更多",this.props.moreList);
+        // console.log("路由的值",this.props.match.params.id);
         return(
-            <div>
-                查看更多a
+            <div id="cake">
+                {
+                    this.props.moreList.map((v,i)=>(
+
+                        <dl key={i}>
+                            <Link to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
+                                <dt>
+                                  <img src={v.image} alt=""/>
+                                    <i>{v.buyNum>1000?"1000+人参加":v.buyNum+"人参加"}</i>
+                                </dt>
+                                <dd>{v.shareTitle}</dd>
+                            </Link>
+                        </dl>
+
+                    ))
+                }
             </div>
         )
     }
+    componentWillMount(){
+        this.props.getMoreList(this.props.match.params.id);
+    }
 }
+
+export default connect((state) => ({moreList: state.learnBaking.moreList}),
+    (dispatch) => (bindActionCreators(actionCreator,dispatch)))(withRouter(More))

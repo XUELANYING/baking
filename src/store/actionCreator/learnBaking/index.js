@@ -43,6 +43,13 @@ const variousList = (payload) =>{
         payload
     }
 };
+//查看更多
+const moreList = (payload) =>{
+    return {
+        type:actionType.GET_MORE_LIST,
+        payload
+    }
+};
 // 课程目录
 const catalogList = (payload) =>{
     return {
@@ -56,7 +63,14 @@ const taskLisk = (payload) =>{
         type:actionType.GET_TASKLIST,
         payload
     }
-}
+};
+//登录
+const userInfo = (payload) =>{
+    return{
+        type:actionType.GET_USERINFO,
+        payload
+    }
+};
 const upLesson = function (payload) {
     return{
         type:actionType.UP_LESSON,
@@ -139,13 +153,13 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/education/getIndex?_t=1564833387381&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs')
             dispatch(swiperList(data.data.category));
-            console.log('轮播图',data.data.category)
+            // console.log('轮播图',data.data.category)
         }
     },
     //新手教程
     getLessonList(){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/education/getCourse?_t=1564977164258&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&educationCourseId=10377");
+            let {data} = await axios.get("/api/education/getCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&educationCourseId=10377");
             dispatch(lessonLists(data.data));
             // console.log("新手教程",data.data)
         }
@@ -153,15 +167,23 @@ export default {
     //视频学堂页分类列表
     getVariousList(categoryId){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/index/getIndexItem?_t=1564975332469&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&categoryId="+categoryId);
+            let {data} = await axios.get("/api/index/getIndexItem?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&categoryId="+categoryId);
             dispatch(variousList(data.data));
             // console.log("分类列表",data.data.length)
+        }
+    },
+    // 查看更多
+    getMoreList(categoryId){
+        return async (dispatch)=>{
+            let {data} = await axios.get("/api/index/getIndexItem?_t=1565341527450&csrfToken=&pageIndex=0&pageSize=10&categoryId="+categoryId);
+            dispatch(moreList(data.data));
+            console.log("查看更多----",data.data)
         }
     },
     // 课程目录
     getCatalogList(){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/education/getSeriesCourse?_t=1565101116751&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&pageIndex=0&pageSize=10&educationCourseId=10377");
+            let {data} = await axios.get("/api/education/getSeriesCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&educationCourseId=10377");
             dispatch(catalogList(data.data.data));
             // console.log("课程目录",data.data.data)
         }
@@ -169,9 +191,17 @@ export default {
     //学员作业
     getTaskList(){
         return async (dispatch)=>{
-            let {data} = await axios.get("/api/dish/getOutstandingCourseContent?_t=1565140148485&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&pageIndex=0&pageSize=10&educationCourseId=10377")
+            let {data} = await axios.get("/api/dish/getOutstandingCourseContent?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&educationCourseId=10377")
             dispatch(taskLisk(data.data.content.data));
-            console.log("作业",data.data.content.data)
+            // console.log("作业",data.data.content.data)
+        }
+    },
+    //登录
+    getUserInfo(){
+        return async (dispatch)=>{
+            let {data} = await axios.get("/login")
+            dispatch(userInfo(data));
+            console.log("登录",data)
         }
     },
 
@@ -182,7 +212,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data=>{
-                    console.log(data.data)
+                    // console.log(data.data)
                     dispatch(upLesson(data.data))
                 })
         }
@@ -194,7 +224,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(1234,data.data.content.data)
+                    // console.log(1234,data.data.content.data)
                     dispatch(upStudent(data.data.content.data))
                 })
         }
@@ -205,7 +235,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(222,data.data.content.data)
+                    // console.log(222,data.data.content.data)
                     dispatch(upNewest(data.data.content.data))
                 })
         }
@@ -216,7 +246,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(333,data.data.dish)
+                    // console.log(333,data.data.dish)
                     dispatch(upDish(data.data.dish))
                 })
         }
@@ -227,7 +257,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(444,data.data)
+                    // console.log(444,data.data)
                     dispatch(upFloor(data.data))
                 })
         }
@@ -238,7 +268,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(555,data.data.content.data)
+                    // console.log(555,data.data.content.data)
                     dispatch(upHomeWork(data.data.content.data))
                 })
         }
@@ -249,7 +279,7 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(666,data)
+                    // console.log(666,data)
                     dispatch(upCurr(data.data.data))
                 })
         }

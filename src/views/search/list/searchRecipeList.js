@@ -8,7 +8,7 @@ import "../../../asset/css/search/reachRecipes.scss";
 import MultiRecipe from "./multiRecipe";
 import DidMoreRecipe from "./didMoreRecipe";
 import PopularRecipe from "./popularRecipe";
-
+import LazyLoad from "react-lazyload";
 
 class SearchRecipeList extends React.Component{
     constructor(){
@@ -53,7 +53,9 @@ class SearchRecipeList extends React.Component{
                             <div className="cookList" key={i}>
                                 <Link className="listInfo" to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                                     <div className="listImg">
-                                        <img src={v.image} alt=""/>
+                                        <LazyLoad once  placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                            <img src={v.image} alt=""/>
+                                        </LazyLoad>
                                         <div className={"videoLogo"}>视频</div>
                                     </div>
                                     <div className="ListDescript">

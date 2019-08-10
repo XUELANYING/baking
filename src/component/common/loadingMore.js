@@ -12,7 +12,6 @@ class LoadingMore extends React.Component {
             pageIndex: 0
         }
     }
-
     render() {
         return (
             <div

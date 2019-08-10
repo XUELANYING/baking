@@ -1,6 +1,7 @@
 import React from "react";
 import LoadingMore from "../../../component/common/loadingMore";
 import {Link} from "react-router-dom";
+import LazyLoad from "react-lazyload";
 
 export default class RecipeList extends React.Component{
     componentDidMount(){
@@ -15,7 +16,9 @@ export default class RecipeList extends React.Component{
                         <Link className="cookList" key={i} to={"/recipe/"+v.clientId+"/"+v.contentId}>
                             <div className="listInfo">
                                 <div className="listImg">
-                                    <img src={v.coverImage} alt={v.coverTitle}/>
+                                    <LazyLoad once placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={v.coverImage} alt={v.coverTitle}/>
+                                    </LazyLoad>
                                 </div>
                                 <div className="ListDescript">
                                     <div className="title1 title3" ref={"title"}>{v.coverTitle}</div>

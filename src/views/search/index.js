@@ -5,7 +5,6 @@ import {bindActionCreators} from "redux";
 import getSearchInfo,{getSearchList} from "../../store/actionCreator/search/search";
 import {Link} from "react-router-dom";
 import SearchBar from "../../component/search/searchBar";
-import LazyLoad from "react-lazyload"
 
 class Search extends Component{
     constructor(){
@@ -25,9 +24,15 @@ class Search extends Component{
     setHistoryList(item){
         if(localStorage.keyword){
             let kw = JSON.parse(localStorage.keyword);
-            kw.unshift(item);
-            if(kw.length>5){
-                kw.length = 5
+            let index = kw.findIndex((v)=>v===item);
+            if(index >-1){
+                kw.unshift(kw.splice(index,1)[0])
+            }else{
+                console.log(123)
+                kw.unshift(item);
+                if(kw.length>5){
+                    kw.length = 5
+                }
             }
             localStorage.setItem("keyword",JSON.stringify(kw))
         }else{
@@ -69,16 +74,14 @@ class Search extends Component{
                             <div className="searchText">
                                 最近搜索
                                 <p onClick={this.clearHistory.bind(this)}>
-                                    <LazyLoad>
-                                        <img src="https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38" alt=""/>
-                                    </LazyLoad>
+                                    <img src="https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38" alt=""/>
                                 </p>
                             </div>
                         </div>
                         <div className="popularSearchBox clear_fix">
                             {
                                 lastestSearch.map((v,i)=>(
-                                    <Link to={"/search/recipe/"+v} key={i} className="SearchResult">{v}</Link>
+                                    <Link to={"/search/recipe/"+v} key={i} className="SearchResult" onClick={this.setHistoryList.bind(this,v)}>{v}</Link>
                                 ))
                             }
                         </div>

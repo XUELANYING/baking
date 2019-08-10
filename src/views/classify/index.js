@@ -5,6 +5,7 @@ import getClassifyInfo, { getCommendList, getClassifyList } from "../../store/ac
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {withRouter} from "react-router-dom";
+import LazyLoad from "react-lazyload"
 
 class Classify extends Component {
     constructor() {
@@ -62,14 +63,23 @@ class Classify extends Component {
                                             v.classifys ? v.classifys.map((item, i) => (
                                                 <div className={"box"} key={item.classifyId}>
                                                     <Link to={"/search/recipe/" + item.name}>
-                                                        <p><img src={item.image} alt={item.name} /></p>
+                                                        <p>
+                                                            <LazyLoad once placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                                <img src={item.image} alt={item.name} />
+                                                            </LazyLoad>
+                                                        </p>
                                                         <span>{item.name}</span>
                                                     </Link>
                                                 </div>
                                             )) : v.list.map((item, i) => (
                                                 <div className={"box"} key={item.classifyId}>
                                                     <Link to={"/search/recipe/" + item.name}>
-                                                        <p><img src={item.image} alt={item.name} /></p>
+                                                        <p>
+                                                            <LazyLoad once placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                                <img src={item.image} alt={item.name} />
+                                                            </LazyLoad>
+
+                                                        </p>
                                                         <span>{item.name}</span>
                                                     </Link>
                                                 </div>

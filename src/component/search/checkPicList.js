@@ -1,5 +1,5 @@
 import React from "react";
-import "./checkPicList.scss";
+import "../../asset/css/search/checkPicList.scss";
 import Swiper from "swiper";
 
 export default class CheckoutPicList extends React.Component {
@@ -14,10 +14,12 @@ export default class CheckoutPicList extends React.Component {
             this.setState({
                 swiperImages:this.props.images
             },()=>{
+                console.log(this.props.index)
                 var mySwiper = new Swiper('.lunbo', {
                     pagination: {
                         el: '.pages',
                     },
+                    initialSlide :this.props.index
                 });
             })
         }

@@ -6,7 +6,6 @@ import {Link} from "react-router-dom";
 import recipeDetailInfo,{getUserList,getMoreCommendInfo,getMoreVideoInfo,getCommendList} from "../../../store/actionCreator/search/recipeDetail"
 import NoComments from "./noComment";
 import LazyLoad from "react-lazyload";
-import ImgView from "../../../component/common/utils/ImgView"
 import LunBo from "../../../component/search/checkPicList";
 
 class recipeDetail extends Component{
@@ -24,7 +23,8 @@ class recipeDetail extends Component{
             likeNum:0,
             rewardNum:0,
             isList:false,
-            recipeImages:[]
+            recipeImages:[],
+            swiperIndex:0
         }
     }
     componentDidMount(){
@@ -86,14 +86,15 @@ class recipeDetail extends Component{
             isList:false
         })
     }
-    getImageList(image){
+    getImageList(image,index){
         let list = [];
         for(let i=0;i<image.length;i++){
             list.push(image[i].image)
         }
         this.setState({
             isList:true,
-            recipeImages:list
+            recipeImages:list,
+            swiperIndex:index
         })
     }
     render(){
@@ -102,7 +103,7 @@ class recipeDetail extends Component{
         let {quantity,material,step,dish,recipe,ownRecipe,videoList,comment,rewardNum,likeNum} = this.state;
         return(
             <Fragment>
-                {this.state.isList?<LunBo message={this.changeList.bind(this)} images={this.state.recipeImages}></LunBo>: <div className={"recipeDetail"}>
+                {this.state.isList?<LunBo message={this.changeList.bind(this)} index={this.state.swiperIndex} images={this.state.recipeImages}></LunBo>: <div className={"recipeDetail"}>
                     <div className="detailTop">
                         <div className="topWrap">
                         <span onClick={()=>this.props.history.go(-1)}>
@@ -174,8 +175,8 @@ class recipeDetail extends Component{
                                             step.map((v,i)=>(
                                                 <div className="box" key={i}>
                                                     <h5>步骤{i+1}</h5>
-                                                    <div className={"stepImg"} onClick={this.getImageList.bind(this,step)}>
-                                                        <LazyLoad>
+                                                    <div className={"stepImg"} onClick={this.getImageList.bind(this,step,i)}>
+                                                        <LazyLoad once placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
                                                             <img src={v.image}/>
                                                         </LazyLoad>
                                                     </div>

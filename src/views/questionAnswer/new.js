@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
 import QuestionBox from "../../component/questionAnswer/common/questionBox";
+import DataList from '../../component/List/index'
 
 class New extends React.Component {
     constructor() {
@@ -16,7 +17,8 @@ class New extends React.Component {
     render() {
         return (
             <Fragment>
-                <QuestionBox boxList={"getNewsList"} list={"newsList"}></QuestionBox>
+                {/*<QuestionBox boxList={"getNewsList"} list={"newsList"}></QuestionBox>*/}
+                <DataList></DataList>
             </Fragment>
         )
     }

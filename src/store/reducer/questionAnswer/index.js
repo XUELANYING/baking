@@ -22,7 +22,6 @@ export default function(state=initState,{type,payload}){
     }else if(type===actionType.GET_GETCLIENTINFO){
         state.clientInfo = payload
         state.dish = [...state.dish,...payload.dish.data]
-        console.log(1111,state.dish)
     }else if(type===actionType.GET_GETCLIENTRECIOPE){
         state.userRecipe = [...state.userRecipe,...payload]
         console.log( payload)

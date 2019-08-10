@@ -1,17 +1,18 @@
 import React from 'react';
 import { PullToRefresh, ListView, ActivityIndicator } from 'antd-mobile';
-import HouseItem from './Item';
-import Empty from '../Empty';
+import ListItem from './Item';
 
 const NoMoreText = '没有更多了哦~';
 const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2
 });
-const row = rowData => <HouseItem house={rowData} />;
+const row = rowData => <ListItem  v={rowData} />;
 
 const EmptyHandle = list =>
   list && list.length === 0 ? (
-    <Empty text="暂时没有房源哦~" />
+      <div>
+          {"暂时没有房源哦~"}
+      </div>
   ) : null;
 
 export default props => {

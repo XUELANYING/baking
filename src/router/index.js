@@ -33,8 +33,6 @@ import ActivityDetail from '../component/bakingRing/activityDetail'
 import BakingCircleDetail from '../component/bakingRing/bakingCircleDetail'
 import DishDetail from '../component/bakingRing/dishDetail'
 
-
-
 export default {
     basename: "/m",
     routers: [
@@ -65,9 +63,7 @@ export default {
                 enter: 'from-right',
                 exit: 'to-right'
             },
-            children: [//子路由
-
-            ]
+            children: []
         },
         {
             component: BarkingRing,

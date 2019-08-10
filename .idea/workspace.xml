@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08ac6f41-344f-4efa-9928-25b421c8eb8f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/animated/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/animated/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/bakingRing/dishDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/bakingRing/dishDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/bakingRing/showlistcommon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/bakingRing/showlistcommon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/bakingRing/Activitycommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/bakingRing/Activitycommon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/bakingRing/dishDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/bakingRing/dishDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer/learnBaking/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/learnBaking/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/bakingRing/latest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/bakingRing/latest.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,44 +22,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
+      <file leaf-file-name="dishDetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/component/bakingRing/dishDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1623">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recipeDetail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state relative-caret-position="351">
+              <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
               <folding>
-                <element signature="e#0#64#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowListCommon.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="面试.txt" pinned="false" current-in-tab="true">
+        <entry file="file://F:/1908/面试.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowListCommon.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="52" column="66" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="66" />
+            <state relative-caret-position="135">
+              <caret line="142" column="44" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="44" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
+                <element signature="n#!!block;n#backTop#0;n#ShowListCommon#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/animated/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -69,6 +62,12 @@
     <findStrings>
       <find>Head</find>
       <find>head</find>
+      <find>getClientRecipe</find>
+      <find>huidaodingbu</find>
+      <find>lazyload</find>
+      <find>img</find>
+      <find>showList</find>
+      <find>ref</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,7 +76,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js" />
+        <option value="$PROJECT_DIR$/src/views/bakingRing/latest.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/Activitycommon.js" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/dishDetail.scss" />
+        <option value="$PROJECT_DIR$/src/asset/css/bakingRing/showlistcommon.scss" />
         <option value="$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js" />
+        <option value="$PROJECT_DIR$/src/component/bakingRing/dishDetail.js" />
+        <option value="F:/1908/面试.txt" />
       </list>
     </option>
   </component>
@@ -97,9 +103,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-91" />
-    <option name="y" value="-17" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-131" />
+    <option name="y" value="137" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -131,14 +137,23 @@
               <item name="baking" type="b2602c69:ProjectViewProjectNode" />
               <item name="baking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="baking" type="b2602c69:ProjectViewProjectNode" />
               <item name="baking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="animated" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="font" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="baking" type="b2602c69:ProjectViewProjectNode" />
@@ -157,22 +172,14 @@
               <item name="baking" type="b2602c69:ProjectViewProjectNode" />
               <item name="baking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="baking" type="b2602c69:ProjectViewProjectNode" />
               <item name="baking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="reducer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="baking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="baking" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="reducer" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="bakingRing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,18 +220,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565322113045</updated>
-      <workItem from="1565322115154" duration="967000" />
+      <workItem from="1565322115154" duration="23529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="967000" />
+    <option name="totallyTimeSpent" value="23529000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-131" y="137" width="1386" height="788" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -261,27 +267,208 @@
     <entry file="file://$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionCreator/bakingRing/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3753">
+          <caret line="139" column="50" selection-start-line="139" selection-start-column="50" selection-end-line="139" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/bakingRing/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/questionAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/questionAnswer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/common/answerBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/animated/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state relative-caret-position="675">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionCreator/questionAnswer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1119">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/questionAnswer/essence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/font/demo_index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/font/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1697">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/font/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/Activitycommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/common/loadingMore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/latest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/bakingRing/bakingRing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/questionAnswer/common/questionBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/dishDetail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#1714#1905#0" />
+            <element signature="e#1927#2265#0" />
+            <element signature="e#2287#2655#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/css/bakingRing/showlistcommon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/bakingRing/ShowListCommon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="52" column="66" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="66" />
+        <state relative-caret-position="135">
+          <caret line="142" column="44" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="44" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
+            <element signature="n#!!block;n#backTop#0;n#ShowListCommon#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/bakingRing/dishDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/1908/面试.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

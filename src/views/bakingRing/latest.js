@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
 import ShowListCommon from '../../component/bakingRing/ShowListCommon'
 import filter from '../../asset/filter'
+import LazyLoad from 'react-lazyload'
 class Latest extends Component{
     render(){
         return (

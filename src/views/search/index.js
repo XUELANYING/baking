@@ -4,7 +4,8 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import getSearchInfo,{getSearchList} from "../../store/actionCreator/search/search";
 import {Link} from "react-router-dom";
-import SearchBar from "../../component/search/searchBar"
+import SearchBar from "../../component/search/searchBar";
+import LazyLoad from "react-lazyload"
 
 class Search extends Component{
     constructor(){
@@ -68,7 +69,9 @@ class Search extends Component{
                             <div className="searchText">
                                 最近搜索
                                 <p onClick={this.clearHistory.bind(this)}>
-                                    <img src="https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38" alt=""/>
+                                    <LazyLoad>
+                                        <img src="https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38" alt=""/>
+                                    </LazyLoad>
                                 </p>
                             </div>
                         </div>

@@ -8,6 +8,7 @@ import {withRouter, Link} from "react-router-dom"
 import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 import PlayUrl from "../../component/learnBaking/lesson/playUrl"
 import TrySeeUrl from "../../component/learnBaking/lesson/trySeeUrl";
+import LazyLoad from 'react-lazyload';
 import LoadingMore from "@component/common/loadingMore";
 class Lesson extends Component {
     constructor(props) {
@@ -105,7 +106,9 @@ class Lesson extends Component {
                                         <li className={"show_list"} key={index} onClick={() => {
                                             this.props.history.push("/school/"+item.contentId)
                                         }}>
-                                            <img src={item.image[0]} alt=""/>
+                                            <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                <img alt="" src={item.image[0]}/>
+                                            </LazyLoad>
                                             <div className="user_less">
                                                 <div className="user_img">
                                                     <img src={item.clientImage} alt=""/>
@@ -155,7 +158,9 @@ class Lesson extends Component {
 
                                         }}>
                                             <div className="curr_img">
-                                                <img src={item.image} alt=""/>
+                                                <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                    <img src={item.image} alt=""/>
+                                                </LazyLoad>
                                                 <div className="buynum"><span>{item.buyNum>1000?"1000+":item.buyNum}</span>人在学</div>
                                             </div>
                                             <div className="curr_less">
@@ -176,35 +181,35 @@ class Lesson extends Component {
                         </div>
                         <div className="scholl_img">
                             <div className="cake">
-                                <div className="cake_c">
+                                <div className="cake_c"  onClick={()=>this.props.history.push("/university")}>
                                     <img
                                         src="https://image.hongbeibang.com/FvihrbO1twdtKSkz2WqB9KxUjjeg?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p onClick={()=>this.props.history.push("/university")}>蛋糕</p>
+                                    <p>蛋糕</p>
                                 </div>
                             </div>
                             <div className="cake">
-                                <div className="cake_c">
+                                <div className="cake_c" onClick={()=>this.props.history.push("/university")}>
                                     <img
                                         src="https://image.hongbeibang.com/Frs8TmZhk4PrxBY2cvA9e3jbbdrB?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p onClick={()=>this.props.history.push("/university")}>甜点</p>
+                                    <p>甜点</p>
                                 </div>
                             </div>
                             <div className="cake">
-                                <div className="cake_c">
+                                <div className="cake_c" onClick={()=>this.props.history.push("/university")}>
                                     <img
                                         src="https://image.hongbeibang.com/ForyDTluoYKimnQmobG6agmowKzy?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p onClick={()=>this.props.history.push("/university")}>面包</p>
+                                    <p>面包</p>
                                 </div>
                             </div>
                             <div className="cake">
-                                <div className="cake_c">
+                                <div className="cake_c"  onClick={()=>this.props.history.push("/university")}>
                                     <img
                                         src="https://image.hongbeibang.com/FuCKHBljrYAFuTjTs0B1fkNcUhWw?100X116&imageView2/1/w/100/h/116"
                                         alt=""/>
-                                    <p onClick={()=>this.props.history.push("/university")}>中式点心</p>
+                                    <p>中式点心</p>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +217,7 @@ class Lesson extends Component {
                 </div>
                 <div style={{background: "#fff", height: "21px"}}></div>
                 <footer className="fotq">
-                    <div className={"foot-lq"}>
+                    <div className={"foot-lq"} onClick={()=>this.props.history.push("/university")}>
                         <img src="https://image.hongbeibang.com/FjlY1hEsTozcG0oGvSXzNqRIc8gb?imageView2/1/w/640/h/640"
                              alt=""/>
                         <span>更多课程</span>
@@ -245,7 +250,12 @@ class Lesson extends Component {
     getSnapshotBeforeUpdate() {
         return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
     }
-
+    shouldComponentUpdate(nextProps){
+        if(this.props.homeworkList!=nextProps.homeworkList){
+            return true
+        }
+        return false
+    }
     componentDidUpdate(prevProps, prevState, scroll) {
         // 窗口发生滚动，滚动最顶端
         if (scroll === true) {
@@ -270,11 +280,6 @@ class Lesson extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps){
-        let contentId = this.props.match.params.contentId
-
-        // console.log(234,this.props.match.params.contentId,nextProps.match.params.contentId)
-    }
 }
 
 export default withRouter(connect((state) => ({

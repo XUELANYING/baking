@@ -5,6 +5,7 @@ import {connect} from "react-redux"
 import actionCreator from "@store/actionCreator";
 import LoadingMore from "@component/common/loadingMore";
 import {withRouter} from "react-router-dom"
+import LazyLoad from 'react-lazyload';
 class Newest extends Component {
     constructor(props) {
         super(props);
@@ -21,7 +22,9 @@ class Newest extends Component {
                     {
                         this.props.newestList.map((item,index)=>(
                             <div key={index} className="show-con">
-                                <img width={"300px"} src={item.image[0]} alt="" className="image"/>
+                                <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                    <img width={"300px"} src={item.image[0]} alt="" className="image"/>
+                                </LazyLoad>
                                 <div className="show-client">
                                     <img width={"100px"} src={item.clientImage} alt=""/>
                                     <i>{item.clientName}</i>
@@ -41,7 +44,6 @@ class Newest extends Component {
         )
     }
     componentDidMount(){
-        console.log(this.props.match.params.contentId)
         if(this.props.newestList.length===0){
             this.props.getNewest({pageIndex:0,contentId:this.props.match.params.contentId})
         }

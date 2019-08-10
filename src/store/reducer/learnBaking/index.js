@@ -11,7 +11,7 @@ export default function(state=initState,{type,payload}) {
         // console.log("jing22222", state.recommendList);
     } else if (type === actionType.GET_KINDLIST) {                        //首页列表
         state.kindList = payload;
-        console.log(1996, payload)
+        // console.log(1996, payload)
         // console.log("根据类别", state.recommendList);
     } else if (type === actionType.GET_BAIKELIST) {                      //技巧百科
         state.baikeList = [...state.baikeList, ...payload];

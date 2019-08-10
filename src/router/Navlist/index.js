@@ -45,9 +45,9 @@ class NavList extends React.Component {
             index: i
         })
     }
-    componentDidMount(){
-        console.log(222,this.props.navList)
-    }
+    // componentDidMount(){
+    //     console.log(222,this.props.navList)
+    // }
 }
 
 export default withRouter(NavList);

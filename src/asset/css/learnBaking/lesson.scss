@@ -251,7 +251,7 @@
     background: #ffffff;
   }
   .tutor{
-    height: 297px;
+    min-height: 297px;
     padding: 15px;
     margin-bottom: 10px;
     background: #ffffff;
@@ -273,7 +273,7 @@
     }
   }
   .tutorCourse{
-    height: 334px;
+    min-height: 334px;
     padding: 15px;
     margin-bottom: 8.5px;
     background: #ffffff;
@@ -328,9 +328,8 @@
     }
   }
   .School{
-    height: 215px;
+    min-height: 215px;
     padding: 15px;
-    margin-bottom: 30px;
     background: #ffffff;
     img{
       width: 130px;

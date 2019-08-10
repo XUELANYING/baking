@@ -47,7 +47,6 @@ class Straight extends Component {
     }
 
     componentDidMount() {
-        console.log(12345,this.props.match.params.contentId)
         if(this.props.studentList.length===0){
             this.props.getStudent({pageIndex:0,contentId:this.props.match.params.contentId})
         }

@@ -37,8 +37,8 @@ import filter from '../../asset/filter'
 
             },
             look:false,
-            index:-1,
-            change:false
+            imgUrl:'https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80'
+
 
         }
         this.handleScroll=this.handleScroll.bind(this);
@@ -76,6 +76,7 @@ import filter from '../../asset/filter'
                                     this.props.history.push("/dish/"+v.contentId);
                                     e.stopPropagation();
                                 }}>
+
                                     <div className={'showlist_head_title'}>
                                         <LazyLoad height={200}>
                                         <img src={v.clientImage} alt="" />
@@ -83,7 +84,7 @@ import filter from '../../asset/filter'
                                         <div className={'showList_info'} >
                                             <div>
 
-                                                {v.isMaster===1?<img src='https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80' alt=""/>:null}
+                                                {v.isMaster===1?<img src={this.state.imgUrl} alt=""/>:null}
 
                                                 <p>{v.clientName}</p>
                                             </div>
@@ -101,9 +102,13 @@ import filter from '../../asset/filter'
 
                                         {
                                             v.image.map((v1,i)=>(
-                                                <div className={'showlist_center'} key={i} style={{width:this.state.imgW[v.image.length]}} >
-                                                    <img src={v1} alt=""  style={{width:"100%",height:this.state.imgH[v.image.length]}}/>
+
+                                                <div className={'showlist_center'}  style={{width:this.state.imgW[v.image.length]}} >
+                                                    <LazyLoad key={i} once height='70'>
+                                                      <img src={v1} alt=""  style={{width:"100%",height:this.state.imgH[v.image.length]}}/>
+                                                    </LazyLoad>
                                                 </div>
+
                                             ))
                                         }
 
@@ -167,6 +172,7 @@ import filter from '../../asset/filter'
                                         </span>
                                         </div>
                                     </div>
+
                                 </section>
                             ))
                         }

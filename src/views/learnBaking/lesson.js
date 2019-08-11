@@ -253,8 +253,8 @@ class Lesson extends Component {
     getSnapshotBeforeUpdate() {
         return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
     }
-    shouldComponentUpdate(nextProps){
-        if(this.props.homeworkList!=nextProps.homeworkList){
+    shouldComponentUpdate(nextProps,nextState){
+        if(this.props.homeworkList!=nextProps.homeworkList ||this.state.isVideo!=nextState.isVideo){
             return true
         }
         return false

@@ -4,8 +4,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import actionCreator from "../../../store/actionCreator/index";
-import LoadingMore from '../../common/loadingMore'
-
+import LoadingMore from '../../common/loadingMore';
 
 class Box extends React.Component {
     constructor() {
@@ -27,11 +26,11 @@ class Box extends React.Component {
                             <p className={'question-title'}>{v.coverTitle}</p>
                             <div className={'recipes'} onClick={(e)=>{
                                 e.stopPropagation(true)
-                                this.props.history.push('/recipe/'+v.contentId+'/'+v.clientId)
+                                this.props.history.push('/recipe/'+v.recipe.clientId+"/"+v.recipe.contentId);
                             }}>
                                 <div className={'recipes-img'}>
-                                    <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
-                                        <img className={"thisImg"} src={v.recipe.image} />
+                                    <LazyLoad once height="70" width={"70px"} placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={v.recipe.image}/>
                                     </LazyLoad>
                                 </div>
                                 <div className={'recipes-detail'}>
@@ -41,7 +40,6 @@ class Box extends React.Component {
                             </div>
                             <div className={'question-bottom'}>
                                 {v.answerNum > 0 ? <p>{v.answerNum}个回答</p> : <p className={'answerNone'}>暂无回答</p>}
-
                                 <p className={'question-bottom'}>
                                     <img className={'icon'}
                                          src="https://image.hongbeibang.com/FlSZI5KwZLrR9-QXD9Vu7u0lVvCE?48X48&imageView2/1/w/40/h/40"

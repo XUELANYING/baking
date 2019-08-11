@@ -2,16 +2,13 @@ import React from "react";
 import KindList from "../kindList"
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import actionCreator from "../../../store/actionCreator";
 import Swiper from "swiper";
+import actionCreator from "../../../store/actionCreator";
 import "swiper/dist/css/swiper.min.css";
 import "../../../asset/css/learnBaking/swiperstyle.scss"
  class Recomme extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-
-        }
     }
     render(){
         return(

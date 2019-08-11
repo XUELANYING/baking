@@ -10,7 +10,6 @@ import {TransitionGroup, CSSTransition} from "react-transition-group";
 import router from './router';
 import RouterGuard from "./router/routerGuard";
 import Loading from './component/common/loading'
-import axios from 'axios'
 import Lrouters from "./router/Lrouters";
 import './asset/css/transition.scss'
 

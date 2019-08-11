@@ -148,8 +148,8 @@ export default {
 //轮播图
     getSwiperList(){
         return async (dispatch)=>{
-            let {data} = await axios.get('/api/education/getIndex?_t=1564833387381&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs')
-            dispatch(swiperList(data.data.category));
+            let {data} = await axios.get('/api/index/getIndexItem?_t=1565516544274&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzg3NDUyNiwiaWF0IjoxNTY0NDg1NzI2fQ.2zlFlPe3c5RBI9gX4Vx4s_Sjn_C_sqydVbRDjiL7Tn0&categoryId=10163')
+            dispatch(swiperList(data.data));
         }
     },
     //新手教程

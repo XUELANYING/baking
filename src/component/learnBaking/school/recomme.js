@@ -6,6 +6,7 @@ import Swiper from "swiper";
 import actionCreator from "../../../store/actionCreator";
 import "swiper/dist/css/swiper.min.css";
 import "../../../asset/css/learnBaking/swiperstyle.scss"
+import {withRouter} from "react-router-dom"
  class Recomme extends React.Component{
     constructor(props){
         super(props);
@@ -16,17 +17,19 @@ import "../../../asset/css/learnBaking/swiperstyle.scss"
                 <div className="swiper-height swiper-container">
                     <div className="swiper-wrapper" >
                         {
-                            this.props.swiperList.slice(0,5).map((v,i)=>(
-                                <div className="swiper-slide" key={i}>
-                                    {
-                                        v.item.map((v1,i)=>(
-                                            <img  key={i} src={v1.image} alt=""/>
-                                        ))
-                                    }
-                                </div>
-                            ))
+
+                            this.props.swiperList.slice(0,6).map((v,i)=>(
+                              <div className="swiper-slide" key={i}>
+                                  <img src={v.images[0]} alt="" onClick={() => {
+
+                                      this.props.history.replace("/lesson/"+v.educationCourseId+"/"+v.clientId)
+
+                                  }}/>
+                           </div>
+                        ))
                         }
                     </div>
+
                     <div className="swiper-pagination"></div>
                 </div>
                 <KindList></KindList>
@@ -37,7 +40,6 @@ import "../../../asset/css/learnBaking/swiperstyle.scss"
         this.props.getSwiperList();
     }
     componentDidUpdate(){
-        // this.props.getSwiperList();
         let swiper = new Swiper('.swiper-container', {
             // centeredSlides: true,
 
@@ -59,5 +61,5 @@ import "../../../asset/css/learnBaking/swiperstyle.scss"
 
     }
 }
-export default connect((state) => ({swiperList: state.learnBaking.swiperList}),
-    (dispatch) => (bindActionCreators(actionCreator, dispatch)))(Recomme)
+export default withRouter(connect((state) => ({swiperList: state.learnBaking.swiperList}),
+    (dispatch) => (bindActionCreators(actionCreator, dispatch)))(Recomme))

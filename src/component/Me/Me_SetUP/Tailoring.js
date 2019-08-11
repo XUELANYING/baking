@@ -81,11 +81,8 @@ import HooksCropperModal from '../addlistOSon/HooksCropperModal'
 
      render(){
          const {
-             classModalVisible,
-             classModalFile,
              hooksModalVisible,
              hooksModalFile,
-             classResultImgUrl,
              hooksResultImgUrl
          } = this.state
         return (
@@ -141,12 +138,6 @@ import HooksCropperModal from '../addlistOSon/HooksCropperModal'
                       )}
                   </div>
 
-
-
-                  {/*<div className={"ticeimg_bottom"}>*/}
-                      {/*<img src="https://image.hongbeibang.com/FtUJvHaECXwl58x67bktx4KSjnym?imageMogr2/strip/thumbnail/640x640"  className={"sns"} alt=""/>*/}
-                      {/*<h2>上传头像</h2>*/}
-                  {/*</div>*/}
             </div>
         )
 

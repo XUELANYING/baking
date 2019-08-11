@@ -1,7 +1,7 @@
-import Convert from "@component/Me/addlistTwo/convert"
-import Daren from "@component/Me/addlistTwo/daren"
-import Record from"@component/Me/addlistTwo/record"
-
+import Loadable from'../../../common/height/loadable'
+const Record = Loadable(()=> import('@component/Me/addlistTwo/record'));
+const Daren = Loadable(()=> import("@component/Me/addlistTwo/daren"));
+const Convert = Loadable(()=> import("@component/Me/addlistTwo/convert"));
 
 export default [
     {// 作品

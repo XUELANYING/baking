@@ -1,13 +1,13 @@
 import React,{Fragment} from 'react';
 import {NavLink,withRouter} from 'react-router-dom';
+import Loadable from "../../common/height/loadable"
 import router from "../../router";
 import '../../asset/css/learnBaking/index.scss'
-import ShowList from "../../component/learnBaking/showList"
-import KindList from "../../component/learnBaking/kindList"
+import '../../asset/css/questionAnswer/main.scss'
+const KindList = Loadable(()=> import('../../component/learnBaking/kindList'));
+const ShowList = Loadable(()=> import('../../component/learnBaking/showList'));
+
 class LearnBarking extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
         return (
             <div style={{paddingBottom:"76px",height:"100%"}}>

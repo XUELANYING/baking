@@ -1,12 +1,13 @@
 import React,{Component} from 'react'
-import router from '../../router'
 import { NavLink} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import actionCreator from "../../store/actionCreator";
-import ShowListCommon from '../../component/bakingRing/ShowListCommon'
-import filter from '../../asset/filter'
-import LazyLoad from 'react-lazyload'
+import Loadable from "../../common/height/loadable"
+import actionCreator from '../../store/actionCreator';
+import filter from '../../asset/filter';
+const ShowListCommon = Loadable(()=> import('../../component/bakingRing/ShowListCommon'));
+
+
 class Latest extends Component{
     render(){
         return (
@@ -42,7 +43,7 @@ class Latest extends Component{
             </div>
         )
     }
- 
+
     componentDidMount(){
         this.props.getShowList();
         this.props.getActivityList();

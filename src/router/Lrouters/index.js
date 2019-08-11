@@ -1,7 +1,8 @@
-import List from "../../views/search/list";
-import Search from "../../views/search";
-import RecipeResult from "../../views/search/recipeDetail";
-
+import React from 'react'
+import Loadable from "../../common/height/loadable"
+const List = Loadable(()=> import('../../views/search/list'));
+const Search = Loadable(()=> import('../../views/search'));
+const RecipeResult = Loadable(()=> import('../../views/search/recipeDetail'));
 export default [
     {
         to:"/search",

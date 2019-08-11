@@ -1,19 +1,17 @@
-// import React,{Component} from 'react'
 import React,{Component} from 'react'
-// import router from '../../router'
-import { NavLink,Link} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import actionCreator from "../../store/actionCreator";
-import ShowListCommon from '../../component/bakingRing/ShowListCommon'
-import filter from "../../asset/filter";
+import Loadable from "../../common/height/loadable"
+import actionCreator from '../../store/actionCreator';
+const ShowListCommon = Loadable(()=> import('../../component/bakingRing/ShowListCommon'));
+
 class Expert extends Component{
     constructor(){
         super();
     }
     render(){
         return (
-            <ShowListCommon showProps={this.props.expertList}></ShowListCommon>   
+            <ShowListCommon showProps={this.props.expertList}></ShowListCommon>
         )
     }
     componentDidMount(){

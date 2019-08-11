@@ -33,16 +33,13 @@ class NavList extends React.Component {
             </Fragment>
         )
     }
-
     componentDidMount() {
-        console.log(this.props.match)
         this.setState({
             index: this.state.path.indexOf(this.props.match.path)
         })
     }
 
     handleClick(i) {
-        console.log(i)
         this.setState({
             index: i
         })

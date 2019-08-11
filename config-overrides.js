@@ -19,7 +19,8 @@ module.exports = override(
         ["@component"]: path.resolve(__dirname, "./src/component"),
         ["@router"]:path.resolve(__dirname,"./src/router"),
         ["@store"]:path.resolve(__dirname,"./src/store"),
-        ["@asset"]:path.resolve(__dirname,"./src/asset")
+        ["@asset"]:path.resolve(__dirname,"./src/asset"),
+        ["@common"]:path.resolve(__dirname,"./src/common")
     })
 )
 

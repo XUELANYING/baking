@@ -6,10 +6,10 @@ import {connect} from "react-redux";
 import BScroll from "better-scroll"
 import {withRouter, Link} from "react-router-dom"
 import { Drawer, List, NavBar, Icon } from 'antd-mobile';
-import PlayUrl from "../../component/learnBaking/lesson/playUrl"
-import TrySeeUrl from "../../component/learnBaking/lesson/trySeeUrl";
+import Loadable from "@common/height/loadable";
 import LazyLoad from 'react-lazyload';
-import LoadingMore from "@component/common/loadingMore";
+const PlayUrl = Loadable(()=> import('@component/learnBaking/lesson/playUrl'));
+const TrySeeUrl = Loadable(()=> import('@component/learnBaking/lesson/trySeeUrl'));
 class Lesson extends Component {
     constructor(props) {
         super(props);

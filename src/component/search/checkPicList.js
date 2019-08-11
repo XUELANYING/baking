@@ -14,7 +14,6 @@ export default class CheckoutPicList extends React.Component {
             this.setState({
                 swiperImages:this.props.images
             },()=>{
-                console.log(this.props.index)
                 var mySwiper = new Swiper('.lunbo', {
                     pagination: {
                         el: '.pages',

@@ -30,6 +30,9 @@ export default function(state=initState,{type,payload}){
         state.userAnswer =  [...state.userAnswer,...payload]
     }else if(type===actionType.GET_GETCLIENTACHIEVEMENTS){
         state.achievements = payload
+    }else if(type===actionType.CHANGE_ISFETCHING){
+        state.isFetching = payload
+        console.log(state.isFetching)
     }
     return state;
 }

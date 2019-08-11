@@ -43,7 +43,7 @@ import '../../asset/css/bakingRing/activitydetail.scss'
     }
 
     componentDidMount(){
-        this.props.getActivityList();
+       /* this.props.getActivityList();*/
         this.props.getActivityDetail(this.props.match.params.id);
 
     }

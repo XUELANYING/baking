@@ -3,10 +3,14 @@ import Loadable from "../common/height/loadable"
 import addlistOne from './Me/router/addlistORoute'
 import addlistTwo from './Me/router/addlistTRouter'
 //主路由
-const LearnBaking = Loadable(()=> import('../views/learnBaking/learnBaking'));
+/*const LearnBaking = Loadable(()=> import('../views/learnBaking/learnBaking'));
 const BarkingRing = Loadable(()=> import('../views/bakingRing/bakingRing'));
 const Nest = Loadable(()=> import('../views/nest/nest'));
-const QuestionAnswer = Loadable(()=> import('../views/questionAnswer/questionAnswer'));
+const QuestionAnswer = Loadable(()=> import('../views/questionAnswer/questionAnswer'));*/
+import LearnBaking from '../views/learnBaking/learnBaking'
+import BarkingRing from '../views/bakingRing/bakingRing'
+import Nest from '../views/nest/nest'
+import QuestionAnswer from '../views/questionAnswer/questionAnswer'
 /**/
 const Baike = Loadable(()=> import('../views/learnBaking/baike'));
 const University = Loadable(()=> import('../views/learnBaking/university'));

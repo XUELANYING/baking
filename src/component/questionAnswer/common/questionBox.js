@@ -3,8 +3,24 @@ import LazyLoad from 'react-lazyload';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
+import {formatDate, localItem, removeLocalItem} from '../../../component/common/utils/fn';
 import actionCreator from "../../../store/actionCreator/index";
 import LoadingMore from '../../common/loadingMore';
+
+/*//滚动到记录的位置方法
+const returnTop = (con) => {
+    if (localItem('scrollPosition')) {
+        //这个回滚对象我写的比较放飞自我，一般可以用类名获取等方法
+        if (!con.refs.lv) return;
+        try {
+            con.refs.lv.scrollTop = localItem('scrollPosition');
+        }
+        catch (e) {
+            console.log(e)
+        }
+        removeLocalItem('scrollPosition');
+    }
+};*/
 
 class Box extends React.Component {
     constructor() {
@@ -14,10 +30,27 @@ class Box extends React.Component {
             pageIndex: 0
         }
     }
+/*//返回记录滚动位置三件套1-针对切换Tab情况：
+    componentDidMount(){
+
+        returnTop(this);
+
+    }
+
+    //返回记录滚动位置三件套2-针对浏览器返回按钮情况：
+    componentDidUpdate(){
+        returnTop(this);
+    }
+
+    //返回记录滚动位置三件套3-记录离开时的滚动条位置：
+    componentWillUnmount(){
+        localItem('scrollPosition', this.refs.lv.scrollProperties.offset);
+    }*/
 
     render() {
+
         return (
-            <div className={'questionWrap'}>
+            <div className={'questionWrap'} ref={"lv"}>
                 {
                     this.props.questionAnswer[this.props.list].map((v, i) => (
                         <div key={i} className={'questionBox'} onClick={() => {
@@ -50,16 +83,16 @@ class Box extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={this.props.boxList}></LoadingMore>
+                <LoadingMore handleList={this.props.boxList} isFetching={this.props.questionAnswer.isFetching}></LoadingMore>
             </div>
         )
     }
 
-    componentDidMount() {
+   /* componentDidMount() {
         if (this.props.list.length === 0) {
             this.props[this.props.boxList]()
         }
-    }
+    }*/
 
    /* getSnapshotBeforeUpdate() {
         return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;

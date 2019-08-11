@@ -12,7 +12,6 @@ class CourseList extends Component {
     }
 
     render() {
-        console.log(this.props.curriculumList)
         return (
             <div>
                 <div className="courseList">

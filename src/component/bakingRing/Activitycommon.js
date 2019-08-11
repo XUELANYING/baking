@@ -34,6 +34,8 @@ class Activitycommon extends Component{
     componentDidMount(){
         console.log("日常活动的组件",this.props.bakingRing.activityDetail)
         console.log('dishDetailId',this.props.bakingRing.dishDetail)
+        this.props.getCommunityDetail();
+
     }
 }
 export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(Activitycommon)

@@ -187,10 +187,7 @@ class ShowListCommon extends Component {
     }
 
     componentDidMount() {
-        this.props.getShowList();
-        this.props.getCommunityDetail();
-        this.props.getExpertList()
-
+        /*this.props.getShowList();*/
     }
 }
 

@@ -9,15 +9,20 @@ class LoadingMore extends React.Component {
     constructor() {
         super()
         this.state = {
-            pageIndex: 0
+            pageIndex: 0,
+            title: "",
+            isFetching: true
         }
     }
+
     render() {
         return (
             <div
                 style={{width: "100%", margin: "0 auto", background: "#fff", display: "flex", justifyContent: "center"}}
                 ref={"wrapper"}>
-                <img src={more} alt=""/>
+                {
+                    this.state.isFetching ? <img src={more} alt=""/> : <p>没有更多啦~~</p>
+                }
             </div>
         )
     }
@@ -27,7 +32,6 @@ class LoadingMore extends React.Component {
         window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
             const windowHeight = window.screen.height;//窗口高度
-            console.log(scrollTop,windowHeight)
             // clearTimeout(this.timer);
             // this.timer = setTimeout(()=>{    //检测到屏幕滚动后，延时30ms进行下一次检测。优化体验,保证性能。
             if (scrollTop && scrollTop < windowHeight) {
@@ -45,38 +49,38 @@ class LoadingMore extends React.Component {
             }
         }, false)
     }
+
     handleClick() {
-        if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {
-            this.props[this.props.handleList]({pageIndex: 0, clientId: this.props.match.params.clientId})
-        } else if (this.props.handleList === "getStudent" || this.props.handleList === "getNewest") {
-            this.props[this.props.handleList]({
-                pageIndex: this.state.pageIndex += 10,
-                contentId: this.props.match.params.contentId
-            })
-        } else if (this.props.handleList === "getCurr") {
-            this.props[this.props.handleList]({
-                pageIndex: this.state.pageIndex += 10,
-                contentId: this.props.match.params.contentId,
-                clientId: this.props.match.params.clientId
-            })
-        }else if(this.props.handleList === "getMoreRecipe"){
-            this.setState({
-                pageIndex: this.state.pageIndex += 10
-            });
-            if(this.props.type/1 === 1){
-                this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,this.state.pageIndex)
-            }else if(this.props.type/1 === 2){
-                this.props.getDidMoreList(this.props.match.params.keyword,this.state.pageIndex)
-            }else{
-                this.props.getPopularList(this.props.match.params.keyword,this.state.pageIndex)
+        if (this.props.isFetching) {
+            if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {
+                this.props[this.props.handleList]({pageIndex: 0, clientId: this.props.match.params.clientId})
+            } else if (this.props.handleList === "getStudent" || this.props.handleList === "getNewest") {
+                this.props[this.props.handleList]({
+                    pageIndex: this.state.pageIndex += 10,
+                    contentId: this.props.match.params.contentId
+                })
+            } else if (this.props.handleList === "getCurr") {
+                this.props[this.props.handleList]({
+                    pageIndex: this.state.pageIndex += 10,
+                    contentId: this.props.match.params.contentId,
+                    clientId: this.props.match.params.clientId
+                })
+            } else if (this.props.handleList === "getMoreRecipe") {
+                this.setState({
+                    pageIndex: this.state.pageIndex += 10
+                });
+                if (this.props.type / 1 === 1) {
+                    this.props.getDetailList(this.props.showIndex, this.props.match.params.keyword, this.state.pageIndex)
+                } else if (this.props.type / 1 === 2) {
+                    this.props.getDidMoreList(this.props.match.params.keyword, this.state.pageIndex)
+                } else {
+                    this.props[this.props.handleList](this.state.pageIndex += 10)
+                    this.setState({
+                        isFetching: false
+                    })
+                }
             }
-        }else {
-            this.props[this.props.handleList](this.state.pageIndex += 10)
-            this.setState({
-                pageIndex: this.state.pageIndex += 10
-            })
         }
     }
 }
-
 export default withRouter(connect((state) => ({...state}), (dispatch) => (bindActionCreators(actionCreator, dispatch)))(LoadingMore));

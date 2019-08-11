@@ -1,5 +1,7 @@
-import  AddlistOSon from  "@component/Me/addlistOSon/acSon"
-import  AddSonson from  "@component/Me/addlistOSon/acSonSon"
+import React from 'react'
+import Loadable from "../../../common/height/loadable"
+const AddlistOSon = Loadable(()=> import('@component/Me/addlistOSon/acSon'));
+const AddSonson = Loadable(()=> import('@component/Me/addlistOSon/acSonSon'));
 
 export default [
     {// 作品

@@ -1,7 +1,8 @@
 import React from 'react';
-import "../../asset/css/learnBaking/baike.scss";
-import BaikeList from "../../component/learnBaking/baikeList";
 import {Link}from "react-router-dom";
+import Loadable from "../../common/height/loadable"
+import "../../asset/css/learnBaking/baike.scss";
+const BaikeList = Loadable(()=> import('../../component/learnBaking/baikeList'));
 
 export default class Baike extends React.Component {
     constructor(props) {

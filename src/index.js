@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+import initReactFastclick from 'react-fastclick';
+import 'lib-flexible';
 import './index.css';
 import App from './App';
 import store from './store';
-import 'lib-flexible';
+
 import 'antd-mobile/dist/antd-mobile.css';
 import * as serviceWorker from './serviceWorker';
 import imgLoading from './asset/img/imgLoding.gif'//图片未加载完成时显示
@@ -12,6 +14,7 @@ import imgLoading from './asset/img/imgLoding.gif'//图片未加载完成时显�
 // 引入mockjs
 import './mock/clientInfo.js'
 
+initReactFastclick();//解决移动端300ms延迟事件
 React.Component.prototype.imgLoading = imgLoading;
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
 

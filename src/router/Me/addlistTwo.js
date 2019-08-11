@@ -1,9 +1,7 @@
 import React from "react"
 import "@asset/css/nest/Me/Top.scss"
 import {
-    NavLink,
     Link,
-    BrowserRouter as Router,
     Route
 } from "react-router-dom"
 import ouper from "./router/addlistTRouter"

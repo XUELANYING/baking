@@ -1,34 +1,36 @@
-﻿import LearnBaking from '../views/learnBaking/learnBaking'
-import BarkingRing from '../views/bakingRing/bakingRing'
-import Nest from '../views/nest/nest'
-import QuestionAnswer from '../views/questionAnswer/questionAnswer';
-import Login from  "../views/login";
-import Baike from "../views/learnBaking/baike";
-import University from "../views/learnBaking/university";
-import LessonSeries from "../views/learnBaking/lessonSeries";
-import Classify from "../views/classify";
-// 烘焙圈
-import Attention from '../views/bakingRing/attention'
-import Latest from '../views/bakingRing/latest'
-import Expert from '../views/bakingRing/expert'
-import QuestionDetail from '../component/questionAnswer/questionDetail'
-import More from "../component/learnBaking/more"
-import AnswerDetail from '../component/questionAnswer/answerDetail'
-import EditQuestion from '../component/questionAnswer/editQuestion'
-import ClientInfo from '../component/questionAnswer/clientInfo'
-import QuestionDescription from '../component/questionAnswer/questionDescription'
-import Lesson from "@views/learnBaking/lesson"
-import Student from "@views/learnBaking/student"
-import School from "@views/learnBaking/school"
-import CourseList from "@views/learnBaking/courseList"
-import Cart from "@views/learnBaking/cart"
-/*郭郭的路由跳转*/
-import opusTaber from "@component/Me/opusTaber"
-import addlistOne from "./Me/router/addlistORoute"
-import addlistTwo from "./Me/router/addlistTRouter"
-import ActivityDetail from '../component/bakingRing/activityDetail'
-import BakingCircleDetail from '../component/bakingRing/bakingCircleDetail'
-import DishDetail from '../component/bakingRing/dishDetail'
+﻿import React from 'react'
+import Loadable from "../common/height/loadable"
+import addlistOne from './Me/router/addlistORoute'
+import addlistTwo from './Me/router/addlistTRouter'
+//主路由
+const LearnBaking = Loadable(()=> import('../views/learnBaking/learnBaking'));
+const BarkingRing = Loadable(()=> import('../views/bakingRing/bakingRing'));
+const Nest = Loadable(()=> import('../views/nest/nest'));
+const QuestionAnswer = Loadable(()=> import('../views/questionAnswer/questionAnswer'));
+/**/
+const Baike = Loadable(()=> import('../views/learnBaking/baike'));
+const University = Loadable(()=> import('../views/learnBaking/university'));
+const LessonSeries = Loadable(()=> import('../views/learnBaking/lessonSeries'));
+const Classify = Loadable(()=> import('../views/classify'));
+const Login = Loadable(()=> import('../views/login'));
+/**/
+const QuestionDetail = Loadable(()=> import('../component/questionAnswer/questionDetail'));
+const More = Loadable(()=> import('../component/learnBaking/more'));
+const AnswerDetail = Loadable(()=> import('../component/questionAnswer/answerDetail'));
+const EditQuestion = Loadable(()=> import('../component/questionAnswer/editQuestion'));
+const ClientInfo = Loadable(()=> import('../component/questionAnswer/clientInfo'));
+const QuestionDescription = Loadable(()=> import('../component/questionAnswer/questionDescription'));
+/**/
+const Lesson = Loadable(()=> import('@views/learnBaking/lesson'));
+const Student = Loadable(()=> import('@views/learnBaking/student'));
+const School = Loadable(()=> import('@views/learnBaking/school'));
+const CourseList = Loadable(()=> import('@views/learnBaking/courseList'));
+const Cart = Loadable(()=> import('@views/learnBaking/cart'));
+/**/
+const opusTaber = Loadable(()=> import('@component/Me/opusTaber'));
+const ActivityDetail = Loadable(()=> import('../component/bakingRing/activityDetail'));
+const BakingCircleDetail = Loadable(()=> import('../component/bakingRing/bakingCircleDetail'));
+const DishDetail = Loadable(()=> import('../component/bakingRing/dishDetail'));
 
 export default {
     basename: "/m",

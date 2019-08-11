@@ -1,7 +1,4 @@
 import React from "react";
-import {
-    Route
-} from "react-router-dom"
 import  one from "@asset/img/one.png"
 import  two from '@asset/img/two.png'
 import  three from "@asset/img/three.png"

@@ -1,11 +1,9 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import actionCreators from '../../store/actionCreator'
-import { NavLink,Link} from 'react-router-dom'
-import actionCreator from "../../store/actionCreator";
-import ShowListCommon from '../../component/bakingRing/ShowListCommon'
-import filter from "../../asset/filter";
+import Loadable from "../../common/height/loadable"
+import actionCreator from '../../store/actionCreator'
+const ShowListCommon = Loadable(()=> import('../../component/bakingRing/ShowListCommon'));
 
 class Attention extends Component{
     constructor(){

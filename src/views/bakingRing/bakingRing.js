@@ -1,16 +1,17 @@
 import React from 'react';
-import router from '../../router'
+import {withRouter} from 'react-router-dom'
+import Loadable from "../../common/height/loadable"
 import '../../asset/font/iconfont.css'
 import '../../asset/css/bakingRing/main.scss'
-import {Switch, NavLink, Route,withRouter} from 'react-router-dom'
-import Attention from './attention'
-import Latest from './latest'
-import Expert from './expert'
+const Attention = Loadable(()=> import('./attention'));
+const Latest = Loadable(()=> import('./latest'));
+const Expert = Loadable(()=> import('./expert'));
+
 class BakingRing extends React.Component {
     constructor() {
         super();
         this.state = {
-            index:1 
+            index:1
         };
         this.data=[
             {
@@ -48,10 +49,10 @@ class BakingRing extends React.Component {
                             <i className={"iconfont icon-lingdang"}></i>
                         </span>
                     </div>
-              </div> 
+              </div>
                 {
                     this.state.index === 0?<Attention></Attention>:this.state.index === 1 ? <Latest></Latest>:this.state.index === 2 ?<Expert></Expert> :null
-                }      
+                }
             </div>
         )
     }

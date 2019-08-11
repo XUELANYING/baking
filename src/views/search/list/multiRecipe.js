@@ -1,12 +1,9 @@
 import React from "react";
-import LoadingMore from "../../../component/common/loadingMore";
 import {Link} from "react-router-dom";
-import LazyLoad from "react-lazyload"
+import LazyLoad from "react-lazyload";
+import LoadingMore from "../../../component/common/loadingMore";
 
 export default class RecipeList extends React.Component{
-    componentDidMount(){
-        this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,0,"");
-    }
     render(){
         let recipeList = this.props.search.searchRecipeResults || [];
         return(
@@ -36,7 +33,7 @@ export default class RecipeList extends React.Component{
                         </Link>
                     ))
                 }
-                <LoadingMore handleList={"getMoreRecipe"} {...this.props}></LoadingMore>
+                <LoadingMore handleList={"getMoreRecipe"} type={"1"}></LoadingMore>
             </div>
         )
     }

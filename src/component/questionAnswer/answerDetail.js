@@ -21,7 +21,7 @@ class AnswerDetail extends React.Component {
      }*/
     render() {
         const info = this.props.questionAnswer.answerDetail
-        const floor = this.props.questionAnswer.answerFloor
+        const floor = this.props.questionAnswer.answerFloor;
         return (
             <div className={"answerDetail"}>
                 <TopWrap styleType={"s3"}></TopWrap>

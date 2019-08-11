@@ -3,6 +3,7 @@
     height: 100%;
     background: #F5F7F9;
     overflow: auto;
+    padding-bottom:49px;
 /*    position: absolute;
     left: 0;
     top: 0;
@@ -58,7 +59,10 @@
             height: 100%;
             width: 100%;
         }
-
+        img{
+            height:100%;
+            width:100%;
+        }
     }
 
     .recipes-detail{
@@ -172,6 +176,7 @@
     left: 0;
     display: flex;
     justify-content: space-around;
+    background:#fff;
     .tab-item{
         display: flex;
         align-items: center;

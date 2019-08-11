@@ -21,7 +21,7 @@ class SearchHelpFriends extends React.Component{
                    HFList.length!==0?<div className="sHelpFList clear_fix">
                        {
                            HFList.map((v,i)=>(
-                               <div className="HFBox" key={i}>
+                               <div className="HFBox" key={i} onClick={()=>this.props.history.push("/clientInfo/"+v.clientId)}>
                                    <div className="HFInfo">
                                        <div className="HFAvator">
                                            <img src={v.image} alt=""/>

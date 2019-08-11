@@ -27,6 +27,7 @@ class LoadingMore extends React.Component {
         window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
             const windowHeight = window.screen.height;//窗口高度
+            console.log(scrollTop,windowHeight)
             // clearTimeout(this.timer);
             // this.timer = setTimeout(()=>{    //检测到屏幕滚动后，延时30ms进行下一次检测。优化体验,保证性能。
             if (scrollTop && scrollTop < windowHeight) {
@@ -44,9 +45,6 @@ class LoadingMore extends React.Component {
             }
         }, false)
     }
-
-
-
     handleClick() {
         if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {
             this.props[this.props.handleList]({pageIndex: 0, clientId: this.props.match.params.clientId})
@@ -64,8 +62,14 @@ class LoadingMore extends React.Component {
         }else if(this.props.handleList === "getMoreRecipe"){
             this.setState({
                 pageIndex: this.state.pageIndex += 10
-            })
-            this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,this.state.pageIndex)
+            });
+            if(this.props.type/1 === 1){
+                this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,this.state.pageIndex)
+            }else if(this.props.type/1 === 2){
+                this.props.getDidMoreList(this.props.match.params.keyword,this.state.pageIndex)
+            }else{
+                this.props.getPopularList(this.props.match.params.keyword,this.state.pageIndex)
+            }
         }else {
             this.props[this.props.handleList](this.state.pageIndex += 10)
             this.setState({

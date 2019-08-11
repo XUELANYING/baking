@@ -1,5 +1,4 @@
 import React from "react";
-import LoadingMore from "../../../component/common/loadingMore";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import getSearchInfo,{getDetailList,getVideoList,getDidMoreList,getPopularList} from "../../../store/actionCreator/search/search";
@@ -9,6 +8,7 @@ import MultiRecipe from "./multiRecipe";
 import DidMoreRecipe from "./didMoreRecipe";
 import PopularRecipe from "./popularRecipe";
 import LazyLoad from "react-lazyload";
+import LoadingMore from "../../../component/common/loadingMore";
 
 class SearchRecipeList extends React.Component{
     constructor(){
@@ -20,7 +20,6 @@ class SearchRecipeList extends React.Component{
     }
     componentDidMount(){
         this.props.getVideoList(this.props.match.params.keyword)
-        this.props.getDetailList(this.props.showIndex,this.props.match.params.keyword,0,"");
         this.setState({
             keyword:this.props.match.params.keyword
         });

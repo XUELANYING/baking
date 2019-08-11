@@ -84,7 +84,6 @@ export default{
              let result = await fetch("/api/search/getMoreRecipe?_t="+Date.now()+"&csrfToken="+token+"&pageIndex="+pageIndex+"&pageSize=10&keyword="+keyword+"&sort=dishNum");
              let res = result.json();
              res.then((data)=>{
-                // console.log(data)
                 let obj={};
                     obj={
                         infoType:2,

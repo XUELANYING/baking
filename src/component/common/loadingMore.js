@@ -28,6 +28,7 @@ class LoadingMore extends React.Component {
     }
 
     componentDidMount() {
+
         const wrapper = this.refs.wrapper;
         window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
@@ -48,6 +49,7 @@ class LoadingMore extends React.Component {
                 this.handleClick()
             }
         }, false)
+
     }
 
     handleClick() {

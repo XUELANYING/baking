@@ -1,11 +1,12 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+import LazyLoad,{ forceCheck }  from 'react-lazyload';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import {formatDate, localItem, removeLocalItem} from '../../../component/common/utils/fn';
 import actionCreator from "../../../store/actionCreator/index";
 import LoadingMore from '../../common/loadingMore';
+import BackTop from '../../../component/common/utils/backToTop'
 
 /*//滚动到记录的位置方法
 const returnTop = (con) => {
@@ -83,7 +84,8 @@ class Box extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={this.props.boxList} isFetching={this.props.questionAnswer.isFetching}></LoadingMore>
+                <BackTop></BackTop>
+                <LoadingMore handleList={this.props.boxList} isFetching={this.props.questionAnswer.isFetching} onScroll={(e)=>{forceCheck()}}></LoadingMore>
             </div>
         )
     }

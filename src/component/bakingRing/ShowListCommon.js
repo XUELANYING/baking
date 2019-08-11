@@ -6,6 +6,7 @@ import actionCreators from '../../store/actionCreator'
 import LazyLoad from 'react-lazyload'
 import '../../asset/css/bakingRing/showlistcommon.scss'
 import filter from '../../asset/filter'
+import BackTop from '../../component/common/utils/backToTop'
 
 
 class ShowListCommon extends Component {
@@ -36,34 +37,10 @@ class ShowListCommon extends Component {
                 "9": "105px",
 
             },
-            look: false,
             index: -1,
             change: false
 
         }
-        this.handleScroll = this.handleScroll.bind(this);
-    }
-
-    //回到顶部
-    handleScroll() {
-        let scrollTop = document.documentElement.scrollTop;
-        if (scrollTop > 220) {
-            this.setState({
-                look: true
-            })
-        } else {
-            this.setState({
-                look: false
-            })
-        }
-    }
-
-    backTop() {
-        document.documentElement.scrollTop = 0;
-    }
-
-    componentWillMount() {
-        window.addEventListener('scroll', this.handleScroll, true);
     }
 
     render() {
@@ -177,17 +154,9 @@ class ShowListCommon extends Component {
                         ))
                     }
                 </div>
-
-                <div className={'backTop'} style={{display: this.state.look ? 'block' : 'none'}}
-                     onClick={this.backTop.bind(this)}>
-                    <i className={'iconfont icon-huidaodingbu-copy-copy'} onClick={this.backTop.bind(this)}></i>
-                </div>
+                <BackTop></BackTop>
             </div>
         )
-    }
-
-    componentDidMount() {
-        /*this.props.getShowList();*/
     }
 }
 

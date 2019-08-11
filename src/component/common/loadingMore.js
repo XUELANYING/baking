@@ -27,11 +27,11 @@ class LoadingMore extends React.Component {
     }
 
     componentDidMount() {
+
         const wrapper = this.refs.wrapper;
         window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
             const windowHeight = window.screen.height;//窗口高度
-            console.log(scrollTop)
             // clearTimeout(this.timer);
             // this.timer = setTimeout(()=>{    //检测到屏幕滚动后，延时30ms进行下一次检测。优化体验,保证性能。
             if (scrollTop && scrollTop < windowHeight) {
@@ -48,6 +48,7 @@ class LoadingMore extends React.Component {
                 this.handleClick()
             }
         }, false)
+
     }
 
 

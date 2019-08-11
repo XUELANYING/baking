@@ -27,11 +27,24 @@ class recipeDetail extends Component{
             swiperIndex:0
         }
     }
+    componentWillMount(){
+        this.setState({
+            quantity:1,
+            material:[],
+            step:[],
+            dish:[],
+            recipe:[],
+            rewardNum:[],
+            likeNum:[],
+            contentId:""
+        });
+    }
     componentDidMount(){
         let {clientId,contentId} = this.props.match.params;
         this.props.getUserList(contentId,"").then(()=>{
             let recipeDetail = this.props.recipeDetail;
             this.setState({
+                contentId:recipeDetail.contentId,
                 quantity:recipeDetail.quantity,
                 material:recipeDetail.material,
                 step:recipeDetail.step,
@@ -71,7 +84,6 @@ class recipeDetail extends Component{
         let {contentId} = this.props.match.params;
         this.props.getUserList(contentId,num).then(()=>{
             let recipeDetail = this.props.recipeDetail;
-            // console.log(this.props)
             this.setState({
                 quantity:recipeDetail.quantity,
                 material:recipeDetail.material
@@ -190,7 +202,10 @@ class recipeDetail extends Component{
                                         }
                                     </div>
                                 </div>
-                                <div className="tip">小贴士</div>
+                                {
+                                    recipeDetail.tip?<div className="tip">小贴士</div>:null
+                                }
+
                                 <div className="tipContent clear_fix">
                                     <div className="box clear_fix">
                                         <p>{recipeDetail.tip}</p>
@@ -273,7 +288,7 @@ class recipeDetail extends Component{
                                 <div className="commendList">
                                     <div className="listBox">
                                         {
-                                            ownRecipe.map((v,i)=>(
+                                            ownRecipe.length!==0?ownRecipe.map((v,i)=>(
                                                 <div className="listInfo" key={i}>
                                                     <Link to={"/recipe/"+v.clientId+"/"+v.contentId}>
                                                         <div className="infoImg">
@@ -282,30 +297,34 @@ class recipeDetail extends Component{
                                                         <div className="charactor">{v.coverTitle}</div>
                                                     </Link>
                                                 </div>
-                                            ))
+                                            )):null
                                         }
                                     </div>
                                 </div>
                                 {/*推荐课程*/}
-                                <div className="title">
-                                    <span>课程推荐</span>
-                                    <strong onClick={()=>this.props.history.push("/university")}>查看更多</strong>
-                                </div>
-                                <div className="commendVideoList">
-                                    <div className="VideoBox">
-                                        {
-                                            videoList.map((v,i)=>(
-                                                <Link className="VideoInfo" key={i} to={"/lesson/"+v.courseId+"/"+v.clientId}>
-                                                    <div className="VideoImg">
-                                                        <img src={v.coverImage} alt=""/>
-                                                    </div>
-                                                    <div className="learning">{v.buyNum>1000?<span>1000+</span>:<span>{v.buyNum}</span>}<span>在学</span></div>
-                                                    <div className="charactor">{v.coverTitle}</div>
-                                                </Link>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
+                                {
+                                    videoList.length!==0?<div className="title">
+                                        <span>课程推荐</span>
+                                        <strong onClick={()=>this.props.history.push("/university")}>查看更多</strong>
+                                    </div>:null
+                                }
+                                {
+                                    videoList.length!==0?<div className="commendVideoList">
+                                        <div className="VideoBox">
+                                            {
+                                                videoList.map((v,i)=>(
+                                                    <Link className="VideoInfo" key={i} to={"/lesson/"+v.courseId+"/"+v.clientId}>
+                                                        <div className="VideoImg">
+                                                            <img src={v.coverImage} alt=""/>
+                                                        </div>
+                                                        <div className="learning">{v.buyNum>1000?<span>1000+</span>:<span>{v.buyNum}</span>}<span>在学</span></div>
+                                                        <div className="charactor">{v.coverTitle}</div>
+                                                    </Link>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>:null
+                                }
 
                                 <div className="commentWrap clear_fix">
                                     <div className="commentTop">帮友评论</div>
@@ -386,7 +405,6 @@ class recipeDetail extends Component{
                         </div>
                     </div>
                 </div>}
-
             </Fragment>
         )
     }

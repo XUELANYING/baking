@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0134c8ff-b16d-4447-89d5-f470383698dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/baking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/baking.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/css/search/reachRecipes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/search/reachRecipes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/css/search/recipeDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/search/recipeDetail.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/css/search/upToLoading.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/loadingMore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/loadingMore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/search/checkPicList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/search/checkPicList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/search/checkPicList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/search/checkPicList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/classify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/classify/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/search/list/didMoreRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/search/list/didMoreRecipe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/search/list/multiRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/search/list/multiRecipe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/search/list/popularRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/search/list/popularRecipe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/search/list/searchRecipeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/search/list/searchRecipeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state/search/recipeDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state/search/recipeDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/search/recipeDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/search/recipeDetail/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,20 +21,22 @@
     <session id="770401878">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.139" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.95" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="39" />
+          <entry key="js" value="45" />
           <entry key="json" value="2" />
           <entry key="scss" value="4" />
           <entry key="vue" value="1" />
@@ -56,25 +45,25 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="39" />
+          <entry key="JavaScript" value="45" />
           <entry key="SCSS" value="4" />
           <entry key="Vue.js" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="5" />
+          <entry key="ESLintLanguageService" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2229" />
+          <entry key="js" value="2709" />
           <entry key="scss" value="227" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="2229" />
+          <entry key="JavaScript" value="2709" />
           <entry key="SCSS" value="227" />
         </counts>
       </usages-collector>
@@ -109,11 +98,13 @@
         <option value="$PROJECT_DIR$/src/views/search/list/popularRecipe.js" />
         <option value="$PROJECT_DIR$/src/views/search/list/searchRecipeList.js" />
         <option value="$PROJECT_DIR$/src/views/classify/index.js" />
-        <option value="$PROJECT_DIR$/src/views/search/recipeDetail/index.js" />
-        <option value="$PROJECT_DIR$/src/component/search/checkPicList.js" />
         <option value="$PROJECT_DIR$/src/asset/css/search/reachRecipes.scss" />
         <option value="$PROJECT_DIR$/src/asset/css/search/recipeDetail.scss" />
         <option value="$PROJECT_DIR$/src/component/common/loadingMore.js" />
+        <option value="$PROJECT_DIR$/src/store/state/search/recipeDetail.js" />
+        <option value="$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js" />
+        <option value="$PROJECT_DIR$/src/component/search/checkPicList.js" />
+        <option value="$PROJECT_DIR$/src/views/search/recipeDetail/index.js" />
       </list>
     </option>
   </component>
@@ -133,9 +124,8 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="361" />
-    <option name="y" value="35" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="333" />
     <option name="width" value="987" />
     <option name="height" value="728" />
   </component>
@@ -145,6 +135,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,41 +175,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="learnBaking" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="component" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="baking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="search" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -273,23 +244,25 @@
       <workItem from="1565351949028" duration="5934000" />
       <workItem from="1565397243054" duration="1047000" />
       <workItem from="1565399129380" duration="8426000" />
-      <workItem from="1565417095514" duration="794000" />
+      <workItem from="1565417095514" duration="1297000" />
+      <workItem from="1565429455090" duration="5763000" />
+      <workItem from="1565501685334" duration="588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27860000" />
+    <option name="totallyTimeSpent" value="34714000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80730224" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8016194" visible="true" weight="0.17708333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" id="npm" order="2" sideWeight="0.19269776" side_tool="true" visible="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.19838056" side_tool="true" visible="true" weight="0.17708333" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19312602" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19148937" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -340,13 +313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="57" column="63" lean-forward="true" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -469,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/search/checkPicList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/asset/css/search/list.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2320">
@@ -497,20 +456,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/search/recipeDetail/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="177" column="76" selection-start-line="177" selection-start-column="69" selection-end-line="177" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/common/loadingMore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/search/recipeDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/state/search/recipeDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/search/recipeDetail/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/search/checkPicList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>

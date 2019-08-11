@@ -19,8 +19,8 @@ class SearchAnswerList extends React.Component{
                     answersList.length !== 0 ? <div className="sAnswerList clear_fix">
                         {
                             answersList.map((v, i) => (
-                                <div className="sBox" key={i}>
-                                    <p dangerouslySetInnerHTML={{__html: v.description}}></p>
+                                <div className="sBox" key={i} onClick={()=> this.props.history.push('/question/' + v.contentId)}>
+                                    <p>{v.coverTitle}</p>
                                     <span>{v.answerNum}个回答</span>
                                 </div>
                             ))

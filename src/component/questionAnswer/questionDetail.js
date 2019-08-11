@@ -8,22 +8,28 @@ import TopWrap from "../common/topWrap";
 
 class QuestionDetail extends React.Component {
     render() {
+        let title = "";
+        if(this.props.questionDetail.recipe){
+            title = this.props.questionDetail.recipe.title
+        }
         return (
             <div className={"questionDetail"}>
                 <TopWrap styleType={"s2"}></TopWrap>
                 <div className={"margintop44"}>
                     <div className={'detail-title'}>{this.props.questionDetail.coverTitle}</div>
-                    <div className={"padding1015"}>
-                        <div className={'recipes'}>
-                            <div className={'recipes-img'}>
-                                <img src={this.props.recipe.image} alt=""/>
+                    {
+                        title!==""?<div className={"padding1015"}>
+                            <div className={'recipes'}>
+                                <div className={'recipes-img'}>
+                                    <img src={this.props.recipe.image} alt=""/>
+                                </div>
+                                <div className={'recipes-detail'}>
+                                    <p className={'recipes-title'}>{this.props.recipe.title}</p>
+                                    <p className={'recipes-author'}>作者：{this.props.recipe.clientName}</p>
+                                </div>
                             </div>
-                            <div className={'recipes-detail'}>
-                                <p className={'recipes-title'}>{this.props.recipe.title}</p>
-                                <p className={'recipes-author'}>作者：{this.props.recipe.clientName}</p>
-                            </div>
-                        </div>
-                    </div>
+                        </div>:null
+                    }
 
                     <div className={'answer-num'}>{this.props.answer.count}个回答</div>
                     {
@@ -49,7 +55,7 @@ class QuestionDetail extends React.Component {
                                                 <div className={"time"}>{v.createTime}</div>
                                             </div>
                                         </div>
-                                        <div className={"detail-content"}>{v.description}</div>
+                                        <div className={"detail-content"} dangerouslySetInnerHTML={{__html: v.description}}></div>
                                         <div className={"detail-handle"}>
                                             <div className={"handle-item"}><img className={"handle-icon"}
                                                                                 src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/38/h/38"

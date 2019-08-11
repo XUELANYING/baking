@@ -90,9 +90,6 @@ class recipeDetail extends Component{
             });
         });
     }
-    changeNum(){
-
-    }
     changeList(){
         this.setState({
             isList:false
@@ -160,7 +157,7 @@ class recipeDetail extends Component{
                                                 <div className="doChange" onClick={this.changeQuantity.bind(this,1)}>
                                                     <div className={"reduce"}></div></div>
                                                 <div className="num">
-                                                    <input type="text" value={quantity} onChange={this.changeNum.bind(this)}/>
+                                                    <span>{quantity}</span>
                                                 </div>
                                                 <div className="doChange" onClick={this.changeQuantity.bind(this,2)}>
                                                     <div className={"reduce"}></div>
@@ -188,7 +185,7 @@ class recipeDetail extends Component{
                                                 <div className="box" key={i}>
                                                     <h5>步骤{i+1}</h5>
                                                     <div className={"stepImg"} onClick={this.getImageList.bind(this,step,i)}>
-                                                        <LazyLoad once placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                        <LazyLoad once placeholder={<div className={"loadingBox"}><img style={{'width':'50px','height':'50px'}} src={this.imgLoading}/></div>}>
                                                             <img src={v.image}/>
                                                         </LazyLoad>
                                                     </div>

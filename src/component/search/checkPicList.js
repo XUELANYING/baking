@@ -18,7 +18,8 @@ export default class CheckoutPicList extends React.Component {
                     pagination: {
                         el: '.pages',
                     },
-                    initialSlide :this.props.index
+                    initialSlide :this.props.index,
+                    bulletActiveClass: 'my-bullet-active',
                 });
             })
         }

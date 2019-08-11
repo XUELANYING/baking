@@ -1,7 +1,7 @@
 import React from "react";
-import LoadingMore from "../../../component/common/loadingMore";
 import {Link} from "react-router-dom";
 import LazyLoad from "react-lazyload";
+import LoadingMore from "../../../component/common/loadingMore";
 
 export default class RecipeList extends React.Component{
     componentDidMount(){
@@ -36,7 +36,7 @@ export default class RecipeList extends React.Component{
                         </Link>
                     ))
                 }
-                <LoadingMore></LoadingMore>
+                <LoadingMore handleList={"getMoreRecipe"} type={"2"}></LoadingMore>
             </div>
         )
     }

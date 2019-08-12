@@ -129,14 +129,12 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/recommend/getRandContent?_t=1564757240452&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs&type=3&pageSize=10')
             dispatch(recommendList(data.data.data));
-            // console.log('jing3333',data.data.data)
         }
     },
     //首页分类列表
     getKindList(id){
         return async (dispatch)=>{
             let {data} = await axios.get('/api/education/getIndex?_t=1565015693131&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs')
-            // console.log('根据id获取',data)
             dispatch(kindList(data.data.category));
         }
     },
@@ -145,7 +143,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/education/getNewbieGuide?type=5&_t=1564813836836&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs')
             dispatch(baikeList(data.data.courseGuide));
-            // console.log('技巧百科列表',data.data.courseGuide)
         }
     },
 //轮播图
@@ -153,7 +150,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get('/api/education/getIndex?_t=1564833387381&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1Mzc4ODk1OCwiaWF0IjoxNTY0NDAwMTU4fQ.KbJocxLZoaTbGHYs6JKbGx3MVXSfN6gZgp9Sgd1D2fs')
             dispatch(swiperList(data.data.category));
-            // console.log('轮播图',data.data.category)
         }
     },
     //新手教程
@@ -161,7 +157,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/api/education/getCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&educationCourseId=10377");
             dispatch(lessonLists(data.data));
-            // console.log("新手教程",data.data)
         }
     },
     //视频学堂页分类列表
@@ -169,7 +164,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/api/index/getIndexItem?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&categoryId="+categoryId);
             dispatch(variousList(data.data));
-            // console.log("分类列表",data.data.length)
         }
     },
     // 查看更多
@@ -177,7 +171,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/api/index/getIndexItem?_t=1565341527450&csrfToken=&pageIndex=0&pageSize=10&categoryId="+categoryId);
             dispatch(moreList(data.data));
-            console.log("查看更多----",data.data)
         }
     },
     // 课程目录
@@ -185,7 +178,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/api/education/getSeriesCourse?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&educationCourseId=10377");
             dispatch(catalogList(data.data.data));
-            // console.log("课程目录",data.data.data)
         }
     },
     //学员作业
@@ -193,7 +185,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/api/dish/getOutstandingCourseContent?_t="+Date.now()+"&csrfToken="+localStorage.csrfToken+"&pageIndex=0&pageSize=10&educationCourseId=10377")
             dispatch(taskLisk(data.data.content.data));
-            // console.log("作业",data.data.content.data)
         }
     },
     //登录
@@ -201,7 +192,6 @@ export default {
         return async (dispatch)=>{
             let {data} = await axios.get("/login")
             dispatch(userInfo(data));
-            console.log("登录",data)
         }
     },
 
@@ -212,7 +202,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data=>{
-                    // console.log(data.data)
                     dispatch(upLesson(data.data))
                 })
         }
@@ -224,7 +213,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(1234,data.data.content.data)
                     dispatch(upStudent(data.data.content.data))
                 })
         }
@@ -235,7 +223,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(222,data.data.content.data)
                     dispatch(upNewest(data.data.content.data))
                 })
         }
@@ -246,7 +233,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(333,data.data.dish)
                     dispatch(upDish(data.data.dish))
                 })
         }
@@ -257,7 +243,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(444,data.data)
                     dispatch(upFloor(data.data))
                 })
         }
@@ -268,7 +253,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(555,data.data.content.data)
                     dispatch(upHomeWork(data.data.content.data))
                 })
         }
@@ -291,7 +275,6 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(777,data.data)
                     dispatch(upCart(data.data))
                 })
         }

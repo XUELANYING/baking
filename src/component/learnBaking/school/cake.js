@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link}from "react-router-dom";
 import actionCreator from "../../../store/actionCreator";
 import "../../../asset/css/learnBaking/cake.scss"
-
+import LazyLoad from 'react-lazyload';
 class Cake extends React.Component {
     constructor(props){
         super(props);
@@ -19,7 +19,9 @@ class Cake extends React.Component {
                             <dl key={i}>
                                 <Link to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                                 <dt>
-                                    <img src={v.verticalImages} alt=""/>
+                                    <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={v.verticalImages} alt=""/>
+                                    </LazyLoad>
                                     <i>{v.buyNum>1000?"1000+人参加":v.buyNum+"人参加"}</i>
                                 </dt>
                                 <dd>{v.shareTitle}</dd>

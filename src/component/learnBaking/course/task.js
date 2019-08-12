@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../../store/actionCreator";
 import {Link}from "react-router-dom";
+
  class Task extends React.Component {
     render() {
         return (
@@ -12,7 +13,9 @@ import {Link}from "react-router-dom";
                             <div key={i} className="ta-com">
                                 <Link exact={0} className={"ca-l"} to={"/school/"+v.contentId}>
                                 <dl className={"ta-out"}>
-                                    <dt><img src={v.image} alt=""/></dt>
+                                    <dt>
+                                             <img src={v.image} alt=""/>
+                                    </dt>
                                     <dd className={"ta-tit"}>
                                         <h4><img src={v.clientImage} alt=""/><em>{v.clientName}</em></h4>
                                         <p>{v.introduce?v.introduce:"零基础也能100%成功的新手专栏"}</p>

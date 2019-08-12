@@ -85,8 +85,6 @@ class LessonSeries extends React.Component {
     }
     componentDidMount(){
         this.props.getLessonList();
-        // console.log(55,this.props.getLessonList);
-
     }
 }
 export default connect((state) => ({lessonLists: state.learnBaking.lessonLists}),

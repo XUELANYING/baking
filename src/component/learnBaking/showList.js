@@ -3,7 +3,8 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import actionCreator from "../../store/actionCreator";
-import "../../asset/css/learnBaking/showList.scss"
+import "../../asset/css/learnBaking/showList.scss";
+import LazyLoad from 'react-lazyload';
 
 class ShowList extends React.Component {
     constructor(){
@@ -22,7 +23,9 @@ class ShowList extends React.Component {
                             <Link  key={i} to={"/lesson/"+v.courseId+"/"+v.clientId}>
                                 <dl>
                                     <dt>
-                                        <img src={v.coverImage} alt="" />
+                                        <LazyLoad once height="70" placeholder={<div style={{position:"relative"}} className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                            <img src={v.coverImage} alt="" />
+                                        </LazyLoad>
                                             <i>{v.collectNum>1000?"1000+在学":v.collectNum+"在学"}</i>
                                     </dt>
                                     <dd>{v.coverTitle}</dd>

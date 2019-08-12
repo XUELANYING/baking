@@ -43,7 +43,6 @@ import "../../../asset/css/learnBaking/swiperstyle.scss"
         // this.props.getSwiperList();
         let swiper = new Swiper('.swiper-container', {
             // centeredSlides: true,
-
             // loop:true,
             autoplay: {
                 delay: 1000,

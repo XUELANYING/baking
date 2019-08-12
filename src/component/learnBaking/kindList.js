@@ -1,11 +1,10 @@
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {NavLink,Link,Route,withRouter}from "react-router-dom";
+import {Link,withRouter}from "react-router-dom";
 import actionCreator from "../../store/actionCreator";
-import More from "./more";
-import router from "../../router"
-import "../../asset/css/learnBaking/showList.scss"
+import "../../asset/css/learnBaking/showList.scss";
+import LazyLoad from 'react-lazyload';
 
 class KindList extends React.Component {
     constructor(){
@@ -31,7 +30,9 @@ class KindList extends React.Component {
                                 <Link  key={i} to={"/lesson/"+v1.educationCourseId+"/"+v1.clientId}>
                                     <dl>
                                         <dt>
-                                            <img src={v1.image} alt=""/>
+                                            <LazyLoad once height="70" placeholder={<div style={{position:"relative"}} className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                <img src={v1.image} alt=""/>
+                                            </LazyLoad>
                                             <i>{v1.buyNum>1000?"1000+在学":v1.buyNum+"在学"}</i>
                                         </dt>
                                         <dd>{v1.shareTitle}</dd>
@@ -46,9 +47,11 @@ class KindList extends React.Component {
                 </div>
         )
     }
-    componentWillMount(){
+    componentDidMount(){
         this.props.getKindList();
     }
+
+
 }
 
 export default connect((state) => ({kindList: state.learnBaking.kindList}),

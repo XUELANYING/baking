@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
 import {Link}from "react-router-dom";
-
+import LazyLoad from 'react-lazyload';
 class BaikeList extends React.Component {
     constructor(){
         super();
@@ -19,7 +19,11 @@ class BaikeList extends React.Component {
                         <section key={i} id={"baike"}>
                             <Link to={"/newbie/video?contentId="+v.courseId}>
                                 <dl>
-                                    <dt><img src={v.image} alt="" /></dt>
+                                    <dt>
+                                        <LazyLoad once height="70" placeholder={<div style={{position:"relative"}} className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                            <img src={v.image} alt="" />
+                                        </LazyLoad>
+                                    </dt>
                                     <dd className={"tit"}>{v.title}</dd>
                                 </dl>
                             </Link>
@@ -31,8 +35,6 @@ class BaikeList extends React.Component {
     }
     componentDidMount(){
         this.props.getBaikeList();
-        // console.log(88,this.props);
-
     }
 }
 export default connect((state) => ({baikeList: state.learnBaking.baikeList}),

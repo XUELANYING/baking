@@ -4,11 +4,11 @@ import {withRouter} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreators from "../../store/actionCreator";
-import filter from '../../asset/filter'
 import '../../asset/css/bakingRing/dishDetail.scss'
+import LazyLoad from 'react-lazyload'
 class DishDetail extends Component {
     constructor(props){
-        super(props)
+        super(props);
         this.state={
             imgW:{
                 "1":"219px",
@@ -51,8 +51,11 @@ class DishDetail extends Component {
                     <div id={'dishDetail_wrap'}>
                         <div className={'dishDetail_info'}>
                             <div className={'houhou'}>
+                                <LazyLoad  once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+
                                 <img className={'dishDetail_clientImage'} src={show.clientImage} alt=""/>
-                                <div className={'dishDetail_userInfo'}>
+                                </LazyLoad>
+                                    <div className={'dishDetail_userInfo'}>
                                     <p>{show.clientName}</p>
                                     <div>
                                         <span>{show.createTime}</span>
@@ -71,7 +74,9 @@ class DishDetail extends Component {
                                 {
                                     show.image?show.image.map((v,i)=>(
                                         <div className={'showlist_center'} key={i} style={{width:this.state.imgW[show.image.length]}} >
-                                            <img ref={'dishImg'} src={v} alt=""  style={{width:"100%",height:this.state.imgH[show.image.length]}} />
+                                            <LazyLoad  once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                <img ref={'dishImg'} src={v} alt=""  style={{width:"100%",height:this.state.imgH[show.image.length]}} />
+                                            </LazyLoad>
                                         </div>
                                     )):null
                                 }
@@ -116,6 +121,6 @@ class DishDetail extends Component {
     }
 }
 
-export default connect((state)=>({
+export default withRouter( connect((state)=>({
       dishDetail:state.bakingRing.dishDetail,
-}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter( DishDetail))
+}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))( DishDetail))

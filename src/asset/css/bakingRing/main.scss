@@ -1,13 +1,11 @@
-//$color: rgb(random(256),random(123),random(356));
-//@mixin randomColor {
-//    background: $color;
-//}
-
 #bakingRing{
   height:100%;
   width: 100%;
   #aaaa{
-    padding-bottom:44px;
+
+    overflow:hidden;
+    height:44px;
+
     #baking_header{
         width: 100%;
         height: 44px;
@@ -22,6 +20,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index:1000;
         span{
             i{
               font-size: 27px;
@@ -50,7 +49,7 @@
   }
 
     #baking_body{
-      height: 100%;
+      width: 100%;
       .baking_activity{
         overflow: auto;
         padding: 5px 0 10px 0 ;
@@ -59,7 +58,7 @@
         border-bottom: 2px solid #E7E2E5;
         div{
           margin-left: 15px;
-          width: 150%;
+          width: 200%;
           .baking_activity_item{
             width: 150px;
             height: 85.5px;
@@ -68,6 +67,7 @@
             overflow: hidden;
             display: inline-block;
             vertical-align: middle;
+            position: relative;
             zoom: 1;
             img{
               width: 100%;
@@ -86,7 +86,7 @@
         .baking_type{
           overflow: auto;
           margin-left: 15px;
-          width: 300%;
+          width: 400%;
           padding:10px 0;
           div{
             display: inline-block;

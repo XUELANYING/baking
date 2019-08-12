@@ -7,6 +7,8 @@ import LazyLoad from 'react-lazyload'
 import '../../asset/css/bakingRing/showlistcommon.scss'
 import filter from '../../asset/filter'
 import BackTop from '../../component/common/utils/backToTop'
+import LoadingMore from "../common/loadingMore";
+
 
 
 class ShowListCommon extends Component {
@@ -37,41 +39,36 @@ class ShowListCommon extends Component {
                 "9": "105px",
 
             },
-            look:false,
-            imgUrl:'https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80'
+            imgUrl:'https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80',
+            isLoading:true
         }
+       
     }
-
     render() {
         const show = this.props.showProps;
         return (
             <div className={'showlistcommon_wrap'}>
 
+                <div className={'showlist_head'}>
+                    {
+                        show.map((v, i) => (
+                            <section key={i} onClick={(e) => {
+                                this.props.history.push("/dish/" + v.contentId);
+                                e.stopPropagation();
+                            }}>
+                                <div className={'showlist_head_title'}>
+                                    <LazyLoad height='70' placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={v.clientImage} alt=""/>
+                                    </LazyLoad>
+                                    <div className={'showList_info'}>
+                                        <div>
 
-                    <div className={'showlist_head'}>
-                        {
-                            show.map((v, i) => (
-                                <section key={i} onClick={(e)=>{
-                                    this.props.history.push("/dish/"+v.contentId);
-                                    e.stopPropagation();
-                                }}>
-
-                                    <div className={'showlist_head_title'}>
-                                        <LazyLoad height={200}>
-                                        <img src={v.clientImage} alt="" />
-                                        </LazyLoad>
-                                        <div className={'showList_info'} >
-                                            <div>
-
-                                                {v.isMaster===1?<img src={this.state.imgUrl} alt=""/>:null}
-
-                                                <p>{v.clientName}</p>
-                                            </div>
-                                            <span>{filter.date(v.createTime)} {v.coverTitle}</span>
+                                            {v.isMaster === 1 ? <img src={this.state.imgUrl} alt=""/> : null}
+                                            <p>{v.clientName}</p>
                                         </div>
                                         <span>{filter.date(v.createTime)} {v.coverTitle}</span>
                                     </div>
-
+                                </div>
                                 <div className={'showlist_message'}>
                                     {v.communityName ?
                                         <span className={"communityName"}>{v.communityName}</span> : null}
@@ -97,23 +94,7 @@ class ShowListCommon extends Component {
                                 <div className={'showlist_foot'}>
                                     <div className={'showlist_foot_one'}>
                                         {
-
-                                            v.image.map((v1, i) => (
-
-                                                <div className={'showlist_center'}
-                                                     style={{width: this.state.imgW[v.image.length]}}>
-                                                    <LazyLoad key={i} once height='70'>
-                                                        <img src={v1} alt="" style={{
-                                                            width: "100%",
-                                                            height: this.state.imgH[v.image.length]
-                                                        }}/>
-                                                    </LazyLoad>
-                                                </div>
-
-                                            ))
-                                        }
-
-                                        {v.type === 2 ? <div className={'one'} onClick={(e) => {
+                                            v.type === 2 ? <div className={'one'} onClick={(e) => {
                                                     this.props.history.push('/recipe/' + v.clientId + "/" + v.contentId);
                                                     e.stopPropagation();
                                                 }}>
@@ -135,7 +116,6 @@ class ShowListCommon extends Component {
                                                         <span>{v.recipe.clientName}</span>
                                                     </div>
                                                 </div> : null
-
                                         }
                                     </div>
 
@@ -167,17 +147,17 @@ class ShowListCommon extends Component {
                                         }
                                         </span>
                                     </div>
-
-
                                 </div>
                             </section>
                         ))
                     }
                 </div>
                 <BackTop></BackTop>
+                <LoadingMore handleList={this.props.boxList} ></LoadingMore>
             </div>
         )
     }
 }
 
 export default connect((state) => ({...state}), (dispatch) => (bindActionCreators(actionCreators, dispatch)))(withRouter(ShowListCommon))
+

@@ -53,6 +53,7 @@ class LoadingMore extends React.Component {
     }
 
     handleClick() {
+
         if (this.props.isFetching) {
             if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {
                 this.props[this.props.handleList]({pageIndex: 0, clientId: this.props.match.params.clientId})
@@ -81,6 +82,22 @@ class LoadingMore extends React.Component {
                         isFetching: false
                     })
                 }
+            }else if(this.props.handleList === 'getExpertList'){
+                this.props[this.props.handleList]({
+                    pageIndex:this.state.pageIndex +=10,
+                })
+            }else if(this.props.handleList === 'getFollowList'){
+                this.setState({
+                    pageIndex: this.state.pageIndex += 5
+                })
+            }else if(this.props.handleList === 'getShowList') {
+                this.props[this.props.handleList]({
+                    pageIndex:this.state.pageIndex +=10,
+                })
+            }else if(this.props.handleList === 'getCommunityDetail'){
+                this.props[this.props.handleList]({
+                    pageIndex:this.state.pageIndex +=10,
+                })
             }
         }
     }

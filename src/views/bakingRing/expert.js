@@ -5,14 +5,17 @@ import Loadable from "../../common/height/loadable"
 import actionCreator from '../../store/actionCreator';
 const ShowListCommon = Loadable(()=> import('../../component/bakingRing/ShowListCommon'));
 
+
 class Expert extends Component{
     render(){
         return (
-            <ShowListCommon showProps={this.props.expertList}></ShowListCommon>
+
+            <ShowListCommon showProps={this.props.expertList} boxList={'getExpertList'}></ShowListCommon>
         )
     }
     componentDidMount(){
-        this.props.getExpertList();
+        this.props.getExpertList({pageIndex:0});
+
     }
 }
 export default connect((state)=>({

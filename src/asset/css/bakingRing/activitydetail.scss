@@ -5,15 +5,16 @@
     background: #eee;
     .activityDetail_head{
       overflow: hidden;
-
       height: 44px;
       width: 100%;
       padding:0 18px;
-      margin:0 auto;position: fixed;
+      margin:0 auto;
+      position: fixed;
       box-sizing:border-box;
       background: #fff;
       display:flex;
       align-items: center;
+      z-index:1000;
       i{
         font-size: 27px;
       }
@@ -59,7 +60,6 @@
       text-align: center;
       background: #fff;
       margin-bottom:10px;
-      //border-bottom:2px solid #EEEEEE;
       color:#F95050;
     }
     .activity_join_two{
@@ -114,15 +114,9 @@
               white-space: nowrap;
               color:#4A4945;
               font-size:11px;
-
-
             }
         }
-
       }
     }
   }
-
-
-
 }

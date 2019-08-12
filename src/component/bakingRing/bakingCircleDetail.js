@@ -5,8 +5,8 @@ import {NavLink,withRouter} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import actionCreator from '../../store/actionCreator'
 import '../../asset/css/bakingRing/bakingCircleDetail.scss'
-import Newest from './Newest'
-
+import Loadable from "../../common/height/loadable";
+const Newest = Loadable(()=> import('./Newest'));
 class BakingCircleDetail extends Component {
     constructor(){
         super();
@@ -15,32 +15,25 @@ class BakingCircleDetail extends Component {
                 {
                     id:0,
                     mostName:'最热',
-                    // component:Newest
-
                 },{
                     id:1,
                     mostName:'最新',
-                    // component:Recently
                 }
             ],
             index:1
-
-
         }
     }
     handlerChange(index){
         this.setState({
             index
         });
-        console.log('dianji',index);
-        this.props.getCommunityDetail(this.props.match.params.id,this.state.index)
+        this.props.getCommunityDetail(this.props.match.params.id,this.state.index,{pageIndex:0})
     }
-
     render(){
         return (
-            <div >
-                <div id={'activityDetail'}>
-                    <div className={'activityDetail_head'}>
+            <div id={'communityWrap'}>
+                <div className={'communityDetail'}>
+                    <div className={'communityDetail_head'}>
                         <i className={'iconfont icon-arrow-left'} onClick={()=>{
                             this.props.history.go(-1)
                         }}></i>
@@ -54,23 +47,19 @@ class BakingCircleDetail extends Component {
                                 <div className={'community_type'} key={i} onClick={this.handlerChange.bind(this,i+1)} style={{borderBottom:i+1===this.state.index ? '2px solid #E98B71 ':''}}>
                                     <span >{v.mostName}</span>
                                 </div>
-
                             ))
                         }
-
                     </div>
 
                 </div>
-                {this.state.index===1? <Newest mostMessage={this.props.hotMost} choose={this.state.index}></Newest>:<Newest mostMessage={this.props.newest} choose={this.state.index}></Newest>}
-
-
+                {this.state.index===1? <Newest mostMessage={this.props.hotMost}  choose={this.state.index} boxList={'getCommunityDetail'}></Newest>:<Newest mostMessage={this.props.newest} choose={this.state.index}  boxList={'getCommunityDetail'}></Newest>}
             </div>
         )
     }
     componentDidMount(){
-        console.log(this.props.match.params.id)
-        this.props.getCommunityDetail(this.props.match.params.id);
-        console.log(this.props.communityDetail)
+        if(this.props.communityDetail.length===0){
+            this.props.getCommunityDetail(this.props.match.params.id,this.state.index,{pageIndex:0});
+        }
     }
 }
 export default withRouter(connect((state)=>({

@@ -2,7 +2,6 @@ import initState from '../../state/bakingRing'
 import actionType from '../../actionType/bakingRing'
 
 export default function(state=initState,{type,payload}){
-    //console.log('jing1111111111111111',payload);
     state = JSON.parse(JSON.stringify(state));
     switch (type){
         case actionType.GET_ACTIVITY:
@@ -15,10 +14,10 @@ export default function(state=initState,{type,payload}){
             state.communityDetail = {...payload};
             break;
         case actionType.GET_NEWEST:
-            state.newest = [...payload];
+            state.newest = [...payload,...state.newest];
             break;
         case actionType.GET_HOT_MOST:
-            state.hotMost = [...payload];
+            state.hotMost = [...state.hotMost,...payload];
             break;
         case actionType.GET_ACTIVITY_DETAIL:
             state.activityDetail = {...payload};
@@ -30,12 +29,11 @@ export default function(state=initState,{type,payload}){
             state.showList = [...state.showList,...payload];
             break;
         case actionType.GET_FOLLOW:
-            // console.log(payload);
             state.followList = [...payload];
             console.log(state.followList);
             break;
         case actionType.GET_EXPERT:
-            state.expertList = [...payload];
+            state.expertList = [...payload,...state.expertList];
             break;
         default:
             break;

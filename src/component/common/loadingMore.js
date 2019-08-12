@@ -62,7 +62,24 @@ class LoadingMore extends React.Component {
                 contentId: this.props.match.params.contentId,
                 clientId: this.props.match.params.clientId
             })
-        }else if(this.props.handleList === "getMoreRecipe"){
+        }else if(this.props.handleList === 'getExpertList'){
+            this.props[this.props.handleList]({
+                pageIndex:this.state.pageIndex +=10,
+            })
+        }else if(this.props.handleList === 'getFollowList'){
+            this.setState({
+                pageIndex: this.state.pageIndex += 5
+            })
+        }else if(this.props.handleList === 'getShowList') {
+            this.props[this.props.handleList]({
+                pageIndex:this.state.pageIndex +=10,
+            })
+        }else if(this.props.handleList === 'getCommunityDetail'){
+            this.props[this.props.handleList]({
+                pageIndex:this.state.pageIndex +=10,
+            })
+        }
+        else if(this.props.handleList === "getMoreRecipe"){
             this.setState({
                 pageIndex: this.state.pageIndex += 10
             })

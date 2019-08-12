@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import actionCreators from '../../store/actionCreator'
 import '../../asset/css/bakingRing/showlistcommon.scss'
-import filter from '../../asset/filter'
 import ShowListCommon from './ShowListCommon'
  class Newest extends Component{
     constructor(props){
@@ -13,18 +12,15 @@ import ShowListCommon from './ShowListCommon'
 
     render(){
         return (
-            <ShowListCommon showProps={this.props.mostMessage}></ShowListCommon>
+            <ShowListCommon showProps={this.props.mostMessage} boxList={'getCommunityDetail'}></ShowListCommon>
         )
     }
-    componentWillMount(){
-        console.log('ahahahahahahaha',this.props);
-        this.props.getCommunityDetail(this.props.match.params.id,this.props.choose);
-        console.log("---------------",this.props.choose)
-    }
     componentDidMount(){
-
-        this.props.getCommunityDetail(this.props.match.params.id,this.props.choose);
-        console.log("---------------",this.props.choose)
+        if(this.props.newest.length===0){
+            this.props.getCommunityDetail(this.props.match.params.id,this.props.choose,{pageIndex:0});
+        }
     }
 }
-export default withRouter(connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(Newest))
+export default connect((state)=>({
+    newest:state.bakingRing.newest
+}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(Newest))

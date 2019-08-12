@@ -32,10 +32,9 @@ class BakingCircleDetail extends Component {
         this.setState({
             index
         });
-        console.log('dianji',index);
-        this.props.getCommunityDetail(this.props.match.params.id,this.state.index)
-    }
+        this.props.getCommunityDetail(this.props.match.params.id,this.state.index,{pageIndex:0})
 
+    }
     render(){
         return (
             <div >
@@ -61,16 +60,16 @@ class BakingCircleDetail extends Component {
                     </div>
 
                 </div>
-                {this.state.index===1? <Newest mostMessage={this.props.hotMost} choose={this.state.index}></Newest>:<Newest mostMessage={this.props.newest} choose={this.state.index}></Newest>}
+                {this.state.index===1? <Newest mostMessage={this.props.hotMost}  choose={this.state.index} boxList={'getCommunityDetail'}></Newest>:<Newest mostMessage={this.props.newest} choose={this.state.index}  boxList={'getCommunityDetail'}></Newest>}
 
 
             </div>
         )
     }
     componentDidMount(){
-        console.log(this.props.match.params.id)
-        this.props.getCommunityDetail(this.props.match.params.id);
-        console.log(this.props.communityDetail)
+        if(this.props.communityDetail){
+            this.props.getCommunityDetail(this.props.match.params.id,this.state.index,{pageIndex:0});
+        }
     }
 }
 export default withRouter(connect((state)=>({

@@ -5,15 +5,14 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreators from '../../store/actionCreator'
 import Activitycommon from './Activitycommon'
-import LoadingMore from '../common/loadingMore'
 import '../../asset/css/bakingRing/activitydetail.scss'
+import LazyLoad from 'react-lazyload'
  class ActivityDetail extends Component {
     constructor(props){
         super(props)
     }
 
     render(){
-
         return (
             <div id={'activityDetail'}>
                 <div >
@@ -24,7 +23,9 @@ import '../../asset/css/bakingRing/activitydetail.scss'
                         <span>日常活动</span>
                     </div>
                     <div className={'activityDetail_image'}>
+                        <LazyLoad  once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
                         <img src={this.props.activityDetail.image} alt=""/>
+                        </LazyLoad>
                     </div>
                     {
                         <div className={'activityDetail_image_two'} dangerouslySetInnerHTML={{__html:this.props.activityDetail.activityIntroduce}}></div>
@@ -43,13 +44,10 @@ import '../../asset/css/bakingRing/activitydetail.scss'
     }
 
     componentDidMount(){
-        this.props.getActivityList();
-        this.props.getActivityDetail(this.props.match.params.id);
-
+            this.props.getActivityDetail(this.props.match.params.id);
     }
 }
 
-export default  connect((state)=>({
-        activityList:state.bakingRing.activityList,
+export default withRouter( connect((state)=>({
         activityDetail:state.bakingRing.activityDetail,
-}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(ActivityDetail))
+}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(ActivityDetail))

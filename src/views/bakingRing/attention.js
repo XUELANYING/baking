@@ -13,13 +13,15 @@ class Attention extends Component{
     }
     render(){
         return (
-            <ShowListCommon showProps={this.props.followList}></ShowListCommon>
+            <ShowListCommon showProps={this.props.followList} boxList={'getFollowList'}></ShowListCommon>
         )
     }
     componentDidMount(){
-        console.log("关注这回出来了吧",this.props.followList);
-        this.props.getFollowList();
+        if(this.props.followList.length===0){
+            this.props.getFollowList({pageIndex:0});
+        }
     }
+
 }
 export default connect((state)=>({
     followList:state.bakingRing.followList

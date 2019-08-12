@@ -6,6 +6,7 @@ import actionCreators from '../../store/actionCreator'
 import LazyLoad from 'react-lazyload'
 import '../../asset/css/bakingRing/showlistcommon.scss'
 import filter from '../../asset/filter'
+import LoadingMore from "../common/loadingMore";
 
 
  class ShowListCommon extends Component{
@@ -36,10 +37,10 @@ import filter from '../../asset/filter'
                 "9":"105px",
 
             },
+            //回到顶部图标是否显示
             look:false,
-            index:-1,
-            change:false
-
+            imgUrl:'https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80',
+            isLoading:true
         }
         this.handleScroll=this.handleScroll.bind(this);
     }
@@ -63,7 +64,6 @@ import filter from '../../asset/filter'
     componentWillMount(){
         window.addEventListener('scroll',this.handleScroll,true);
     }
-
     render() {
         const show = this.props.showProps;
         return (
@@ -77,14 +77,14 @@ import filter from '../../asset/filter'
                                     e.stopPropagation();
                                 }}>
                                     <div className={'showlist_head_title'}>
-                                        <LazyLoad height={200}>
+                                        <LazyLoad height='70' placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
                                         <img src={v.clientImage} alt="" />
                                         </LazyLoad>
                                         <div className={'showList_info'} >
                                             <div>
-
-                                                {v.isMaster===1?<img src='https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80' alt=""/>:null}
-
+                                                <LazyLoad height='70' placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                {v.isMaster===1?<img src={this.state.imgUrl} alt=""/>:null}
+                                                </LazyLoad>
                                                 <p>{v.clientName}</p>
                                             </div>
                                             <span>{filter.date(v.createTime)} {v.coverTitle}</span>
@@ -93,22 +93,21 @@ import filter from '../../asset/filter'
                                     <div className={'showlist_message'}>
                                         {v.communityName?<span className={"communityName"}>{v.communityName}</span>:null}
                                         {
-                                            v.type===4?<span>{v.introduce}</span>:null
+                                            v.type===4?<p>{v.introduce}</p>:null
                                         }
                                     </div>
 
                                     <div className={'showlist_center_wrap'}>
-
                                         {
                                             v.image.map((v1,i)=>(
                                                 <div className={'showlist_center'} key={i} style={{width:this.state.imgW[v.image.length]}} >
+                                                    <LazyLoad height='70' placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
                                                     <img src={v1} alt=""  style={{width:"100%",height:this.state.imgH[v.image.length]}}/>
+                                                    </LazyLoad>
                                                 </div>
                                             ))
                                         }
-
                                     </div>
-
                                     <div className={'showlist_foot'} >
                                         <div className={'showlist_foot_one'}>
                                             {
@@ -128,7 +127,9 @@ import filter from '../../asset/filter'
                                         this.props.history.push('/recipe/'+v.recipe.clientId+"/"+v.recipe.contentId);
                                         e.stopPropagation();
                                     }}>
-                                                        <img src={v.recipe.image} alt=""/>
+                                                        <LazyLoad height='70' placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                                        <img  src={v.recipe.image} alt=""/>
+                                                        </LazyLoad>
 
                                                         <div>
                                                             <p>{v.recipe.title}</p>
@@ -151,11 +152,9 @@ import filter from '../../asset/filter'
                                         <div>
                                             <i className={'iconfont icon-dashang'}></i>
                                             <span>
-
                                         {
                                             v.rewardNum?v.rewardNum:'打赏'
                                         }
-
                                         </span>
                                         </div>
                                         <div>
@@ -175,14 +174,13 @@ import filter from '../../asset/filter'
                     <div className={'backTop'} style={{display:this.state.look?'block':'none'}} onClick={this.backTop.bind(this)}>
                         <i className={'iconfont icon-huidaodingbu-copy-copy'} onClick={this.backTop.bind(this)}></i>
                     </div>
+                <LoadingMore handleList={this.props.boxList} ></LoadingMore>
+
             </div>
         )
     }
-    componentDidMount(){
-        this.props.getShowList();
-        this.props.getCommunityDetail();
-        this.props.getExpertList()
 
-    }
 }
-export default connect((state)=>({...state}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(withRouter(ShowListCommon))
+export default withRouter(connect((state)=>({
+    showList:state.bakingRing.showList
+}),(dispatch)=>(bindActionCreators(actionCreators,dispatch)))(ShowListCommon))

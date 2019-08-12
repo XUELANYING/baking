@@ -21,7 +21,6 @@ export default{
             let result = await fetch("/api/classify/getRecommend?_t="+Date.now()+"&csrfToken="+token)
             let res = result.json();
             res.then(({data})=>{
-                // console.log(data)
                 dispatch(getCommendInfo(data))
             })
         }

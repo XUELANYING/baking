@@ -1,13 +1,17 @@
 import React,{Component} from 'react'
-import router from '../../router'
 import { NavLink} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import actionCreator from "../../store/actionCreator";
 import ShowListCommon from '../../component/bakingRing/ShowListCommon'
-import filter from '../../asset/filter'
 import LazyLoad from 'react-lazyload'
 class Latest extends Component{
+    constructor(){
+        super();
+        this.state={
+            colorList:['#94BFBB','#927472','#E5AA9C','#5BADA6','#b78b9f','#acbcc9','#8f7671','#acb99b','#aca6bb','#c3d0ad']
+        }
+    }
     render(){
         return (
             <div id={'baking_body'}>
@@ -18,7 +22,9 @@ class Latest extends Component{
                                 {
                                 v.item.map((v,i)=>(
                                     <NavLink className={'baking_activity_item'} to={'/activity/'+v.activityContentId} key={i}>
-                                        <img src={v.image} alt=""/>
+                                        <LazyLoad height='70' placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                            <img src = {v.image} alt =''/>
+                                        </LazyLoad>
                                     </NavLink>
                                 ))
                             }
@@ -32,13 +38,13 @@ class Latest extends Component{
                         {
                             this.props.communityList.map((v,i)=>(
                                 <div key={i} >
-                                    <NavLink to={'/bakingCircle/'+v.communityId} style={{background:filter.randomColor(1)}}>{v.name}</NavLink>
+                                    <NavLink to={'/bakingCircle/'+v.communityId} style={{background:this.state.colorList[i]}}>{v.name}</NavLink>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
-                <ShowListCommon showProps={this.props.showList}></ShowListCommon>
+                <ShowListCommon showProps={this.props.showList} boxList={'getShowList'}></ShowListCommon>
             </div>
         )
     }

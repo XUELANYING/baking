@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
@@ -48,4 +49,5 @@ class ShowList extends React.Component {
 
 export default connect((state) => ({recommendList: state.learnBaking.recommendList}),
     (dispatch) => (bindActionCreators(actionCreator, dispatch)))(ShowList)
+
 

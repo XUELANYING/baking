@@ -1,3 +1,4 @@
+
 import React from "react";
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
@@ -41,13 +42,11 @@ class Cake extends React.Component {
     componentDidMount(){
         console.log(this.props.categoryId);
         this.props.getVariousList(this.props.categoryId);
-// console.log('ahah',this.props.categoryId)
     }
     componentWillReceiveProps(nextProps){
-       /* if(nextProps.categoryId!==this.props.){
 
-        }*/
     }
 }
 export default connect((state) => ({variousList: state.learnBaking.variousList}),
     (dispatch) => (bindActionCreators(actionCreator,dispatch)))(Cake)
+

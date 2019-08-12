@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
@@ -39,3 +40,4 @@ class BaikeList extends React.Component {
 }
 export default connect((state) => ({baikeList: state.learnBaking.baikeList}),
     (dispatch) => (bindActionCreators(actionCreator, dispatch)))(BaikeList)
+

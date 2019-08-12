@@ -7,12 +7,13 @@ import actionCreator from "../../store/actionCreator";
 import "../../asset/css/learnBaking/showList.scss"
 import Loading from '../common/loading'
 
+
 class KindList extends React.Component {
     constructor() {
         super();
         this.state = {
             kindList: [],
-            show:true
+            show: true
         }
     }
 
@@ -29,6 +30,7 @@ class KindList extends React.Component {
                                 }}>查看全部</em>
                             </p>
                             <div className={"sect"}>
+
                                 {v.item.map((v1, i) => (
                                     <Link key={i} to={"/lesson/" + v1.educationCourseId + "/" + v1.clientId}>
                                         <dl>
@@ -53,10 +55,10 @@ class KindList extends React.Component {
             </Fragment>
         )
     }
+
     componentDidMount() {
         this.props.getKindList();
     }
 }
-
 export default connect((state) => ({kindList: state.learnBaking.kindList}),
     (dispatch) => (bindActionCreators(actionCreator, dispatch)))(withRouter(KindList))

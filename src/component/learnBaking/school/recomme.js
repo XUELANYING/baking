@@ -1,3 +1,4 @@
+
 import React from "react";
 import KindList from "../kindList"
 import {bindActionCreators} from 'redux'

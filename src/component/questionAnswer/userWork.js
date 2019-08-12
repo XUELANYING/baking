@@ -94,7 +94,7 @@ class UserWork extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={"getClientInfo"}></LoadingMore>
+                <LoadingMore handleList={"getClientInfo"} isFeatching={true}></LoadingMore>
             </div>
         )
     }

@@ -16,10 +16,11 @@ class AnswerBox extends React.Component {
                 {
                     this.props.questionAnswer[this.props.list].map((v, i) => (
                         <div key={i} className={'questionBox'} onClick={() => {
-                            this.props.history.push('/answer/' + v.contentId)
+                            this.props.history.push('/answer/' + v.contentId )
                         }}>
                             <div className={'userInfo'} onClick={(e) => {
                                 e.stopPropagation(true)
+
                                 this.props.history.push('/clientInfo/' + v.clientId)
                             }}>
                                 <div className={'user-logo'}>
@@ -46,7 +47,7 @@ class AnswerBox extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={this.props.boxList}></LoadingMore>
+                <LoadingMore handleList={this.props.boxList} isFeatching={true}></LoadingMore>
             </div>
         )
     }

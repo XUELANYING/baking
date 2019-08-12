@@ -61,9 +61,13 @@ class App extends React.Component {
     render() {
         return (
             <div className={"App"}>
-                <Router>
-                    <Routes/>
-                </Router>
+                {
+                    this.state.isLoading?<p>jiaz</p>:
+                        <Router>
+                        <Routes/>
+                    </Router>
+                }
+
             </div>
         );
     }

@@ -72,7 +72,7 @@ class UserRecipe extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={"getClientRecipe"}></LoadingMore>
+                <LoadingMore handleList={"getClientRecipe"} isFeatching={true}></LoadingMore>
             </div>
         )
     }

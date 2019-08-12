@@ -108,8 +108,8 @@ class ClientInfo extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getClientInfo({pageIndex: 0, clientId: this.props.match.params.clientId})
-        this.props.getClientAchievements(this.props.match.params.clientId)
+        this.props.getClientInfo({pageIndex: 0, clientId: this.props.match.params.clientId || "1305482"})
+        this.props.getClientAchievements(this.props.match.params.clientId  || "1305482")
     }
 
     handleClick(i) {

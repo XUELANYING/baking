@@ -81,23 +81,34 @@ export default {
                 dispatch(isFetching(true))
                 dispatch(newsList(data.data.content.data))
             }else{
+                dispatch(newsList(data.data.content.data))
                 dispatch(isFetching(false))
             }
         }
     },
-    getHotList(){
+    getHotList(pageIndex=0){
         return async (dispatch)=>{
 
-            let {data} =await axios.get('/api/question/getHot?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex=0&pageSize=10')
+            let {data} =await axios.get('/api/question/getHot?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex='+pageIndex+'&pageSize=10')
+            if(data.data.content.count>=pageIndex+10){
+                dispatch(isFetching(true))
             dispatch(hotList(data.data.content.data))
-            console.log(data.data.content.data)
+            }else{
+                dispatch(hotList(data.data.content.data))
+                dispatch(isFetching(false))
+            }
         }
     },
     getEssenceList(pageIndex=0){
         return async (dispatch)=>{
             let {data} = await axios.get('/api/question/getEssence?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex='+pageIndex+'&pageSize=10')
+            if(data.data.content.count>=pageIndex+10){
+                dispatch(isFetching(true))
             dispatch(essenceList(data.data.content.data))
-            console.log('question',data.data.content)
+            }else{
+                dispatch(essenceList(data.data.content.data))
+                dispatch(isFetching(false))
+            }
         }
     },
     getQuestionDetail(id){

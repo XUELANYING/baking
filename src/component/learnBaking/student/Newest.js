@@ -39,11 +39,14 @@ class Newest extends Component {
                             </div>
                         ))
                     }
-                    <LoadingMore handleList={"getNewest"}></LoadingMore>
+                    <LoadingMore handleList={"getNewest"} isFetching={this.props.isFetching}></LoadingMore>
 
                 </div>
             </Fragment>
         )
+    }
+    getSnapshotBeforeUpdate() {
+        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
     }
     componentDidMount(){
         if(this.props.newestList.length===0){
@@ -51,4 +54,4 @@ class Newest extends Component {
         }
     }
 }
-export default withRouter(connect((state)=>({newestList: state.learnBaking.newestList,introduces:state.learnBaking.introduces}),(dispatch)=>bindActionCreators(actionCreator,dispatch))(Newest));
+export default withRouter(connect((state)=>({newestList: state.learnBaking.newestList,introduces:state.learnBaking.introduces,isFetching:state.learnBaking.isFetching}),(dispatch)=>bindActionCreators(actionCreator,dispatch))(Newest));

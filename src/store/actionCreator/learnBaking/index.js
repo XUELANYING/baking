@@ -120,7 +120,12 @@ const upCart = function (payload) {
         payload
     }
 }
-
+const isFetching = (payload)=>{
+    return{
+        type:actionType.CHANGE_ISFETCHING,
+        payload
+    }
+}
 
 
 export default {
@@ -213,7 +218,14 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    dispatch(upStudent(data.data.content.data))
+                    // dispatch(upStudent(data.data.content.data))
+                    if(data.data.content.count === 10){
+                        dispatch(isFetching(true))
+                        dispatch(upStudent(data.data.content.data))
+                    }else{
+                        dispatch(upStudent(data.data.content.data))
+                        dispatch(isFetching(false))
+                    }
                 })
         }
     },
@@ -223,7 +235,13 @@ export default {
             fetchfill(url)
                 .then(res => res.json())
                 .then(data => {
-                    dispatch(upNewest(data.data.content.data))
+                    if(data.data.content.count > pageIndex+10){
+                        dispatch(isFetching(true))
+                        dispatch(upNewest(data.data.content.data))
+                    }else{
+                        dispatch(upNewest(data.data.content.data))
+                        dispatch(isFetching(false))
+                    }
                 })
         }
     },

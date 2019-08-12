@@ -76,29 +76,19 @@ class LoadingMore extends React.Component {
                     this.props.getDetailList(this.props.showIndex, this.props.match.params.keyword, this.state.pageIndex)
                 } else if (this.props.type / 1 === 2) {
                     this.props.getDidMoreList(this.props.match.params.keyword, this.state.pageIndex)
-                } else {
-                    this.props[this.props.handleList](this.state.pageIndex += 10)
+
+                } else if (this.props.handleList === 'getFollowList') {
                     this.setState({
-                        isFetching: false
+                        pageIndex: this.state.pageIndex += 5
                     })
                 }
-            }else if(this.props.handleList === 'getExpertList'){
-                this.props[this.props.handleList]({
-                    pageIndex:this.state.pageIndex +=10,
-                })
-            }else if(this.props.handleList === 'getFollowList'){
-                this.setState({
-                    pageIndex: this.state.pageIndex += 5
-                })
-            }else if(this.props.handleList === 'getShowList') {
-                this.props[this.props.handleList]({
-                    pageIndex:this.state.pageIndex +=10,
-                })
-            }else if(this.props.handleList === 'getCommunityDetail'){
-                this.props[this.props.handleList]({
-                    pageIndex:this.state.pageIndex +=10,
-                })
+            } else {
+                this.props[this.props.handleList](this.state.pageIndex += 10)
             }
+        }else{
+            this.setState({
+                isFetching: false
+            })
         }
     }
 }

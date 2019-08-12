@@ -18,6 +18,7 @@ export default {
     floorList:[],
     homeworkList:[],
     curriculumList:[],
-    carList:[]
+    carList:[],
+    isFetching:true
 }
 

@@ -244,15 +244,14 @@ class Lesson extends Component {
     }
 
     componentDidMount() {
-
-        this.props.getLesson(this.props.match.params.contentId)
         this.props.getHomeWork(this.props.match.params.contentId)
+        this.props.getLesson(this.props.match.params.contentId)
         this.props.getCurr({pageIndex:0,contentId:this.props.match.params.contentId,clientId:this.props.match.params.clientId})
         this.forceUpdate();
     }
-    getSnapshotBeforeUpdate() {
-        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
-    }
+    // getSnapshotBeforeUpdate() {
+    //     return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
+    // }
     shouldComponentUpdate(nextProps,nextState){
         if(this.props.homeworkList!=nextProps.homeworkList ||this.state.isVideo!=nextState.isVideo){
             return true
@@ -280,6 +279,12 @@ class Lesson extends Component {
                 tap: true,
                 click: true,
             })
+        }
+    }
+    componentWillReceiveProps(nextProps){
+        if(this.props.match.params.contentId!== nextProps.match.params.contentId){
+            this.props.getHomeWork(nextProps.match.params.contentId)
+            window.scrollTo(0, 0);
         }
     }
 

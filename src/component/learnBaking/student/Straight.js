@@ -45,12 +45,15 @@ class Straight extends Component {
                             </div>
                         ))
                     }
-                    <LoadingMore handleList={"getStudent"}></LoadingMore>
+                    <LoadingMore handleList={"getStudent"} isFetching={this.props.isFetching}></LoadingMore>
                 </div>
             </Fragment>
         )
     }
 
+    getSnapshotBeforeUpdate() {
+        return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;
+    }
     componentDidMount() {
         if(this.props.studentList.length===0){
             this.props.getStudent({pageIndex:0,contentId:this.props.match.params.contentId})
@@ -60,5 +63,6 @@ class Straight extends Component {
 
 export default withRouter(connect((state) => ({
     studentList: state.learnBaking.studentList,
-    introduces: state.learnBaking.introduces
+    introduces: state.learnBaking.introduces,
+    isFetching:state.learnBaking.isFetching
 }), (dispatch) => bindActionCreators(actionCreator, dispatch))(Straight));

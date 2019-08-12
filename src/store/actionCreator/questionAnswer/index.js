@@ -77,7 +77,7 @@ export default {
     getNewsList(pageIndex=0){
         return async (dispatch)=>{
             let {data} = await axios.get('/api/question/getNew?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex='+pageIndex+'&pageSize=10')
-            if(data.data.content.count/10>pageIndex+1){
+            if(data.data.content.count>=pageIndex+10){
                 dispatch(isFetching(true))
                 dispatch(newsList(data.data.content.data))
             }else{

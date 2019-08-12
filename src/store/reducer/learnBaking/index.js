@@ -43,6 +43,9 @@ export default function(state=initState,{type,payload}) {
         state.carList=payload;
     }else if (type === actionType.GET_USERINFO) {            //登录
         state.userInfo = { ...payload};
+    }else if(type===actionType.CHANGE_ISFETCHING){
+        state.isFetching = payload
+        console.log(state.isFetching)
     }
     return state;
 }

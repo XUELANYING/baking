@@ -3,9 +3,10 @@ import "@asset/css/learnBaking/student.scss"
 import actionCreator from "@store/actionCreator";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
-import Straight from "../../component/learnBaking/student/Straight"
-import Newest from "../../component/learnBaking/student/Newest"
-import {withRouter} from "react-router-dom"
+import Loadable from "@common/height/loadable";
+import {withRouter} from "react-router-dom";
+const Straight = Loadable(()=> import('@component/learnBaking/student/Straight'));
+const Newest = Loadable(()=> import('@component/learnBaking/student/Newest'));
 class Student extends Component {
     constructor(props) {
         super(props);

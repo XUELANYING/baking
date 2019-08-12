@@ -56,7 +56,7 @@ export default class University extends React.Component{
                                     <div id="nav-list" onClick={this.handlerChange.bind(this,i)} style={{color:i===this.state.index?"black":"gray",borderBottom:i===this.state.index?"2px solid red":""}} key={i}>{v.title}</div>
                                     </div>
                                 )
-                            })
+                        })
                         }
                     </div>
 

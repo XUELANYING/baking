@@ -198,7 +198,7 @@
                 justify-content: center;
                 align-items: center;
                 display: inline-flex;
-                input{
+                span{
                   line-height: 28px;
                   border: 0;
                   border-radius: 0;
@@ -209,7 +209,6 @@
                   vertical-align: middle;
                   margin-left: 5px;
                   margin-right: 5px;
-                  width: 25px;
                   padding: 0 7.5px;
                   height: 24px;
                   font-size: 17px;
@@ -288,6 +287,7 @@
               margin: 15px auto 0 auto;
               border-radius: 4px;
               overflow: hidden;
+              position:relative;
               img{
                 width:345px;
                 height:230px;

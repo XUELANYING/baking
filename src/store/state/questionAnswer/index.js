@@ -13,4 +13,5 @@ export default {
     userRecipe:[],//用户菜谱
     userAnswer:[],//用户回答
     achievements:{},//用户成就
+    isFetching:true,//是否有下一页
 }

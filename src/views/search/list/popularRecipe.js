@@ -1,10 +1,17 @@
 import React from "react";
-import LoadingMore from "../../../component/common/loadingMore";
 import {Link} from "react-router-dom";
+import LazyLoad from "react-lazyload";
+import LoadingMore from "../../../component/common/loadingMore";
 
 export default class RecipeList extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            keyword:""
+        }
+    }
     componentDidMount(){
-        this.props.getPopularList(this.props.match.params.keyword,0);
+        this.props.getPopularList(this.props.match.params.keyword,0)
     }
     render(){
         let recipeList = this.props.search.searchPopular || [];
@@ -15,7 +22,9 @@ export default class RecipeList extends React.Component{
                         <Link className="cookList" key={i} to={"/recipe/"+v.clientId+"/"+v.contentId}>
                             <div className="listInfo">
                                 <div className="listImg">
-                                    <img src={v.coverImage} alt={v.coverTitle}/>
+                                    <LazyLoad once placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={v.coverImage} alt={v.coverTitle}/>
+                                    </LazyLoad>
                                 </div>
                                 <div className="ListDescript">
                                     <div className="title1 title3" ref={"title"}>{v.coverTitle}</div>
@@ -33,7 +42,7 @@ export default class RecipeList extends React.Component{
                         </Link>
                     ))
                 }
-                <LoadingMore></LoadingMore>
+                <LoadingMore handleList={"getMoreRecipe"} type={"3"}></LoadingMore>
             </div>
         )
     }

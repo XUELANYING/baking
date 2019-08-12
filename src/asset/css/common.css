@@ -78,3 +78,20 @@ body{
     height: 100%;
     width: 100%;
 }
+
+/*backTop*/
+.backTop {
+    display: inline-block;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 6;
+}
+.backTop i{
+    color: #a55e22;
+    overflow: hidden;
+    font-size:35px;
+    zoom: 1;
+    background: #fff;
+    border-radius: 50%;
+}

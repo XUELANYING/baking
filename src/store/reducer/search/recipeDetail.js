@@ -4,6 +4,7 @@ import recipeDetailType from "../../actionType/search/recipeDetail";
 export default function(state=recipeDetailState,{type,payload}){
     state = JSON.parse(JSON.stringify(state));
     if(type === recipeDetailType.getClientInfo){
+        state.contentId = payload.contentId;
         state.quantity = payload.quantity;
         state.material = payload.material;
         state.clientId = payload.clientId;

@@ -1,4 +1,5 @@
 const recipeDetailState={
+    contentId:"",
     quantity:1,
     material:[],
     step:[],

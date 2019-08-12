@@ -15,10 +15,16 @@
     width: 46%;
     height: 278px;
     border: 1px solid #fff;
-    .image{
+    .introfuce_img{
       width: 166px;
       height: 166px;
+      position: relative;
+      .image{
+        width: 100%;
+        height: 100%;
+      }
     }
+
     .show-client{
       margin: 8px;
       height: 20px;
@@ -34,6 +40,20 @@
         color: #B5B5B5;
         font-size: 11px;
       }
+    }
+    p{
+      font-size: 14.352px;
+      color: #313131;
+      line-height: 20.424px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      white-space: normal;
+      padding: 0 8px 8px 8px;
+      height: 31.05px;
     }
     .introduce{
       height: 36px;

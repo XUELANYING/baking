@@ -20,7 +20,6 @@ class RouterGuard extends React.Component {
             </Fragment>
         )
     }
-
     componentDidMount() {
         document.title = this.props.meta.title || "烘焙帮"
     }

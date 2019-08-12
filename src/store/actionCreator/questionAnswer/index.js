@@ -66,13 +66,23 @@ const ClientAnswer=(payload)=>{
         payload
     }
 }
+const isFetching = (payload)=>{
+    return{
+        type:actionType.CHANGE_ISFETCHING,
+        payload
+    }
+}
 
 export default {
     getNewsList(pageIndex=0){
         return async (dispatch)=>{
             let {data} = await axios.get('/api/question/getNew?_t='+Date.now()+'&csrfToken='+localStorage.csrfToken+'&pageIndex='+pageIndex+'&pageSize=10')
-            dispatch(newsList(data.data.content.data))
-
+            if(data.data.content.count/10>pageIndex+1){
+                dispatch(isFetching(true))
+                dispatch(newsList(data.data.content.data))
+            }else{
+                dispatch(isFetching(false))
+            }
         }
     },
     getHotList(){

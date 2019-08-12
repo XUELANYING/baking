@@ -1,10 +1,12 @@
-import Activity from "@component/Me/addlistOne/activity"
-import Curriculum from "@component/Me/addlistOne/curriculum"
-import Medal from "@component/Me/addlistOne/medal"
-import Sign from "@component/Me/addlistOne/sign"
+import React from 'react'
+import Loadable from "../../../common/height/loadable"
 import addlistOneSon from "./addlistOneSon"
-import Tailoring from "../../../component/Me/Me_SetUP/Tailoring";
 
+const Activity = Loadable(()=> import("@component/Me/addlistOne/activity"));
+const Curriculum = Loadable(()=> import("@component/Me/addlistOne/curriculum"));
+const Medal = Loadable(()=> import("@component/Me/addlistOne/medal"));
+const Sign = Loadable(()=> import("@component/Me/addlistOne/sign"));
+const Tailoring = Loadable(()=> import("../../../component/Me/Me_SetUP/Tailoring"));
 export default [
     {// 作品
         to:"/me/activity",

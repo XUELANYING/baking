@@ -11,8 +11,6 @@ class Cart extends Component {
         this.state = {};
     }
     onOpenChange = (...args) => {
-        console.log(111)
-        // console.log(args);
         this.setState({open: !this.state.open});
         const con = document.getElementsByClassName("Top")[0]
         const see = document.getElementsByClassName("Me_SetUp")[0]

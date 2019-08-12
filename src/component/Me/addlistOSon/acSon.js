@@ -12,6 +12,7 @@ import {
 import test from "../../../store/actionCreator/Me";
 import "@asset/css/nest/Me/acson.scss"
 import AddSonson from "./acSonSon";
+import LazyLoad from 'react-lazyload';
  class AcSon extends React.Component{
      constructor(){
          super()
@@ -40,7 +41,9 @@ import AddSonson from "./acSonSon";
          }
      }
 
-
+ // <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+ // <img src={v.coverImage} alt=""/>
+ // </LazyLoad>
 
     render(){
         return (
@@ -60,7 +63,9 @@ import AddSonson from "./acSonSon";
                               return  (
                                   <div key={i}>
                                       <div className={'activityDetail_image'}>
-                                          <img src={v.image} alt=""/>
+                                          <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                               <img src={v.image} alt=""/>
+                                            </LazyLoad>
                                       </div>
                                       <div className={"activityDetail_image_two"} dangerouslySetInnerHTML={{__html:v.activityIntroduce}}></div>
 

@@ -12,14 +12,18 @@ class CourseList extends Component {
     }
 
     render() {
-        console.log(this.props.curriculumList)
         return (
             <div>
                 <div className="courseList">
                     <div className="course_con">
                         {
                             this.props.curriculumList.map((item,index)=>(
-                                <div className="course_show" key={index}>
+                                <div className="course_show" key={index}
+                                     onClick={() => {
+
+                                         this.props.history.replace("/lesson/"+item.educationCourseId+"/"+item.clientId)
+
+                                     }}>
                                     <div className="course_img">
                                         <img src={item.image} alt=""/>
                                         <p><span>{item.buyNum>1000?"1000+":item.buyNum}</span><span>人参加</span></p>

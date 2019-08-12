@@ -1,7 +1,6 @@
 import React,{Fragment} from 'react';
-import {Switch, NavLink, Route, withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import '../../asset/css/questionAnswer/main.scss'
-import QuestionDetail from '../../component/questionAnswer/questionDetail'
 import Hot from './hot'
 import Essence from './essence'
 import New from './new'
@@ -57,24 +56,10 @@ class QuestionAnswer extends React.Component {
                             ))
                         }
                     </nav>
-
-                    {/*<nav className={'qusTab'}>
-                        {
-                            this.props.children.map((v, i) => (
-                                v.isHide ? null :
-                                    <NavLink activeClassName={'active'} key={i} to={v.to}>{v.name}</NavLink>
-                            ))
-                        }
-                    </nav>*/}
                 </div>
                 {
                     index===0? <Essence></Essence>:index===1? <New></New>:index===2?<Hot></Hot>:null
                 }
-                {/*{
-                    this.props.children.map((v, i) => (
-                        v.isHide ? null : <Route key={i} path={v.path} {...v}/>
-                    ))
-                }*/}
             </div>
         )
     }

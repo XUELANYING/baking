@@ -6,6 +6,7 @@ import actionCreator from "@store/actionCreator";
 import LoadingMore from "@component/common/loadingMore";
 import BScroll from "better-scroll"
 import {withRouter} from "react-router-dom"
+import LazyLoad from 'react-lazyload';
 
 class Straight extends Component {
     constructor(props) {
@@ -25,7 +26,11 @@ class Straight extends Component {
                     {
                         this.props.studentList.map((item, index) => (
                             <div key={index} className="show-con">
-                                <img width={"300px"} src={item.image[0]} alt="" className="image"/>
+                                <div className="introfuce_img">
+                                    <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={item.image[0]} alt="" className="image"/>
+                                    </LazyLoad>
+                                </div>
                                 <div className="show-client">
                                     <img width={"100px"} src={item.clientImage} alt=""/>
                                     <i>{item.clientName}</i>
@@ -47,7 +52,6 @@ class Straight extends Component {
     }
 
     componentDidMount() {
-        console.log(12345,this.props.match.params.contentId)
         if(this.props.studentList.length===0){
             this.props.getStudent({pageIndex:0,contentId:this.props.match.params.contentId})
         }

@@ -8,17 +8,20 @@ export default function(state=searchState,{type,payload}){
         state.lastestSearch = payload.lastestSearch;
     }
     if(type === searchType.DetailType){
+        // state.searchRecipeResults = []
         if(payload.infoType===1){
             for(let i=0;i<payload.data.data.length;i++){
                 state.searchRecipeResults.push(payload.data.data[i])
             }
         }
         if(payload.infoType===2){
+            // state.searchDidMore = []
             for(let i=0;i<payload.data.data.length;i++){
                 state.searchDidMore.push(payload.data.data[i])
             }
         }
         if(payload.infoType===3){
+            // state.searchPopular = []
             for(let i=0;i<payload.data.data.length;i++){
                 state.searchPopular.push(payload.data.data[i])
             }

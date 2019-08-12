@@ -1,6 +1,6 @@
 .ka-b{
   border-bottom: 44px;
-  background: green;
+  width: 100%;
 }
 .sect {
   height: 290px;
@@ -12,9 +12,7 @@
   -ms-overflow-style: none;
   background: #fff;
 }
-.sect::-webkit-scrollbar {
-  width: 0 !important
-}
+
 .sect dl{
   width: 160px;
   height: 270px;
@@ -23,7 +21,7 @@
   flex:1;
 }
 .sect dl dt img{
-width: 100%;
+  width: 100%;
   height: 100%;
   border-radius: 4px;
 }
@@ -61,16 +59,16 @@ width: 100%;
 }
 
 
-#l-list{
+.l-list{
   height: 329px;
 }
-#l-list p{
+.l-list p{
   height: 59px;
   width: 100%;
 background: #fff;
   /*text-align: center;*/
 }
-#l-list p span{
+.l-list p span{
   font-size: 17px;
   line-height: 24px;
   color: #313131;
@@ -82,12 +80,11 @@ background: #fff;
   margin-left: 15px;
   font-weight: bold;
 }
-#l-list p em{
+.l-list p em{
   font-size: 14px;
 line-height: 24px;
 color: #999999;
 vertical-align: middle;
-display: inline-block;
 margin-left:15px;
 padding-top: 25px;
 padding-bottom:10px;

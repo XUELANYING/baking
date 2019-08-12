@@ -16,7 +16,7 @@ function formatImg(list) {
 export default class ImgView extends React.Component {
     static propTypes = {
         imgList: PropTypes.array.isRequired,
-        list: PropTypes.array.isRequired,
+        list: PropTypes.array.isRequired,//初始图片列表
         height: PropTypes.string.isRequired,
         width: PropTypes.string.isRequired,
     }
@@ -29,6 +29,7 @@ export default class ImgView extends React.Component {
 
     static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.list !== prevState.list) {
+            console.log( nextProps.list)
             return {
                 imgList: formatImg(nextProps.list),
                 list: nextProps.list,
@@ -41,6 +42,7 @@ export default class ImgView extends React.Component {
 
     render() {
         const { imgList,height,width } = this.state
+
         return (
             <div  className={"box-wrap-img"}>
                 {

@@ -13,13 +13,10 @@ class More extends React.Component {
         }
     }
     render(){
-        // console.log("更多",this.props.moreList);
-        // console.log("路由的值",this.props.match.params.id);
         return(
             <div id="cake">
                 {
                     this.props.moreList.map((v,i)=>(
-
                         <dl key={i}>
                             <Link to={"/lesson/"+v.educationCourseId+"/"+v.clientId}>
                                 <dt>

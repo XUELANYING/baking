@@ -1,11 +1,27 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+import LazyLoad,{ forceCheck }  from 'react-lazyload';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
+import {formatDate, localItem, removeLocalItem} from '../../../component/common/utils/fn';
 import actionCreator from "../../../store/actionCreator/index";
-import LoadingMore from '../../common/loadingMore'
+import LoadingMore from '../../common/loadingMore';
+import BackTop from '../../../component/common/utils/backToTop'
 
+/*//滚动到记录的位置方法
+const returnTop = (con) => {
+    if (localItem('scrollPosition')) {
+        //这个回滚对象我写的比较放飞自我，一般可以用类名获取等方法
+        if (!con.refs.lv) return;
+        try {
+            con.refs.lv.scrollTop = localItem('scrollPosition');
+        }
+        catch (e) {
+            console.log(e)
+        }
+        removeLocalItem('scrollPosition');
+    }
+};*/
 
 class Box extends React.Component {
     constructor() {
@@ -15,10 +31,27 @@ class Box extends React.Component {
             pageIndex: 0
         }
     }
+/*//返回记录滚动位置三件套1-针对切换Tab情况：
+    componentDidMount(){
+
+        returnTop(this);
+
+    }
+
+    //返回记录滚动位置三件套2-针对浏览器返回按钮情况：
+    componentDidUpdate(){
+        returnTop(this);
+    }
+
+    //返回记录滚动位置三件套3-记录离开时的滚动条位置：
+    componentWillUnmount(){
+        localItem('scrollPosition', this.refs.lv.scrollProperties.offset);
+    }*/
 
     render() {
+
         return (
-            <div className={'questionWrap'}>
+            <div className={'questionWrap'} ref={"lv"}>
                 {
                     this.props.questionAnswer[this.props.list].map((v, i) => (
                         <div key={i} className={'questionBox'} onClick={() => {
@@ -27,11 +60,11 @@ class Box extends React.Component {
                             <p className={'question-title'}>{v.coverTitle}</p>
                             <div className={'recipes'} onClick={(e)=>{
                                 e.stopPropagation(true)
-                                this.props.history.push('/recipe/'+v.contentId+'/'+v.clientId)
+                                this.props.history.push('/recipe/'+v.recipe.clientId+"/"+v.recipe.contentId);
                             }}>
                                 <div className={'recipes-img'}>
-                                    <LazyLoad once height="70" placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
-                                        <img className={"thisImg"} src={v.recipe.image} />
+                                    <LazyLoad once height="70" width={"70px"} placeholder={<div className={"loadingBox"}><img src={this.imgLoading}/></div>}>
+                                        <img src={v.recipe.image}/>
                                     </LazyLoad>
                                 </div>
                                 <div className={'recipes-detail'}>
@@ -41,7 +74,6 @@ class Box extends React.Component {
                             </div>
                             <div className={'question-bottom'}>
                                 {v.answerNum > 0 ? <p>{v.answerNum}个回答</p> : <p className={'answerNone'}>暂无回答</p>}
-
                                 <p className={'question-bottom'}>
                                     <img className={'icon'}
                                          src="https://image.hongbeibang.com/FlSZI5KwZLrR9-QXD9Vu7u0lVvCE?48X48&imageView2/1/w/40/h/40"
@@ -52,16 +84,17 @@ class Box extends React.Component {
                         </div>
                     ))
                 }
-                <LoadingMore handleList={this.props.boxList}></LoadingMore>
+                <BackTop></BackTop>
+                <LoadingMore handleList={this.props.boxList} isFetching={this.props.questionAnswer.isFetching} onScroll={(e)=>{forceCheck()}}></LoadingMore>
             </div>
         )
     }
 
-    componentDidMount() {
+   /* componentDidMount() {
         if (this.props.list.length === 0) {
             this.props[this.props.boxList]()
         }
-    }
+    }*/
 
    /* getSnapshotBeforeUpdate() {
         return document.documentElement.scrollTop || document.body.scrollTop > 0 ? true : false;

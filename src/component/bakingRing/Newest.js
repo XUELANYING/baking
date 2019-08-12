@@ -16,11 +16,6 @@ import ShowListCommon from './ShowListCommon'
             <ShowListCommon showProps={this.props.mostMessage}></ShowListCommon>
         )
     }
-    componentWillMount(){
-        console.log('ahahahahahahaha',this.props);
-        this.props.getCommunityDetail(this.props.match.params.id,this.props.choose);
-        console.log("---------------",this.props.choose)
-    }
     componentDidMount(){
 
         this.props.getCommunityDetail(this.props.match.params.id,this.props.choose);

@@ -7,14 +7,23 @@ export default class RecipeList extends React.Component{
     constructor(){
         super();
         this.state={
-            keyword:""
+            keyword:"",
+            isFetching:true,
         }
     }
     componentDidMount(){
         this.props.getPopularList(this.props.match.params.keyword,0)
+
+    }
+    componentDidUpdate(){
+        let count = this.props.search.searchPopular.count;
+        let length = this.props.search.searchPopular.list.length;
+        if(length >= count){
+            this.state.isFetching = false
+        }
     }
     render(){
-        let recipeList = this.props.search.searchPopular || [];
+        let recipeList = this.props.search.searchPopular.list || [];
         return(
             <div className="recipeLists">
                 {
@@ -42,7 +51,7 @@ export default class RecipeList extends React.Component{
                         </Link>
                     ))
                 }
-                <LoadingMore handleList={"getMoreRecipe"} type={"3"}></LoadingMore>
+                <LoadingMore {...this.props} isFetching={this.state.isFetching} handleList={"getMoreRecipe"} type={"3"}></LoadingMore>
             </div>
         )
     }

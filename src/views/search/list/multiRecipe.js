@@ -4,8 +4,21 @@ import LazyLoad from "react-lazyload";
 import LoadingMore from "../../../component/common/loadingMore";
 
 export default class RecipeList extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            isFetching:true,
+        }
+    }
+    componentDidUpdate(){
+        let count = this.props.search.searchRecipeResults.count;
+        let length = this.props.search.searchRecipeResults.list.length;
+        if(length >= count){
+            this.state.isFetching = false
+        }
+    }
     render(){
-        let recipeList = this.props.search.searchRecipeResults || [];
+        let recipeList = this.props.search.searchRecipeResults.list || [];
         return(
             <div className="recipeLists">
                 {
@@ -33,7 +46,7 @@ export default class RecipeList extends React.Component{
                         </Link>
                     ))
                 }
-                <LoadingMore handleList={"getMoreRecipe"} type={"1"}></LoadingMore>
+                <LoadingMore {...this.props} isFetching={this.state.isFetching} handleList={"getMoreRecipe"} type={"1"}></LoadingMore>
             </div>
         )
     }

@@ -26,9 +26,7 @@ class LoadingMore extends React.Component {
             </div>
         )
     }
-
     componentDidMount() {
-
         const wrapper = this.refs.wrapper;
         window.addEventListener('scroll', () => {
             const scrollTop = wrapper.getBoundingClientRect().top;//获取LoadingMore组件中的ref绑定元素距屏幕顶部的距离
@@ -53,7 +51,6 @@ class LoadingMore extends React.Component {
     }
 
     handleClick() {
-
         if (this.props.isFetching) {
             if (this.props.handleList === "getClientRecipe" || this.props.handleList === "getClientInfo" || this.props.handleList === "getClientAnswer") {
                 this.props[this.props.handleList]({pageIndex: 0, clientId: this.props.match.params.clientId})
@@ -76,12 +73,18 @@ class LoadingMore extends React.Component {
                     this.props.getDetailList(this.props.showIndex, this.props.match.params.keyword, this.state.pageIndex)
                 } else if (this.props.type / 1 === 2) {
                     this.props.getDidMoreList(this.props.match.params.keyword, this.state.pageIndex)
-
-                } else if (this.props.handleList === 'getFollowList') {
-                    this.setState({
-                        pageIndex: this.state.pageIndex += 5
-                    })
+                } else{
+                    this.props.getPopularList(this.props.match.params.keyword,0)
                 }
+            }else if(this.props.handleList === "getMoreAnswers"){
+                this.setState({
+                    pageIndex: this.state.pageIndex += 10
+                });
+                this.props.getDetailList(1,this.props.match.params.keyword,this.state.pageIndex,"")
+            }else if (this.props.handleList === 'getFollowList') {
+                this.setState({
+                    pageIndex: this.state.pageIndex += 5
+                })
             } else {
                 this.props[this.props.handleList](this.state.pageIndex += 10)
             }

@@ -8,8 +8,24 @@ import NothingRes from "./nothing";
 
 
 class SearchAnswerList extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            isFetching:true
+        }
+    }
     componentDidMount(){
         this.props.getDetailList(1,this.props.match.params.keyword,0,"")
+    }
+    componentDidUpdate(){
+        let count = this.props.search.searchAnswerList.count;
+        let length = this.props.search.searchAnswerList.data.length;
+        console.log(count,length)
+        if(length >= count){
+            if(length >= count){
+                this.state.isFetching = false
+            }
+        }
     }
     render(){
         let answersList= this.props.search.searchAnswerList.data || [];
@@ -25,7 +41,7 @@ class SearchAnswerList extends React.Component{
                                 </div>
                             ))
                         }
-                        <LoadingMore></LoadingMore>
+                        <LoadingMore {...this.props} handleList={"getMoreAnswers"} isFetching={this.state.isFetching}></LoadingMore>
                     </div> : <NothingRes></NothingRes>
                 }
             </div>

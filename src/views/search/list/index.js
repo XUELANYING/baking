@@ -43,6 +43,7 @@ class List extends Component{
         let {keyword,threeBarInfo} = this.state;
         return(
             <div className={'listWrap'}>
+
                 <div className="searchBoxC">
                     <p className={"backImg"} onClick={()=>this.props.history.go(-1)}>
                         <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
@@ -77,7 +78,9 @@ class List extends Component{
                 {
                     this.state.showIndex===0?<SearchRecipeList showIndex={this.state.showIndex} {...this.props}></SearchRecipeList>:this.state.showIndex===1?<SearchAnswerList {...this.props}></SearchAnswerList>:<SearchHelpFriends {...this.props}></SearchHelpFriends>
                 }
+
             </div>
+
         )
     }
 }

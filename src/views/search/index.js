@@ -25,10 +25,9 @@ class Search extends Component{
         if(localStorage.keyword){
             let kw = JSON.parse(localStorage.keyword);
             let index = kw.findIndex((v)=>v===item);
-            if(index >-1){
+            if(index > -1){
                 kw.unshift(kw.splice(index,1)[0])
             }else{
-                console.log(123)
                 kw.unshift(item);
                 if(kw.length>5){
                     kw.length = 5

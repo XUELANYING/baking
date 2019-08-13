@@ -8,22 +8,22 @@ export default function(state=searchState,{type,payload}){
         state.lastestSearch = payload.lastestSearch;
     }
     if(type === searchType.DetailType){
-        // state.searchRecipeResults = []
         if(payload.infoType===1){
+            state.searchRecipeResults.count = payload.data.count
             for(let i=0;i<payload.data.data.length;i++){
-                state.searchRecipeResults.push(payload.data.data[i])
+                state.searchRecipeResults.list.push(payload.data.data[i])
             }
         }
         if(payload.infoType===2){
-            // state.searchDidMore = []
+            state.searchDidMore.count = payload.data.count
             for(let i=0;i<payload.data.data.length;i++){
-                state.searchDidMore.push(payload.data.data[i])
+                state.searchDidMore.list.push(payload.data.data[i])
             }
         }
         if(payload.infoType===3){
-            // state.searchPopular = []
+            state.searchPopular.count = payload.data.count
             for(let i=0;i<payload.data.data.length;i++){
-                state.searchPopular.push(payload.data.data[i])
+                state.searchPopular.list.push(payload.data.data[i])
             }
         }
     }
@@ -34,11 +34,13 @@ export default function(state=searchState,{type,payload}){
         state.searchVideoList = payload.list;
     }
     if(type === searchType.SearchAnswer){
-        state.searchAnswerList = payload
+        state.searchAnswerList.count = payload.count
+        for(let i=0;i<payload.data.length;i++){
+            state.searchAnswerList.data.push(payload.data[i])
+        }
     }
     if(type === searchType.SearchHelpFriends){
         state.searchHFList = payload
     }
-    // console.log(state)
     return state;
 }

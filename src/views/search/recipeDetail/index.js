@@ -40,6 +40,7 @@ class recipeDetail extends Component{
         });
     }
     componentDidMount(){
+        window.scroll(0,0)
         let {clientId,contentId} = this.props.match.params;
         this.props.getUserList(contentId,"").then(()=>{
             let recipeDetail = this.props.recipeDetail;

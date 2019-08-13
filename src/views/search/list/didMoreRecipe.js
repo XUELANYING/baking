@@ -4,11 +4,27 @@ import LazyLoad from "react-lazyload";
 import LoadingMore from "../../../component/common/loadingMore";
 
 export default class RecipeList extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            isFetching:true,
+        }
+    }
     componentDidMount(){
         this.props.getDidMoreList(this.props.match.params.keyword,0);
     }
+    componentDidUpdate(){
+        let count = this.props.search.searchDidMore.count;
+        let length = this.props.search.searchDidMore.list.length;
+        console.log(count,length)
+        if(length >= count){
+            if(length >= count){
+                this.state.isFetching = false
+            }
+        }
+    }
     render(){
-        let recipeList = this.props.search.searchDidMore || [];
+        let recipeList = this.props.search.searchDidMore.list || [];
         return(
             <div className="recipeLists">
                 {
@@ -36,7 +52,7 @@ export default class RecipeList extends React.Component{
                         </Link>
                     ))
                 }
-                <LoadingMore handleList={"getMoreRecipe"} type={"2"}></LoadingMore>
+                <LoadingMore {...this.props} isFetching={this.state.isFetching} handleList={"getMoreRecipe"} type={"2"}></LoadingMore>
             </div>
         )
     }

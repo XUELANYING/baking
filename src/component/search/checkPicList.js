@@ -14,23 +14,29 @@ export default class CheckoutPicList extends React.Component {
             this.setState({
                 swiperImages:this.props.images
             },()=>{
-                var mySwiper = new Swiper('.lunbo', {
+                new Swiper('.lunboRecipe', {
                     pagination: {
                         el: '.pages',
                     },
+                    click:true,
                     initialSlide :this.props.index,
                     bulletActiveClass: 'my-bullet-active',
+                    on: {
+                        touchEnd: function (event) {
+                            event.stopPropagation()
+                        },
+                        click:()=>{
+                            this.props.message()
+                        }
+                    }
                 });
             })
         }
     }
-    getDirective(){
-        this.props.message()
-    }
     render() {
         let {swiperImages} = this.state
         return (
-            <div className="swiper-container lunbo" onClick={this.getDirective.bind(this)}>
+            <div className="swiper-container lunboRecipe">
                 <div className="swiper-wrapper lunbo-wrapper clear_fix">
                     {
                         swiperImages.map((v,i)=>(
